@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>从Web抓取信息 [ 至善的网志 ]</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/iLiKE.css">
+    
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
+    <script id="leancloud">
+      AV.init({
+          appId: "6E5zTbTljdUbVW2WkXPsXGJk-gzGzoHsz",
+          appKey: "0vsyDKfNpeSECAI70J794ugv"
+      });
+    </script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+    <div class="header">
+        <div class="container">
+    <div class="menu">
+      <div class="menu-left">
+        <a href="/">
+          <img src="/favicon.ico"></img>
+        </a>
+      </div>
+      <div class="menu-right">
+        
+          
+          
+          
+          
+          
+          
+          <a href=".">首页</a>
+        
+          
+          
+          
+          
+          
+          
+          <a href="archives">归档</a>
+        
+          
+          
+          
+          
+          
+          
+          <a href="tags">标签</a>
+        
+          
+          
+          
+          
+          
+          
+          <a href="about">关于</a>
+        
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="container">
+        <h1 class="post-title">从Web抓取信息</h1>
+<article class="post markdown-style">
+  <h3 id="1-Web抓取常用模块"><a href="#1-Web抓取常用模块" class="headerlink" title="1. Web抓取常用模块"></a>1. Web抓取常用模块</h3><p>webbrower：打开浏览器获取指定页面。</p>
+<p>requests：从网上下载文件和网页。</p>
+<p>Beautiful Soup：解析HTML，即网页编写的格式。</p>
+<p>Selenium：启动并控制浏览器，可以模拟鼠标在这个网页上点击。</p>
+<h3 id="2-通过request模块下载Web文件"><a href="#2-通过request模块下载Web文件" class="headerlink" title="2. 通过request模块下载Web文件"></a>2. 通过request模块下载Web文件</h3><ol>
+<li><p>调用 requests.get()下载该文件。</p>
+</li>
+<li><p>用’wb’调用 open()，以写二进制的方式打开一个新文件。 </p>
+</li>
+<li><p>利用 Respose 对象的 iter_content()方法做循环。 </p>
+</li>
+<li><p>在每次迭代中调用 write()，将内容写入该文件。 </p>
+</li>
+<li><p>调用 close()关闭该文件。</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _*_ coding:utf-8 _*_</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入模块</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">res = requests.get(<span class="string">&#x27;http://www.gutenberg.org/cache/epub/1112/pg1112.txt&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检验是否下载成功</span></span><br><span class="line">res.raise_for_status()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以写二进制的方式打开文件</span></span><br><span class="line">playFile = <span class="built_in">open</span>(<span class="string">&#x27;RomeoAndJuliet.txt&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过循环克隆文件</span></span><br><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> res.iter_content(<span class="number">1000000</span>):</span><br><span class="line">    playFile.write(chunk)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭文件</span></span><br><span class="line">playFile.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-用-BeautifulSoup-模块解析-HTML"><a href="#3-用-BeautifulSoup-模块解析-HTML" class="headerlink" title="3. 用 BeautifulSoup 模块解析 HTML"></a>3. 用 BeautifulSoup 模块解析 HTML</h3><p>BeautifulSoup 是用于从HTML页面中提取信息的模块。在这里，需要先搞明白HTML是什么。</p>
+<p>####3.1 HTML简介</p>
+<p>HTML全称Hypertext Marked Language，即超文本标记语言，由Web的发明者 Tim Berners-Lee和同事 Daniel W. Connolly于1991年创立。超文本标记语言利用统一规则把网页上的图文视音频统一在一个格式下面。从Web抓取信息需要先弄清楚HTML网页结构，以便寻找需要的信息，并制定抓取策略。</p>
+<p>基本结构如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;<span class="name">title</span>&gt;</span>The Website Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我的第一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的第一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>具有以下特征：</p>
+<ul>
+<li>用&lt;&gt;表示</li>
+<li>成对出现，第一个是开始标签，第二个是结束标签</li>
+<li>纯文本文件，带有.html</li>
+</ul>
+<p>那么如何发现网页的源代码呢？如果是谷歌浏览器可以直接右键单击<code>检查</code>，然后点击代码即可发现对应的网页内容。</p>
+<h4 id="3-2-“I’m-Feeling-Lucky”Google-查找"><a href="#3-2-“I’m-Feeling-Lucky”Google-查找" class="headerlink" title="3.2 “I’m Feeling Lucky”Google 查找"></a>3.2 “I’m Feeling Lucky”Google 查找</h4><p>代码目的：自动查找网页中所需的特定信息。</p>
+<p>代码逻辑：</p>
+<ul>
+<li>从命令行参数中获取查询关键字。</li>
+<li>取得查询结果页面。 </li>
+<li>为每个结果打开一个浏览器选项卡。</li>
+</ul>
+<p>这意味着代码需要完成以下工作: </p>
+<ul>
+<li>从 sys.argv 中读取命令行参数。</li>
+<li>用 requests 模块取得查询结果页面。</li>
+<li>找到每个查询结果的链接。</li>
+<li>调用 webbrowser.open()函数打开 Web 浏览器。 </li>
+<li>打开一个新的文件编辑器窗口，并保存为 lucky.py。</li>
+</ul>
+<p>Ref 《Python编程快速上手—让繁琐工作自动化》</p>
+<p>2020年 3月27日</p>
+
+</article>
+
+    <div class="pagenator post-pagenator">
+    
+    
+        <a class="extend prev post-prev" href="/2020/03/30/2020-03-30-Rational_and_emotional_brain/">上一篇</a>
+    
+
+    
+    <p>上次更新 2020-10-11</p>
+    
+    
+        <a class="extend next post-next" href="/2020/03/06/2020-03-26-good-strategy-bad-strategy/">下一篇</a>
+    
+    </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+    <div class="social">
+	<ul class="social-list">
+		
+			
+				
+				
+				<li>
+					<a href="mailto:ligj1706@gmail.com" title="email" target="_blank">
+					<i class="fa fa-email"></i>
+					</a>
+				</li>
+			
+		
+			
+		
+			
+				
+				<li>
+					<a href="https://twitter.com/JohnLee024" title="twitter" target="_self">
+					<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://github.com/ligj1706" title="github" target="_self">
+					<i class="fa fa-github"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://www.douban.com/people/147876796/" title="douban" target="_self">
+					<i class="fa fa-douban"></i>
+					</a>
+				</li>
+			
+		
+	</ul>
+</div>
+    <div class="copyright">
+        <span>
+            
+            
+            
+                © 至善 2015 - 2020
+            
+        </span>
+    </div>
+    <div class="power">
+        <span>
+            Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/CaiChenghan/iLiKE">iLiKE Theme</a>
+        </span>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <!--page counter part-->
+<script>
+function addCount (Counter) {
+    url=$('.article-date').attr('href').trim();
+    title = $('.article-title').text().trim();
+    var query = new AV.Query(Counter);
+    //use url as unique idnetfication
+    query.equalTo("url",url);
+    query.find({
+        success: function(results) {
+            if (results.length>0) {
+                var counter=results[0];
+                counter.fetchWhenSave(true); //get recent result
+                counter.increment("time");
+                counter.save();
+            } else {
+                var newcounter=new Counter();
+                newcounter.set("title",title);
+                newcounter.set("url",url);
+                newcounter.set("time",1);
+                newcounter.save(null,{
+                    success: function(newcounter) {
+                        //alert('New object created');
+                    }, error: function(newcounter,error) {
+                        alert('Failed to create');
+                    }
+                })
+            }
+        },
+        error: function(error) {
+            //find null is not a error
+            alert('Error:'+error.code+" "+error.message);
+        }
+    });
+}
+$(function() {
+    var Counter=AV.Object.extend("Counter");
+    //only increse visit counting when intering a page
+    if ($('.article-title').length == 1) {
+       addCount(Counter);
+    }
+    var query=new AV.Query(Counter);
+    query.descending("time");
+    // the sum of popular posts
+    query.limit(10); 
+    query.find({
+        success: function(results) {
+                for(var i=0;i<results.length;i++) {
+                    var counter=results[i];
+                    title=counter.get("title");
+                    url=counter.get("url");
+                    time=counter.get("time");
+                    // add to the popularlist widget
+                    showcontent=title+" ("+time+")";
+                    //notice the "" in href
+                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                }
+            },
+        error: function(error) {
+            alert("Error:"+error.code+" "+error.message);
+        }
+    });
+});
+</script>
+</div>
+    </div>
+</body>
+</html>
