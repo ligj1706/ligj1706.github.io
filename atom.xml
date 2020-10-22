@@ -3,11 +3,11 @@
   <title>至善的网志</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://ligj1706.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://ligj1706.github.io/"/>
   <updated>2020-10-22T12:48:37.704Z</updated>
-  <id>http://example.com/</id>
+  <id>http://ligj1706.github.io/</id>
   
   <author>
     <name>至善</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>农业随人均GDP变化的三大规律</title>
-    <link href="http://example.com/2020/10/11/2020-10-11-GDP-to-angriculture/"/>
-    <id>http://example.com/2020/10/11/2020-10-11-GDP-to-angriculture/</id>
+    <link href="http://ligj1706.github.io/2020/10/11/2020-10-11-GDP-to-angriculture/"/>
+    <id>http://ligj1706.github.io/2020/10/11/2020-10-11-GDP-to-angriculture/</id>
     <published>2020-10-11T10:48:08.000Z</published>
     <updated>2020-10-22T12:48:37.704Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="大农业" scheme="http://example.com/categories/%E5%A4%A7%E5%86%9C%E4%B8%9A/"/>
+    <category term="大农业" scheme="http://ligj1706.github.io/categories/%E5%A4%A7%E5%86%9C%E4%B8%9A/"/>
     
     
-    <category term="大农业" scheme="http://example.com/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/"/>
+    <category term="大农业" scheme="http://ligj1706.github.io/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/"/>
     
-    <category term="行业观察" scheme="http://example.com/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"/>
+    <category term="行业观察" scheme="http://ligj1706.github.io/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"/>
     
   </entry>
   
   <entry>
     <title>重要的并不是工具本身</title>
-    <link href="http://example.com/2020/10/09/2020-10-09-Excel-learn/"/>
-    <id>http://example.com/2020/10/09/2020-10-09-Excel-learn/</id>
+    <link href="http://ligj1706.github.io/2020/10/09/2020-10-09-Excel-learn/"/>
+    <id>http://ligj1706.github.io/2020/10/09/2020-10-09-Excel-learn/</id>
     <published>2020-10-09T03:01:07.000Z</published>
     <updated>2020-10-11T11:29:53.229Z</updated>
     
@@ -63,14 +63,14 @@
     
     
     
-    <category term="职场技能" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/"/>
+    <category term="职场技能" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/"/>
     
   </entry>
   
   <entry>
     <title>自主、责任与选择—自主掌控人生的力量</title>
-    <link href="http://example.com/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/"/>
-    <id>http://example.com/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/</id>
+    <link href="http://ligj1706.github.io/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/"/>
+    <id>http://ligj1706.github.io/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/</id>
     <published>2020-10-03T01:09:35.000Z</published>
     <updated>2020-10-11T03:26:02.979Z</updated>
     
@@ -85,18 +85,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="认知科学" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="动机" scheme="http://example.com/tags/%E5%8A%A8%E6%9C%BA/"/>
+    <category term="动机" scheme="http://ligj1706.github.io/tags/%E5%8A%A8%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>从小白到专家的技能养成</title>
-    <link href="http://example.com/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/"/>
-    <id>http://example.com/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/</id>
+    <link href="http://ligj1706.github.io/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/"/>
+    <id>http://ligj1706.github.io/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/</id>
     <published>2020-09-20T00:13:18.000Z</published>
     <updated>2020-10-11T10:50:14.863Z</updated>
     
@@ -111,16 +111,16 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="职场习惯" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/"/>
+    <category term="职场习惯" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/"/>
     
   </entry>
   
   <entry>
     <title>提升认知水平的三点方法</title>
-    <link href="http://example.com/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/"/>
-    <id>http://example.com/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/</id>
+    <link href="http://ligj1706.github.io/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/"/>
+    <id>http://ligj1706.github.io/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/</id>
     <published>2020-08-24T11:26:37.000Z</published>
     <updated>2020-10-11T11:27:26.768Z</updated>
     
@@ -138,16 +138,16 @@
     
     
     
-    <category term="认知" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
     
-    <category term="职场思考" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
+    <category term="职场思考" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>动机！动机！动机！</title>
-    <link href="http://example.com/2020/08/05/2020-08-05-motivation-motivation-motivation/"/>
-    <id>http://example.com/2020/08/05/2020-08-05-motivation-motivation-motivation/</id>
+    <link href="http://ligj1706.github.io/2020/08/05/2020-08-05-motivation-motivation-motivation/"/>
+    <id>http://ligj1706.github.io/2020/08/05/2020-08-05-motivation-motivation-motivation/</id>
     <published>2020-08-05T03:07:13.000Z</published>
     <updated>2020-10-11T10:49:54.241Z</updated>
     
@@ -165,18 +165,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="认知科学" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="行动" scheme="http://example.com/tags/%E8%A1%8C%E5%8A%A8/"/>
+    <category term="行动" scheme="http://ligj1706.github.io/tags/%E8%A1%8C%E5%8A%A8/"/>
     
   </entry>
   
   <entry>
     <title>养猪领域信息源</title>
-    <link href="http://example.com/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/"/>
-    <id>http://example.com/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/</id>
+    <link href="http://ligj1706.github.io/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/"/>
+    <id>http://ligj1706.github.io/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/</id>
     <published>2020-07-18T11:35:32.000Z</published>
     <updated>2020-10-11T11:38:06.791Z</updated>
     
@@ -191,14 +191,14 @@
     
     
     
-    <category term="信息源" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/"/>
+    <category term="信息源" scheme="http://ligj1706.github.io/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>节点、关系与网络</title>
-    <link href="http://example.com/2020/06/27/2020-06-27-Nodes-relationships-and-network/"/>
-    <id>http://example.com/2020/06/27/2020-06-27-Nodes-relationships-and-network/</id>
+    <link href="http://ligj1706.github.io/2020/06/27/2020-06-27-Nodes-relationships-and-network/"/>
+    <id>http://ligj1706.github.io/2020/06/27/2020-06-27-Nodes-relationships-and-network/</id>
     <published>2020-06-27T03:09:56.000Z</published>
     <updated>2020-10-11T10:49:44.881Z</updated>
     
@@ -215,16 +215,16 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="开智正典" scheme="http://example.com/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/"/>
+    <category term="开智正典" scheme="http://ligj1706.github.io/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/"/>
     
   </entry>
   
   <entry>
     <title>心流：最优体验、自得其乐与意义追寻</title>
-    <link href="http://example.com/2020/06/26/2020-06-26-flows/"/>
-    <id>http://example.com/2020/06/26/2020-06-26-flows/</id>
+    <link href="http://ligj1706.github.io/2020/06/26/2020-06-26-flows/"/>
+    <id>http://ligj1706.github.io/2020/06/26/2020-06-26-flows/</id>
     <published>2020-06-26T03:13:20.000Z</published>
     <updated>2020-10-11T10:49:28.284Z</updated>
     
@@ -240,20 +240,20 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="职场习惯" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/"/>
+    <category term="职场习惯" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/"/>
     
-    <category term="认知科学" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="心流" scheme="http://example.com/tags/%E5%BF%83%E6%B5%81/"/>
+    <category term="心流" scheme="http://ligj1706.github.io/tags/%E5%BF%83%E6%B5%81/"/>
     
   </entry>
   
   <entry>
     <title>情绪不是你对世界的反映，情绪是你建构的世界</title>
-    <link href="http://example.com/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/"/>
-    <id>http://example.com/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/</id>
+    <link href="http://ligj1706.github.io/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/"/>
+    <id>http://ligj1706.github.io/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/</id>
     <published>2020-06-06T03:15:09.000Z</published>
     <updated>2020-10-11T11:25:49.653Z</updated>
     
@@ -270,18 +270,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="认知科学" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="情绪" scheme="http://example.com/tags/%E6%83%85%E7%BB%AA/"/>
+    <category term="情绪" scheme="http://ligj1706.github.io/tags/%E6%83%85%E7%BB%AA/"/>
     
   </entry>
   
   <entry>
     <title>商业活动最基本的三个要素</title>
-    <link href="http://example.com/2020/05/27/2020-05-27-three_basic_elements_of_business%20activities/"/>
-    <id>http://example.com/2020/05/27/2020-05-27-three_basic_elements_of_business%20activities/</id>
+    <link href="http://ligj1706.github.io/2020/05/27/2020-05-27-three_basic_elements_of_business%20activities/"/>
+    <id>http://ligj1706.github.io/2020/05/27/2020-05-27-three_basic_elements_of_business%20activities/</id>
     <published>2020-05-27T11:23:46.000Z</published>
     <updated>2020-10-11T11:24:29.176Z</updated>
     
@@ -297,14 +297,14 @@
     
     
     
-    <category term="职场思考" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
+    <category term="职场思考" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>迟早都会挂掉，为何不选择酷的方式呢</title>
-    <link href="http://example.com/2020/05/22/2020-05-22-Movie_notes/"/>
-    <id>http://example.com/2020/05/22/2020-05-22-Movie_notes/</id>
+    <link href="http://ligj1706.github.io/2020/05/22/2020-05-22-Movie_notes/"/>
+    <id>http://ligj1706.github.io/2020/05/22/2020-05-22-Movie_notes/</id>
     <published>2020-05-22T11:22:28.000Z</published>
     <updated>2020-10-12T13:37:44.771Z</updated>
     
@@ -319,16 +319,16 @@
     
     
     
-    <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
+    <category term="杂谈" scheme="http://ligj1706.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="影评" scheme="http://example.com/tags/%E5%BD%B1%E8%AF%84/"/>
+    <category term="影评" scheme="http://ligj1706.github.io/tags/%E5%BD%B1%E8%AF%84/"/>
     
   </entry>
   
   <entry>
     <title>优雅的解决问题</title>
-    <link href="http://example.com/2020/05/04/2020-05-04-Solve_the_problem_elegantly/"/>
-    <id>http://example.com/2020/05/04/2020-05-04-Solve_the_problem_elegantly/</id>
+    <link href="http://ligj1706.github.io/2020/05/04/2020-05-04-Solve_the_problem_elegantly/"/>
+    <id>http://ligj1706.github.io/2020/05/04/2020-05-04-Solve_the_problem_elegantly/</id>
     <published>2020-05-04T11:19:30.000Z</published>
     <updated>2020-10-11T11:21:31.982Z</updated>
     
@@ -344,18 +344,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="开智正典" scheme="http://example.com/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/"/>
+    <category term="开智正典" scheme="http://ligj1706.github.io/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/"/>
     
-    <category term="职场技能" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/"/>
+    <category term="职场技能" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/"/>
     
   </entry>
   
   <entry>
     <title>生活不易，积极一点</title>
-    <link href="http://example.com/2020/05/03/2020-05-03-Active_life/"/>
-    <id>http://example.com/2020/05/03/2020-05-03-Active_life/</id>
+    <link href="http://ligj1706.github.io/2020/05/03/2020-05-03-Active_life/"/>
+    <id>http://ligj1706.github.io/2020/05/03/2020-05-03-Active_life/</id>
     <published>2020-05-03T11:17:52.000Z</published>
     <updated>2020-10-11T11:18:43.351Z</updated>
     
@@ -370,18 +370,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="认知科学" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="情绪" scheme="http://example.com/tags/%E6%83%85%E7%BB%AA/"/>
+    <category term="情绪" scheme="http://ligj1706.github.io/tags/%E6%83%85%E7%BB%AA/"/>
     
   </entry>
   
   <entry>
     <title>谁信任你，你信任谁?</title>
-    <link href="http://example.com/2020/04/19/2020-04-19-Who_trust_you/"/>
-    <id>http://example.com/2020/04/19/2020-04-19-Who_trust_you/</id>
+    <link href="http://ligj1706.github.io/2020/04/19/2020-04-19-Who_trust_you/"/>
+    <id>http://ligj1706.github.io/2020/04/19/2020-04-19-Who_trust_you/</id>
     <published>2020-04-19T11:14:14.000Z</published>
     <updated>2020-10-11T11:14:55.662Z</updated>
     
@@ -397,18 +397,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="职场思考" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
+    <category term="职场思考" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
     
-    <category term="社会智慧" scheme="http://example.com/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/"/>
+    <category term="社会智慧" scheme="http://ligj1706.github.io/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/"/>
     
   </entry>
   
   <entry>
     <title>一本接地气的小册子</title>
-    <link href="http://example.com/2020/03/30/2020-03-30-about-the-world/"/>
-    <id>http://example.com/2020/03/30/2020-03-30-about-the-world/</id>
+    <link href="http://ligj1706.github.io/2020/03/30/2020-03-30-about-the-world/"/>
+    <id>http://ligj1706.github.io/2020/03/30/2020-03-30-about-the-world/</id>
     <published>2020-03-30T12:30:28.000Z</published>
     <updated>2020-10-13T11:22:54.036Z</updated>
     
@@ -424,18 +424,18 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="职场思考" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
+    <category term="职场思考" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
     
-    <category term="职场技术" scheme="http://example.com/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/"/>
+    <category term="职场技术" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>理性和感性的大脑</title>
-    <link href="http://example.com/2020/03/30/2020-03-30-Rational_and_emotional_brain/"/>
-    <id>http://example.com/2020/03/30/2020-03-30-Rational_and_emotional_brain/</id>
+    <link href="http://ligj1706.github.io/2020/03/30/2020-03-30-Rational_and_emotional_brain/"/>
+    <id>http://ligj1706.github.io/2020/03/30/2020-03-30-Rational_and_emotional_brain/</id>
     <published>2020-03-30T11:12:22.000Z</published>
     <updated>2020-10-11T11:13:05.344Z</updated>
     
@@ -451,16 +451,16 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="认知" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
     
   </entry>
   
   <entry>
     <title>从Web抓取信息</title>
-    <link href="http://example.com/2020/03/26/2020-03-26-Grabbing_information_from_the_web/"/>
-    <id>http://example.com/2020/03/26/2020-03-26-Grabbing_information_from_the_web/</id>
+    <link href="http://ligj1706.github.io/2020/03/26/2020-03-26-Grabbing_information_from_the_web/"/>
+    <id>http://ligj1706.github.io/2020/03/26/2020-03-26-Grabbing_information_from_the_web/</id>
     <published>2020-03-26T11:10:53.000Z</published>
     <updated>2020-10-11T11:11:38.706Z</updated>
     
@@ -476,16 +476,16 @@
     
     
     
-    <category term="爬虫" scheme="http://example.com/tags/%E7%88%AC%E8%99%AB/"/>
+    <category term="爬虫" scheme="http://ligj1706.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
-    <category term="数据分析" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>三段论杂感</title>
-    <link href="http://example.com/2020/03/06/2020-03-26-good-strategy-bad-strategy/"/>
-    <id>http://example.com/2020/03/06/2020-03-26-good-strategy-bad-strategy/</id>
+    <link href="http://ligj1706.github.io/2020/03/06/2020-03-26-good-strategy-bad-strategy/"/>
+    <id>http://ligj1706.github.io/2020/03/06/2020-03-26-good-strategy-bad-strategy/</id>
     <published>2020-03-06T13:39:46.000Z</published>
     <updated>2020-10-13T11:20:36.294Z</updated>
     
@@ -502,16 +502,16 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="投资" scheme="http://example.com/tags/%E6%8A%95%E8%B5%84/"/>
+    <category term="投资" scheme="http://ligj1706.github.io/tags/%E6%8A%95%E8%B5%84/"/>
     
   </entry>
   
   <entry>
     <title>你我都是认知吝啬鬼</title>
-    <link href="http://example.com/2020/02/29/2020-02-29-We-are-cognitive-mister/"/>
-    <id>http://example.com/2020/02/29/2020-02-29-We-are-cognitive-mister/</id>
+    <link href="http://ligj1706.github.io/2020/02/29/2020-02-29-We-are-cognitive-mister/"/>
+    <id>http://ligj1706.github.io/2020/02/29/2020-02-29-We-are-cognitive-mister/</id>
     <published>2020-02-29T03:18:34.000Z</published>
     <updated>2020-10-11T10:49:11.718Z</updated>
     
@@ -527,11 +527,11 @@
     
     
     
-    <category term="读书笔记" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="认知" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
     
-    <category term="认知科学" scheme="http://example.com/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
   </entry>
   
