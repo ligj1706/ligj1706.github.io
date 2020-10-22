@@ -1,479 +1,762 @@
 <!DOCTYPE html>
-
-<html lang="zh-CN">
+<html lang=zh>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="utf-8">
   
-  <title> [ 至善的网志 ]</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
   
-    <!-- stylesheets list from config.yml -->
-    
-      <link rel="stylesheet" href="/css/iLiKE.css">
-    
+  
+  <title>Hexo</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="至善的网志">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="至善的网志">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="至善">
+<meta property="article:tag" content="大农业 计算机技术 认知科学 投资">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="至善的网志" type="application/atom+xml">
   
   
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
   
-  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
-    <script id="leancloud">
-      AV.init({
-          appId: "6E5zTbTljdUbVW2WkXPsXGJk-gzGzoHsz",
-          appKey: "0vsyDKfNpeSECAI70J794ugv"
-      });
-    </script>
+  
+<link rel="stylesheet" href="/css/style.css">
 
+  
+  
+  
+  
 <meta name="generator" content="Hexo 5.2.0"></head>
-<body>
-    <div class="header">
-        <div class="container">
-    <div class="menu">
-      <div class="menu-left">
-        <a href="/">
-          <img src="/favicon.ico"></img>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/cofess" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
         </a>
+        <h2 id="name" class="hidden-xs hidden-sm">昵称</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
       </div>
-      <div class="menu-right">
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
         
-          
-          
-          
-          
-          
-          
-          <a href=".">首页</a>
         
-          
-          
-          
-          
-          
-          
-          <a href="archives">归档</a>
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
         
-          
-          
-          
-          
-          
-          
-          <a href="tags">标签</a>
         
-          
-          
-          
-          
-          
-          
-          <a href="about">关于</a>
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
         
-      </div>
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
     </div>
 </div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0/" rel="tag">人物传记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" rel="tag">信息源</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E6%96%B0/" rel="tag">创新</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/" rel="tag">创造思维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%9C%BA/" rel="tag">动机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" rel="tag">大农业</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E8%AF%84/" rel="tag">影评</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%B5%81/" rel="tag">心流</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%B4%A2%E6%80%9D%E7%BB%B4/" rel="tag">理财思维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/" rel="tag">社会智慧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA/" rel="tag">职场</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" rel="tag">职场思考</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/" rel="tag">职场技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" rel="tag">行业观察</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E5%8A%A8/" rel="tag">行动</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">39</span></li></ul>
     </div>
-    <div class="container">
-        
-
-
-
-  <div class="article">
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/10/11/2020-10-11-GDP-to-angriculture/">
-            农业随人均GDP变化的三大规律
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>人均GDP不同增长阶段，一个国家农产品需求结构、农业从业人员结构、农业发展的主要矛盾及农业对经济的贡献呈现不同的特点。一般而言，人均GDP3000美元，1万美元是两个非常重要的参考指标。
-农产品需求结构随人均GDP的变化规律人口的增长或者人均收入的增加都会导致农产品需求结构发生变化。一般情况下，人口...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-10-11
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/10/09/2020-10-09-Excel-learn/">
-            重要的并不是工具本身
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>这本书《为什么精英都是Excel控》建议倒着看，先看附录，然后看最后一章的案例，接着在从第一章看。
-学习Excel重要的不是Excel本身，而是Excel背后体现的思维。
-重要的并不是操作技术首先来做道面试题。
-123456789101112你是一家汉堡店的经营者，汉堡店生意很好，下个月的销售量预计...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-10-09
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/10/03/2020-10-03-choice_the_power_to_control_life independently/">
-            自主、责任与选择—自主掌控人生的力量
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>他很完美，但是在别人的眼中，他是一个完美的人。从小成绩优异，工作顺利，听父母的话，老师夸奖，老板欣赏，周围的人都很羡慕他的生活。
-但是，他并不快乐。已近中年的他，越来越不知道自己想要什么，在工作、家庭的压力下，失去了方向。他发现，这不是真实的自我，只是在做别人眼中的自我，没有自主感、胜任感和归属感。...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-10-03
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/">
-            从小白到专家的技能养成
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>专家和新手的区别在哪里？每一个程序员都有一个梦想，成为领域内的专家。专家和新手有什么不同？1970年代左右，德雷福斯兄弟通过对飞行员、国际著名象棋大师的技能习得进行研究，他们发现专家和新手在技能调用上有很大的不同，并提出了德雷福斯模型（Dreyfus model），把从新手到专家分为新手、高级新手、...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-09-20
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/">
-            提升认知水平的三点方法
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>人
-通过各种途径认识牛人：
-
-通过社交媒体、行业会议等，主动认识各个领域的高手，最好能够建立信任关系。建立关系时，脸皮一定要厚，尊重、给别人提供你的价值，或者让别人看到你的潜力。注意，向别人请教时，一定要有所准备，问出高质量的问题。
-
-阅读牛人的传记，从中得到启发，具体参见阳志平-寻找牛人与智者清单...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-08-24
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/08/05/2020-08-05-motivation-motivation-motivation/">
-            动机！动机！动机！
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>
-一切动机背后都是未被满足的需求。
-
-1人类为什么做他们所做的事？这是动机心理学研究的核心问题。动机（motivation）是指有目标的指引，为个体行为提供方向和动力的行为。
-对动机的关注，最早可追溯到古希腊时期，苏格拉底、柏拉图等思想家认为人的行为受享乐主义所驱使。到了20世纪初，以弗洛伊德、赫尔...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-08-05
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/">
-            养猪领域信息源
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>种猪目前种猪集中在五大公司手中，对育种市场呈垄断状态。2017年，前三大企业市场占有率为47%，PIC高达23%，位于第二和第三的Topigs Norvsin和DanAvl，分别占据14%和10%。
-PIC、Dan Avl、Topigs Norsvin。该三家为美国公司。
-DNA Genetics、...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-07-18
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/06/27/2020-06-27-Nodes-relationships-and-network/">
-            节点、关系与网络
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>001 
-想象一下，把你的社交网络、中国所有的航班线路图、疫情的传染路径、某个社会热点的传播路径、某种观点在大众中的普及程度等抽象为由节点和边组成的网络。这些复杂网络是否有相同的规律？
-针对类似这样的问题，还真有科学家进行研究。最早的研究是1736年关于柯尼斯堡七桥问题的研究（见下图），提出了图论。...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-06-27
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/06/26/2020-06-26-flows/">
-            心流：最优体验、自得其乐与意义追寻
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>工作和休闲，你会选择哪一种活动？如果你知道米哈里·契克森米哈赖(Mihaly Csikszentmihaly）关于心流的研究，你多半会回答工作相比休闲更能产生最有体验。
-为什么会这样？工作可以主动确定目标和接受信息，而很多时候休闲是无意识的，被动接触信息，没有明确的目标。其次，工作中战胜挑战带来的快...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-06-26
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/">
-            情绪不是你对世界的反映，情绪是你建构的世界
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>第一次知道Lisa 的情绪建构论，是在开智学堂的一场直播，当时也没细想这个大家熟知的情绪观点有何区别。在头脑中，一直认为下面观点是正确的：
-
-不同时间内同一情绪指纹是相似的；不同年龄、性别、个性、文化背景的人同一情绪指纹也是相似的；同一情绪有相似的情绪指纹。
-面部表情可以客观准确的评估情绪；不管哪里...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-06-06
-            </span>
-          
-        </div>
-      </div>
-    
   </div>
 
 
-
-    <div class="pagenator">
     
-        <a class="extend prev-none">上一页</a>
-    
-    
-
-    
-        
-            <span class="extend page-item page-item-select">1</span>
-        
-        
-    
-        
-        
-            <a class="extend page-item page-item-normal" href="/page/2">2</a>
-        
-    
-        
-        
-            <a class="extend page-item page-item-normal" href="/page/3">3</a>
-        
-    
-        
-        
-            <a class="extend page-item page-item-normal" href="/page/4">4</a>
-        
-    
-        
-        
-            <a class="extend page-item page-item-normal" href="/page/5">5</a>
-        
-    
-        
-        
-            <a class="extend page-item page-item-normal" href="/page/6">6</a>
-        
-    
-    
-    
-    
-        <a class="extend next" href="/page/2">下一页</a>
-    
-</div>
-
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0/" style="font-size: 13px;">人物传记</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" style="font-size: 13.13px;">信息源</a> <a href="/tags/%E5%88%9B%E6%96%B0/" style="font-size: 13.38px;">创新</a> <a href="/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/" style="font-size: 13px;">创造思维</a> <a href="/tags/%E5%8A%A8%E6%9C%BA/" style="font-size: 13px;">动机</a> <a href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" style="font-size: 13.13px;">大农业</a> <a href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" style="font-size: 13.75px;">开智正典</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 13.13px;">影评</a> <a href="/tags/%E5%BF%83%E6%B5%81/" style="font-size: 13px;">心流</a> <a href="/tags/%E6%83%85%E7%BB%AA/" style="font-size: 13.13px;">情绪</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 13.25px;">投资</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" style="font-size: 13px;">数据分析</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 13.38px;">杂谈</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%B4%A2%E6%80%9D%E7%BB%B4/" style="font-size: 13px;">理财思维</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/" style="font-size: 13.13px;">社会智慧</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 13px;">编程</a> <a href="/tags/%E8%81%8C%E5%9C%BA/" style="font-size: 13px;">职场</a> <a href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" style="font-size: 13.5px;">职场习惯</a> <a href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" style="font-size: 13.88px;">职场思考</a> <a href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/" style="font-size: 13.38px;">职场技术</a> <a href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" style="font-size: 13.13px;">职场技能</a> <a href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" style="font-size: 13px;">行业观察</a> <a href="/tags/%E8%A1%8C%E5%8A%A8/" style="font-size: 13.38px;">行动</a> <a href="/tags/%E8%AE%A4%E7%9F%A5/" style="font-size: 13.63px;">认知</a> <a href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" style="font-size: 13.75px;">认知科学</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 14px;">读书笔记</a>
     </div>
-    <div class="footer">
-        <div class="container">
-    <div class="social">
-	<ul class="social-list">
-		
-			
-				
-				
-				<li>
-					<a href="mailto:ligj1706@gmail.com" title="email" target="_blank">
-					<i class="fa fa-email"></i>
-					</a>
-				</li>
-			
-		
-			
-		
-			
-				
-				<li>
-					<a href="https://twitter.com/JohnLee024" title="twitter" target="_self">
-					<i class="fa fa-twitter"></i>
-					</a>
-				</li>
-			
-		
-			
-				
-				<li>
-					<a href="https://github.com/ligj1706" title="github" target="_self">
-					<i class="fa fa-github"></i>
-					</a>
-				</li>
-			
-		
-			
-				
-				<li>
-					<a href="https://www.douban.com/people/147876796/" title="douban" target="_self">
-					<i class="fa fa-douban"></i>
-					</a>
-				</li>
-			
-		
-	</ul>
-</div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/10/11/2020-10-11-GDP-to-angriculture/" class="title">农业随人均GDP变化的三大规律</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-10-11T10:48:08.000Z" itemprop="datePublished">2020-10-11</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/10/09/2020-10-09-Excel-learn/" class="title">重要的并不是工具本身</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-10-09T03:01:07.000Z" itemprop="datePublished">2020-10-09</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/" class="title">自主、责任与选择—自主掌控人生的力量</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-10-03T01:09:35.000Z" itemprop="datePublished">2020-10-03</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/" class="title">从小白到专家的技能养成</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-20T00:13:18.000Z" itemprop="datePublished">2020-09-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/" class="title">提升认知水平的三点方法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-08-24T11:26:37.000Z" itemprop="datePublished">2020-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  <main class="main" role="main">
+  
+  <div class="content article-list">
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/11/2020-10-11-GDP-to-angriculture/">农业随人均GDP变化的三大规律</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/10/11/2020-10-11-GDP-to-angriculture/" class="article-date">
+	  <time datetime="2020-10-11T10:48:08.000Z" itemprop="datePublished">10月 11</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" rel="tag">大农业</a>, <a class="article-tag-link-link" href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" rel="tag">行业观察</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/10/11/2020-10-11-GDP-to-angriculture/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/09/2020-10-09-Excel-learn/">重要的并不是工具本身</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/10/09/2020-10-09-Excel-learn/" class="article-date">
+	  <time datetime="2020-10-09T03:01:07.000Z" itemprop="datePublished">10月 9</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/10/09/2020-10-09-Excel-learn/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/">自主、责任与选择—自主掌控人生的力量</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/" class="article-date">
+	  <time datetime="2020-10-03T01:09:35.000Z" itemprop="datePublished">10月 3</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%8A%A8%E6%9C%BA/" rel="tag">动机</a>, <a class="article-tag-link-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/">从小白到专家的技能养成</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/" class="article-date">
+	  <time datetime="2020-09-20T00:13:18.000Z" itemprop="datePublished">9月 20</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/">提升认知水平的三点方法</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/" class="article-date">
+	  <time datetime="2020-08-24T11:26:37.000Z" itemprop="datePublished">8月 24</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" rel="tag">职场思考</a>, <a class="article-tag-link-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/05/2020-08-05-motivation-motivation-motivation/">动机！动机！动机！</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/08/05/2020-08-05-motivation-motivation-motivation/" class="article-date">
+	  <time datetime="2020-08-05T03:07:13.000Z" itemprop="datePublished">8月 5</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%A1%8C%E5%8A%A8/" rel="tag">行动</a>, <a class="article-tag-link-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/08/05/2020-08-05-motivation-motivation-motivation/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/">养猪领域信息源</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/" class="article-date">
+	  <time datetime="2020-07-18T11:35:32.000Z" itemprop="datePublished">7月 18</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" rel="tag">信息源</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/27/2020-06-27-Nodes-relationships-and-network/">节点、关系与网络</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/06/27/2020-06-27-Nodes-relationships-and-network/" class="article-date">
+	  <time datetime="2020-06-27T03:09:56.000Z" itemprop="datePublished">6月 27</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/06/27/2020-06-27-Nodes-relationships-and-network/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/26/2020-06-26-flows/">心流：最优体验、自得其乐与意义追寻</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/06/26/2020-06-26-flows/" class="article-date">
+	  <time datetime="2020-06-26T03:13:20.000Z" itemprop="datePublished">6月 26</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%BF%83%E6%B5%81/" rel="tag">心流</a>, <a class="article-tag-link-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a>, <a class="article-tag-link-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/06/26/2020-06-26-flows/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/">情绪不是你对世界的反映，情绪是你建构的世界</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/" class="article-date">
+	  <time datetime="2020-06-06T03:15:09.000Z" itemprop="datePublished">6月 6</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a>, <a class="article-tag-link-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+  </div>
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev disabled">
+                <a href="javascript:;">
+                    <i class="icon icon-angle-left"></i>
+                    上一页
+                </a>
+            </li>
+            
+            
+            <li class="next">
+                <a href="/page/2/">
+                    下一页
+                    <i class="icon icon-angle-right"></i>
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 1 of 6</div>
+        </div>
+    </nav>
+    
+ 
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
     <div class="copyright">
-        <span>
-            
-            
-            
-                © 至善 2015 - 2020
-            
-        </span>
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
     </div>
-    <div class="power">
-        <span>
-            Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/CaiChenghan/iLiKE">iLiKE Theme</a>
-        </span>
-    </div>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-    <!--page counter part-->
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script>
-function addCount (Counter) {
-    url=$('.article-date').attr('href').trim();
-    title = $('.article-title').text().trim();
-    var query = new AV.Query(Counter);
-    //use url as unique idnetfication
-    query.equalTo("url",url);
-    query.find({
-        success: function(results) {
-            if (results.length>0) {
-                var counter=results[0];
-                counter.fetchWhenSave(true); //get recent result
-                counter.increment("time");
-                counter.save();
-            } else {
-                var newcounter=new Counter();
-                newcounter.set("title",title);
-                newcounter.set("url",url);
-                newcounter.set("time",1);
-                newcounter.save(null,{
-                    success: function(newcounter) {
-                        //alert('New object created');
-                    }, error: function(newcounter,error) {
-                        alert('Failed to create');
-                    }
-                })
-            }
-        },
-        error: function(error) {
-            //find null is not a error
-            alert('Error:'+error.code+" "+error.message);
-        }
-    });
-}
-$(function() {
-    var Counter=AV.Object.extend("Counter");
-    //only increse visit counting when intering a page
-    if ($('.article-title').length == 1) {
-       addCount(Counter);
-    }
-    var query=new AV.Query(Counter);
-    query.descending("time");
-    // the sum of popular posts
-    query.limit(10); 
-    query.find({
-        success: function(results) {
-                for(var i=0;i<results.length;i++) {
-                    var counter=results[i];
-                    title=counter.get("title");
-                    url=counter.get("url");
-                    time=counter.get("time");
-                    // add to the popularlist widget
-                    showcontent=title+" ("+time+")";
-                    //notice the "" in href
-                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
-                }
-            },
-        error: function(error) {
-            alert("Error:"+error.code+" "+error.message);
-        }
-    });
-});
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-</div>
-    </div>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
 </body>
 </html>
