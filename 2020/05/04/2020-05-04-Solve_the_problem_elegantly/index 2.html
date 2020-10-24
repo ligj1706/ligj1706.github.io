@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>优雅的解决问题 | 至善的网志</title>
+  <meta name="description" content="01《改变》这本书最大的亮点是，通过群论和类逻辑理论两个抽象层次很高的理论，展示了如何解决问题。 群论（The Theory of Groups）：群的代数结构，由埃瓦里斯特·伽罗瓦在19世纪30年代开创，可以简单把特征归纳为：  由具有某一共同特征的成员所组成的集合。可以是数字、事件、物体等任何可以放在一起的东西。  成员可以以各种不同的顺序来组合，组合的结果仍然相同。  每个群皆包括一个恒等成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优雅的解决问题">
+<meta property="og:url" content="http://ligj1706.github.io/2020/05/04/2020-05-04-Solve_the_problem_elegantly/index.html">
+<meta property="og:site_name" content="至善的网志">
+<meta property="og:description" content="01《改变》这本书最大的亮点是，通过群论和类逻辑理论两个抽象层次很高的理论，展示了如何解决问题。 群论（The Theory of Groups）：群的代数结构，由埃瓦里斯特·伽罗瓦在19世纪30年代开创，可以简单把特征归纳为：  由具有某一共同特征的成员所组成的集合。可以是数字、事件、物体等任何可以放在一起的东西。  成员可以以各种不同的顺序来组合，组合的结果仍然相同。  每个群皆包括一个恒等成">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gjzmhabu2lj30yg0diaae.jpg">
+<meta property="article:published_time" content="2020-05-04T11:19:30.000Z">
+<meta property="article:modified_time" content="2020-10-23T14:11:35.445Z">
+<meta property="article:author" content="至善">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="开智正典">
+<meta property="article:tag" content="职场技能">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gjzmhabu2lj30yg0diaae.jpg">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://ligj1706.github.io/2020/05/04/2020-05-04-Solve_the_problem_elegantly/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="至善的网志" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://ligj1706.github.io/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">至善的网志</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"> </h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>大学之道，在明明德，在亲民，在止于至善。知止而后有定，定而后能静，静而后能安，安而后能虑，虑而后能得。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0/" rel="tag">人物传记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" rel="tag">信息源</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E6%96%B0/" rel="tag">创新</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/" rel="tag">创造思维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%9C%BA/" rel="tag">动机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" rel="tag">大农业</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E8%AF%84/" rel="tag">影评</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%B5%81/" rel="tag">心流</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/" rel="tag">社会智慧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" rel="tag">职场思考</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/" rel="tag">职场技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" rel="tag">行业观察</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E5%8A%A8/" rel="tag">行动</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">40</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-2020-05-04-Solve_the_problem_elegantly" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      优雅的解决问题
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/05/04/2020-05-04-Solve_the_problem_elegantly/" class="article-date">
+	  <time datetime="2020-05-04T11:19:30.000Z" itemprop="datePublished">2020-05-04</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a>, <a class="article-tag-link-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/04/2020-05-04-Solve_the_problem_elegantly/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="01"><a href="#01" class="headerlink" title="01"></a>01</h2><p>《改变》这本书最大的亮点是，通过群论和类逻辑理论两个抽象层次很高的理论，展示了如何解决问题。</p>
+<p>群论（The Theory of Groups）：群的代数结构，由埃瓦里斯特·伽罗瓦在19世纪30年代开创，可以简单把特征归纳为：</p>
+<ul>
+<li><p>由具有某一共同特征的成员所组成的集合。可以是数字、事件、物体等任何可以放在一起的东西。</p>
+</li>
+<li><p>成员可以以各种不同的顺序来组合，组合的结果仍然相同。</p>
+</li>
+<li><p>每个群皆包括一个恒等成员，任何一个其他成员与该恒等成员组合，其结果仍为该成员自身。比如任何数加零，仍然为其本身，声响组成的群，恒等成员为寂静。</p>
+</li>
+<li><p>在符合群概念的系统中，每一成员皆有其相对或相反成员，跟他的相反成员组合，结果为恒等成员。</p>
+</li>
+</ul>
+<p>逻辑类型理论（The Theory of Logical Types）：为了解决悖论, 并实现逻辑主义论题, 罗素提出了逻辑类型论，分为简单类型论和分支类型论两部分。“凡涉及某集合的全部成员者，必定不是该集合的一员。”</p>
+<blockquote>
+<p>逻辑类型理论对于种类之内，也就是其成员之间发生的事，并不在意，但是这一理论提供我们一个架构，以考虑成员和种类的关系，以及由某一逻辑层次转到更高一个层次所蕴涵的奇特改变。</p>
+</blockquote>
+<p>从逻辑类型理论的推论，可以得到两个重要结论：</p>
+<ul>
+<li><p>逻辑是分层次的，必须严格区分，以免矛盾混淆。</p>
+</li>
+<li><p>从一个层次转到较高一个层次（即从成员转到种类），需要一个换挡、一种跳跃、一个超越或转型——一言以蔽之，即一种“变”。这在理论上和实践上都极端重要，因为“变”提供了一个跳出系统之外的方式。</p>
+</li>
+</ul>
+<h2 id="02"><a href="#02" class="headerlink" title="02"></a>02</h2><p>根据前面的两个理论，把需要解决的问题理解为一个系统，根据在系统内还是在系统外发生的改变，可以把改变分为第一序改变和第二序改变。</p>
+<p>系统成员内部发生改变，而系统本身维持不变，<strong>称为第一序改变（first-order change）。</strong></p>
+<p>改变系统本身，转到完全不同状态的改变，<strong>称为第二序改变（scond-order change），</strong>在实际问题上不合常理或逻辑，是悖论。</p>
+<p>比如中国历史上，通过各种措施调和土地兼并，维护封建统治，是第一序改变。但当矛盾无法调和时，通过战争改朝换代来解决。但如果放在更大的历史视角去看，历朝统治并没有改变社会性质，朝代的更替都是第一序改变。</p>
+<p><strong>第一和第二序改变，有点类似质变和量变的关系。</strong>比如下面9个点，使用四条直线连接在一起，如果不突破正方形的限制，永远都无法完成。在正方形内没有改变任何结构，而右图改变结构，问题迎刃而解。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gjzmhabu2lj30yg0diaae.jpg" alt="image-20200501210702100"> </p>
+<p>第一序改变是基于一般常理的解决方案，而第二序改变的方法往往是超出常理的、令人不可思议的，改变过程中，存在着令人困惑不解和矛盾的元素。</p>
+<h2 id="03"><a href="#03" class="headerlink" title="03"></a>03</h2><p>当陷入僵局、停顿、死结等局面时，经常见到三种处理不当的方式：</p>
+<ul>
+<li><p>企图否定问题存在方式解决问题：应当有所行动，但却不行动。</p>
+</li>
+<li><p>企图改变某种困难，但该问题无法改变或者根本不存在：不应当采取行动，却采取行动。</p>
+</li>
+<li><p>试图以原有方法改变局面，但当前局面必须站在更高层面才得以解决，或者原有方法足以解决困难，却试图从系统层面解决：在错误的层次上解决问题。</p>
+</li>
+</ul>
+<p>为此有一些解决问题的方法。</p>
+<h3 id="解决问题的步骤"><a href="#解决问题的步骤" class="headerlink" title="解决问题的步骤"></a>解决问题的步骤</h3><p>Step1：清晰的界定问题。</p>
+<p>Step2：分析到目前为止已企图运用过的解决对策。此步骤的目的是，知道哪些解决问题的方法是不可行的，同时辨别维持问题不变的因素并设法改变。</p>
+<p>Step3：清晰的表达想要解决的问题，表达清楚解决问题想要达到的目的。</p>
+<p>Step4：形成与执行一个能产生这一改变的计划。</p>
+<p>正如维特根斯坦强调，一个问题最值得探究的是“问题”本身。在解决实际问题中，过多的关注”why”分析假设性原因充满学院派气息，无法解决实际问题，而关注”what”了解此时此地情况，更利于解决实际问题。</p>
+<h3 id="重新框定问题"><a href="#重新框定问题" class="headerlink" title="重新框定问题"></a>重新框定问题</h3><p>通过重新框定达到第二序改变：</p>
+<blockquote>
+<p>重新框定强调将一个客体（事物）的种类成员改变成另一相等有效的种类成员；或者说，将这一新的种类成员引进我们的概念中，并使我们能用这一种新的观点去理解事物。</p>
+</blockquote>
+<p>同样一件事情，从不同的角度解释，得到的结果会有所不同，比如“只有半杯水”与“还有半杯水”的例子。旧瓶装新酒，换个文字描述同样的商品（5%含脂，95%脱脂），人们会采取不一样的行动。</p>
+<p>通过重新框定有效性在于：</p>
+<ul>
+<li><p>针对客体，人类会建构出一整套符现实的秩序，这些秩序并非客体本身所具有的，取决于这些事物对我们的意义和价值程度。</p>
+</li>
+<li><p>一旦某一客体被概念化成为既定种类的实体，很难同时概念化为另一实体。比如，椅子不可能变成桌子，椅子用来坐的属性定义后，很难改变。</p>
+</li>
+<li><p>一旦觉知到另一种类成分后，便很难轻易的回到先前对实体的设定中。比如“9点问题”。</p>
+</li>
+</ul>
+<h2 id="04"><a href="#04" class="headerlink" title="04"></a>04</h2><p>解决问题的方法很多，没有对错之分，但有高下之分。</p>
+<p>遵循几条最基本的原则，如群论和类逻辑理论，遵循最小省力法则，跳出框架，优雅的解决问题。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://ligj1706.github.io/2020/05/04/2020-05-04-Solve_the_problem_elegantly/" title="优雅的解决问题" target="_blank" rel="external">http://ligj1706.github.io/2020/05/04/2020-05-04-Solve_the_problem_elegantly/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://ligj1706.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://ligj1706.github.io/" target="_blank"><span class="text-dark">至善的网志</span><small class="ml-1x"> </small></a></h3>
+        <div>聚焦大农业、计算机技术、认知科学及投资四大领域。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/05/22/2020-05-22-Movie_notes/" title="迟早都会挂掉，为何不选择酷的方式呢"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/05/03/2020-05-03-Active_life/" title="生活不易，积极一点"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

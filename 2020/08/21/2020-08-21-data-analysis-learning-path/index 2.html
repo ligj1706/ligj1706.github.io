@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>数据分析学习路径 | 至善的网志</title>
+  <meta name="description" content="1.定义、分析步骤、运用场景定义：数据分析是对信息进行搜集，提取有用的信息形成结论，辅助决策的过程。 数据分析包括以下步骤：  明确数据分析的目的&#x2F;需求设计 数据采集 数据清洗和储存 数据分析 形成业务报告 作出判断及采取行动  数据分析运用场景众多，数据分析是决策判断及采取行动的工具。一切皆数据，商业决策中、生活中均会用到数据分析。具体包括：  商业：产品分析、运营分析、市场分析、用户画像、战略">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分析学习路径">
+<meta property="og:url" content="http://ligj1706.github.io/2020/08/21/2020-08-21-data-analysis-learning-path/index.html">
+<meta property="og:site_name" content="至善的网志">
+<meta property="og:description" content="1.定义、分析步骤、运用场景定义：数据分析是对信息进行搜集，提取有用的信息形成结论，辅助决策的过程。 数据分析包括以下步骤：  明确数据分析的目的&#x2F;需求设计 数据采集 数据清洗和储存 数据分析 形成业务报告 作出判断及采取行动  数据分析运用场景众多，数据分析是决策判断及采取行动的工具。一切皆数据，商业决策中、生活中均会用到数据分析。具体包括：  商业：产品分析、运营分析、市场分析、用户画像、战略">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://uploader.shimo.im/f/iJOSnilhdeU303S9.jpg!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/nER1686mBrEkoPpe.png!thumbnail">
+<meta property="article:published_time" content="2020-08-21T02:51:37.000Z">
+<meta property="article:modified_time" content="2020-10-24T02:58:06.406Z">
+<meta property="article:author" content="至善">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploader.shimo.im/f/iJOSnilhdeU303S9.jpg!thumbnail">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://ligj1706.github.io/2020/08/21/2020-08-21-data-analysis-learning-path/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="至善的网志" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://ligj1706.github.io/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">至善的网志</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"> </h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>大学之道，在明明德，在亲民，在止于至善。知止而后有定，定而后能静，静而后能安，安而后能虑，虑而后能得。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0/" rel="tag">人物传记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" rel="tag">信息源</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E6%96%B0/" rel="tag">创新</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/" rel="tag">创造思维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%9C%BA/" rel="tag">动机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" rel="tag">大农业</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E8%AF%84/" rel="tag">影评</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%B5%81/" rel="tag">心流</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/" rel="tag">社会智慧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" rel="tag">职场思考</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/" rel="tag">职场技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" rel="tag">行业观察</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E5%8A%A8/" rel="tag">行动</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">40</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89%E3%80%81%E5%88%86%E6%9E%90%E6%AD%A5%E9%AA%A4%E3%80%81%E8%BF%90%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">1.定义、分析步骤、运用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%81%8C%E4%BD%8D%E5%8F%8A%E5%B2%97%E4%BD%8D"><span class="toc-number">2.</span> <span class="toc-text">2.数据分析职位及岗位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%B7%A5%E4%BD%9C%E8%81%8C%E8%B4%A3"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 工作职责</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E4%BB%BB%E8%81%8C%E8%A6%81%E6%B1%82"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 任职要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 常用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E4%BB%BB%E8%81%8C%E6%9D%A1%E4%BB%B6%E6%80%BB%E7%BB%93"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 任职条件总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%83%BD%E5%8A%9B%E8%BF%9B%E9%98%B6"><span class="toc-number">3.</span> <span class="toc-text">3.能力进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E7%9A%84%E8%81%8C%E4%BD%8D%E6%99%8B%E5%8D%87"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 数据分析师的职位晋升</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%B1%E4%B8%9A%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90"><span class="toc-number">4.</span> <span class="toc-text">4.数据分析就业市场分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%B0%B1%E4%B8%9A%E6%96%B9%E5%90%91"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 就业方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%88%91%E9%80%82%E5%90%88%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 我适合的方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92"><span class="toc-number">5.</span> <span class="toc-text">5.数据分析学习计划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 学习的学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%88%86%E4%B8%BA%E5%9B%9B%E4%B8%AA%E5%B1%82%E6%AC%A1%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.2.</span> <span class="toc-text">5.1 数据分析分为四个层次学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E5%86%85%E5%AE%B9%E7%BB%86%E5%88%86"><span class="toc-number">5.3.</span> <span class="toc-text">5.2 掌握的知识内容细分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-1-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E7%AF%87"><span class="toc-number">5.3.1.</span> <span class="toc-text">5.2.1 数据分析工具使用篇</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-2-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E6%8A%80%E8%83%BD%E7%AF%87"><span class="toc-number">5.3.2.</span> <span class="toc-text">5.2.2 数据库应用技能篇</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-3-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7%E7%AF%87"><span class="toc-number">5.3.3.</span> <span class="toc-text">5.2.3 数据可视化工具篇</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-4-%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AF%87"><span class="toc-number">5.3.4.</span> <span class="toc-text">5.2.4 常用统计基础知识篇</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-5-%E5%95%86%E4%B8%9A%E5%88%86%E6%9E%90%E7%9F%A5%E8%AF%86%E7%AF%87"><span class="toc-number">5.3.5.</span> <span class="toc-text">5.2.5 商业分析知识篇</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-6-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.3.6.</span> <span class="toc-text">5.2.6 机器学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="toc-number">5.3.7.</span> <span class="toc-text">5.3 学习模块设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">5.4.</span> <span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ChangeLog"><span class="toc-number">5.5.</span> <span class="toc-text">ChangeLog</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-2020-08-21-data-analysis-learning-path" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据分析学习路径
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/08/21/2020-08-21-data-analysis-learning-path/" class="article-date">
+	  <time datetime="2020-08-21T02:51:37.000Z" itemprop="datePublished">2020-08-21</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/08/21/2020-08-21-data-analysis-learning-path/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="1-定义、分析步骤、运用场景"><a href="#1-定义、分析步骤、运用场景" class="headerlink" title="1.定义、分析步骤、运用场景"></a>1.定义、分析步骤、运用场景</h2><p><strong>定义：</strong>数据分析是对信息进行搜集，提取有用的信息形成结论，辅助决策的过程。</p>
+<p><strong>数据分析包括以下步骤：</strong></p>
+<ul>
+<li>明确数据分析的目的/需求设计</li>
+<li>数据采集</li>
+<li>数据清洗和储存</li>
+<li>数据分析</li>
+<li>形成业务报告</li>
+<li>作出判断及采取行动</li>
+</ul>
+<p>数据分析运用场景众多，数据分析是决策判断及采取行动的工具。一切皆数据，商业决策中、生活中均会用到数据分析。具体包括：</p>
+<ul>
+<li>商业：产品分析、运营分析、市场分析、用户画像、战略分析、组织变革</li>
+<li>日常生活：买房、投资</li>
+</ul>
+<h2 id="2-数据分析职位及岗位"><a href="#2-数据分析职位及岗位" class="headerlink" title="2.数据分析职位及岗位"></a>2.数据分析职位及岗位</h2><h3 id="2-1-工作职责"><a href="#2-1-工作职责" class="headerlink" title="2.1 工作职责"></a>2.1 工作职责</h3><ul>
+<li><p>挖掘商业信息，支持决策；</p>
+</li>
+<li><p>数据流程，指标设计，数据产品设计；</p>
+</li>
+<li><p>商业问题量化分析，影响业务；</p>
+</li>
+<li><p>数据看板检测；</p>
+</li>
+<li><p>数据平台的研发、运维和升级；</p>
+</li>
+<li><p>数据分析与建模；</p>
+</li>
+<li><p>数据整理；</p>
+</li>
+<li><p>算法平台构建；</p>
+</li>
+</ul>
+<h3 id="2-2-任职要求"><a href="#2-2-任职要求" class="headerlink" title="2.2 任职要求"></a>2.2 任职要求</h3><ul>
+<li>数据分析技术能力<ul>
+<li>熟练掌握数据分析基本套路</li>
+<li>熟练数据分析工具的使用</li>
+<li>逻辑分析能力</li>
+</ul>
+</li>
+<li>书面表达能力<ul>
+<li>文档写作能力</li>
+</ul>
+</li>
+<li>沟通表达能力<ul>
+<li>日常工作时间50%用于沟通，30%用于分析报告写作</li>
+<li>把数据反映的故事讲解出来</li>
+<li>用获得的数据与团队沟通</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-常用工具"><a href="#2-3-常用工具" class="headerlink" title="2.3 常用工具"></a>2.3 常用工具</h3><ul>
+<li>数据库管理工具：SQL-MySQL、NoSQL-MongDB；</li>
+<li>数据分析工具：Excel、python、SPSS、Matlab；</li>
+<li>数据可视化工具：Tebleau、Power BI;</li>
+<li>大数据处理工具：Hive、Spark等。</li>
+</ul>
+<p><img src="https://uploader.shimo.im/f/iJOSnilhdeU303S9.jpg!thumbnail" alt="img"></p>
+<h3 id="2-4-任职条件总结"><a href="#2-4-任职条件总结" class="headerlink" title="2.4 任职条件总结"></a>2.4 任职条件总结</h3><ul>
+<li>数据分析需要掌握知识点和技术实现方式，「统计基础」「机器学习」「R」「Excel」「SQL」「Power BI」足以让你得到一个主流公司初级的数据分析师面试的机会。</li>
+</ul>
+<h2 id="3-能力进阶"><a href="#3-能力进阶" class="headerlink" title="3.能力进阶"></a>3.能力进阶</h2><h3 id="3-1-数据分析师的职位晋升"><a href="#3-1-数据分析师的职位晋升" class="headerlink" title="3.1 数据分析师的职位晋升"></a>3.1 数据分析师的职位晋升</h3><img src="https://uploader.shimo.im/f/nER1686mBrEkoPpe.png!thumbnail" alt="img" style="zoom:67%;" />
+
+<h2 id="4-数据分析就业市场分析"><a href="#4-数据分析就业市场分析" class="headerlink" title="4.数据分析就业市场分析"></a>4.数据分析就业市场分析</h2><h3 id="4-1-就业方向"><a href="#4-1-就业方向" class="headerlink" title="4.1 就业方向"></a>4.1 就业方向</h3><ul>
+<li><p>数据分析师、数据工程师和机器学习算法工程师：</p>
+<ul>
+<li>数据分析师：偏向于数据的商业化运用</li>
+<li>数据工程师：偏向数据架构及数据储存，数据平台的运维</li>
+<li>机器学习算法工程师：偏向于数据建模，算法平台的构建</li>
+</ul>
+<p>三个就业方向，越往下越偏向于数据这种技术，越往上，越偏向于在商业上的运用。不管哪一个方向，都离不开对业务个技术的理解，只不过偏向点有所不同。人才需求呈现金字塔，数据分析师的人才需求量最大。</p>
+</li>
+<li><p>企业管理咨询、战投部门、财务分析等方向</p>
+</li>
+</ul>
+<p>数据分析师三个岗位珙桐之处都是需要和数据联系，但可以划分为便业务型和偏技术型两种。</p>
+<h3 id="4-2-我适合的方向"><a href="#4-2-我适合的方向" class="headerlink" title="4.2 我适合的方向"></a>4.2 我适合的方向</h3><ul>
+<li>必须记住：数据分析是辅助商业决策的工具，目的是用工具更好的在行业中创造价值；</li>
+<li>工作也是学习的一部分，工作的目的在于创造，不要忽视创造；</li>
+<li>数据分析结合商学，和行业深度绑定发展。</li>
+</ul>
+<h2 id="5-数据分析学习计划"><a href="#5-数据分析学习计划" class="headerlink" title="5.数据分析学习计划"></a>5.数据分析学习计划</h2><h3 id="5-1-学习的学习"><a href="#5-1-学习的学习" class="headerlink" title="5.1 学习的学习"></a>5.1 学习的学习</h3><ul>
+<li>创造第一：一上来就写代码和运用工具；</li>
+<li>注意实操场景，业务驱动数据分析；</li>
+<li>模仿最厉害的专家：使用的工具、交流的社区、看的书、日常关注的信息等；</li>
+</ul>
+<h3 id="5-1-数据分析分为四个层次学习"><a href="#5-1-数据分析分为四个层次学习" class="headerlink" title="5.1 数据分析分为四个层次学习"></a>5.1 数据分析分为四个层次学习</h3><ul>
+<li>入门数据分析，掌握常用数据分析工具的使用；</li>
+<li>掌握数据分析必备方法论，提升数据分析能力；</li>
+<li>建立分析思维，探索分析应对之道；</li>
+<li>建立算法思维、数据探索能力，提升商业探索能力。</li>
+</ul>
+<h3 id="5-2-掌握的知识内容细分"><a href="#5-2-掌握的知识内容细分" class="headerlink" title="5.2 掌握的知识内容细分"></a>5.2 掌握的知识内容细分</h3><h4 id="5-2-1-数据分析工具使用篇"><a href="#5-2-1-数据分析工具使用篇" class="headerlink" title="5.2.1 数据分析工具使用篇"></a>5.2.1 数据分析工具使用篇</h4><p><a href="https://link.zhihu.com/?target=https://www.coursera.org/specializations/python">Python for Everybody | Coursera</a></p>
+<p><a href="https://link.zhihu.com/?target=https://www.udemy.com/learning-python-for-data-analysis-and-visualization/">Learning Python for Data Analysis and Visualization</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400">廖雪峰python课</a></p>
+<p>《数据挖掘技术》</p>
+<h4 id="5-2-2-数据库应用技能篇"><a href="#5-2-2-数据库应用技能篇" class="headerlink" title="5.2.2 数据库应用技能篇"></a>5.2.2 数据库应用技能篇</h4><p><a href="https://link.zhihu.com/?target=https://www.coursera.org/learn/analytics-mysql">Managing Big Data with MySQL | Coursera</a></p>
+<p><a href="https://link.zhihu.com/?target=https://www.w3cschool.cn/sql/">SQL教程_w3cschool</a></p>
+<h4 id="5-2-3-数据可视化工具篇"><a href="#5-2-3-数据可视化工具篇" class="headerlink" title="5.2.3 数据可视化工具篇"></a>5.2.3 数据可视化工具篇</h4><p><a href="https://link.zhihu.com/?target=https://www.coursera.org/learn/analytics-tableau%23">Data Visualization and Communication with Tableau | Coursera</a></p>
+<p><a href="https://link.zhihu.com/?target=https://www.tableau.com/learn/training">Tableau Training &amp; Tutorials</a> </p>
+<p><a href="https://link.zhihu.com/?target=https://www.tableau.com/learn/live-training-resources">Live Training Resources</a></p>
+<p><a href="https://link.zhihu.com/?target=https://www.tableau.com/learn/webinars">Webinars</a></p>
+<h4 id="5-2-4-常用统计基础知识篇"><a href="#5-2-4-常用统计基础知识篇" class="headerlink" title="5.2.4 常用统计基础知识篇"></a>5.2.4 常用统计基础知识篇</h4><p><a href="https://link.zhihu.com/?target=https://www.coursera.org/learn/basic-statistics">Basic Statistics | Coursera</a></p>
+<h4 id="5-2-5-商业分析知识篇"><a href="#5-2-5-商业分析知识篇" class="headerlink" title="5.2.5 商业分析知识篇"></a>5.2.5 商业分析知识篇</h4><ul>
+<li>战略思维/产品思维/市场营销思维</li>
+<li>信息分析能力/论证分析能力</li>
+</ul>
+<h4 id="5-2-6-机器学习"><a href="#5-2-6-机器学习" class="headerlink" title="5.2.6 机器学习"></a>5.2.6 机器学习</h4><p><a href="https://link.zhihu.com/?target=https://www.coursera.org/learn/machine-learning">Machine Learning | Coursera</a></p>
+<p>Hadoop、storm、spark</p>
+<h4 id="5-3-学习模块设计"><a href="#5-3-学习模块设计" class="headerlink" title="5.3 学习模块设计"></a>5.3 学习模块设计</h4><p>最小知识：Excel及数据可视化、基本的商业分析套路和模型。</p>
+<p>常用统计模型—-&gt;Excel—-&gt;MySQL—-&gt;Tableau。</p>
+<p>最多3个月搞定所有工作，通过CDA的考试。</p>
+<table>
+<thead>
+<tr>
+<th>知识类别</th>
+<th>知识模块</th>
+<th>学习资源</th>
+<th>课程性质</th>
+<th>学习方式</th>
+<th>学习情况</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据分析思维篇</td>
+<td>数据分析常用的思维模型</td>
+<td>《精益数据分析》《数据实践之美》《深入浅出数据分析》</td>
+<td>必修</td>
+<td>了解</td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>数据分析常用模型</td>
+<td>《谁说菜鸟不会数据分析》1</td>
+<td>必修</td>
+<td></td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>常用的四十个战略思维模型</td>
+<td></td>
+<td>选修</td>
+<td>商业实践</td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>数据分析案例解析</td>
+<td>《数据化管理：洞悉零售及电子商务运营》</td>
+<td>选修</td>
+<td>商业实践</td>
+<td></td>
+</tr>
+<tr>
+<td>统计学知识篇</td>
+<td>统计学思维</td>
+<td>《统计学七支柱》《深入浅出统计学》《商务与经济统计》</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>统计概念及常用统计量</td>
+<td>《概率论与数理统计》-</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>常用统计模型</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Excel技能养成篇</td>
+<td>表格设计的原则；数据处理、筛选、</td>
+<td>《Excel数据分析思维、技术与实践》《和秋叶一起学Excel》</td>
+<td>必修</td>
+<td></td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>函数及公式（Vlookup）</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>数据透视表/VBA程序开发</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>Excel实现数据可视化</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td>完成</td>
+</tr>
+<tr>
+<td></td>
+<td>XX业务数据分析</td>
+<td>《高效商业分析——Excel建模与决策》</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据库技能篇</td>
+<td>数据库基本结构（查增删改）</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>SQL及MySQL</td>
+<td>《MySQL必知必会》及官方教程</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>数据库数据获取方式</td>
+<td></td>
+<td>选修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>XX数据库实战课程</td>
+<td>《网站分析实战》</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pyhon使用篇</td>
+<td>python从入门到精通</td>
+<td>《利用Python进行数据分析》《python编程从入门到实践》</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Numpy入门到精通</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Pandas入门到精通</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Matplotib入门到精通</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>python统计分析</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>python网络爬虫</td>
+<td></td>
+<td>必修</td>
+<td>商业实战</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>python实现办公自动化</td>
+<td></td>
+<td>必修</td>
+<td>案例实战</td>
+<td></td>
+</tr>
+<tr>
+<td>数据可视化篇</td>
+<td>数据可视化原则、入门及工具</td>
+<td>《数据之美——一本书学会可视化设计》《数据可视化之美》</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Excel实现数据可视化</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Tableau数据分析</td>
+<td>《人人都是数据分析师：Tableau应用实战》</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Python 实现数据可视化</td>
+<td></td>
+<td>选修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>经典数据可视化案例拆解</td>
+<td>《数据可视化(40位数据设计师访谈录)》</td>
+<td>必修</td>
+<td>案例解析</td>
+<td></td>
+</tr>
+<tr>
+<td>机器学习入门篇</td>
+<td>基本思想，算法分类、算法库</td>
+<td></td>
+<td>选修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>无监督学习与聚类算法</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>商业能力养成篇</td>
+<td>商学入门</td>
+<td>《智能商业》</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>产业知识入门到精通</td>
+<td>和君产业书单</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>战略知识入门到精通</td>
+<td>和君战略书单及王丰/曾乔课程</td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>招股书阅读</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>游学、访谈</td>
+<td></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>数据分析全景地图-三节课</p>
+<p>数据分析课程-开课吧</p>
+<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20200821 完成课程设计初稿</p>
+<p>20200823 增补学习计划</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://ligj1706.github.io/2020/08/21/2020-08-21-data-analysis-learning-path/" title="数据分析学习路径" target="_blank" rel="external">http://ligj1706.github.io/2020/08/21/2020-08-21-data-analysis-learning-path/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://ligj1706.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://ligj1706.github.io/" target="_blank"><span class="text-dark">至善的网志</span><small class="ml-1x"> </small></a></h3>
+        <div>聚焦大农业、计算机技术、认知科学及投资四大领域。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/" title="提升认知水平的三点方法"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/08/05/2020-08-05-motivation-motivation-motivation/" title="动机！动机！动机！"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
