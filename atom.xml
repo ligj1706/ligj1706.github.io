@@ -6,7 +6,7 @@
   <link href="http://ligj1706.github.io/atom.xml" rel="self"/>
   
   <link href="http://ligj1706.github.io/"/>
-  <updated>2020-11-03T10:58:22.055Z</updated>
+  <updated>2020-11-08T01:44:30.906Z</updated>
   <id>http://ligj1706.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据分析基础（一）</title>
+    <link href="http://ligj1706.github.io/2020/11/08/2020-11-08-data-analyse-basic/"/>
+    <id>http://ligj1706.github.io/2020/11/08/2020-11-08-data-analyse-basic/</id>
+    <published>2020-11-08T01:43:36.000Z</published>
+    <updated>2020-11-08T01:44:30.906Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="数据分析的步骤"><a href="#数据分析的步骤" class="headerlink" title="数据分析的步骤"></a>数据分析的步骤</h3><p>数据分析可分为数据采集、数据挖掘、数据可视化三个步骤。</p><p>但在完成上面三个步骤之前，还有一个基本的东西需要完成：明确数据分析的目标。</p><p>如果数据分析的目标不清晰，数据不能够用来解决问题，那么数据就没有任何价值。所以数据分析的完整步骤应该是：明确数据分析目的——数据采集——数据整理（清洗、变换、分类等）——数据挖掘（建模）——数据可视化——数据更迭。</p><h3 id="数据分析常用的方法"><a href="#数据分析常用的方法" class="headerlink" title="数据分析常用的方法"></a>数据分析常用的方法</h3><p>分类：</p><p>聚类：</p><p>预测：</p><p>关联分析：</p><p>国际权威的学术组织 ICDM （the IEEE International Conference on Data Mining）评选出了十大经典的算法。</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkhilfpmf9j30wc06gt9e.jpg" alt="image-20201108093634021"></p><table><thead><tr><th align="left">算法</th><th>常用方法</th></tr></thead><tbody><tr><td align="left">分类算法</td><td>C4.5，朴素贝叶斯（Naive Bayes），SVM，KNN，Adaboost，CART</td></tr><tr><td align="left">聚类算法</td><td>K-Means，EM</td></tr><tr><td align="left">关联分析</td><td>Apriori</td></tr><tr><td align="left">连接分析</td><td>PageRank</td></tr></tbody></table><h3 id="用户画像建模"><a href="#用户画像建模" class="headerlink" title="用户画像建模"></a>用户画像建模</h3><p>获客、粘客、留客</p><h3 id="数据变换的常用方法"><a href="#数据变换的常用方法" class="headerlink" title="数据变换的常用方法"></a>数据变换的常用方法</h3><p>为什么要进行数据变换？把数据变换成统一的标准，方便后续围绕数据进行计算。</p><p>常用的数据变换方法有：</p><ul><li>数据平滑：去除数据中的噪声，将连续数据离散化。这里可以采用分箱、聚类和回归的方式进行数据平滑；</li><li>数据聚集：对数据进行汇总，在 SQL 中有一些聚集函数可以供我们操作，比如 Max() 反馈某个字段的数值最大值，Sum() 返回某个字段的数值总和；</li><li>数据概化：将数据由较低的概念抽象成为较高的概念，减少数据复杂度，即用更高的概念替代更低的概念；</li><li>数据规范化：使属性数据按比例缩放，这样就将原来的数值映射到一个新的特定区域中。常用的方法有最小—最大规范化、Z—score 规范化、按小数定标规范化等，我会在后面给你讲到这些方法的使用；</li><li>属性构造：构造出新的属性并添加到属性集中。这里会用到特征工程的知识，因为通过属性与属性的连接构造新的属性，其实就是特征工程。比如说，数据表中统计每个人的英语、语文和数学成绩，你可以构造一个“总和”这个属性，来作为新属性。这样“总和”这个属性就可以用到后续的数据挖掘计算中。</li></ul><p>常用的规范方法：</p><ul><li>min-max：将数据归一化到[0,1]区间。新数值 =（原数值 - 极小值）/（极大值 - 极小值）</li><li>z-score：将数据规范到0均值，1方差的标准正态分布上，减少老师说的百分制80和500分制80的数据值差异问题。新数值 =（原数值 - 均值）/ 标准差</li><li>小数定标规范化：将数据转化为[-1,1]区间中。</li></ul><h3 id="数据分析案例"><a href="#数据分析案例" class="headerlink" title="数据分析案例"></a>数据分析案例</h3><p>航空公司客户价值分析</p><p>家用电器用户行为与事件识别</p><p>电子商务网站用户行为分析与服务推荐</p><p>电商产品评论数据情感分析</p><p>财政收入影响因素及预测模型</p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>数据分析实战45讲｜极课时间</p><p>《python数据分析与挖掘实战》张良均等著</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;数据分析的步骤&quot;&gt;&lt;a href=&quot;#数据分析的步骤&quot; class=&quot;headerlink&quot; title=&quot;数据分析的步骤&quot;&gt;&lt;/a&gt;数据分析的步骤&lt;/h3&gt;&lt;p&gt;数据分析可分为数据采集、数据挖掘、数据可视化三个步骤。&lt;/p&gt;
+&lt;p&gt;但在完成上面三个步骤之前，还有</summary>
+      
+    
+    
+    
+    
+    <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>2020中国农业500强解读</title>
@@ -65,9 +92,9 @@
     
     <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
-    
     <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
     
   </entry>
   
@@ -96,9 +123,9 @@
     
     <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
-    
     <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
     
   </entry>
   
@@ -122,9 +149,9 @@
     
     <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
-    
     <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
     
   </entry>
   
@@ -148,9 +175,9 @@
     
     <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
-    
     <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
     
   </entry>
   
@@ -174,9 +201,9 @@
     
     <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
-    
     <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
     
   </entry>
   
@@ -519,29 +546,6 @@
     <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
     <category term="情绪" scheme="http://ligj1706.github.io/tags/%E6%83%85%E7%BB%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>商业活动最基本的三个要素</title>
-    <link href="http://ligj1706.github.io/2020/05/27/2020-05-27-three_basic_elements_of_business%20activities/"/>
-    <id>http://ligj1706.github.io/2020/05/27/2020-05-27-three_basic_elements_of_business%20activities/</id>
-    <published>2020-05-27T11:23:46.000Z</published>
-    <updated>2020-10-11T11:24:29.176Z</updated>
-    
-    <content type="html"><![CDATA[<p>任何一个商业活动，无非三个基本要素：<strong>顾客、产品、供应链</strong>。</p><p>顾客：顾客是谁，顾客需要什么产品，顾客如何才能够感知和接受产品<br>产品：满足顾客需要的产品是什么，产品如何设计，产品开发思路，产品开发的成本<br>供应链：如何把产品运送到顾客那里，如何以合适的时间和成本组织供应链。</p><p>工业制造为例，顾客是下游的采购商，产品是XX工业品，企业需要根据需求设计或者生产，需要预测采购商的需求量，需要库存，组织货物的发送。</p><p>生鲜电商为例，顾客是小区年轻一族，他们需要安全、便捷、体验感好的产品，顾客对价格敏感性相对较低。分析清楚后，电商公司要思考从哪里找货，如何加工，如何仓储，如何运输等一系列问题。</p><p>再以职业教育行业为例，顾客是希望提升XX方面职业技能，付费能力XX的人，为此需要开发XX产品，需要解决教研设计产品、大规模获取用户的问题。</p><p>当然，实际的商业活动比这个复杂，但离不开这三个基本要素。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;任何一个商业活动，无非三个基本要素：&lt;strong&gt;顾客、产品、供应链&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;顾客：顾客是谁，顾客需要什么产品，顾客如何才能够感知和接受产品&lt;br&gt;产品：满足顾客需要的产品是什么，产品如何设计，产品开发思路，产品开发的成本&lt;br&gt;供应链：如何把产</summary>
-      
-    
-    
-    
-    
-    <category term="职场思考" scheme="http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
