@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>大家买猪肉时关心啥？爬取京东上2000条评论后发现了！ | 妙生的网志</title>
+  <meta name="description" content="背景最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。 下面对网易未央的一款猪肉评论进行抓取，并做简单分析。 技术有限，大部分代码是参考这里的。 网页分析京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。 使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。  第一个网页链接打开后，发现搜索错了，并非是评论储存的地方。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大家买猪肉时关心啥？爬取京东上2000条评论后发现了！">
+<meta property="og:url" content="http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/index.html">
+<meta property="og:site_name" content="妙生的网志">
+<meta property="og:description" content="背景最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。 下面对网易未央的一款猪肉评论进行抓取，并做简单分析。 技术有限，大部分代码是参考这里的。 网页分析京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。 使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。  第一个网页链接打开后，发现搜索错了，并非是评论储存的地方。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdlhrz9vj327c0p47ez.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdy0ejbqj30gw0ea4hn.jpg">
+<meta property="article:published_time" content="2020-11-17T11:20:46.000Z">
+<meta property="article:modified_time" content="2020-11-17T11:27:58.645Z">
+<meta property="article:author" content="至善">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="妙生的网志" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://ligj1706.github.io/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">妙生的网志</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"> </h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>大学之道，在明明德，在亲民，在止于至善。知止而后有定，定而后能静，静而后能安，安而后能虑，虑而后能得。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" rel="tag">信息源</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E6%96%B0/" rel="tag">创新</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/" rel="tag">创造思维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%9C%BA/" rel="tag">动机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%95%86%E4%B8%9A%E6%A1%88%E4%BE%8B/" rel="tag">商业案例</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" rel="tag">大农业</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E8%AF%84/" rel="tag">影评</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%B5%81/" rel="tag">心流</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/" rel="tag">社会智慧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" rel="tag">职场思考</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/" rel="tag">职场技术</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" rel="tag">行业观察</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E5%8A%A8/" rel="tag">行动</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">44</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">网页分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="toc-number">3.</span> <span class="toc-text">代码如下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E7%BB%93%E8%AE%BA"><span class="toc-number">4.</span> <span class="toc-text">分析结论</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-2020-11-17-JD-pig" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      大家买猪肉时关心啥？爬取京东上2000条评论后发现了！
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/11/17/2020-11-17-JD-pig/" class="article-date">
+	  <time datetime="2020-11-17T11:20:46.000Z" itemprop="datePublished">2020-11-17</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="article-tag-link-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a>, <a class="article-tag-link-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/11/17/2020-11-17-JD-pig/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。</p>
+<p>下面对网易未央的一款猪肉评论进行抓取，并做简单分析。</p>
+<p>技术有限，大部分代码是<a target="_blank" rel="noopener" href="https://blog.csdn.net/Q_M_X_D_D_/article/details/104662721">参考这里</a>的。</p>
+<h3 id="网页分析"><a href="#网页分析" class="headerlink" title="网页分析"></a>网页分析</h3><p>京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。</p>
+<p>使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg" alt="image-20201117190100685"></p>
+<p>第一个网页链接打开后，发现搜索错了，并非是评论储存的地方。我们继续往下找，如下图所示的便是商品评论储存的地方了。观察URL，最后一个数字是“1”，表示评论的页数。我们可以通过for循环，爬取需要的数据。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdlhrz9vj327c0p47ez.jpg" alt="image-20201117190532476"></p>
+<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代码参考链接：https://blog.csdn.net/Q_M_X_D_D_/article/details/104662721</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 爬取评论信息</span></span><br><span class="line"> </span><br><span class="line">page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入爬取的结束页码:&#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,page):</span><br><span class="line">    print(<span class="string">&#x27;第%s页开始爬取&#x27;</span>%(i+<span class="number">1</span>))</span><br><span class="line">    url = <span class="string">&#x27;https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId=5461917&amp;score=0&amp;sortType=5&amp;page=0&amp;pageSize=10&amp;isShadowSku=0&amp;fold=1&#x27;</span></span><br><span class="line">    url = url.<span class="built_in">format</span>(i)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://item.jd.com/&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    request = urllib.request.Request(url=url,headers=headers)</span><br><span class="line">    content = urllib.request.urlopen(request).read().decode(<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">    content = content.strip(<span class="string">&#x27;fetchJSON_comment98vv385();&#x27;</span>)</span><br><span class="line">    obj = json.loads(content)</span><br><span class="line">    comments = obj[<span class="string">&#x27;comments&#x27;</span>]</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;京东.text&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,encoding=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> comment <span class="keyword">in</span> comments:</span><br><span class="line">        <span class="comment">#评论时间</span></span><br><span class="line">        <span class="comment"># creationTime = comment[&#x27;creationTime&#x27;]</span></span><br><span class="line">        <span class="comment">#评论人</span></span><br><span class="line">        <span class="comment"># nickname = comment[&#x27;nickname&#x27;]</span></span><br><span class="line">        <span class="comment">#评论内容</span></span><br><span class="line">        contents = comment[<span class="string">&#x27;content&#x27;</span>]</span><br><span class="line">        item = &#123;</span><br><span class="line">            <span class="comment"># &#x27;评论时间&#x27;: creationTime,</span></span><br><span class="line">            <span class="comment"># &#x27;用户&#x27;: nickname,</span></span><br><span class="line">            <span class="string">&#x27;评论内容&#x27;</span>: contents,</span><br><span class="line">        &#125;</span><br><span class="line">        string = <span class="built_in">str</span>(item)</span><br><span class="line">        fp.write(string + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;第%s页完成&#x27;</span> %(i+<span class="number">1</span>))</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    fp.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="分析结论"><a href="#分析结论" class="headerlink" title="分析结论"></a>分析结论</h3><p>因需要分析的是“评论内容”，所以未爬取“评论时间”，“用户”等信息。</p>
+<p>爬取得完后，常规操作是利用Matplotlib、Pandas等进行数据分析及可视化，现在我们用最简单的词频统计工具分析，后面学会了这些工具，在完善。</p>
+<p>此次爬取了200页，总共2000条的评论，通过<a target="_blank" rel="noopener" href="http://www.picdata.cn/picdata/index.php#">图悦</a>分析词评，删除没有意义的“评论内容”，“猪肉”等词语，生成的词云如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdy0ejbqj30gw0ea4hn.jpg" alt="image-20201117191733693"></p>
+<p>从中可以得出用户购买猪肉关注的点：<strong>味道、价格、送货速度、外观、健康、售后服务、服务稳定性。</strong>这些指标在一定程度为生产经营提供了方向性参考，当然还需要进一步把这些指标拆解成具体的行动。</p>
+<p>不足之处：获取的评论数量依然有限，同时只获取了一个产品的评论，用户代表性上较差。等学到了更多新技能后，再来优化：）。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/" title="大家买猪肉时关心啥？爬取京东上2000条评论后发现了！" target="_blank" rel="external">http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://ligj1706.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://ligj1706.github.io/" target="_blank"><span class="text-dark">妙生的网志</span><small class="ml-1x"> </small></a></h3>
+        <div>聚焦乡村产业、认知科学、投资、计算机四大领域。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/11/24/2020-10-24-problem-solving-method/" title="一种通用的问题解决方法"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/11/12/2020-11-11-agricultural-lies/" title="农业的谎言，越早识破越好"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,wechat,facebook,twitter" data-mobile-sites="weibo,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
