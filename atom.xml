@@ -6,7 +6,7 @@
   <link href="http://ligj1706.github.io/atom.xml" rel="self"/>
   
   <link href="http://ligj1706.github.io/"/>
-  <updated>2021-04-11T04:58:04.646Z</updated>
+  <updated>2021-04-12T10:14:34.935Z</updated>
   <id>http://ligj1706.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>决策偏差二：可得性启发式</title>
+    <link href="http://ligj1706.github.io/2021/04/11/2021-04-11-Availability-heuristic/"/>
+    <id>http://ligj1706.github.io/2021/04/11/2021-04-11-Availability-heuristic/</id>
+    <published>2021-04-11T14:34:04.000Z</published>
+    <updated>2021-04-12T10:14:34.935Z</updated>
+    
+    <content type="html"><![CDATA[<p>人们会通过能够想到的例子或者事件的容易程度来评估某类事件发生的频率或概率。</p><p>如果你身边全是本科毕业生，你会得出中国本科毕业生占比很高。你经常在网上看到月薪1万以上的人，会高估中国人均收入。某些公众号写手，先有一个观点，然后找各种证据来证明观点是正确的，读者不仔细辨别，很容易就被他们绕进去。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gpg2w4mhhkj30ws0hwt9d.jpg" alt="image-20210411203003258" style="zoom:50%;" /><p>从大脑中提取储存信息过程中，可能会脑补或者省略关键信息。某个项目，因为政策原因可能被放弃，你在思考应急预案时，会提取之前类似的经历，以此判断事情的严重性，以及应该采取的措施。但是，你错误的使用之前因合作方换新领导，导致项目被放弃的经历，评估当前项目，结果可想而之。</p><p>那么如何避免可得性偏差呢？</p><p>反过来想。这件事情，换个做法会怎么样？如果不做，会怎么样？</p><p>使用金字塔法则。分析问题时，“相互独立，完全穷尽”。</p><p>控制情绪。越是重大的决策（买房、结婚、生孩子、换工作），越是不要在情绪不稳定的时候决定。</p><p>拓展信息渠道。征求领域内专业人士的建议，不要使用头脑中零散的信息、自以为正确的框架，草率的判断。</p><p>2021年4月11日</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;人们会通过能够想到的例子或者事件的容易程度来评估某类事件发生的频率或概率。&lt;/p&gt;
+&lt;p&gt;如果你身边全是本科毕业生，你会得出中国本科毕业生占比很高。你经常在网上看到月薪1万以上的人，会高估中国人均收入。某些公众号写手，先有一个观点，然后找各种证据来证明观点是正确的，读者不仔</summary>
+      
+    
+    
+    
+    
+    <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>《人类网络》阅读杂记</title>
@@ -52,31 +77,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;1-什么是代表性启发式&quot;&gt;&lt;a href=&quot;#1-什么是代表性启发式&quot; class=&quot;headerlink&quot; title=&quot;1 什么是代表性启发式&quot;&gt;&lt;/a&gt;1 什么是代表性启发式&lt;/h2&gt;&lt;p&gt;代表性启发式：1970年代初期提出，是一种常见的认知偏差。人们会通过</summary>
-      
-    
-    
-    
-    
-    <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
-    
-    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>决策偏差二：可得性启发式</title>
-    <link href="http://ligj1706.github.io/2021/04/09/2021-04-11-Availability-heuristic/"/>
-    <id>http://ligj1706.github.io/2021/04/09/2021-04-11-Availability-heuristic/</id>
-    <published>2021-04-09T14:34:04.000Z</published>
-    <updated>2021-04-11T13:43:26.543Z</updated>
-    
-    <content type="html"><![CDATA[<p>人们会通过能够想到的例子或者事件的容易程度来评估某类事件发生的频率或概率。</p><p>如果你身边全是本科毕业生，你会得出中国本科毕业生占比很高。你经常在网上看到月薪1万以上的人，会高估中国人均收入。某些公众号写手，先有一个观点，然后找各种证据来证明观点是正确的，读者不仔细辨别，很容易就被他们绕进去。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gpg2w4mhhkj30ws0hwt9d.jpg" alt="image-20210411203003258" style="zoom:50%;" /><p>从大脑中提取储存信息过程中，可能会脑补或者省略关键信息。某个项目，因为政策原因可能被放弃，你在思考应急预案时，会提取之前类似的经历，以此判断事情的严重性，以及应该采取的措施。但是，你错误的使用之前因合作方换新领导，导致项目被放弃的经历，评估当前项目，结果可想而之。</p><p>那么如何避免可得性偏差呢？</p><p>反过来想。这件事情，换个做法会怎么样？如果不做，会怎么样？</p><p>使用金字塔法则。分析问题时，“相互独立，完全穷尽”。</p><p>控制情绪。越是重大的决策（买房、结婚、生孩子、换工作），越是不要在情绪不稳定的时候决定。</p><p>拓展信息渠道。征求领域内专业人士的建议，不要使用头脑中零散的信息、自以为正确的框架，草率的判断。</p><p>2021年4月11日</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;人们会通过能够想到的例子或者事件的容易程度来评估某类事件发生的频率或概率。&lt;/p&gt;
-&lt;p&gt;如果你身边全是本科毕业生，你会得出中国本科毕业生占比很高。你经常在网上看到月薪1万以上的人，会高估中国人均收入。某些公众号写手，先有一个观点，然后找各种证据来证明观点是正确的，读者不仔</summary>
       
     
     
