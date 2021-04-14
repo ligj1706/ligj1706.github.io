@@ -6,7 +6,7 @@
   <link href="http://ligj1706.github.io/atom.xml" rel="self"/>
   
   <link href="http://ligj1706.github.io/"/>
-  <updated>2021-04-12T10:14:34.935Z</updated>
+  <updated>2021-04-14T15:13:39.436Z</updated>
   <id>http://ligj1706.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>决策偏差三：框架与锚定效应</title>
+    <link href="http://ligj1706.github.io/2021/04/14/2021-04-14-frame/"/>
+    <id>http://ligj1706.github.io/2021/04/14/2021-04-14-frame/</id>
+    <published>2021-04-14T15:12:39.000Z</published>
+    <updated>2021-04-14T15:13:39.436Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="框架效应"><a href="#框架效应" class="headerlink" title="框架效应"></a>框架效应</h2><p>同一个问题，换另外一种说法，人们却会得出完全不一样的判断，这就是受到了框架效应的影响。卡尼曼认为“框架的基本原理是对给定的表达方式的被动接受”。</p><p>通过下面三个例子理解框架效应：</p><p><strong>案例1：</strong></p><p>假设美国正在对抗一场不同寻常的传染病，预期会有600人死亡。在下面两个决策中你，你分别选择哪个方案。</p><p>决策1：方案A，将有200人获救；方案B，有1/3的概率600人全部获救，2/3的概率600人无一人获救。</p><p>决策2：方案C，400人会因疾病丧生；方案D，有1/3的概率没有人因此丧生，2/3的概率所有有会丧失。</p><p>研究发现，对于决策1，多数人选择方案A；对于决策2，多数人选择方案D。但实际上，方案A与方案C等价，方案B与方案D等价。</p><p><strong>案例2：</strong></p><p>某款商品广告语由“含有5%的脂肪”，改“95%脱脂”，结果销量大涨。</p><p><strong>案例3:</strong></p><p>为了刺激学生消费，要发一笔钱给学生。结果发现，向学生告知“这笔钱是学费退款”，比告知学生“这笔钱是额外津贴”消费的少。为什么同一笔钱，换个说法，消费会不一样呢？</p><p>原来是，“学费退款”被大脑编码为“这笔钱本来就是自己的”，消费了心疼；“额外津贴”则被大脑编码为“这笔钱是意外之财”，可以放心消费。学生把钱划分到了不同的「心理账户」之中，使用不同的消费方式。</p><p>如何避免框架效应影响呢？</p><p><strong>思考背后的默认假设和动机。</strong>不断追问“为什么”，直到不能追问。</p><p><strong>反过来想。</strong>跳出框架的好方法是反过来想。“这件事情，不这么做会怎么样？”，“这件事情，换个做法会怎么样？“</p><p>当然，商业、政府、人际交往中，也可以正向的使用框架效应。这里留个题给大家思考——你这里同时有一个坏消息和一个好消息，应该怎么公布，让大家更开心一些？</p><h2 id="锚定效应"><a href="#锚定效应" class="headerlink" title="锚定效应"></a>锚定效应</h2><p>在评估一件事情时，会把先前获得的信息作为一个参照点，后续判断以此为「锚」进行评估，出现锚定效应。</p><p>商品的标价一般以8或者9结尾，如199元，7.89元，9.99元，大脑会自动锚定200元，8元，10元，并计算差价，商品标价巧妙的利用了锚定效应。</p><p><strong>锚定效应如何使用呢？</strong></p><p>反向设锚。”我们的商谈目标是让他们锚定在这个数字上“，在商业谈判中，不要被对方给出的价格影响，抛出一个远低于对方预期的价格，破除对方给的锚，掌握话语权。</p><p>每一次下注和判断，不要受到前面结果的影响。</p><p>感到自己过得不顺时，改变比较对象，焦虑感有可能就消失了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;框架效应&quot;&gt;&lt;a href=&quot;#框架效应&quot; class=&quot;headerlink&quot; title=&quot;框架效应&quot;&gt;&lt;/a&gt;框架效应&lt;/h2&gt;&lt;p&gt;同一个问题，换另外一种说法，人们却会得出完全不一样的判断，这就是受到了框架效应的影响。卡尼曼认为“框架的基本原理是对给定的表</summary>
+      
+    
+    
+    
+    
+    <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+    <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>决策偏差二：可得性启发式</title>
@@ -522,33 +546,6 @@
     <category term="认知" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/"/>
     
     <category term="认知科学" scheme="http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大家买猪肉时关心啥？爬取京东上2000条评论后发现了！</title>
-    <link href="http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/"/>
-    <id>http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/</id>
-    <published>2020-11-17T11:20:46.000Z</published>
-    <updated>2020-11-17T11:27:58.645Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。</p><p>下面对网易未央的一款猪肉评论进行抓取，并做简单分析。</p><p>技术有限，大部分代码是<a href="https://blog.csdn.net/Q_M_X_D_D_/article/details/104662721">参考这里</a>的。</p><h3 id="网页分析"><a href="#网页分析" class="headerlink" title="网页分析"></a>网页分析</h3><p>京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。</p><p>使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg" alt="image-20201117190100685"></p><p>第一个网页链接打开后，发现搜索错了，并非是评论储存的地方。我们继续往下找，如下图所示的便是商品评论储存的地方了。观察URL，最后一个数字是“1”，表示评论的页数。我们可以通过for循环，爬取需要的数据。</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdlhrz9vj327c0p47ez.jpg" alt="image-20201117190532476"></p><h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代码参考链接：https://blog.csdn.net/Q_M_X_D_D_/article/details/104662721</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 爬取评论信息</span></span><br><span class="line"> </span><br><span class="line">page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入爬取的结束页码:&#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,page):</span><br><span class="line">    print(<span class="string">&#x27;第%s页开始爬取&#x27;</span>%(i+<span class="number">1</span>))</span><br><span class="line">    url = <span class="string">&#x27;https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId=5461917&amp;score=0&amp;sortType=5&amp;page=0&amp;pageSize=10&amp;isShadowSku=0&amp;fold=1&#x27;</span></span><br><span class="line">    url = url.<span class="built_in">format</span>(i)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://item.jd.com/&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    request = urllib.request.Request(url=url,headers=headers)</span><br><span class="line">    content = urllib.request.urlopen(request).read().decode(<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">    content = content.strip(<span class="string">&#x27;fetchJSON_comment98vv385();&#x27;</span>)</span><br><span class="line">    obj = json.loads(content)</span><br><span class="line">    comments = obj[<span class="string">&#x27;comments&#x27;</span>]</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;京东.text&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,encoding=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> comment <span class="keyword">in</span> comments:</span><br><span class="line">        <span class="comment">#评论时间</span></span><br><span class="line">        <span class="comment"># creationTime = comment[&#x27;creationTime&#x27;]</span></span><br><span class="line">        <span class="comment">#评论人</span></span><br><span class="line">        <span class="comment"># nickname = comment[&#x27;nickname&#x27;]</span></span><br><span class="line">        <span class="comment">#评论内容</span></span><br><span class="line">        contents = comment[<span class="string">&#x27;content&#x27;</span>]</span><br><span class="line">        item = &#123;</span><br><span class="line">            <span class="comment"># &#x27;评论时间&#x27;: creationTime,</span></span><br><span class="line">            <span class="comment"># &#x27;用户&#x27;: nickname,</span></span><br><span class="line">            <span class="string">&#x27;评论内容&#x27;</span>: contents,</span><br><span class="line">        &#125;</span><br><span class="line">        string = <span class="built_in">str</span>(item)</span><br><span class="line">        fp.write(string + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;第%s页完成&#x27;</span> %(i+<span class="number">1</span>))</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    fp.close()</span><br></pre></td></tr></table></figure><h3 id="分析结论"><a href="#分析结论" class="headerlink" title="分析结论"></a>分析结论</h3><p>因需要分析的是“评论内容”，所以未爬取“评论时间”，“用户”等信息。</p><p>爬取得完后，常规操作是利用Matplotlib、Pandas等进行数据分析及可视化，现在我们用最简单的词频统计工具分析，后面学会了这些工具，在完善。</p><p>此次爬取了200页，总共2000条的评论，通过<a href="http://www.picdata.cn/picdata/index.php#">图悦</a>分析词评，删除没有意义的“评论内容”，“猪肉”等词语，生成的词云如下：</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdy0ejbqj30gw0ea4hn.jpg" alt="image-20201117191733693"></p><p>从中可以得出用户购买猪肉关注的点：<strong>味道、价格、送货速度、外观、健康、售后服务、服务稳定性。</strong>这些指标在一定程度为生产经营提供了方向性参考，当然还需要进一步把这些指标拆解成具体的行动。</p><p>不足之处：获取的评论数量依然有限，同时只获取了一个产品的评论，用户代表性上较差。等学到了更多新技能后，再来优化：）。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。&lt;/p&gt;
-&lt;p&gt;下面对网易未央的一款猪肉评论进行抓取</summary>
-      
-    
-    
-    
-    
-    <category term="编程" scheme="http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="数据分析" scheme="http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-    <category term="python" scheme="http://ligj1706.github.io/tags/python/"/>
     
   </entry>
   
