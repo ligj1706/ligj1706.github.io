@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>如何使用Python操作Excel | 妙生的网志</title>
+  <meta name="description" content="在进行操作前，我们先熟悉一下excel表格的基本术语：  工作簿：workbook。包含多个工作表的。 表单：worksheet。指一个工作簿里面的每个表单。 行：row 列：column 单元格：cell  这里我们使用openpyxl读取数据。 查看工作簿&#x2F;工作表的内容123456import openpyxlwb &#x3D; openpyxl.load_workbook(&amp;#x27;examble.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使用Python操作Excel">
+<meta property="og:url" content="http://ligj1706.github.io/2020/11/27/2020-11-27-python-excel/index.html">
+<meta property="og:site_name" content="妙生的网志">
+<meta property="og:description" content="在进行操作前，我们先熟悉一下excel表格的基本术语：  工作簿：workbook。包含多个工作表的。 表单：worksheet。指一个工作簿里面的每个表单。 行：row 列：column 单元格：cell  这里我们使用openpyxl读取数据。 查看工作簿&#x2F;工作表的内容123456import openpyxlwb &#x3D; openpyxl.load_workbook(&amp;#x27;examble.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-26T23:36:26.000Z">
+<meta property="article:modified_time" content="2020-11-28T13:40:56.061Z">
+<meta property="article:author" content="至善">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://ligj1706.github.io/2020/11/27/2020-11-27-python-excel/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="妙生的网志" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://ligj1706.github.io/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">妙生的网志</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"> </h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>大学之道，在明明德，在亲民，在止于至善。知止而后有定，定而后能静，静而后能安，安而后能虑，虑而后能得。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%A0%E8%AE%B0/" rel="tag">传记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" rel="tag">信息源</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E6%96%B0/" rel="tag">创新</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/" rel="tag">创造思维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%9C%BA/" rel="tag">动机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%95%86%E4%B8%9A%E6%A1%88%E4%BE%8B/" rel="tag">商业案例</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/" rel="tag">大农业</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/" rel="tag">开智正典</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E8%AF%84/" rel="tag">影评</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%B5%81/" rel="tag">心流</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/" rel="tag">社会智慧</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/" rel="tag">职场习惯</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/" rel="tag">职场思考</a><span class="tag-list-count">25</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/" rel="tag">职场技术</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag">职场技能</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/" rel="tag">行业观察</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E5%8A%A8/" rel="tag">行动</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag">认知科学</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">52</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%A5%E4%BD%9C%E7%B0%BF-%E5%B7%A5%E4%BD%9C%E8%A1%A8%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">1.</span> <span class="toc-text">查看工作簿&#x2F;工作表的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%B7%A5%E4%BD%9C%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA%E5%8F%8A%E4%BF%9D%E5%AD%98"><span class="toc-number">2.</span> <span class="toc-text">新工作表的创建及保存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E5%8D%95%E5%85%83%E6%A0%BC%E5%86%99%E5%86%85%E5%AE%B9"><span class="toc-number">3.</span> <span class="toc-text">向单元格写内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E5%86%85%E5%AE%B9%E7%9A%84%E6%89%B9%E9%87%8F%E6%94%B9%E5%86%99"><span class="toc-number">4.</span> <span class="toc-text">单元格内容的批量改写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-2020-11-27-python-excel" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何使用Python操作Excel
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/11/27/2020-11-27-python-excel/" class="article-date">
+	  <time datetime="2020-11-26T23:36:26.000Z" itemprop="datePublished">2020-11-27</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="article-tag-link-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/11/27/2020-11-27-python-excel/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>在进行操作前，我们先熟悉一下excel表格的基本术语：</p>
+<ul>
+<li>工作簿：workbook。包含多个工作表的。</li>
+<li>表单：worksheet。指一个工作簿里面的每个表单。</li>
+<li>行：row</li>
+<li>列：column</li>
+<li>单元格：cell</li>
+</ul>
+<p>这里我们使用openpyxl读取数据。</p>
+<h3 id="查看工作簿-工作表的内容"><a href="#查看工作簿-工作表的内容" class="headerlink" title="查看工作簿/工作表的内容"></a>查看工作簿/工作表的内容</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从工作簿查看工作表</span></span><br><span class="line">print(wb.sheetnames)</span><br></pre></td></tr></table></figure>
+
+<p>也可以通过循环的形式打开工作表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从工作簿查看工作表</span></span><br><span class="line"><span class="keyword">for</span> sheet <span class="keyword">in</span> wb:</span><br><span class="line">  print(sheet.title)</span><br></pre></td></tr></table></figure>
+
+<p>假如要想增加工作表，可以通过下面的程序实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加表单</span></span><br><span class="line">Mysheet = wb.create_sheet(<span class="string">&quot;保育猪成本&quot;</span>)</span><br><span class="line">Mysheet2 = wb.create_sheet(<span class="string">&quot;育肥猪成本&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(wb.sheetnames)</span><br></pre></td></tr></table></figure>
+
+<p>读取某个单元格内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">ws = wb.active</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取表单对象</span></span><br><span class="line">print(ws[<span class="string">&#x27;A1&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取单元格的内容</span></span><br><span class="line">print(ws[<span class="string">&#x27;A1&#x27;</span>].value)</span><br></pre></td></tr></table></figure>
+
+<p>上面的程序未表示出行列坐标，如果想表示“第X行X列是X”，使用下面方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">ws = wb.active</span><br><span class="line"></span><br><span class="line">c = ws[<span class="string">&#x27;A1&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取单元格的第一种方法</span></span><br><span class="line">print(<span class="string">&#x27;row &#123;&#125; column &#123;&#125; is &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(c.row, c.column, c.value))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取单元格的第一种方法</span></span><br><span class="line">print(ws.cell(row=<span class="number">1</span>, column=<span class="number">3</span>).value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取一行多个单元格</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">8</span>):</span><br><span class="line">  print(ws.cell(row=i, column=<span class="number">3</span>).value)</span><br></pre></td></tr></table></figure>
+
+<p>遍历某行或者某列的内容</p>
+<p>通过下面的程序可以读取工作表中第五列的所有内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mport openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line">ws = wb.get_sheet_by_name(<span class="string">&quot;原始数据&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>, ws.max_row+<span class="number">1</span>):</span><br><span class="line">    name = ws.cell(row=i, column=<span class="number">5</span>).value</span><br><span class="line"></span><br><span class="line">    print(name)</span><br></pre></td></tr></table></figure>
+
+<p>总结：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>] <span class="keyword">import</span> openyxl</span><br><span class="line">[<span class="number">2</span>] wb = openpyxl.load_wookbook(<span class="string">&quot;文件名&quot;</span>)</span><br><span class="line">[<span class="number">3</span>] ws = wb.active <span class="keyword">or</span>  ws = wb.get_sheet_by_name(sheettitle)</span><br><span class="line">[<span class="number">4</span>] ws = [<span class="string">&#x27;A1&#x27;</span>] <span class="keyword">or</span> ws.cell(row=<span class="number">3</span>, column=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="新工作表的创建及保存"><a href="#新工作表的创建及保存" class="headerlink" title="新工作表的创建及保存"></a>新工作表的创建及保存</h3><p>工作表和工作簿的创建比较简单。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建工作簿</span></span><br><span class="line">ws = openpyxl.Workbook()</span><br><span class="line">sheet = ws.active</span><br><span class="line"></span><br><span class="line"><span class="comment"># 给工作表命名</span></span><br><span class="line">sheet.title = <span class="string">&quot;first&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存工作表</span></span><br><span class="line">ws.save(<span class="string">&quot;examble2.xlsx&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当然也可以在原有文件的基础上创建工作表，注意最后保存文件时，使用另外一个名字，防止覆盖原文件的内容。</p>
+<p>如果想要创建新的工作表，则使用<code>create_sheet(index=0, title=&#39;名称&#39;)</code>，index代表表单的位置，title表示表单的名称，如果不填写表单的名称，会默认为sheet。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建工作簿</span></span><br><span class="line">ws = openpyxl.Wookbook()</span><br><span class="line"></span><br><span class="line">sheet = ws.active</span><br><span class="line"></span><br><span class="line">ws.create_sheet(index=<span class="number">3</span>, title=<span class="string">&#x27;second&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存工作表</span></span><br><span class="line">ws.save(<span class="string">&quot;examble2.xlsx&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>表单的删除使用如下程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws.remove_sheet(wb.get_sheet_by_name(<span class="string">&#x27;second&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="向单元格写内容"><a href="#向单元格写内容" class="headerlink" title="向单元格写内容"></a>向单元格写内容</h3><p>最简单的是手工往里面填，这个用得少</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sheet[<span class="string">&#x27;A1&#x27;</span>] = <span class="string">&quot;填写单元格的内容&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>向单元格批量填写如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.Workbook()</span><br><span class="line"></span><br><span class="line">sheet = wb.active</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建工作表</span></span><br><span class="line">ws = wb.create_sheet(<span class="string">&quot;First&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1000</span>):</span><br><span class="line">    ws.append(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">100</span>, <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">wb.save(<span class="string">&quot;excamble5.xlsx&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="单元格内容的批量改写"><a href="#单元格内容的批量改写" class="headerlink" title="单元格内容的批量改写"></a>单元格内容的批量改写</h3><p>基本方法是使用for循环对单元格进行遍历，当查找到需要改写的内容时，直接改写</p>
+<p>遍历的程序如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;examble.xlsx&#x27;</span>)</span><br><span class="line">ws = wb.get_sheet_by_name(<span class="string">&quot;原始数据&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历第4列</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>, ws.max_row+<span class="number">1</span>):</span><br><span class="line">    name = ws.cell(row=i, column=<span class="number">5</span>).value</span><br><span class="line"></span><br><span class="line">    print(name)</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1m4411K7Tc?p=3">用Python处理Excel数据，中文全基础系列教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1m4411K7Tc?p=3">用Python处理Excel数据，中文全基础系列教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://openpyxl.readthedocs.io/en/stable/">openpyxl官方文档</a></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://ligj1706.github.io/2020/11/27/2020-11-27-python-excel/" title="如何使用Python操作Excel" target="_blank" rel="external">http://ligj1706.github.io/2020/11/27/2020-11-27-python-excel/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://ligj1706.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://ligj1706.github.io/" target="_blank"><span class="text-dark">妙生的网志</span><small class="ml-1x"> </small></a></h3>
+        <div>聚焦乡村产业、认知科学、投资、计算机四大领域。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/12/04/2020-12-04-WOOP/" title="行动力提升你需要秘密武器WOOP"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/11/24/2020-10-24-problem-solving-method/" title="一种通用的问题解决方法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,wechat,facebook,twitter" data-mobile-sites="weibo,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://ligj1706.github.io/" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/JohnLee024" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.douban.com/people/147876796/" target="_blank" title="Douban" data-toggle=tooltip data-placement=top><i class="icon icon-douban"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
