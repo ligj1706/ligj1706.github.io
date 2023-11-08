@@ -185,6 +185,235 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/29/2020-10-29-python-douban-image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="若有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好运的分析师">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/29/2020-10-29-python-douban-image/" class="post-title-link" itemprop="url">python操作流程及爬取豆瓣图片</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-29 19:55:43" itemprop="dateCreated datePublished" datetime="2020-10-29T19:55:43+08:00">2020-10-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="常见的数据来源"><a href="#常见的数据来源" class="headerlink" title="常见的数据来源"></a>常见的数据来源</h3><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开放数据源</td>
+<td>重要是行业数据库，政府公开的各类数据</td>
+<td>国家统计局、wind、巨潮资讯网</td>
+</tr>
+<tr>
+<td>爬虫爬取的数据</td>
+<td>通过爬虫取得的数据</td>
+<td>豆瓣、社交网站、电商网站、图片网站</td>
+</tr>
+<tr>
+<td>传感器采集</td>
+<td>通过传感器采集到的数据</td>
+<td></td>
+</tr>
+<tr>
+<td>日志采集</td>
+<td>应用埋点采集到的数据</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="爬取数据的工具"><a href="#爬取数据的工具" class="headerlink" title="爬取数据的工具"></a>爬取数据的工具</h3><p><strong>火车采集器。</strong>可以做抓取工具，也可以做数据清洗、数据分析、数据挖掘和可视化等工作。</p>
+<p><strong>八爪鱼。</strong>可以实现自动云采集。</p>
+<p><strong>集搜客。</strong>缺点是没有云采集功能，所有爬虫都是在用户自己电脑上跑的。</p>
+<h3 id="爬虫的操作流程"><a href="#爬虫的操作流程" class="headerlink" title="爬虫的操作流程"></a>爬虫的操作流程</h3><p>爬虫模拟我们日常获取网页信息的流程，通过计算机程序自动化爬取内容。</p>
+<p>包括三个阶段：</p>
+<ul>
+<li>打开网页。工具为<strong>Requests</strong>，数据包括 HTML 页面以及 JSON 数据。</li>
+<li>爬取数据。针对HTML页面使用<strong>XPath</strong>提取数据，针对JSON数据使用<strong>JSON</strong>库进行解析。</li>
+<li>保存数据。可以使用<strong>Pandas</strong>保存数据，导出为<strong>CSV</strong>文件。</li>
+</ul>
+<h3 id="三个阶段解析"><a href="#三个阶段解析" class="headerlink" title="三个阶段解析"></a>三个阶段解析</h3><h4 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a>Requests</h4><p>Requests有两种访问方式，Get和Post。</p>
+<p>其中Get把参数包含在链接中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(<span class="string">&#x27;http://www.douban.com&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Post通过request body传递参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r = requests.post(<span class="string">&#x27;http://xxx.com&#x27;</span>, data = &#123;<span class="string">&#x27;key&#x27;</span>, <span class="string">&#x27;value&#x27;</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>data的数据结构是字典，通过key 和 value 对数据储存。</p>
+<p>动态数据需要通过<a target="_blank" rel="noopener" href="https://www.cnblogs.com/syfwhu/p/6116323.html">XHR</a>发出HTTP请求。</p>
+<h4 id="Xpath"><a href="#Xpath" class="headerlink" title="Xpath"></a>Xpath</h4><p>XPath 是 XML 的路径语言，帮助定位位置。</p>
+<p><strong>使用Xpath解析规则</strong></p>
+<p>在 XPath 中，有七种类型的节点：元素、属性、文本、命名空间、处理指令、注释以及文档（根）节点。</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>node</td>
+<td>选取此节点的所有子节点</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>从根节点选取</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;</td>
+<td>选取所有的当前节点，不考虑位置</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性</td>
+</tr>
+<tr>
+<td>｜</td>
+<td>或，两个节点的合并</td>
+</tr>
+<tr>
+<td>text()</td>
+<td>当前路径下的文版内容</td>
+</tr>
+</tbody></table>
+<p>下面用<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/xpath_syntax.asp">这个网站</a>上的例子举例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;ISO-8859-1&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">&quot;eng&quot;</span>&gt;</span>Harry Potter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">&quot;eng&quot;</span>&gt;</span>Learning XML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>39.95<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">路径表达式</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x2F;bookstore&#x2F;book[1]</td>
+<td align="left">选取属于 bookstore 子元素的第一个 book 元素。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;bookstore&#x2F;book[last()]</td>
+<td align="left">选取属于 bookstore 子元素的最后一个 book 元素。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;bookstore&#x2F;book[last()-1]</td>
+<td align="left">选取属于 bookstore 子元素的倒数第二个 book 元素。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;bookstore&#x2F;book[position()&lt;3]</td>
+<td align="left">选取最前面的两个属于 bookstore 元素的子元素的 book 元素。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;&#x2F;title[@lang]</td>
+<td align="left">选取所有拥有名为 lang 的属性的 title 元素。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;&#x2F;title[@lang&#x3D;’eng’]</td>
+<td align="left">选取所有 title 元素，且这些元素拥有值为 eng 的 lang 属性。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;bookstore&#x2F;book[price&gt;35.00]</td>
+<td align="left">选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;bookstore&#x2F;book[price&gt;35.00]&#x2F;title</td>
+<td align="left">选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00。</td>
+</tr>
+</tbody></table>
+<p>xpath(’&#x2F;&#x2F;@id’) 选取所有的 id 属性；</p>
+<p>xpath(’&#x2F;&#x2F;book[@id]’) 选取所有拥有名为 id 的属性的 book 元素；</p>
+<p>xpath(’&#x2F;&#x2F;book[@id&#x3D;“abc”]’) 选取所有 book 元素，且这些 book 元素拥有 id&#x3D; “abc”的属性；</p>
+<p>xpath(’&#x2F;&#x2F;book&#x2F;title | &#x2F;&#x2F;book&#x2F;price’) 选取 book 元素的所有 title 和 price 元素。</p>
+<p>定位到所有列表项目，需要使用lxml，下面代码为定位到HTML所有列表函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">html = etree.HTML(html)</span><br><span class="line">result = html.xpath(<span class="string">&#x27;//li&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>Json.dumps()：将python对象转换成ISON对象。</p>
+<p>Json.load()：将python对象转换成JSON对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">jsonData = <span class="string">&#x27;&#123;&quot;a&quot;:1,&quot;b&quot;:2,&quot;c&quot;:3,&quot;d&quot;:4,&quot;e&quot;:5&#125;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = json.loads(jsonData)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">input</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number">4</span>, <span class="string">&#x27;e&#x27;</span>: <span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目实战：爬取葛优相关图片"><a href="#项目实战：爬取葛优相关图片" class="headerlink" title="项目实战：爬取葛优相关图片"></a>项目实战：爬取葛优相关图片</h3><h4 id="步骤一：打开网页"><a href="#步骤一：打开网页" class="headerlink" title="步骤一：打开网页"></a>步骤一：打开网页</h4><p>打开<a target="_blank" rel="noopener" href="https://www.douban.com/doulist/113201263/">豆瓣图片</a>，输入关键词葛优</p>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gibedwo682j319n0u0x6p.jpg" alt="image-20200901195719609" style="zoom:50%;" />
+
+<h4 id="步骤二：选择图片"><a href="#步骤二：选择图片" class="headerlink" title="步骤二：选择图片"></a>步骤二：选择图片</h4><p>在搜索结果中，可以看到网页是动态的（即往下滑可以看到更多的图片），动态数据需要通过<a target="_blank" rel="noopener" href="https://www.cnblogs.com/syfwhu/p/6116323.html">XHR</a>发出HTTP请求，此处需要知道JSON。</p>
+<p>我们先来寻找XHR结构，方法是通过：1）谷歌浏览器右键单击检查；2）选择Network；3）选择XHR；4）刷新页面。从图片中可以看到共有1724张葛优相关的图片。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gibeiuzis1j31jl0u04i8.jpg" alt="image-20200901200213885"></p>
+<p>从上图最下面的方框中可以看到JSON。可以看到数据被放到images里面，每张图片通过字典形式储存，元数据包含author、height、id、src、title、width等信息，有了这些信息，我们便可以提取需要的数据。</p>
+<p>在看一下图片的组成，limit：20，最大可以显示20张，第一张图片从0开始，我们便可以写个for循环实现所有的下载。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">images<span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span>src<span class="punctuation">:</span> <span class="string">&quot;https://img3.doubanio.com/view/photo/photo/public/p399074242.jpg&quot;</span><span class="punctuation">,</span> author<span class="punctuation">:</span> <span class="string">&quot;饭&quot;</span><span class="punctuation">,</span>…<span class="punctuation">&#125;</span><span class="punctuation">,</span>…<span class="punctuation">]</span></span><br><span class="line"><span class="number">0</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>src<span class="punctuation">:</span> <span class="string">&quot;https://img3.doubanio.com/view/photo/photo/public/p399074242.jpg&quot;</span><span class="punctuation">,</span> author<span class="punctuation">:</span> <span class="string">&quot;饭&quot;</span><span class="punctuation">,</span>…<span class="punctuation">&#125;</span></span><br><span class="line">author<span class="punctuation">:</span> <span class="string">&quot;饭&quot;</span></span><br><span class="line">height<span class="punctuation">:</span> <span class="number">600</span></span><br><span class="line">id<span class="punctuation">:</span> <span class="string">&quot;399074242&quot;</span></span><br><span class="line">src<span class="punctuation">:</span> <span class="string">&quot;https://img3.doubanio.com/view/photo/photo/public/p399074242.jpg&quot;</span></span><br><span class="line">title<span class="punctuation">:</span> <span class="string">&quot;葛优&quot;</span></span><br><span class="line">url<span class="punctuation">:</span> <span class="string">&quot;https://www.douban.com/link2/?url=http%3A%2F%2Fwww.douban.com%2Fphotos%2Fphoto%2F399074242%2F&amp;query=%E8%91%9B%E4%BC%98&amp;cat_id=1025&amp;type=search&quot;</span></span><br><span class="line">width<span class="punctuation">:</span> <span class="number">414</span></span><br><span class="line">limit<span class="punctuation">:</span> <span class="number">20</span></span><br><span class="line">more<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">total<span class="punctuation">:</span> <span class="number">1724</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="提取需要的信息"><a href="#提取需要的信息" class="headerlink" title="提取需要的信息"></a>提取需要的信息</h4><p>找到了网页及所需要的信息，接下里就是提取所需要的数据，并且进行储存。</p>
+<p>完整代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">query = <span class="string">&#x27;葛优&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载图片</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download</span>(<span class="params">src, <span class="built_in">id</span></span>):</span><br><span class="line">  <span class="built_in">dir</span> = <span class="string">&#x27;./&#x27;</span> + <span class="built_in">str</span>(<span class="built_in">id</span>) + <span class="string">&#x27;.jpg&#x27;</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    pic = requests.get(src, timeout=<span class="number">10</span>)</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="built_in">dir</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    fp.write(pic.content)</span><br><span class="line">    fp.close()</span><br><span class="line">  <span class="keyword">except</span> requests.exceptions.ConnectionError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;图片无法下载&#x27;</span>)</span><br><span class="line">            </span><br><span class="line"><span class="comment"># for 循环 请求全部的 url</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">1723</span>, <span class="number">20</span>):</span><br><span class="line">  url = <span class="string">&#x27;https://www.douban.com/j/search_photo?q=&#x27;</span>+query+<span class="string">&#x27;&amp;limit=20&amp;start=&#x27;</span>+<span class="built_in">str</span>(i)</span><br><span class="line">  html = requests.get(url).text    <span class="comment"># 得到返回结果</span></span><br><span class="line">  response = json.loads(html, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="comment"># 将 JSON 格式转换成 Python 对象</span></span><br><span class="line">  <span class="keyword">for</span> image <span class="keyword">in</span> response[<span class="string">&#x27;images&#x27;</span>]:</span><br><span class="line">    <span class="built_in">print</span>(image[<span class="string">&#x27;src&#x27;</span>]) <span class="comment"># 查看当前下载的图片网址</span></span><br><span class="line">    download(image[<span class="string">&#x27;src&#x27;</span>], image[<span class="string">&#x27;id&#x27;</span>]) <span class="comment"># 下载一张图片</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/xpath_syntax.asp">Xpath教程</a></p>
+<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20201029 补充Xpath案例，仍然出现错误<code>Expecting value: line 1 column 1 (char 0)</code></p>
+<p>20200901 爬虫代码运行错误</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/27/2020-10-27-Pandas-basic-learn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -335,128 +564,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/25/2020-10-25-NumPy-leann1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
-      <meta itemprop="name" content="妙生">
-      <meta itemprop="description" content="若有可能，让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="好运的分析师">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/25/2020-10-25-NumPy-leann1/" class="post-title-link" itemprop="url">一文学懂NumPy基础知识1</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-25 22:44:52" itemprop="dateCreated datePublished" datetime="2020-10-25T22:44:52+08:00">2020-10-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="NumPy可以用来干什么？"><a href="#NumPy可以用来干什么？" class="headerlink" title="NumPy可以用来干什么？"></a>NumPy可以用来干什么？</h2><p>在python里面已经有了列表list，为什么还要使用NumPy？</p>
-<p>这和list与NumPy在数据储存和运算速度有关。提升内存和计算资源的利用效率。</p>
-<p>NumPy最重要的知识包括：</p>
-<ul>
-<li>ndarray（N-dimensional array object），解决多维数组问题，</li>
-<li>ufunc（universal function object），解决对数组进行处理的函数。</li>
-</ul>
-<h2 id="ndarray"><a href="#ndarray" class="headerlink" title="ndarray"></a>ndarray</h2><p>array表示数据，ndarray代表多维数组。</p>
-<h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">b = np.array([[<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>], [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>], [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">b[<span class="number">1</span>, <span class="number">1</span>]=<span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br><span class="line"><span class="built_in">print</span>(b.shape)</span><br><span class="line"><span class="built_in">print</span>(a.dtype)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">3</span>,)</span><br><span class="line">(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">int64</span><br><span class="line">[[ <span class="number">1</span>  <span class="number">1</span>  <span class="number">2</span>]</span><br><span class="line"> [ <span class="number">2</span> <span class="number">10</span>  <span class="number">5</span>]</span><br><span class="line"> [ <span class="number">3</span>  <span class="number">4</span>  <span class="number">5</span>]]</span><br></pre></td></tr></table></figure>
-
-<p>总结：</p>
-<ul>
-<li>shape用于获取数组的大小；</li>
-<li>dtype用于获取数组的属性；</li>
-<li>b[1, 1]表示对数组进行修改，从零开始计数，上面代码把b中的每个数组看成一个整体，当成一个数。</li>
-</ul>
-<h3 id="结构数组"><a href="#结构数组" class="headerlink" title="结构数组"></a>结构数组</h3><p>创建储存每个数字单元的表格。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 定义数组结构</span></span><br><span class="line">persontype = np.dtype(&#123;</span><br><span class="line">  <span class="string">&#x27;names&#x27;</span>:[<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;chinese&#x27;</span>, <span class="string">&#x27;math&#x27;</span>, <span class="string">&#x27;English&#x27;</span>],</span><br><span class="line">  <span class="string">&#x27;formats&#x27;</span>:[<span class="string">&#x27;S32&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;f&#x27;</span>]&#125;)</span><br><span class="line"></span><br><span class="line">peoples = np.array([(<span class="string">&#x27;A&#x27;</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>), </span><br><span class="line">                    (<span class="string">&#x27;B&#x27;</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>),</span><br><span class="line">                    (<span class="string">&#x27;C&#x27;</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">5</span>),</span><br><span class="line">                    (<span class="string">&#x27;D&#x27;</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">1</span>)],</span><br><span class="line">                   dtype = persontype)</span><br><span class="line"></span><br><span class="line">ages = peoples[:][<span class="string">&#x27;age&#x27;</span>]</span><br><span class="line">chineses = peoples[:][<span class="string">&#x27;chinese&#x27;</span>]</span><br><span class="line">maths = peoples[:][<span class="string">&#x27;math&#x27;</span>]</span><br><span class="line">Englishs = peoples[:][<span class="string">&#x27;English&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算平均值</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(ages))</span><br><span class="line"><span class="built_in">print</span>(np.mean(chineses))</span><br><span class="line"><span class="built_in">print</span>(np.mean(maths))</span><br><span class="line"><span class="built_in">print</span>(np.mean(Englishs))</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.0</span></span><br><span class="line"><span class="number">5.75</span></span><br><span class="line"><span class="number">6.5</span></span><br><span class="line"><span class="number">4.5</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ufunc"><a href="#ufunc" class="headerlink" title="ufunc"></a>ufunc</h2><p>universal function的缩写。</p>
-<h3 id="创建连续数组"><a href="#创建连续数组" class="headerlink" title="创建连续数组"></a>创建连续数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x1 = np.arange(<span class="number">1</span>, <span class="number">11</span>, <span class="number">2</span>)</span><br><span class="line">x2 = np.linspace(<span class="number">1</span>, <span class="number">9</span> ,<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(x1)</span><br><span class="line"><span class="built_in">print</span>(x2)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span>]</span><br><span class="line">[<span class="number">1.</span> <span class="number">3.</span> <span class="number">5.</span> <span class="number">7.</span> <span class="number">9.</span>]</span><br></pre></td></tr></table></figure>
-
-<p>arange是range的内置函数，arange(1, 11, 2)分别代表初始值、终值、步长</p>
-<p>linspaces是linear space的缩写，代表线性等分向量。linespace(1, 9,5)分别代表初始值，重值（含），元素个数。</p>
-<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p>可以进行加、剪、乘、除、n次方，取余数等运算</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x1 = np.arange(<span class="number">1</span>, <span class="number">11</span>, <span class="number">2</span>)</span><br><span class="line">x2 = np.linspace(<span class="number">1</span>, <span class="number">9</span> ,<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.add(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.subtract(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.multiply(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.divide(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.power(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.remainder(x1, x2))</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">2.</span>  <span class="number">6.</span> <span class="number">10.</span> <span class="number">14.</span> <span class="number">18.</span>]</span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line">[ <span class="number">1.</span>  <span class="number">9.</span> <span class="number">25.</span> <span class="number">49.</span> <span class="number">81.</span>]</span><br><span class="line">[<span class="number">1.</span> <span class="number">1.</span> <span class="number">1.</span> <span class="number">1.</span> <span class="number">1.</span>]</span><br><span class="line">[<span class="number">1.00000000e+00</span> <span class="number">2.70000000e+01</span> <span class="number">3.12500000e+03</span> <span class="number">8.23543000e+05</span></span><br><span class="line"> <span class="number">3.87420489e+08</span>]</span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br></pre></td></tr></table></figure>
-
-<p>在进行计算时，需要保证数组的秩相同，即每个列表的元素个数相同，方可进行运算。</p>
-<h3 id="统计学相关的运算"><a href="#统计学相关的运算" class="headerlink" title="统计学相关的运算"></a>统计学相关的运算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>],[<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.amin(a)) <span class="comment"># 最小值</span></span><br><span class="line"><span class="built_in">print</span>(np.amin(a, <span class="number">0</span>)) <span class="comment"># 每一列中的的最小值</span></span><br><span class="line"><span class="built_in">print</span>(np.amin(a, <span class="number">1</span>)) <span class="comment"># 每一行中的最小值</span></span><br><span class="line"><span class="built_in">print</span>(np.amax(a)) <span class="comment"># 最大值</span></span><br><span class="line"><span class="built_in">print</span>(np.amax(a, <span class="number">0</span>)) <span class="comment"># 每一列中的最大值</span></span><br><span class="line"><span class="built_in">print</span>(np.amax(a, <span class="number">1</span>)) <span class="comment"># 每一行的最小值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计最大值与最小值之差</span></span><br><span class="line"><span class="built_in">print</span>(np.ptp(a))</span><br><span class="line"><span class="built_in">print</span>(np.ptp(a, <span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(np.ptp(a, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 求中位数与平均数</span></span><br><span class="line"><span class="built_in">print</span>(np.median(a)) <span class="comment"># 整体列表中位数</span></span><br><span class="line"><span class="built_in">print</span>(np.median(a, axis=<span class="number">0</span>)) <span class="comment"># 求每一列的中位数</span></span><br><span class="line"><span class="built_in">print</span>(np.median(a, axis=<span class="number">1</span>)) <span class="comment"># 求每一行的中位数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a)) <span class="comment"># 求整体列表的平均数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a, axis=<span class="number">0</span>)) <span class="comment"># 求每一列的平均数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a, axis=<span class="number">1</span>)) <span class="comment"># 求每一行的平均数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 求加权平均数</span></span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">wts = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(np.average(a)) <span class="comment"># 默认权重相同</span></span><br><span class="line"><span class="built_in">print</span>(np.average(a, weights=wgt)) <span class="comment"># 赋予不同权重 （1*1=2*2+3*3+4*4）/（1+2+3+4）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 求标准差方差</span></span><br><span class="line"><span class="built_in">print</span>(np.std(a)) <span class="comment"># 标注差</span></span><br><span class="line"><span class="built_in">print</span>(np.var(a)) <span class="comment"># 方差</span></span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">[<span class="number">1</span> <span class="number">4</span> <span class="number">7</span>]</span><br><span class="line"><span class="number">9</span></span><br><span class="line">[<span class="number">7</span> <span class="number">8</span> <span class="number">9</span>]</span><br><span class="line">[<span class="number">3</span> <span class="number">6</span> <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">8</span></span><br><span class="line">[<span class="number">6</span> <span class="number">6</span> <span class="number">6</span>]</span><br><span class="line">[<span class="number">2</span> <span class="number">2</span> <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">5.0</span></span><br><span class="line">[<span class="number">4.</span> <span class="number">5.</span> <span class="number">6.</span>]</span><br><span class="line">[<span class="number">2.</span> <span class="number">5.</span> <span class="number">8.</span>]</span><br><span class="line"><span class="number">5.0</span></span><br><span class="line">[<span class="number">4.</span> <span class="number">5.</span> <span class="number">6.</span>]</span><br><span class="line">[<span class="number">2.</span> <span class="number">5.</span> <span class="number">8.</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">2.5</span></span><br><span class="line"><span class="number">3.0</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.118033988749895</span></span><br><span class="line"><span class="number">1.25</span></span><br></pre></td></tr></table></figure>
-
-<p>从行列式角度理解，axis&#x3D;0表示列，axis&#x3D;1表示行。</p>
-<h2 id="NumPy进行排序"><a href="#NumPy进行排序" class="headerlink" title="NumPy进行排序"></a>NumPy进行排序</h2><p>排序在数据分析中使用频率很高，一般排序语句结构为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(a, axis=-<span class="number">1</span>, kind=‘quicksort’, order=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下axis&#x3D;-1，表示对内部列表分别排序。当axis&#x3D;None时，表示把所有数字按照一个列表排序。</p>
-<p>Kind包含三种结构：quicksort、mergesort、heapsort ，分别代表快速排序、合并排序、堆排序。默认情况下，使用的是quicksort排序。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">14</span>, <span class="number">55</span>, <span class="number">9</span>], [<span class="number">45</span>, <span class="number">56</span>, <span class="number">87</span>], [<span class="number">90</span>, <span class="number">3</span>, <span class="number">45</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.sort(a))</span><br><span class="line"><span class="built_in">print</span>(np.sort(a, axis=<span class="literal">None</span>))</span><br><span class="line"><span class="built_in">print</span>(np.sort(a, axis=<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(np.sort(a, axis=<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[[ <span class="number">9</span> <span class="number">14</span> <span class="number">55</span>]</span><br><span class="line"> [<span class="number">45</span> <span class="number">56</span> <span class="number">87</span>]</span><br><span class="line"> [ <span class="number">3</span> <span class="number">45</span> <span class="number">90</span>]]</span><br><span class="line">[ <span class="number">3</span>  <span class="number">9</span> <span class="number">14</span> <span class="number">45</span> <span class="number">45</span> <span class="number">55</span> <span class="number">56</span> <span class="number">87</span> <span class="number">90</span>]</span><br><span class="line">[[<span class="number">14</span>  <span class="number">3</span>  <span class="number">9</span>]</span><br><span class="line"> [<span class="number">45</span> <span class="number">55</span> <span class="number">45</span>]</span><br><span class="line"> [<span class="number">90</span> <span class="number">56</span> <span class="number">87</span>]]</span><br><span class="line">[[ <span class="number">9</span> <span class="number">14</span> <span class="number">55</span>]</span><br><span class="line"> [<span class="number">45</span> <span class="number">56</span> <span class="number">87</span>]</span><br><span class="line"> [ <span class="number">3</span> <span class="number">45</span> <span class="number">90</span>]]</span><br></pre></td></tr></table></figure>
-
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>《数据分析实战45讲》-极课时间  陈旸</p>
-<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20201025 完成基本内容</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -528,7 +635,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">149</span>
+          <span class="site-state-item-count">150</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

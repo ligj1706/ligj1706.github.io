@@ -185,6 +185,119 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/09/2020-10-09-Excel-learn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="若有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好运的分析师">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/09/2020-10-09-Excel-learn/" class="post-title-link" itemprop="url">重要的并不是工具本身</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-09 11:01:07" itemprop="dateCreated datePublished" datetime="2020-10-09T11:01:07+08:00">2020-10-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这本书《为什么精英都是Excel控》建议倒着看，先看附录，然后看最后一章的案例，接着在从第一章看。</p>
+<p>学习Excel重要的不是Excel本身，而是Excel背后体现的思维。</p>
+<h3 id="重要的并不是操作技术"><a href="#重要的并不是操作技术" class="headerlink" title="重要的并不是操作技术"></a>重要的并不是操作技术</h3><p>首先来做道面试题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">你是一家汉堡店的经营者，汉堡店生意很好，下个月的销售量预计比这个月增加10%</span><br><span class="line">同时，你也可以提高汉堡的售价，如果售价提高10%的话，预计下个月的销售量，应该会和这个月差不多</span><br><span class="line"></span><br><span class="line">请问：</span><br><span class="line"></span><br><span class="line">A：维持现在的价格，让销售量增加10%</span><br><span class="line"></span><br><span class="line">B：售价提高10%，维持现在的销售量</span><br><span class="line"></span><br><span class="line">那个策略才能带来更多利润？</span><br><span class="line"></span><br><span class="line">不考虑其他因素答案选择B。原因：利润=收入-成本。A和B的成本虽然相同，但A会增加制作成本。</span><br></pre></td></tr></table></figure>
+
+<p>但是商业世界远比这个复杂，你需要考虑售价提高后，销量的减少，或者销量提高后边际成本的减少。</p>
+<p>但你可以你定出一个基本的公示*<em>：利润&#x3D;单价 * 数量 <em>复购率 - 成本</em></em></p>
+<p>所以在对商业进行思考时，我们都可以简单的拆分成收入、费用、成本，然后在把影响这些的因素进一步细分，找到企业经营的核心要素，然后把资源投入到核心要素上。</p>
+<p>下面这张图就是一个拆解的案例：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gjkimrnkf8j30qe0i0npd.jpg" alt="image-20201010203450916"></p>
+<p>而且你在对收益模拟时，可以采用极限模拟法：分为乐观、维持原状、悲观三个层次。这样思考的作用是确定临界点。</p>
+<h3 id="接下来讲讲操作技术"><a href="#接下来讲讲操作技术" class="headerlink" title="接下来讲讲操作技术"></a>接下来讲讲操作技术</h3><p>下面这张表是制作Excel时的注意事项。</p>
+<p>附录里面也有一张类似的表，比我下面这张好看多了，只是当时没发现：）。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gjkioreorij31jo0u01ky.jpg" alt="image-20201010203648708"></p>
+<p>下面的操作技术是改变数字或背景的颜色。下面这几点蛮有启发的，特别是第一点，<strong>第一点说明了一个工作中非常重要的原则：区分原始数据和修改数据，不要污染原始数据。</strong>当你把原始数据污染了，如果后面需要找到最原始的记录但没有，这会增加额外的成本甚至带来巨大的损失。</p>
+<ol>
+<li><p>使用颜色区分不同的数字：手动输入的数字（蓝色）、计算公式的数字（黑色）、参照其他工作表的数字使用不同的颜色。</p>
+</li>
+<li><p>一个Excel表格的颜色，最好不要超过3种。</p>
+</li>
+<li><p>不需要填入数字的用N&#x2F;A，表示”not applicable ”。N&#x2F;M表示”not meaningful ”。</p>
+</li>
+<li><p>在公司内部贯彻格式，降低沟通成本。</p>
+</li>
+</ol>
+<h3 id="还有和协作有关的操作技术"><a href="#还有和协作有关的操作技术" class="headerlink" title="还有和协作有关的操作技术"></a>还有和协作有关的操作技术</h3><p>团队协作，最重要的是共享规则和共识，团队内部Excel协作只是一个场景，核心是简单计算、团队内部共享同一规则。</p>
+<p>具体包括：</p>
+<ul>
+<li><p>避免在算式中手动输入数字（输入的数字含义他人难以看懂）。可把手动输入的数字和计算的数字分开。</p>
+</li>
+<li><p>避免使用太长的算式。</p>
+</li>
+<li><p>为工作表绘制架构图。</p>
+</li>
+<li><p>同一工作簿中工作表按逻辑排列，相同的最好标上类似的数据，工作表越少越好。</p>
+</li>
+<li><p>标明数据的出处，写明附注，让自己和别人能够看懂。</p>
+</li>
+<li><p>交给别人时，确保想给别人看的信息，确定使用隐藏。</p>
+</li>
+<li><p>团队内部协作时遵循：第一负责人原则；只使用一个文件。</p>
+</li>
+<li><p>存档时不要覆盖原文件，做好版本管理，采用另存为的方法（重要）。</p>
+</li>
+</ul>
+<p>作者还有一章专门讲了Excel的快捷键，如果用Excel比较多，常用的快捷键建议用熟。</p>
+<p>这本书比较浅显，其他学习资料建议首选秋叶团队出版的Excel，把秋叶的那本书弄懂，工作的绝大部分场景就可以解决了，这本书里面还推荐了很多学习资源，可以延伸学习。</p>
+<p>最后，我在使用办公工具时的一个感想：工具的好坏影响工作的质量，比具体技术更重要的是思维，不要一味的追求技术的高大上，关键是用工具场景化解决问题。最后，工具宁愿少而精，不要频繁换工具增加成本。</p>
+<p>end.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -321,149 +434,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
-      <meta itemprop="name" content="妙生">
-      <meta itemprop="description" content="若有可能，让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="好运的分析师">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/" class="post-title-link" itemprop="url">从小白到专家的技能养成</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-20 08:13:18" itemprop="dateCreated datePublished" datetime="2020-09-20T08:13:18+08:00">2020-09-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-02 21:27:19" itemprop="dateModified" datetime="2023-08-02T21:27:19+08:00">2023-08-02</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="专家和新手的区别在哪里？"><a href="#专家和新手的区别在哪里？" class="headerlink" title="专家和新手的区别在哪里？"></a>专家和新手的区别在哪里？</h3><p>每一个程序员都有一个梦想，成为领域内的专家。专家和新手有什么不同？1970年代左右，德雷福斯兄弟通过对飞行员、国际著名象棋大师的技能习得进行研究，他们发现专家和新手在技能调用上有很大的不同，并提出了德雷福斯模型（Dreyfus model），把从新手到专家分为新手、高级新手、胜任者、精通者、专家五个阶段。</p>
-<p>第一阶：新手</p>
-<ul>
-<li><p>在该技能领域经验很少或者根本没有经验</p>
-</li>
-<li><p>严格按照指令行事（告诉行动清单时会做得很好） </p>
-</li>
-<li><p>几乎无法感知情景</p>
-</li>
-<li><p>无法判断行为的对错或处理问题</p>
-</li>
-</ul>
-<p>第二阶：高级新手</p>
-<ul>
-<li><p>可以独自尝试任务，但仍难以解决问题</p>
-</li>
-<li><p>摆脱固定规则但仍需依赖行动准则</p>
-</li>
-<li><p>情景感知依然有限，难以感知事情全貌</p>
-</li>
-<li><p>难以区分工作权重及优先级</p>
-</li>
-</ul>
-<p>第三阶：胜任者</p>
-<ul>
-<li><p>能独立解决遇到的新老问题</p>
-</li>
-<li><p>从全局角度（至少部分）审视行动，能区分工作权重</p>
-</li>
-<li><p>有意识刻意的制定计划</p>
-</li>
-<li><p>将流程标准化常规化</p>
-</li>
-</ul>
-<p>第四阶：精通者</p>
-<ul>
-<li><p>整体把握全局，而非局限在某一个方面</p>
-</li>
-<li><p>正确区分权重，知道最重要的任务</p>
-</li>
-<li><p>感知情景并反思纠偏</p>
-</li>
-<li><p>使用原则灵活指导行动</p>
-</li>
-<li><p>决策越来越轻松</p>
-</li>
-</ul>
-<p>第五阶：专家</p>
-<ul>
-<li><p>根据训练后的直觉把握情景</p>
-</li>
-<li><p>不再依赖规则、行动准则及原则</p>
-</li>
-<li><p>出现新情况或发送问题才使用新方法</p>
-</li>
-<li><p>预知未来</p>
-</li>
-</ul>
-<p>可以看出，新手和专家很重要的三个区别：全局意识及权重意识、情景化解决问题的能力、反思及纠偏的的能力。</p>
-<p>一项统计显示，专家和精通者的数量不足超过20%，80%以上的人注定的在胜任者以下，并且高级新手占比最多。这说明了很多标榜有10年工作经验的人，实际上只是把一年的工作技能重复了9年。这也从一个侧面反映了，成为一个专家是多么的困难（约占1%-5%），程序员发展到一定阶段转型管理成功的概率远高于成为专家，而且公司也要不了那么多专家。</p>
-<img src="https://p.ipic.vip/keokoi.png" alt="image-20230802212659113" style="zoom:50%;" />
-
-<p>任正非之前的一篇演讲中，提到把公司人员分为职员类、专家类、管理类，而对不同级别的专家任正非这么认为：</p>
-<blockquote>
-<p>第二类是专家队伍，专家要快速适应社会变化，赶不上时代变化就会掉队，华为没有收容队。初级专家应该一专多知，做好本职的基础上，再想别的；中级专家一专多能或两专多能；高级专家要有场景化的合成作战能力。</p>
-</blockquote>
-<p>可见，成为专家，并非仅仅局限在工具使用和技术能力提高上，在软件开发中程序设计语言、工具是十分必要的，但沟通能力、学习和思考能力更加重要，这往往是程序开发过程中容易忽视的能力，或者程序开发者不屑于注意的能力。</p>
-<p>拥有场景化解决问题的能力是多么重要，要培养全局思考的能力，多问问为什么这么做，不要仅仅局限在自己的一亩三分地，导致思维受到束缚。</p>
-<p>最后用网上看到的一篇文章里提到的，对新工程师入职企业的建议结尾。</p>
-<ul>
-<li><p>企业最关心的（或者说唯一在乎的）事情，就是增加收入、降低成本。</p>
-<p>企业实际上需要的不是程序员，而是能够帮助它们增加收入、降低成本的人。</p>
-</li>
-<li><p>企业雇佣你，是为了让你帮它们完成某个可以增加收入、降低成本的项目，而不是为了让你追求个人的软件成就。正确的做法是，你应该把自己描述成与增加收入、降低成本有关系的人，比如”xx产品的开发者”或”改进者”。有一个 Google Adsense 程序员的自我介绍，是这样写的：”Google 公司97%的收入，与我的代码有关。”</p>
-</li>
-<li><p>我自己的体会是，写文档对一个人的锻炼是很大的。（1）可以熟悉项目；（2）可以提高表达能力；（3）可以提高技术能力，因为只有理解了代码才能表达出来，文档越清晰，就代表思路越清晰；（4）可以提高个人影响力，文档写得越好，看的人就越多。久而久之，你就会成为项目的代言人，别人有问题就会来找你。</p>
-</li>
-</ul>
-<p>End.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -535,7 +505,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">149</span>
+          <span class="site-state-item-count">150</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
