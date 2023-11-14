@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/25/2020-10-25-NumPy-leann1/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2019/07/04/2019-07-04-Success-goals-and-hexomotivations/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -199,7 +199,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/25/2020-10-25-NumPy-leann1/" class="post-title-link" itemprop="url">一文学懂NumPy基础知识1</a>
+            <a href="/2019/07/04/2019-07-04-Success-goals-and-hexomotivations/" class="post-title-link" itemprop="url">目标，内在动机与行动力</a>
         </h2>
 
         <div class="post-meta">
@@ -209,7 +209,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-10-25 22:44:52" itemprop="dateCreated datePublished" datetime="2020-10-25T22:44:52+08:00">2020-10-25</time>
+              <time title="Created: 2019-07-04 00:13:12" itemprop="dateCreated datePublished" datetime="2019-07-04T00:13:12+08:00">2019-07-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -230,65 +230,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="NumPy可以用来干什么？"><a href="#NumPy可以用来干什么？" class="headerlink" title="NumPy可以用来干什么？"></a>NumPy可以用来干什么？</h2><p>在python里面已经有了列表list，为什么还要使用NumPy？</p>
-<p>这和list与NumPy在数据储存和运算速度有关。提升内存和计算资源的利用效率。</p>
-<p>NumPy最重要的知识包括：</p>
-<ul>
-<li>ndarray（N-dimensional array object），解决多维数组问题，</li>
-<li>ufunc（universal function object），解决对数组进行处理的函数。</li>
-</ul>
-<h2 id="ndarray"><a href="#ndarray" class="headerlink" title="ndarray"></a>ndarray</h2><p>array表示数据，ndarray代表多维数组。</p>
-<h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">b = np.array([[<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>], [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>], [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">b[<span class="number">1</span>, <span class="number">1</span>]=<span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br><span class="line"><span class="built_in">print</span>(b.shape)</span><br><span class="line"><span class="built_in">print</span>(a.dtype)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br></pre></td></tr></table></figure>
+          本书的核心思想：成长型心智；核心概念：自我决定论、内在动机。中文翻译为《成功，动机与目标》，英文名为Succeed,How We can Reach Our Goals，从中也可以猜出本书的主要内容，Succeed and Goals、How to reach。
 
-<p>输出结果为</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">3</span>,)</span><br><span class="line">(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">int64</span><br><span class="line">[[ <span class="number">1</span>  <span class="number">1</span>  <span class="number">2</span>]</span><br><span class="line"> [ <span class="number">2</span> <span class="number">10</span>  <span class="number">5</span>]</span><br><span class="line"> [ <span class="number">3</span>  <span class="number">4</span>  <span class="number">5</span>]]</span><br></pre></td></tr></table></figure>
+目标是什么
+从动机出发，目标分为两种绩效目标和表现目标。两者的区别在于你制定的目标的动机是受内在因素影响还是外在因素影响，受外在因素影响制定的目标往往是为了获得外在奖赏，内在因素影响制定的目标指向自我发展，评价更多来自自身。
 
-<p>总结：</p>
-<ul>
-<li>shape用于获取数组的大小；</li>
-<li>dtype用于获取数组的属性；</li>
-<li>b[1, 1]表示对数组进行修改，从零开始计数，上面代码把b中的每个数组看成一个整体，当成一个数。</li>
-</ul>
-<h3 id="结构数组"><a href="#结构数组" class="headerlink" title="结构数组"></a>结构数组</h3><p>创建储存每个数字单元的表格。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 定义数组结构</span></span><br><span class="line">persontype = np.dtype(&#123;</span><br><span class="line">  <span class="string">&#x27;names&#x27;</span>:[<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;chinese&#x27;</span>, <span class="string">&#x27;math&#x27;</span>, <span class="string">&#x27;English&#x27;</span>],</span><br><span class="line">  <span class="string">&#x27;formats&#x27;</span>:[<span class="string">&#x27;S32&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;f&#x27;</span>]&#125;)</span><br><span class="line"></span><br><span class="line">peoples = np.array([(<span class="string">&#x27;A&#x27;</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>), </span><br><span class="line">                    (<span class="string">&#x27;B&#x27;</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>),</span><br><span class="line">                    (<span class="string">&#x27;C&#x27;</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">5</span>),</span><br><span class="line">                    (<span class="string">&#x27;D&#x27;</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">1</span>)],</span><br><span class="line">                   dtype = persontype)</span><br><span class="line"></span><br><span class="line">ages = peoples[:][<span class="string">&#x27;age&#x27;</span>]</span><br><span class="line">chineses = peoples[:][<span class="string">&#x27;chinese&#x27;</span>]</span><br><span class="line">maths = peoples[:][<span class="string">&#x27;math&#x27;</span>]</span><br><span class="line">Englishs = peoples[:][<span class="string">&#x27;English&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算平均值</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(ages))</span><br><span class="line"><span class="built_in">print</span>(np.mean(chineses))</span><br><span class="line"><span class="built_in">print</span>(np.mean(maths))</span><br><span class="line"><span class="built_in">print</span>(np.mean(Englishs))</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.0</span></span><br><span class="line"><span class="number">5.75</span></span><br><span class="line"><span class="number">6.5</span></span><br><span class="line"><span class="number">4.5</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ufunc"><a href="#ufunc" class="headerlink" title="ufunc"></a>ufunc</h2><p>universal function的缩写。</p>
-<h3 id="创建连续数组"><a href="#创建连续数组" class="headerlink" title="创建连续数组"></a>创建连续数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x1 = np.arange(<span class="number">1</span>, <span class="number">11</span>, <span class="number">2</span>)</span><br><span class="line">x2 = np.linspace(<span class="number">1</span>, <span class="number">9</span> ,<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(x1)</span><br><span class="line"><span class="built_in">print</span>(x2)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span>]</span><br><span class="line">[<span class="number">1.</span> <span class="number">3.</span> <span class="number">5.</span> <span class="number">7.</span> <span class="number">9.</span>]</span><br></pre></td></tr></table></figure>
-
-<p>arange是range的内置函数，arange(1, 11, 2)分别代表初始值、终值、步长</p>
-<p>linspaces是linear space的缩写，代表线性等分向量。linespace(1, 9,5)分别代表初始值，重值（含），元素个数。</p>
-<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p>可以进行加、剪、乘、除、n次方，取余数等运算</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x1 = np.arange(<span class="number">1</span>, <span class="number">11</span>, <span class="number">2</span>)</span><br><span class="line">x2 = np.linspace(<span class="number">1</span>, <span class="number">9</span> ,<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.add(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.subtract(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.multiply(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.divide(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.power(x1, x2))</span><br><span class="line"><span class="built_in">print</span>(np.remainder(x1, x2))</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">2.</span>  <span class="number">6.</span> <span class="number">10.</span> <span class="number">14.</span> <span class="number">18.</span>]</span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line">[ <span class="number">1.</span>  <span class="number">9.</span> <span class="number">25.</span> <span class="number">49.</span> <span class="number">81.</span>]</span><br><span class="line">[<span class="number">1.</span> <span class="number">1.</span> <span class="number">1.</span> <span class="number">1.</span> <span class="number">1.</span>]</span><br><span class="line">[<span class="number">1.00000000e+00</span> <span class="number">2.70000000e+01</span> <span class="number">3.12500000e+03</span> <span class="number">8.23543000e+05</span></span><br><span class="line"> <span class="number">3.87420489e+08</span>]</span><br><span class="line">[<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br></pre></td></tr></table></figure>
-
-<p>在进行计算时，需要保证数组的秩相同，即每个列表的元素个数相同，方可进行运算。</p>
-<h3 id="统计学相关的运算"><a href="#统计学相关的运算" class="headerlink" title="统计学相关的运算"></a>统计学相关的运算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>],[<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.amin(a)) <span class="comment"># 最小值</span></span><br><span class="line"><span class="built_in">print</span>(np.amin(a, <span class="number">0</span>)) <span class="comment"># 每一列中的的最小值</span></span><br><span class="line"><span class="built_in">print</span>(np.amin(a, <span class="number">1</span>)) <span class="comment"># 每一行中的最小值</span></span><br><span class="line"><span class="built_in">print</span>(np.amax(a)) <span class="comment"># 最大值</span></span><br><span class="line"><span class="built_in">print</span>(np.amax(a, <span class="number">0</span>)) <span class="comment"># 每一列中的最大值</span></span><br><span class="line"><span class="built_in">print</span>(np.amax(a, <span class="number">1</span>)) <span class="comment"># 每一行的最小值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计最大值与最小值之差</span></span><br><span class="line"><span class="built_in">print</span>(np.ptp(a))</span><br><span class="line"><span class="built_in">print</span>(np.ptp(a, <span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(np.ptp(a, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 求中位数与平均数</span></span><br><span class="line"><span class="built_in">print</span>(np.median(a)) <span class="comment"># 整体列表中位数</span></span><br><span class="line"><span class="built_in">print</span>(np.median(a, axis=<span class="number">0</span>)) <span class="comment"># 求每一列的中位数</span></span><br><span class="line"><span class="built_in">print</span>(np.median(a, axis=<span class="number">1</span>)) <span class="comment"># 求每一行的中位数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a)) <span class="comment"># 求整体列表的平均数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a, axis=<span class="number">0</span>)) <span class="comment"># 求每一列的平均数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a, axis=<span class="number">1</span>)) <span class="comment"># 求每一行的平均数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 求加权平均数</span></span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">wts = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(np.average(a)) <span class="comment"># 默认权重相同</span></span><br><span class="line"><span class="built_in">print</span>(np.average(a, weights=wgt)) <span class="comment"># 赋予不同权重 （1*1=2*2+3*3+4*4）/（1+2+3+4）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 求标准差方差</span></span><br><span class="line"><span class="built_in">print</span>(np.std(a)) <span class="comment"># 标注差</span></span><br><span class="line"><span class="built_in">print</span>(np.var(a)) <span class="comment"># 方差</span></span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">[<span class="number">1</span> <span class="number">4</span> <span class="number">7</span>]</span><br><span class="line"><span class="number">9</span></span><br><span class="line">[<span class="number">7</span> <span class="number">8</span> <span class="number">9</span>]</span><br><span class="line">[<span class="number">3</span> <span class="number">6</span> <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">8</span></span><br><span class="line">[<span class="number">6</span> <span class="number">6</span> <span class="number">6</span>]</span><br><span class="line">[<span class="number">2</span> <span class="number">2</span> <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">5.0</span></span><br><span class="line">[<span class="number">4.</span> <span class="number">5.</span> <span class="number">6.</span>]</span><br><span class="line">[<span class="number">2.</span> <span class="number">5.</span> <span class="number">8.</span>]</span><br><span class="line"><span class="number">5.0</span></span><br><span class="line">[<span class="number">4.</span> <span class="number">5.</span> <span class="number">6.</span>]</span><br><span class="line">[<span class="number">2.</span> <span class="number">5.</span> <span class="number">8.</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">2.5</span></span><br><span class="line"><span class="number">3.0</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.118033988749895</span></span><br><span class="line"><span class="number">1.25</span></span><br></pre></td></tr></table></figure>
-
-<p>从行列式角度理解，axis&#x3D;0表示列，axis&#x3D;1表示行。</p>
-<h2 id="NumPy进行排序"><a href="#NumPy进行排序" class="headerlink" title="NumPy进行排序"></a>NumPy进行排序</h2><p>排序在数据分析中使用频率很高，一般排序语句结构为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(a, axis=-<span class="number">1</span>, kind=‘quicksort’, order=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下axis&#x3D;-1，表示对内部列表分别排序。当axis&#x3D;None时，表示把所有数字按照一个列表排序。</p>
-<p>Kind包含三种结构：quicksort、mergesort、heapsort ，分别代表快速排序、合并排序、堆排序。默认情况下，使用的是quicksort排序。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">14</span>, <span class="number">55</span>, <span class="number">9</span>], [<span class="number">45</span>, <span class="number">56</span>, <span class="number">87</span>], [<span class="number">90</span>, <span class="number">3</span>, <span class="number">45</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.sort(a))</span><br><span class="line"><span class="built_in">print</span>(np.sort(a, axis=<span class="literal">None</span>))</span><br><span class="line"><span class="built_in">print</span>(np.sort(a, axis=<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(np.sort(a, axis=<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[[ <span class="number">9</span> <span class="number">14</span> <span class="number">55</span>]</span><br><span class="line"> [<span class="number">45</span> <span class="number">56</span> <span class="number">87</span>]</span><br><span class="line"> [ <span class="number">3</span> <span class="number">45</span> <span class="number">90</span>]]</span><br><span class="line">[ <span class="number">3</span>  <span class="number">9</span> <span class="number">14</span> <span class="number">45</span> <span class="number">45</span> <span class="number">55</span> <span class="number">56</span> <span class="number">87</span> <span class="number">90</span>]</span><br><span class="line">[[<span class="number">14</span>  <span class="number">3</span>  <span class="number">9</span>]</span><br><span class="line"> [<span class="number">45</span> <span class="number">55</span> <span class="number">45</span>]</span><br><span class="line"> [<span class="number">90</span> <span class="number">56</span> <span class="number">87</span>]]</span><br><span class="line">[[ <span class="number">9</span> <span class="number">14</span> <span class="number">55</span>]</span><br><span class="line"> [<span class="number">45</span> <span class="number">56</span> <span class="number">87</span>]</span><br><span class="line"> [ <span class="number">3</span> <span class="number">45</span> <span class="number">90</span>]]</span><br></pre></td></tr></table></figure>
-
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>《数据分析实战45讲》-极课时间  陈旸</p>
-<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20201025 完成基本内容</p>
-
+心理学家把”表现“的意愿叫做”绩效目标“——展示自己聪明、有才、用能力或业绩优于他人。当你追求“绩效目标”
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/04/2019-07-04-Success-goals-and-hexomotivations/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -307,7 +262,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/25/2020-10-25-python-basic-syntax/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2019/05/27/2019-05-27-Three-principle-of-science/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -321,7 +276,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/25/2020-10-25-python-basic-syntax/" class="post-title-link" itemprop="url">一篇文章掌握python基本语法</a>
+            <a href="/2019/05/27/2019-05-27-Three-principle-of-science/" class="post-title-link" itemprop="url">科学的三点原则</a>
         </h2>
 
         <div class="post-meta">
@@ -331,7 +286,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-10-25 19:57:05" itemprop="dateCreated datePublished" datetime="2020-10-25T19:57:05+08:00">2020-10-25</time>
+              <time title="Created: 2019-05-27 18:55:07" itemprop="dateCreated datePublished" datetime="2019-05-27T18:55:07+08:00">2019-05-27</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -352,64 +307,103 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;What&#x27;s is your name?&quot;</span>)</span><br><span class="line">a = <span class="number">1</span> + <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello, %s&#x27;</span> %name)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a = %d&#x27;</span> %a)</span><br></pre></td></tr></table></figure>
+          科学的三大条件
+什么是心理学？心理学是不是科学？斯坦诺维奇看来“心理学是用科学方法研究人类行为的学科”。因为心理学研究领域宽泛，看起来不像是一个学科，但实际上心理学是一个学科的原因是其科学性。
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">What<span class="string">&#x27;s your name?y</span></span><br><span class="line"><span class="string">hello,y</span></span><br><span class="line"><span class="string">a = 2</span></span><br></pre></td></tr></table></figure>
+那什么是科学呢？在斯坦诺维奇看来，科学满足三个条件：
 
-<h3 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;What&#x27;s your score?&quot;</span>))</span><br><span class="line"><span class="keyword">if</span> score&gt;= <span class="number">90</span>:</span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&#x27;Excellent&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">       <span class="keyword">if</span> score &lt; <span class="number">60</span>:</span><br><span class="line">           <span class="built_in">print</span>(<span class="string">&#x27;Fail&#x27;</span>)</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           <span class="built_in">print</span>(<span class="string">&#x27;Good Job&#x27;</span>)</span><br></pre></td></tr></table></figure>
+ 1. 科学采用系统的实证主义的研究方法；
+ 2. 以公共性、可检验的知识为研究对象；
+ 3. 研究实证可解问题，并产生可检验的理论。
 
-<h3 id="循环语句：for-…-in"><a href="#循环语句：for-…-in" class="headerlink" title="循环语句：for … in"></a>循环语句：for … in</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">11</span>):</span><br><span class="line">    <span class="built_in">sum</span> = <span class="built_in">sum</span> + number</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
+接下来看每一条的具体含义：
+1） 系统的实证主义
 
-<p>输出结果为；</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">55</span></span><br></pre></td></tr></table></figure>
+实证主义是指“基于观察的实践”。可以简单的理解为以（客观）事实为基础，区分观点、结论和事实。但是非结构化、零散的观察并不能导致科学知识的产生，科学是通过理论揭
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/27/2019-05-27-Three-principle-of-science/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
-<h3 id="循环语句-while"><a href="#循环语句-while" class="headerlink" title="循环语句: while"></a>循环语句: while</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span> = <span class="number">1</span></span><br><span class="line">number = <span class="number">2</span></span><br><span class="line"><span class="keyword">while</span> number &lt;=<span class="number">100</span>:</span><br><span class="line">  <span class="built_in">sum</span> = <span class="built_in">sum</span> + number</span><br><span class="line">  number = number + <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br><span class="line"><span class="built_in">print</span>(number)</span><br></pre></td></tr></table></figure>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5050</span></span><br><span class="line"><span class="number">101</span></span><br></pre></td></tr></table></figure>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2019/05/23/2019-05-23-Learn-Renzhengfei/">
 
-<h3 id="数据类型：列表、元组、字典、集合"><a href="#数据类型：列表、元组、字典、集合" class="headerlink" title="数据类型：列表、元组、字典、集合"></a>数据类型：列表、元组、字典、集合</h3><h4 id="列表"><a href="#列表" class="headerlink" title="列表[]"></a>列表[]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lists = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line">lists.append(<span class="string">&#x27;d&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(lists))</span><br><span class="line">lists.insert(<span class="number">0</span>,<span class="string">&#x27;mm&#x27;</span>)</span><br><span class="line">lists.pop()</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br></pre></td></tr></table></figure>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="若有可能，让生活更美丽一点">
+    </span>
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>]</span><br><span class="line"><span class="number">4</span></span><br><span class="line">[<span class="string">&#x27;nm&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>]</span><br></pre></td></tr></table></figure>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好运的分析师">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/05/23/2019-05-23-Learn-Renzhengfei/" class="post-title-link" itemprop="url">学习任总的讲话</a>
+        </h2>
 
-<p>增：append() 在尾部添加元素、使用 insert() 在列表中插入元素</p>
-<p>删：使用 pop() 删除尾部的元素</p>
-<p>查：len() 函数获得 lists 中元素的个数</p>
-<h4 id="元组-tuple"><a href="#元组-tuple" class="headerlink" title="元组 (tuple)"></a>元组 (tuple)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tuples = (<span class="string">&#x27;tupleA&#x27;</span>,<span class="string">&#x27;tupleB&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(tuples[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(tuples[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(tuples[-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tupleA</span><br><span class="line">tupleB</span><br><span class="line">tupleB</span><br></pre></td></tr></table></figure>
+              <time title="Created: 2019-05-23 18:52:13" itemprop="dateCreated datePublished" datetime="2019-05-23T18:52:13+08:00">2019-05-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
 
-<p>元组和列表相同，但是初始化后不能够增加和删除元素，上面程序表示的是元素的查找。</p>
-<h4 id="字典-dictionary"><a href="#字典-dictionary" class="headerlink" title="字典 {dictionary}"></a>字典 {dictionary}</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#定义一个dictionary</span></span><br><span class="line">score = &#123;<span class="string">&#x27;guanyu&#x27;</span>:<span class="number">95</span>,<span class="string">&#x27;zhangfei&#x27;</span>:<span class="number">96</span>&#125;</span><br><span class="line"><span class="comment">#添加一个元素</span></span><br><span class="line">score[<span class="string">&#x27;zhaoyun&#x27;</span>] = <span class="number">98</span></span><br><span class="line"><span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除一个元素</span></span><br><span class="line">score.pop(<span class="string">&#x27;zhangfei&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看key是否存在</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;guanyu&#x27;</span> <span class="keyword">in</span> score)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看一个key对应的值</span></span><br><span class="line"><span class="built_in">print</span>(score.get(<span class="string">&#x27;guanyu&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(score.get(<span class="string">&#x27;yase&#x27;</span>,<span class="number">99</span>))</span><br></pre></td></tr></table></figure>
+          
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;guanyu&#x27;</span>: <span class="number">95</span>, <span class="string">&#x27;zhangfei&#x27;</span>: <span class="number">96</span>, <span class="string">&#x27;zhaoyun&#x27;</span>: <span class="number">98</span>&#125;</span><br><span class="line">&#123;<span class="string">&#x27;guanyu&#x27;</span>: <span class="number">95</span>, <span class="string">&#x27;zhaoyun&#x27;</span>: <span class="number">98</span>&#125;</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="number">95</span></span><br><span class="line"><span class="number">99</span></span><br></pre></td></tr></table></figure>
+        </div>
+      </header>
 
-<p>增：score[‘zhaoyun’] &#x3D; 98</p>
-<p>删：score.pop()</p>
-<p>查：是否存在用print(‘guanyu’ in score)、对应值用print(score.get(‘guanyu’))</p>
-<h3 id="集合：set"><a href="#集合：set" class="headerlink" title="集合：set"></a>集合：set</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="built_in">set</span>([<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>])</span><br><span class="line"><span class="comment"># 增加某个元素</span></span><br><span class="line">s.add(<span class="string">&#x27;d&#x27;</span>)</span><br><span class="line"><span class="comment"># 移除某个元素</span></span><br><span class="line">s.remove(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"><span class="comment"># 查找某个元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c&#x27;</span> <span class="keyword">in</span> s)</span><br></pre></td></tr></table></figure>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;c&#x27;</span>&#125;</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+      
+          任正非今年罕见的接受了媒体的三场采访（2场1月份，1场5月份，原文见参考资料），每场讲话务实、简练、直指问题核心。任正非所体现的企业家精神值得我辈学习，做企业当做华为、做企业家当学任正非。人生只为一件大事而来，态度决定命运，气度决定格局，底蕴的厚度决定事业的高度。学习完任总的讲话，结合当前实际及未来职业发展，总结以来内容。
 
-<p>集合和字典类似，但在增删查语法上有所区别：</p>
-<p>增： add</p>
-<p>删：remove</p>
-<p>查：使用 in</p>
-<h3 id="函数：def"><a href="#函数：def" class="headerlink" title="函数：def"></a>函数：def</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">addone</span>(<span class="params">score</span>):</span><br><span class="line">   <span class="keyword">return</span> score + <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(addone(<span class="number">99</span>))</span><br></pre></td></tr></table></figure>
+格局。什么是格局，借阳志平老师的一句话说明：“格局意味着能与不同阶层、不同年龄、不同产业的人交流。”任正非在三次谈话中并不是维护公司权威角度，而是有一说一，赞美美国企业。格局的提高意味着能够从更对维度看待一件事情，而不是站在原本自己的阶层上看待问题。
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>使用<code># -*- coding: utf-8 -*-</code>，单行注释使用<code>#</code>，多行注释可以使用三个单引号’’’ ‘’’。</p>
-<h3 id="引用模块-包：import"><a href="#引用模块-包：import" class="headerlink" title="引用模块 &#x2F; 包：import"></a>引用模块 &#x2F; 包：import</h3><p>引用直接使用<code>import module_name</code>调动即可，import本质上是路径的搜索。</p>
-<p>针对package，可以采用<code>from … import …</code>，这实际是从一个目录中引用模块</p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>《数据分析实战45讲》-极课时间 陈旸</p>
-
+科学、理性、实事求
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/23/2019-05-23-Learn-Renzhengfei/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -427,7 +421,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/45/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/75/">75</a><a class="extend next" rel="next" href="/page/47/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/45/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/47/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 

@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/29/2020-10-29-python-douban-image/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2019/08/23/2019-08-23-Principles_of_Speech/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -199,7 +199,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/29/2020-10-29-python-douban-image/" class="post-title-link" itemprop="url">python操作流程及爬取豆瓣图片</a>
+            <a href="/2019/08/23/2019-08-23-Principles_of_Speech/" class="post-title-link" itemprop="url">演说原则的原则</a>
         </h2>
 
         <div class="post-meta">
@@ -209,7 +209,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-10-29 19:55:43" itemprop="dateCreated datePublished" datetime="2020-10-29T19:55:43+08:00">2020-10-29</time>
+              <time title="Created: 2019-08-23 19:00:32" itemprop="dateCreated datePublished" datetime="2019-08-23T19:00:32+08:00">2019-08-23</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -230,172 +230,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="常见的数据来源"><a href="#常见的数据来源" class="headerlink" title="常见的数据来源"></a>常见的数据来源</h3><table>
-<thead>
-<tr>
-<th>类别</th>
-<th>解释</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>开放数据源</td>
-<td>重要是行业数据库，政府公开的各类数据</td>
-<td>国家统计局、wind、巨潮资讯网</td>
-</tr>
-<tr>
-<td>爬虫爬取的数据</td>
-<td>通过爬虫取得的数据</td>
-<td>豆瓣、社交网站、电商网站、图片网站</td>
-</tr>
-<tr>
-<td>传感器采集</td>
-<td>通过传感器采集到的数据</td>
-<td></td>
-</tr>
-<tr>
-<td>日志采集</td>
-<td>应用埋点采集到的数据</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="爬取数据的工具"><a href="#爬取数据的工具" class="headerlink" title="爬取数据的工具"></a>爬取数据的工具</h3><p><strong>火车采集器。</strong>可以做抓取工具，也可以做数据清洗、数据分析、数据挖掘和可视化等工作。</p>
-<p><strong>八爪鱼。</strong>可以实现自动云采集。</p>
-<p><strong>集搜客。</strong>缺点是没有云采集功能，所有爬虫都是在用户自己电脑上跑的。</p>
-<h3 id="爬虫的操作流程"><a href="#爬虫的操作流程" class="headerlink" title="爬虫的操作流程"></a>爬虫的操作流程</h3><p>爬虫模拟我们日常获取网页信息的流程，通过计算机程序自动化爬取内容。</p>
-<p>包括三个阶段：</p>
-<ul>
-<li>打开网页。工具为<strong>Requests</strong>，数据包括 HTML 页面以及 JSON 数据。</li>
-<li>爬取数据。针对HTML页面使用<strong>XPath</strong>提取数据，针对JSON数据使用<strong>JSON</strong>库进行解析。</li>
-<li>保存数据。可以使用<strong>Pandas</strong>保存数据，导出为<strong>CSV</strong>文件。</li>
-</ul>
-<h3 id="三个阶段解析"><a href="#三个阶段解析" class="headerlink" title="三个阶段解析"></a>三个阶段解析</h3><h4 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a>Requests</h4><p>Requests有两种访问方式，Get和Post。</p>
-<p>其中Get把参数包含在链接中。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(<span class="string">&#x27;http://www.douban.com&#x27;</span>)</span><br></pre></td></tr></table></figure>
+          重要的是原则
+加尔•雷纳德（Garr Reynolds）是谁？幻灯片设计与演说专家，担任过苹果公司全球用户关系项目负责人，多家全球500强公司培训师，日本禅宗的追随者，日本DesignMatters公社设计总监。
 
-<p>Post通过request body传递参数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r = requests.post(<span class="string">&#x27;http://xxx.com&#x27;</span>, data = &#123;<span class="string">&#x27;key&#x27;</span>, <span class="string">&#x27;value&#x27;</span>&#125;)</span><br></pre></td></tr></table></figure>
+《演说之禅》是一本在演说和PPT制作方面难得的好书，文字平实，没有列出如何做PPT和演说的第一二三点，很多人会觉得没有新意，道理都懂。但，无用之处乃为大用，关键是把做PPT和演说的原则实践，实践再实践，正如顶级剑客一样：
 
-<p>data的数据结构是字典，通过key 和 value 对数据储存。</p>
-<p>动态数据需要通过<a target="_blank" rel="noopener" href="https://www.cnblogs.com/syfwhu/p/6116323.html">XHR</a>发出HTTP请求。</p>
-<h4 id="Xpath"><a href="#Xpath" class="headerlink" title="Xpath"></a>Xpath</h4><p>XPath 是 XML 的路径语言，帮助定位位置。</p>
-<p><strong>使用Xpath解析规则</strong></p>
-<p>在 XPath 中，有七种类型的节点：元素、属性、文本、命名空间、处理指令、注释以及文档（根）节点。</p>
-<table>
-<thead>
-<tr>
-<th>表达式</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>node</td>
-<td>选取此节点的所有子节点</td>
-</tr>
-<tr>
-<td>&#x2F;</td>
-<td>从根节点选取</td>
-</tr>
-<tr>
-<td>&#x2F;&#x2F;</td>
-<td>选取所有的当前节点，不考虑位置</td>
-</tr>
-<tr>
-<td>.</td>
-<td>选取当前节点</td>
-</tr>
-<tr>
-<td>..</td>
-<td>选取当前节点的父节点</td>
-</tr>
-<tr>
-<td>@</td>
-<td>选取属性</td>
-</tr>
-<tr>
-<td>｜</td>
-<td>或，两个节点的合并</td>
-</tr>
-<tr>
-<td>text()</td>
-<td>当前路径下的文版内容</td>
-</tr>
-</tbody></table>
-<p>下面用<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/xpath_syntax.asp">这个网站</a>上的例子举例：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;ISO-8859-1&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">&quot;eng&quot;</span>&gt;</span>Harry Potter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">&quot;eng&quot;</span>&gt;</span>Learning XML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>39.95<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></span><br></pre></td></tr></table></figure>
+作为一名剑客，其首要原则便是不依托所谓的技巧和花招。而大多数剑客却过于看重他们，更有甚者将其看作性命攸关的之事。
 
-<table>
-<thead>
-<tr>
-<th align="left">路径表达式</th>
-<th align="left">结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&#x2F;bookstore&#x2F;book[1]</td>
-<td align="left">选取属于 bookstore 子元素的第一个 book 元素。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;bookstore&#x2F;book[last()]</td>
-<td align="left">选取属于 bookstore 子元素的最后一个 book 元素。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;bookstore&#x2F;book[last()-1]</td>
-<td align="left">选取属于 bookstore 子元素的倒数第二个 book 元素。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;bookstore&#x2F;book[position()&lt;3]</td>
-<td align="left">选取最前面的两个属于 bookstore 元素的子元素的 book 元素。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;&#x2F;title[@lang]</td>
-<td align="left">选取所有拥有名为 lang 的属性的 title 元素。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;&#x2F;title[@lang&#x3D;’eng’]</td>
-<td align="left">选取所有 title 元素，且这些元素拥有值为 eng 的 lang 属性。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;bookstore&#x2F;book[price&gt;35.00]</td>
-<td align="left">选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;bookstore&#x2F;book[price&gt;35.00]&#x2F;title</td>
-<td align="left">选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00。</td>
-</tr>
-</tbody></table>
-<p>xpath(’&#x2F;&#x2F;@id’) 选取所有的 id 属性；</p>
-<p>xpath(’&#x2F;&#x2F;book[@id]’) 选取所有拥有名为 id 的属性的 book 元素；</p>
-<p>xpath(’&#x2F;&#x2F;book[@id&#x3D;“abc”]’) 选取所有 book 元素，且这些 book 元素拥有 id&#x3D; “abc”的属性；</p>
-<p>xpath(’&#x2F;&#x2F;book&#x2F;title | &#x2F;&#x2F;book&#x2F;price’) 选取 book 元素的所有 title 和 price 元素。</p>
-<p>定位到所有列表项目，需要使用lxml，下面代码为定位到HTML所有列表函数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">html = etree.HTML(html)</span><br><span class="line">result = html.xpath(<span class="string">&#x27;//li&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>Json.dumps()：将python对象转换成ISON对象。</p>
-<p>Json.load()：将python对象转换成JSON对象。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">jsonData = <span class="string">&#x27;&#123;&quot;a&quot;:1,&quot;b&quot;:2,&quot;c&quot;:3,&quot;d&quot;:4,&quot;e&quot;:5&#125;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = json.loads(jsonData)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">input</span>)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number">4</span>, <span class="string">&#x27;e&#x27;</span>: <span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="项目实战：爬取葛优相关图片"><a href="#项目实战：爬取葛优相关图片" class="headerlink" title="项目实战：爬取葛优相关图片"></a>项目实战：爬取葛优相关图片</h3><h4 id="步骤一：打开网页"><a href="#步骤一：打开网页" class="headerlink" title="步骤一：打开网页"></a>步骤一：打开网页</h4><p>打开<a target="_blank" rel="noopener" href="https://www.douban.com/doulist/113201263/">豆瓣图片</a>，输入关键词葛优</p>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gibedwo682j319n0u0x6p.jpg" alt="image-20200901195719609" style="zoom:50%;" />
-
-<h4 id="步骤二：选择图片"><a href="#步骤二：选择图片" class="headerlink" title="步骤二：选择图片"></a>步骤二：选择图片</h4><p>在搜索结果中，可以看到网页是动态的（即往下滑可以看到更多的图片），动态数据需要通过<a target="_blank" rel="noopener" href="https://www.cnblogs.com/syfwhu/p/6116323.html">XHR</a>发出HTTP请求，此处需要知道JSON。</p>
-<p>我们先来寻找XHR结构，方法是通过：1）谷歌浏览器右键单击检查；2）选择Network；3）选择XHR；4）刷新页面。从图片中可以看到共有1724张葛优相关的图片。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gibeiuzis1j31jl0u04i8.jpg" alt="image-20200901200213885"></p>
-<p>从上图最下面的方框中可以看到JSON。可以看到数据被放到images里面，每张图片通过字典形式储存，元数据包含author、height、id、src、title、width等信息，有了这些信息，我们便可以提取需要的数据。</p>
-<p>在看一下图片的组成，limit：20，最大可以显示20张，第一张图片从0开始，我们便可以写个for循环实现所有的下载。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">images<span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span>src<span class="punctuation">:</span> <span class="string">&quot;https://img3.doubanio.com/view/photo/photo/public/p399074242.jpg&quot;</span><span class="punctuation">,</span> author<span class="punctuation">:</span> <span class="string">&quot;饭&quot;</span><span class="punctuation">,</span>…<span class="punctuation">&#125;</span><span class="punctuation">,</span>…<span class="punctuation">]</span></span><br><span class="line"><span class="number">0</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>src<span class="punctuation">:</span> <span class="string">&quot;https://img3.doubanio.com/view/photo/photo/public/p399074242.jpg&quot;</span><span class="punctuation">,</span> author<span class="punctuation">:</span> <span class="string">&quot;饭&quot;</span><span class="punctuation">,</span>…<span class="punctuation">&#125;</span></span><br><span class="line">author<span class="punctuation">:</span> <span class="string">&quot;饭&quot;</span></span><br><span class="line">height<span class="punctuation">:</span> <span class="number">600</span></span><br><span class="line">id<span class="punctuation">:</span> <span class="string">&quot;399074242&quot;</span></span><br><span class="line">src<span class="punctuation">:</span> <span class="string">&quot;https://img3.doubanio.com/view/photo/photo/public/p399074242.jpg&quot;</span></span><br><span class="line">title<span class="punctuation">:</span> <span class="string">&quot;葛优&quot;</span></span><br><span class="line">url<span class="punctuation">:</span> <span class="string">&quot;https://www.douban.com/link2/?url=http%3A%2F%2Fwww.douban.com%2Fphotos%2Fphoto%2F399074242%2F&amp;query=%E8%91%9B%E4%BC%98&amp;cat_id=1025&amp;type=search&quot;</span></span><br><span class="line">width<span class="punctuation">:</span> <span class="number">414</span></span><br><span class="line">limit<span class="punctuation">:</span> <span class="number">20</span></span><br><span class="line">more<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">total<span class="punctuation">:</span> <span class="number">1724</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="提取需要的信息"><a href="#提取需要的信息" class="headerlink" title="提取需要的信息"></a>提取需要的信息</h4><p>找到了网页及所需要的信息，接下里就是提取所需要的数据，并且进行储存。</p>
-<p>完整代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">query = <span class="string">&#x27;葛优&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载图片</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download</span>(<span class="params">src, <span class="built_in">id</span></span>):</span><br><span class="line">  <span class="built_in">dir</span> = <span class="string">&#x27;./&#x27;</span> + <span class="built_in">str</span>(<span class="built_in">id</span>) + <span class="string">&#x27;.jpg&#x27;</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    pic = requests.get(src, timeout=<span class="number">10</span>)</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="built_in">dir</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    fp.write(pic.content)</span><br><span class="line">    fp.close()</span><br><span class="line">  <span class="keyword">except</span> requests.exceptions.ConnectionError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;图片无法下载&#x27;</span>)</span><br><span class="line">            </span><br><span class="line"><span class="comment"># for 循环 请求全部的 url</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">1723</span>, <span class="number">20</span>):</span><br><span class="line">  url = <span class="string">&#x27;https://www.douban.com/j/search_photo?q=&#x27;</span>+query+<span class="string">&#x27;&amp;limit=20&amp;start=&#x27;</span>+<span class="built_in">str</span>(i)</span><br><span class="line">  html = requests.get(url).text    <span class="comment"># 得到返回结果</span></span><br><span class="line">  response = json.loads(html, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="comment"># 将 JSON 格式转换成 Python 对象</span></span><br><span class="line">  <span class="keyword">for</span> image <span class="keyword">in</span> response[<span class="string">&#x27;images&#x27;</span>]:</span><br><span class="line">    <span class="built_in">print</span>(image[<span class="string">&#x27;src&#x27;</span>]) <span class="comment"># 查看当前下载的图片网址</span></span><br><span class="line">    download(image[<span class="string">&#x27;src&#x27;</span>], image[<span class="string">&#x27;id&#x27;</span>]) <span class="comment"># 下载一张图片</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/xpath_syntax.asp">Xpath教程</a></p>
-<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20201029 补充Xpath案例，仍然出现错误<code>Expecting value: line 1 column 1 (char 0)</code></p>
-<p>20200901 爬虫代码运行错误</p>
-
+本书从内容构思、幻灯片设计、演讲方式三个层面
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/23/2019-08-23-Principles_of_Speech/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -414,7 +264,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/27/2020-10-27-Pandas-basic-learn/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2019/08/14/2019-08-14-Growth_of_newcomers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -428,7 +278,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/27/2020-10-27-Pandas-basic-learn/" class="post-title-link" itemprop="url">Pandas基础快速入门</a>
+            <a href="/2019/08/14/2019-08-14-Growth_of_newcomers/" class="post-title-link" itemprop="url">职场新人成长没啥秘籍</a>
         </h2>
 
         <div class="post-meta">
@@ -438,7 +288,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-10-27 21:37:50" itemprop="dateCreated datePublished" datetime="2020-10-27T21:37:50+08:00">2020-10-27</time>
+              <time title="Created: 2019-08-14 18:58:55" itemprop="dateCreated datePublished" datetime="2019-08-14T18:58:55+08:00">2019-08-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -459,97 +309,96 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-初识Pandas"><a href="#1-初识Pandas" class="headerlink" title="1.初识Pandas"></a>1.初识Pandas</h2><p><strong>Pandas</strong> 是“Python的核心数据分析支持库，提供了快速、灵活、明确的数据结构，旨在简单、直观地处理关系型、标记型数据”，主要数据结构是 Series（一维数据）与 DataFrame（二维数据），这两种数据结构可以处理金融、统计、社会科学、工程等领域里的大多数典型用例。</p>
-<h2 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2.数据结构"></a>2.数据结构</h2><h3 id="2-1-Series数据结构"><a href="#2-1-Series数据结构" class="headerlink" title="2.1 Series数据结构"></a>2.1 Series数据结构</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">s = pd.Series([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, np.nan, <span class="number">6</span>, <span class="number">8</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"></span><br><span class="line">d = pd.Series([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>], index=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure>
+          从去年年初开始一直想找个时间系统的学习华为创始人任正非的讲话，因各种事情，拖了又拖。最近几个月因中美毛衣战，一向低调的任总在频繁与媒体见面，任总的每一次讲话透彻，直击问题本质。年轻时候，多接触智者的思想，对成长有益，遂重拾任总从1994年-2019年发表的讲话，也算是紧张工作下的另一种成长。
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>    <span class="number">1.0</span></span><br><span class="line"><span class="number">1</span>    <span class="number">3.0</span></span><br><span class="line"><span class="number">2</span>    <span class="number">5.0</span></span><br><span class="line"><span class="number">3</span>    NaN</span><br><span class="line"><span class="number">4</span>    <span class="number">6.0</span></span><br><span class="line"><span class="number">5</span>    <span class="number">8.0</span></span><br><span class="line">dtype: float64</span><br><span class="line">  </span><br><span class="line">a    <span class="number">1</span></span><br><span class="line"><span class="number">1</span>    <span class="number">3</span></span><br><span class="line">c    <span class="number">5</span></span><br><span class="line"><span class="number">3</span>    <span class="number">7</span></span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+第一篇阅读的是任总对职场新人的讲话，《致新员工书（1994）》《任正非总裁答新员工问（1999）》。讲话虽然久远，但初入职场的我读后仍然受益匪浅。任总讲述的都是一些常识，但难在执行，职场新人最重要的是利用现有平台发展自己，创造一件与众不同的作品。
 
-<p>数据结构为Series([1, 3, 5, 6], index&#x3D;[‘a’, ‘b’, ‘c’, ‘d’])。index默认结构为0、1、2、3……</p>
-<p>从上面的运行结果可以看出，index后面的文本型结构’a’，必须加引号，否则会报错，而数字是否加引号虽不影响，单加不加引号，数据类型完全不同。</p>
-<p>除了采用index外，还可以采用字典形式，如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line">x1 = Series(d)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(x1)</span><br></pre></td></tr></table></figure>
+放低自己，重新做人
+商业社会和学校是两个不同的生态，企
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/14/2019-08-14-Growth_of_newcomers/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">2</span></span><br><span class="line">c    <span class="number">3</span></span><br><span class="line">d    <span class="number">4</span></span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-<h3 id="2-2-DataFrame-数据结构"><a href="#2-2-DataFrame-数据结构" class="headerlink" title="2.2 DataFrame 数据结构"></a>2.2 DataFrame 数据结构</h3><p>DataFrame可以理解为两个Series构成的数组结构，在语法上完全相同。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;列1&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;列2&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;列3&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;列1&#x27;</span>, <span class="string">&#x27;列2&#x27;</span>, <span class="string">&#x27;列3&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df2)</span><br></pre></td></tr></table></figure>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2019/07/25/2019-07-25-Financial_Management_Lesson_One/">
 
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">       列<span class="number">1</span>  列<span class="number">2</span>  列<span class="number">3</span></span><br><span class="line">one     <span class="number">1</span>   <span class="number">5</span>   <span class="number">0</span></span><br><span class="line">two     <span class="number">2</span>   <span class="number">6</span>   <span class="number">9</span></span><br><span class="line">three   <span class="number">3</span>   <span class="number">7</span>   <span class="number">6</span></span><br><span class="line">four    <span class="number">4</span>   <span class="number">8</span>   <span class="number">8</span></span><br></pre></td></tr></table></figure>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="若有可能，让生活更美丽一点">
+    </span>
 
-<h3 id="2-3-导入和导出"><a href="#2-3-导入和导出" class="headerlink" title="2.3 导入和导出"></a>2.3 导入和导出</h3><p>Pandas 可以从xlsx, csv中导入数据，也可以输出数据为xlsx, csv。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写入csv</span></span><br><span class="line">df.to_csv(<span class="string">&#x27;foo.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取csv</span></span><br><span class="line">pd.read_csv(<span class="string">&#x27;foo.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好运的分析师">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/25/2019-07-25-Financial_Management_Lesson_One/" class="post-title-link" itemprop="url">成年人的第一课</a>
+        </h2>
 
-<h2 id="3-数据清洗"><a href="#3-数据清洗" class="headerlink" title="3.数据清洗"></a>3.数据清洗</h2><h3 id="3-1-删除"><a href="#3-1-删除" class="headerlink" title="3.1 删除"></a>3.1 删除</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;列1&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;列2&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;列3&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;列1&#x27;</span>, <span class="string">&#x27;列2&#x27;</span>, <span class="string">&#x27;列3&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据删除使用drop()</span></span><br><span class="line">df2 = df2.drop(columns=[<span class="string">&#x27;列1&#x27;</span>])</span><br><span class="line">df2 = df2.drop(index=[<span class="string">&#x27;one&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df2)</span><br></pre></td></tr></table></figure>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
-<h3 id="3-2-去除重复的值"><a href="#3-2-去除重复的值" class="headerlink" title="3.2 去除重复的值"></a>3.2 去除重复的值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.drop_duplicates() <span class="comment">#去除重复行</span></span><br></pre></td></tr></table></figure>
+              <time title="Created: 2019-07-25 18:57:14" itemprop="dateCreated datePublished" datetime="2019-07-25T18:57:14+08:00">2019-07-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
 
-<h3 id="3-3-重命名"><a href="#3-3-重命名" class="headerlink" title="3.3 重命名"></a>3.3 重命名</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;列1&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;列2&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;列3&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;列1&#x27;</span>, <span class="string">&#x27;列2&#x27;</span>, <span class="string">&#x27;列3&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重命名使用rename(columns=new_names, inplace=True) 函数</span></span><br><span class="line">df2.rename(index=&#123;<span class="string">&#x27;one&#x27;</span>:<span class="string">&#x27;第1&#x27;</span>, <span class="string">&#x27;two&#x27;</span>:<span class="string">&#x27;第2&#x27;</span>&#125;, inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df2)</span><br></pre></td></tr></table></figure>
+          
 
-<h3 id="3-4-格式相关"><a href="#3-4-格式相关" class="headerlink" title="3.4 格式相关"></a>3.4 格式相关</h3><p><strong>使用astype转换格式</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;列1&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;列2&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;列3&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;列1&#x27;</span>, <span class="string">&#x27;列2&#x27;</span>, <span class="string">&#x27;列3&#x27;</span>])</span><br><span class="line"></span><br><span class="line">df2[<span class="string">&#x27;列1&#x27;</span>].astype(<span class="string">&#x27;str&#x27;</span>)</span><br><span class="line">df2[<span class="string">&#x27;列1&#x27;</span>].astype(np.int64)</span><br></pre></td></tr></table></figure>
+        </div>
+      </header>
 
-<p><strong>去除数据之间的空格strip</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;列1&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;列2&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;列3&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;列1&#x27;</span>, <span class="string">&#x27;列2&#x27;</span>, <span class="string">&#x27;列3&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除左右两边的空格</span></span><br><span class="line">df2[<span class="string">&#x27;one&#x27;</span>] = df2[<span class="string">&#x27;one&#x27;</span>].<span class="built_in">map</span>(<span class="built_in">str</span>.strip)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除左边的空格</span></span><br><span class="line">df2[<span class="string">&#x27;one&#x27;</span>] = df2[<span class="string">&#x27;one&#x27;</span>].<span class="built_in">map</span>(<span class="built_in">str</span>.lstrip)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除右边的空格</span></span><br><span class="line">df2[<span class="string">&#x27;one&#x27;</span>] = df2[<span class="string">&#x27;one&#x27;</span>].<span class="built_in">map</span>.(<span class="built_in">str</span>.rstrip)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除特殊的字符</span></span><br><span class="line">df2[<span class="string">&#x27;one&#x27;</span>]=df2[<span class="string">&#x27;one&#x27;</span>].<span class="built_in">str</span>.strip(<span class="string">&#x27;$&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-<p><strong>大小写转换</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;chinese&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;math&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;English&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;chinese&#x27;</span>, <span class="string">&#x27;math&#x27;</span>, <span class="string">&#x27;English&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 全部大写</span></span><br><span class="line">df2.columns = df2.columns.<span class="built_in">str</span>.upper()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 全部小写</span></span><br><span class="line">df2.columns = df2.columns.<span class="built_in">str</span>.lower()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 首字母大写</span></span><br><span class="line">df2.columns = df2.columns.<span class="built_in">str</span>.title()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df2)</span><br></pre></td></tr></table></figure>
+      
+          前段时间《富爸爸，穷爸爸》的作者罗伯特-清崎(Robert Kiyosaki)创办的公司破产了，于是网上各种标题党出来了，对这本书的质疑声也大了。对于这些噪音无需多管，在我看来《富爸爸，穷爸爸》《富爸爸的财富自由之路》仍然是财商启蒙不可多得的书籍。何为财商？作者在书中定义为：“把现金或劳动转化为能带来现金流的资产的能力。”财商可以简单的理解为财富获取及管理的综合能力，学校里财商教育的缺失被不少人诟病，成年人只能够进行财商自我教育，而且这是从学校步入社会后的第一课，越早培养财商越好。
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下面这两行代码也可以一行代码</span></span><br><span class="line">data = &#123;<span class="string">&#x27;chinese&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">&#x27;math&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], <span class="string">&#x27;English&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;</span><br><span class="line">df2 = DataFrame(data, index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>], columns=[<span class="string">&#x27;chinese&#x27;</span>, <span class="string">&#x27;math&#x27;</span>, <span class="string">&#x27;English&#x27;</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">df2 = pd.DataFrame(&#123;<span class="string">&#x27;chinese&#x27;</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], </span><br><span class="line">                     <span class="string">&#x27;math&#x27;</span>:[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>],</span><br><span class="line">                    <span class="string">&#x27;English&#x27;</span>:[<span class="number">0</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;,index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="string">&#x27;four&#x27;</span>] )</span><br></pre></td></tr></table></figure>
-
-<p><strong>查找空值</strong></p>
-<p>查找空值使用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.isnull()</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-5-apply-函数对数据进行清洗"><a href="#3-5-apply-函数对数据进行清洗" class="headerlink" title="3.5 apply 函数对数据进行清洗"></a>3.5 apply 函数对数据进行清洗</h3><p>@todo</p>
-<h2 id="4-数据分析"><a href="#4-数据分析" class="headerlink" title="4.数据分析"></a>4.数据分析</h2><p>Pandas常用的统计函数用法和NumPy类似（资料来源极课时间｜数据分析实战45讲），如下：</p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwly1gk43eo27nnj30u01hcts7.jpg" alt="img" style="zoom: 50%;" />
-
-<p>使用describe()函数可以输出所有的统计指标</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;ZhangFei&#x27;</span>, <span class="string">&#x27;GuanYu&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df1.describe())</span><br></pre></td></tr></table></figure>
-
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   data1</span><br><span class="line">count  <span class="number">5.000000</span></span><br><span class="line">mean   <span class="number">2.000000</span></span><br><span class="line">std    <span class="number">1.581139</span></span><br><span class="line"><span class="built_in">min</span>    <span class="number">0.000000</span></span><br><span class="line"><span class="number">25</span>%    <span class="number">1.000000</span></span><br><span class="line"><span class="number">50</span>%    <span class="number">2.000000</span></span><br><span class="line"><span class="number">75</span>%    <span class="number">3.000000</span></span><br><span class="line"><span class="built_in">max</span>    <span class="number">4.000000</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5-数据表合并"><a href="#5-数据表合并" class="headerlink" title="5.数据表合并"></a>5.数据表合并</h2><p>比如下面两个数据表需要合并，使用的是merge()函数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line">df2 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], <span class="string">&#x27;data2&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-1-基于指定列进行连接"><a href="#5-1-基于指定列进行连接" class="headerlink" title="5.1 基于指定列进行连接"></a>5.1 基于指定列进行连接</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line">df2 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], <span class="string">&#x27;data2&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line"></span><br><span class="line">df3 = pd.merge(df1, df2, on=<span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df3)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name  data1  data2</span><br><span class="line"><span class="number">0</span>  One      <span class="number">0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  Two      <span class="number">1</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-inner内链接"><a href="#5-2-inner内链接" class="headerlink" title="5.2 inner内链接"></a>5.2 inner内链接</h3><p>相当于求两个DataFrame的交集。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line">df2 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], <span class="string">&#x27;data2&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line"></span><br><span class="line">df3 = pd.merge(df1, df2, how=<span class="string">&#x27;inner&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df3)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  name  data1  data2</span><br><span class="line"><span class="number">0</span>  One      <span class="number">0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  Two      <span class="number">1</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-3-outer外链接"><a href="#5-3-outer外链接" class="headerlink" title="5.3 outer外链接"></a>5.3 outer外链接</h3><p>相当于求两个 DataFrame 的并集</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line">df2 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], <span class="string">&#x27;data2&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line"></span><br><span class="line">df3 = pd.merge(df1, df2, how=<span class="string">&#x27;outer&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df3)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> name  data1  data2</span><br><span class="line"><span class="number">0</span>  One    <span class="number">0.0</span>    <span class="number">0.0</span></span><br><span class="line"><span class="number">1</span>  Two    <span class="number">1.0</span>    <span class="number">1.0</span></span><br><span class="line"><span class="number">2</span>    a    <span class="number">2.0</span>    NaN</span><br><span class="line"><span class="number">3</span>    b    <span class="number">3.0</span>    NaN</span><br><span class="line"><span class="number">4</span>    c    <span class="number">4.0</span>    NaN</span><br><span class="line"><span class="number">5</span>    A    NaN    <span class="number">2.0</span></span><br><span class="line"><span class="number">6</span>    B    NaN    <span class="number">3.0</span></span><br><span class="line"><span class="number">7</span>    C    NaN    <span class="number">4.0</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-4-left左链接"><a href="#5-4-left左链接" class="headerlink" title="5.4 left左链接"></a>5.4 left左链接</h3><p>第一个 DataFrame 为主进行的连接，第二个 DataFrame 作为补充</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line">df2 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], <span class="string">&#x27;data2&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line"></span><br><span class="line">df3 = pd.merge(df1, df2, how=<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df3)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name  data1  data2</span><br><span class="line"><span class="number">0</span>  One      <span class="number">0</span>    <span class="number">0.0</span></span><br><span class="line"><span class="number">1</span>  Two      <span class="number">1</span>    <span class="number">1.0</span></span><br><span class="line"><span class="number">2</span>    a      <span class="number">2</span>    NaN</span><br><span class="line"><span class="number">3</span>    b      <span class="number">3</span>    NaN</span><br><span class="line"><span class="number">4</span>    c      <span class="number">4</span>    NaN</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-5-right右链接"><a href="#5-5-right右链接" class="headerlink" title="5.5 right右链接"></a>5.5 right右链接</h3><p>第二个 DataFrame 为主进行的连接，第一个 DataFrame 作为补充</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line">df1 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], <span class="string">&#x27;data1&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line">df2 = DataFrame(&#123;<span class="string">&#x27;name&#x27;</span>:[<span class="string">&#x27;One&#x27;</span>, <span class="string">&#x27;Two&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], <span class="string">&#x27;data2&#x27;</span>:<span class="built_in">range</span>(<span class="number">5</span>)&#125;)</span><br><span class="line"></span><br><span class="line">df3 = pd.merge(df1, df2, how=<span class="string">&#x27;right&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df3)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> name  data1  data2</span><br><span class="line"><span class="number">0</span>  One    <span class="number">0.0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  Two    <span class="number">1.0</span>      <span class="number">1</span></span><br><span class="line"><span class="number">2</span>    A    NaN      <span class="number">2</span></span><br><span class="line"><span class="number">3</span>    B    NaN      <span class="number">3</span></span><br><span class="line"><span class="number">4</span>    C    NaN      <span class="number">4</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://www.pypandas.cn/docs/">Pandas中文网</a></p>
-<p>极课时间｜数据分析实战45讲-陈旸</p>
-<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20201026 完成1-3.4</p>
-<p>20201027 完成3.5-5</p>
-
+关于金钱有哪些反常识？
+不要为钱工作
+有这么一个故事：马车夫为了让驴子向前赶路，于是在驴子前面挂了胡萝卜，毛驴
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/25/2019-07-25-Financial_Management_Lesson_One/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -567,7 +416,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/44/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/75/">75</a><a class="extend next" rel="next" href="/page/46/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/44/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/46/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 

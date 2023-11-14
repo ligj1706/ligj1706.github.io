@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2021/04/14/2021-04-14-frame/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/25/2020-10-25-NumPy-leann1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -199,7 +199,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/14/2021-04-14-frame/" class="post-title-link" itemprop="url">决策偏差三：框架与锚定效应</a>
+            <a href="/2020/10/25/2020-10-25-NumPy-leann1/" class="post-title-link" itemprop="url">一文学懂NumPy基础知识1</a>
         </h2>
 
         <div class="post-meta">
@@ -209,7 +209,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-04-14 23:12:39" itemprop="dateCreated datePublished" datetime="2021-04-14T23:12:39+08:00">2021-04-14</time>
+              <time title="Created: 2020-10-25 22:44:52" itemprop="dateCreated datePublished" datetime="2020-10-25T22:44:52+08:00">2020-10-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -230,29 +230,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="框架效应"><a href="#框架效应" class="headerlink" title="框架效应"></a>框架效应</h2><p>同一个问题，换另外一种说法，人们却会得出完全不一样的判断，这就是受到了框架效应的影响。卡尼曼认为“框架的基本原理是对给定的表达方式的被动接受”。</p>
-<p>通过下面三个例子理解框架效应：</p>
-<p><strong>案例1：</strong></p>
-<p>假设美国正在对抗一场不同寻常的传染病，预期会有600人死亡。在下面两个决策中你，你分别选择哪个方案。</p>
-<p>决策1：方案A，将有200人获救；方案B，有1&#x2F;3的概率600人全部获救，2&#x2F;3的概率600人无一人获救。</p>
-<p>决策2：方案C，400人会因疾病丧生；方案D，有1&#x2F;3的概率没有人因此丧生，2&#x2F;3的概率所有有会丧失。</p>
-<p>研究发现，对于决策1，多数人选择方案A；对于决策2，多数人选择方案D。但实际上，方案A与方案C等价，方案B与方案D等价。</p>
-<p><strong>案例2：</strong></p>
-<p>某款商品广告语由“含有5%的脂肪”，改“95%脱脂”，结果销量大涨。</p>
-<p><strong>案例3:</strong></p>
-<p>为了刺激学生消费，要发一笔钱给学生。结果发现，向学生告知“这笔钱是学费退款”，比告知学生“这笔钱是额外津贴”消费的少。为什么同一笔钱，换个说法，消费会不一样呢？</p>
-<p>原来是，“学费退款”被大脑编码为“这笔钱本来就是自己的”，消费了心疼；“额外津贴”则被大脑编码为“这笔钱是意外之财”，可以放心消费。学生把钱划分到了不同的「心理账户」之中，使用不同的消费方式。</p>
-<p>如何避免框架效应影响呢？</p>
-<p><strong>思考背后的默认假设和动机。</strong>不断追问“为什么”，直到不能追问。</p>
-<p><strong>反过来想。</strong>跳出框架的好方法是反过来想。“这件事情，不这么做会怎么样？”，“这件事情，换个做法会怎么样？“</p>
-<p>当然，商业、政府、人际交往中，也可以正向的使用框架效应。这里留个题给大家思考——你这里同时有一个坏消息和一个好消息，应该怎么公布，让大家更开心一些？</p>
-<h2 id="锚定效应"><a href="#锚定效应" class="headerlink" title="锚定效应"></a>锚定效应</h2><p>在评估一件事情时，会把先前获得的信息作为一个参照点，后续判断以此为「锚」进行评估，出现锚定效应。</p>
-<p>商品的标价一般以8或者9结尾，如199元，7.89元，9.99元，大脑会自动锚定200元，8元，10元，并计算差价，商品标价巧妙的利用了锚定效应。</p>
-<p><strong>锚定效应如何使用呢？</strong></p>
-<p>反向设锚。”我们的商谈目标是让他们锚定在这个数字上“，在商业谈判中，不要被对方给出的价格影响，抛出一个远低于对方预期的价格，破除对方给的锚，掌握话语权。</p>
-<p>每一次下注和判断，不要受到前面结果的影响。</p>
-<p>感到自己过得不顺时，改变比较对象，焦虑感有可能就消失了。</p>
+          NumPy可以用来干什么？
+在python里面已经有了列表list，为什么还要使用NumPy？
 
+这和list与NumPy在数据储存和运算速度有关。提升内存和计算资源的利用效率。
+
+NumPy最重要的知识包括：
+
+ * ndarray（N-dimensional array object），解决多维数组问题，
+ * ufunc（universal function object），解决对数组进行处理的函数。
+
+ndarray
+array表示数据，ndarray代表多维数组。
+
+创建数组
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+import numpy as np
+a = np.array([1, 
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/25/2020-10-25-NumPy-leann1/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -271,7 +282,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2021/04/11/2021-04-11-Availability-heuristic/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/25/2020-10-25-python-basic-syntax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -285,7 +296,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/11/2021-04-11-Availability-heuristic/" class="post-title-link" itemprop="url">决策偏差二：可得性启发式</a>
+            <a href="/2020/10/25/2020-10-25-python-basic-syntax/" class="post-title-link" itemprop="url">一篇文章掌握python基本语法</a>
         </h2>
 
         <div class="post-meta">
@@ -295,7 +306,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-04-11 22:34:04" itemprop="dateCreated datePublished" datetime="2021-04-11T22:34:04+08:00">2021-04-11</time>
+              <time title="Created: 2020-10-25 19:57:05" itemprop="dateCreated datePublished" datetime="2020-10-25T19:57:05+08:00">2020-10-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -316,18 +327,141 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>人们会通过能够想到的例子或者事件的容易程度来评估某类事件发生的频率或概率。</p>
-<p>如果你身边全是本科毕业生，你会得出中国本科毕业生占比很高。你经常在网上看到月薪1万以上的人，会高估中国人均收入。某些公众号写手，先有一个观点，然后找各种证据来证明观点是正确的，读者不仔细辨别，很容易就被他们绕进去。</p>
-<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gpg2w4mhhkj30ws0hwt9d.jpg" alt="image-20210411203003258" style="zoom:50%;" />
+          输入输出
+1
+2
+3
+4
 
-<p>从大脑中提取储存信息过程中，可能会脑补或者省略关键信息。某个项目，因为政策原因可能被放弃，你在思考应急预案时，会提取之前类似的经历，以此判断事情的严重性，以及应该采取的措施。但是，你错误的使用之前因合作方换新领导，导致项目被放弃的经历，评估当前项目，结果可想而之。</p>
-<p>那么如何避免可得性偏差呢？</p>
-<p>反过来想。这件事情，换个做法会怎么样？如果不做，会怎么样？</p>
-<p>使用金字塔法则。分析问题时，“相互独立，完全穷尽”。</p>
-<p>控制情绪。越是重大的决策（买房、结婚、生孩子、换工作），越是不要在情绪不稳定的时候决定。</p>
-<p>拓展信息渠道。征求领域内专业人士的建议，不要使用头脑中零散的信息、自以为正确的框架，草率的判断。</p>
-<p>2021年4月11日</p>
 
+name = input("What's is your name?")
+a = 1 + 1
+print('hello, %s' %name)
+print('a = %d' %a)
+
+
+输出结果为：
+
+1
+2
+3
+
+
+What's your name?y
+hello,y
+a = 2
+
+
+判断语句
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+score = int(input("What's your score?"))
+if score>= 90:
+       print('Excellent')
+else:
+       if score < 60:
+        
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/25/2020-10-25-python-basic-syntax/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/23/2020-10-23-the-road-to-effective-development/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="若有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好运的分析师">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/23/2020-10-23-the-road-to-effective-development/" class="post-title-link" itemprop="url">注重实效的开发之路</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-23 21:40:34" itemprop="dateCreated datePublished" datetime="2020-10-23T21:40:34+08:00">2020-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          《程序员修炼之道》这本书，算是计算机界的畅销书了，本书的价值是向你展示了最佳实践，无论新手还是老手，阅读中都会产生共鸣。正如书的封底所言，阅读本书，你将会：
+
+ * 与软件腐烂作斗争；
+ * 避开重复知识的陷阱；
+ * 编写灵活、动态、可适应的代码；
+ * 防止考巧合编程；
+ * 通过合约、断言及异常使你的代码“防弹”；
+ * 捕捉真正的需求；
+ * 无情而有效的测试；
+ * 让你的用户满意；
+ * 建立注重实效程序员的团队，并且通过自动化使你的开发更严谨。
+
+以需求为导向的开发
+对于一个企业，唯一关心的是如何增加收入，降低成本。企业需要的并不是程序员，而是能够帮它们完成可以增加收入、降低成本
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/23/2020-10-23-the-road-to-effective-development/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -345,7 +479,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/75/">75</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
