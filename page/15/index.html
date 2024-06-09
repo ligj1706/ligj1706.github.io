@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2022/03/10/2022-03-10-business.md/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/27/2020-11-27-python-excel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -199,7 +199,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/03/10/2022-03-10-business.md/" class="post-title-link" itemprop="url">这两个商业常识，大家都知道，但却很难做到（二）</a>
+            <a href="/2020/11/27/2020-11-27-python-excel/" class="post-title-link" itemprop="url">如何使用Python操作Excel</a>
         </h2>
 
         <div class="post-meta">
@@ -209,7 +209,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-03-10 11:40:19" itemprop="dateCreated datePublished" datetime="2022-03-10T11:40:19+08:00">2022-03-10</time>
+              <time title="Created: 2020-11-27 07:36:26" itemprop="dateCreated datePublished" datetime="2020-11-27T07:36:26+08:00">2020-11-27</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -218,15 +218,6 @@
                 <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%81%8C%E5%9C%BA/" itemprop="url" rel="index"><span itemprop="name">职场</span></a>
-                </span>
-            </span>
 
           
 
@@ -239,17 +230,48 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          今天接着聊第二个：聚焦，集中战略资源取得压倒性优势。
+          在进行操作前，我们先熟悉一下excel表格的基本术语：
+
+ * 工作簿：workbook。包含多个工作表的。
+ * 表单：worksheet。指一个工作簿里面的每个表单。
+ * 行：row
+ * 列：column
+ * 单元格：cell
+
+这里我们使用openpyxl读取数据。
+
+查看工作簿/工作表的内容
+1
+2
+3
+4
+5
+6
+
+
+import openpyxl
+
+wb = openpyxl.load_workbook('examble.xlsx')
+
+# 从工作簿查看工作表
+print(wb.sheetnames)
+
+
+也可以通过循环的形式打开工作表
 
 1
-1993年，福耀公司上市，曹德旺成为亿万富翁，公司开启多元化发展之路，涉及IT、房地产、玻璃、贸易、装饰等。
+2
+3
+4
+5
+6
+7
 
-本想着大干一场，结果繁荣的背后，却暗藏危机。此时，银根收紧，建设楼房的资金出现问题；才建立三年的工业村，由于质量问题成了烂尾楼；参股公司农村信用联社因为政策原因，退出投资；玻璃制造行业涌现几十家企业，竞争加剧。公司负债率飙升至68%。
 
-做的事情变多了，可是利润却不见涨。曹德旺开始调查、访问、请教他人、自我反思，寻找利润不见涨的原因。最终，下定决心把主业聚焦在汽车玻璃制造上，一口气关掉了几百家销售部、引进董事制度完善公司治理
+im
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/03/10/2022-03-10-business.md/#more" rel="contents">
+              <a class="btn" href="/2020/11/27/2020-11-27-python-excel/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -273,7 +295,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2022/02/26/2022-02-26-business/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/24/2020-10-24-problem-solving-method/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -287,7 +309,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/02/26/2022-02-26-business/" class="post-title-link" itemprop="url">这两个商业常识，大家都知道，但却很难做到（一）</a>
+            <a href="/2020/11/24/2020-10-24-problem-solving-method/" class="post-title-link" itemprop="url">一种通用的问题解决方法</a>
         </h2>
 
         <div class="post-meta">
@@ -297,14 +319,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-02-26 11:40:19" itemprop="dateCreated datePublished" datetime="2022-02-26T11:40:19+08:00">2022-02-26</time>
+              <time title="Created: 2020-11-24 08:48:51" itemprop="dateCreated datePublished" datetime="2020-11-24T08:48:51+08:00">2020-11-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+                <time title="Modified: 2023-01-03 22:52:15" itemprop="dateModified" datetime="2023-01-03T22:52:15+08:00">2023-01-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -312,7 +334,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%81%8C%E5%9C%BA/" itemprop="url" rel="index"><span itemprop="name">职场</span></a>
+                  <a href="/categories/%E8%AE%A4%E7%9F%A5/" itemprop="url" rel="index"><span itemprop="name">认知</span></a>
                 </span>
             </span>
 
@@ -327,23 +349,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          最近，研究了不少饲料行业的企业和企业家，印象最深刻的莫过于海大集团及其创始人薛华、通威集团及其创始人刘汉元。两家企业在竞争激烈的饲料行业，保持着远高于行业平均的增速，一步步走在了全球饲料行业的前列。两位创始人，给我的感觉是极其低调、务实，真的是极其低调、务实。
+          问题解决的算子
+任何一个问题的解决，都有三点特征：
 
-他们成功的原因有很多，但无不遵守了商业规则。最基本的是下面这两条：
+ * 目标导向。明确需要解决的问题和要达成的目标。
+ * 子目标分解。把总目标分解为一系列子任务，或者子目标。
+ * 算子应用。算子（operator）****指将某一问题从一种状态转化为另一种状态的动作，即达成目标（总目标和子目标）的方法。
 
-第一，为客户创造价值，为员工提升价值。
+问题的状态包括初始状态、中间状态、目标状态，问题解决者能够达到的状态被定义为「问题空间」，问题解决的算子可以被认为是将「问题空间」从一个状态转变到另一个状态的方法。
 
-第二，聚焦，集中战略资源取得压倒性优势。
+我们可以把问题解决看作是走迷宫，算子是进入迷宫到走出迷宫的移动路径，问题解决者必须找到一条穿越迷宫的合适路径。
 
-这篇文章先聊第一点。
-
-01
-先说前半句：为客户创造价值。
-
-德鲁克说过一句很经典的话：企业存在的唯一目的是创造客户，企业只有营销和创新两项职能。去掉各种高大上的词语以及市场上各种
+习得问题解决算子至
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/26/2022-02-26-business/#more" rel="contents">
+              <a class="btn" href="/2020/11/24/2020-10-24-problem-solving-method/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -367,7 +387,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2022/02/03/2022-02-13-scientism/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -381,7 +401,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/02/03/2022-02-13-scientism/" class="post-title-link" itemprop="url">科学主义的胜利</a>
+            <a href="/2020/11/17/2020-11-17-JD-pig/" class="post-title-link" itemprop="url">大家买猪肉时关心啥？爬取京东上2000条评论后发现了！</a>
         </h2>
 
         <div class="post-meta">
@@ -391,7 +411,103 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-02-03 21:40:34" itemprop="dateCreated datePublished" datetime="2022-02-03T21:40:34+08:00">2022-02-03</time>
+              <time title="Created: 2020-11-17 19:20:46" itemprop="dateCreated datePublished" datetime="2020-11-17T19:20:46+08:00">2020-11-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          背景
+最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。
+
+下面对网易未央的一款猪肉评论进行抓取，并做简单分析。
+
+技术有限，大部分代码是参考这里的。
+
+网页分析
+京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。
+
+使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。
+
+
+
+第一个网页链接打开后，发现搜索错了，并非是评论储存的地方。我们继续往下找，如下图所示的便是商品评论储存的地方了。观察URL，最后一个数字是“1”，表示评论的页数。我们可以通过for循环，爬取需要的数据。
+
+
+
+代码如下
+1
+2
+3
+4
+5
+6
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/17/2020-11-17-JD-pig/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/12/2020-11-11-agricultural-lies/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/12/2020-11-11-agricultural-lies/" class="post-title-link" itemprop="url">农业的谎言，越早识破越好</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-12 07:17:03" itemprop="dateCreated datePublished" datetime="2020-11-12T07:17:03+08:00">2020-11-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -413,16 +529,15 @@
 
       
           1
-当时，西方普遍接受神创论，认为上帝创造了物种，并且每个物种被创造出来后，不会发生任何改变。
+农业只是一个普通的行业
+大众眼中，一提到农业，立刻想到种点什么、养点什么、或者搞个农场，想到的是从事该行业单调、辛苦、没钱赚、低信息流动。这个不性感的行业，变成了大家眼中依靠“情怀”情怀才能存在的行业。
 
-1801年，拉马克提出包括人类在内的一切物种，都从其他物种传衍下来。物种会进化出适应环境的器官，并遗传给下一代，比如长颈鹿的脖子是长期伸颈采食树叶所致。但拉马克提出的理论缺乏科学证据。
+事实的确如此，但也并非如此。做农业有时候亏损得没钱赚，但有时候却是暴利！
 
-后来，韦尔斯、赫伯特等进一步发现，同一物种在不同自然条件影响下，性状会发生改变，以此适应当地环境。
-
-1831年12月-1836年10月，达尔文乘船科考，进化论思想逐渐成形。然而，达尔文可靠结束后，并没有立即发表自己的观点，直到1858年，华莱士在给华莱士的来信中，阐述了相似的进化思想后，两人以共同署名的方式，发
+以去年到今年价格一直高企的猪价为例。2020年上半年生猪自繁自养盈利值为2311.36元/头，同比涨幅1896.36%，净利润直接上涨10倍、20倍。截至今年7月15日，已发布中报预告的1527家A股上市公司中，260家公司预计利润同比翻番。养猪股最赚钱，房地产亏损最严重，牧原股份以至少净利润105亿元的水平占据
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/03/2022-02-13-scientism/#more" rel="contents">
+              <a class="btn" href="/2020/11/12/2020-11-11-agricultural-lies/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -446,7 +561,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2022/02/01/2022-02-03-engineering-thinking/">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/10/2020-11-10-person-fate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
@@ -460,7 +575,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/02/01/2022-02-03-engineering-thinking/" class="post-title-link" itemprop="url">有用的工程思维</a>
+            <a href="/2020/11/10/2020-11-10-person-fate/" class="post-title-link" itemprop="url">不确定性意味着机会</a>
         </h2>
 
         <div class="post-meta">
@@ -470,7 +585,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-02-01 11:36:55" itemprop="dateCreated datePublished" datetime="2022-02-01T11:36:55+08:00">2022-02-01</time>
+              <time title="Created: 2020-11-10 23:23:34" itemprop="dateCreated datePublished" datetime="2020-11-10T23:23:34+08:00">2020-11-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -491,22 +606,194 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          工程思维最大的特点是：在各种现实条件的约束下，通过模块化的系统思维，得出巧妙的答案，解决问题，所以工程思维的落脚点是行动。
+          历史充满偶然性，看似普通的一件事情，小人物，却可以改写历史。
 
-模块化的系统思维，能够把复杂的问题，拆分成各个子模块，逐一击破。
+诚如作者所说：
 
-工程师思维有三法宝：
+或许，那平淡无奇的漫长岁月是为了历史的突变准备、积蓄能量，正如地下奔腾的岩浆，在长期积蓄的压力作用下喷薄而出。对个人、国家和民族来说，这种关键时刻的选择，的确关乎一生一世、存亡兴替。如果说漫长的悠悠岁月是历史长河地步平缓的深流，那短暂的“关键时刻”就是大河上的惊涛骇浪；如果说漫长岁月是历史幕后的长期演练，那辉煌的一瞬间就是历史前台的炫目演出。
 
-1、结构：没有结构的情况下能够“预见结构。事情一团乱麻时，能够理出逻辑。
+茨维格十四篇历史人物特写，刻画了在决定历史瞬间时，人物的心理状态。
 
-2、约束：在约束条件下（时间、资金、人力等等）能够熟练地进行设计。 背后是概率、胜率、赔率等计算。
-
-3、取舍：经过深思熟虑后对解决方案和备选方案作出决断。 需要敢于做决策，因为生活中，没有一个方案是100%确定的。
-
-在工程思维的典型代表如老毛。当时判断国内战争要打5年，而最重要的是三大战役解放全国。其
+人们会为这种转折归因。历史足够复杂，茨维格在《人类的群星闪耀时》所说的时候，不一定也是这件事发生的深
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/01/2022-02-03-engineering-thinking/#more" rel="contents">
+              <a class="btn" href="/2020/11/10/2020-11-10-person-fate/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/10/2020-11-09-Cognitiv-psychology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/10/2020-11-09-Cognitiv-psychology/" class="post-title-link" itemprop="url">认知心理学全局认识</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-10 07:36:26" itemprop="dateCreated datePublished" datetime="2020-11-10T07:36:26+08:00">2020-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          创建个框架，待增补内容。
+
+学科解决什么问题
+认知心理学是认知科学的重要分支，研究人类心智是如何工作的一门学科，包括：知觉与注意、知识的表征、记忆与学习、问题解决、判断推理、语言。
+
+1967年奈赛尔出版第一本认知心理学专著《认知心理学》，标志着认知心理学诞生。
+
+核心模块主要内容模块一感觉、知觉与客体识别模块二记忆模块三推理与决策模块四语言模块五学习与专家技能习得认知心理学的研究方法包括实验法、观察法、测验法。
+
+学科发展历史
+第一代：
+
+信息加工学派：使用计算机隐喻，核心贡献是组块。核心人物——巴德利
+
+联结学派：使用大脑隐喻，无数神经元联结。核心人物——韩丁
+
+第二代：
+
+具身认知
+
+强
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/10/2020-11-09-Cognitiv-psychology/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/11/08/2020-11-08-data-analyse-basic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/08/2020-11-08-data-analyse-basic/" class="post-title-link" itemprop="url">数据分析基础（一）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-08 09:43:36" itemprop="dateCreated datePublished" datetime="2020-11-08T09:43:36+08:00">2020-11-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          数据分析的步骤
+数据分析可分为数据采集、数据挖掘、数据可视化三个步骤。
+
+但在完成上面三个步骤之前，还有一个基本的东西需要完成：明确数据分析的目标。
+
+如果数据分析的目标不清晰，数据不能够用来解决问题，那么数据就没有任何价值。所以数据分析的完整步骤应该是：明确数据分析目的——数据采集——数据整理（清洗、变换、分类等）——数据挖掘（建模）——数据可视化——数据更迭。
+
+
+
+数据分析常用算法
+国际权威的学术组织 ICDM （the IEEE International Conference on Data Mining）评选出了十大经典的算法。
+
+算法常用方法分类算法C4.5，朴素贝叶斯（Naiv
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/08/2020-11-08-data-analyse-basic/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -529,7 +816,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
