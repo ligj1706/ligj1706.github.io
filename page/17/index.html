@@ -185,6 +185,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/27/2020-10-27-Pandas-basic-learn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/27/2020-10-27-Pandas-basic-learn/" class="post-title-link" itemprop="url">Pandas基础快速入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-27 21:37:50" itemprop="dateCreated datePublished" datetime="2020-10-27T21:37:50+08:00">2020-10-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          1.初识Pandas
+Pandas 是“Python的核心数据分析支持库，提供了快速、灵活、明确的数据结构，旨在简单、直观地处理关系型、标记型数据”，主要数据结构是 Series（一维数据）与 DataFrame（二维数据），这两种数据结构可以处理金融、统计、社会科学、工程等领域里的大多数典型用例。
+
+2.数据结构
+2.1 Series数据结构
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+import numpy as np
+import pandas as pd
+
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
+
+print(s)
+
+d = pd.Series([1
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/27/2020-10-27-Pandas-basic-learn/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/10/25/2020-10-25-NumPy-leann1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -747,98 +842,6 @@ B：售价提高10%，维持现在的销售量
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
-      <meta itemprop="name" content="妙生">
-      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="妙生">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/" class="post-title-link" itemprop="url">从小白到专家的技能养成</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-20 08:13:18" itemprop="dateCreated datePublished" datetime="2020-09-20T08:13:18+08:00">2020-09-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-02 21:27:19" itemprop="dateModified" datetime="2023-08-02T21:27:19+08:00">2023-08-02</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          专家和新手的区别在哪里？
-每一个程序员都有一个梦想，成为领域内的专家。专家和新手有什么不同？1970年代左右，德雷福斯兄弟通过对飞行员、国际著名象棋大师的技能习得进行研究，他们发现专家和新手在技能调用上有很大的不同，并提出了德雷福斯模型（Dreyfus model），把从新手到专家分为新手、高级新手、胜任者、精通者、专家五个阶段。
-
-第一阶：新手
-
- * 在该技能领域经验很少或者根本没有经验
-   
-   
- * 严格按照指令行事（告诉行动清单时会做得很好） 
-   
-   
- * 几乎无法感知情景
-   
-   
- * 无法判断行为的对错或处理问题
-   
-   
-
-第二阶：高级新手
-
- *
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -910,7 +913,7 @@ B：售价提高10%，维持现在的销售量
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">173</span>
+          <span class="site-state-item-count">174</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
