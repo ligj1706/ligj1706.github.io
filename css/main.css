@@ -1196,7 +1196,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff32;
+  background: #1365ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2509,4 +2509,26 @@ hr {
 }
 .sub-menu .menu-item {
   display: inline-block;
+}
+body {
+  background-color: #fff; /* 默认背景 */
+  color: #000; /* 默认文字颜色 */
+}
+.dark-mode {
+  background-color: #000; /* 黑色背景 */
+  color: #fff; /* 白色文字 */
+}
+a {
+  color: #00f; /* 默认链接颜色 */
+}
+.dark-mode a {
+  color: #add8e6; /* 黑暗模式下链接颜色 */
+}
+button {
+  background-color: #808080; /* 默认按钮背景 */
+  color: #fff; /* 默认按钮文字颜色 */
+}
+.dark-mode button {
+  background-color: #a9a9a9; /* 黑暗模式下按钮背景 */
+  color: #fff; /* 黑暗模式下按钮文字颜色 */
 }
