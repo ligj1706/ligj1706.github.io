@@ -1196,7 +1196,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fffe08;
+  background: #de6732;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2019,6 +2019,12 @@ pre .javascript .function {
   padding-left: 10px;
 }
 body {
+  background-color: #fafafa;
+}
+header {
+  background-color: #fafafa;
+}
+footer {
   background-color: #fafafa;
 }
 .event-list {
