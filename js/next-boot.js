@@ -109,6 +109,15 @@ NexT.boot.motion = function() {
 
 document.addEventListener('DOMContentLoaded', () => {
   NexT.boot.registerEvents();
+  
+  // 添加切换主题的逻辑
+  const toggleButton = document.getElementById('toggle-theme');
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  }
+
   NexT.boot.refresh();
   NexT.boot.motion();
 });
