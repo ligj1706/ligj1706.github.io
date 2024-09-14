@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ligj1706.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="问题解决的算子 任何一个问题的解决，都有三点特征：   * 目标导向。明确需要解决的问题和要达成的目标。  * 子目标分解。把总目标分解为一系列子任务，或者子目标。  * 算子应用。算子（operator）****指将某一问题从一种状态转化为另一种状态的动作，即达成目标（总目标和子目标）的方法。  问题的状态包括初始状态、中间状态、目标状态，问题解决者能够达到的状态被定义为「问题空间」，问题解决的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一种通用的问题解决方法">
+<meta property="og:url" content="http://ligj1706.github.io/2020-10-24-problem-solving-method/">
+<meta property="og:site_name" content="妙生">
+<meta property="og:description" content="问题解决的算子 任何一个问题的解决，都有三点特征：   * 目标导向。明确需要解决的问题和要达成的目标。  * 子目标分解。把总目标分解为一系列子任务，或者子目标。  * 算子应用。算子（operator）****指将某一问题从一种状态转化为另一种状态的动作，即达成目标（总目标和子目标）的方法。  问题的状态包括初始状态、中间状态、目标状态，问题解决者能够达到的状态被定义为「问题空间」，问题解决的">
+<meta property="og:locale">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gkwk9fqfr4j31b80u07wi.jpg">
+<meta property="article:published_time" content="2020-11-24T00:48:51.000Z">
+<meta property="article:modified_time" content="2023-01-03T14:52:15.000Z">
+<meta property="article:author" content="妙生">
+<meta property="article:tag" content="认知">
+<meta property="article:tag" content="认知科学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gkwk9fqfr4j31b80u07wi.jpg">
+
+<link rel="canonical" href="http://ligj1706.github.io/2020-10-24-problem-solving-method/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>一种通用的问题解决方法 | 妙生</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        <div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">妙生</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+
+        <!-- 添加切换背景的按钮 -->
+      </div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020-10-24-problem-solving-method/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一种通用的问题解决方法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-24 08:48:51" itemprop="dateCreated datePublished" datetime="2020-11-24T08:48:51+08:00">2020-11-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-03 22:52:15" itemprop="dateModified" datetime="2023-01-03T22:52:15+08:00">2023-01-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A4%E7%9F%A5/" itemprop="url" rel="index"><span itemprop="name">认知</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="问题解决的算子"><a href="#问题解决的算子" class="headerlink" title="问题解决的算子"></a>问题解决的算子</h3><p>任何一个问题的解决，都有三点特征：</p>
+<ul>
+<li>目标导向。明确需要解决的问题和要达成的目标。</li>
+<li>子目标分解。把总目标分解为一系列子任务，或者子目标。</li>
+<li>算子应用。<strong>算子（operator）****指将某一问题从一种状态转化为另一种状态的动作</strong>，即达成目标（总目标和子目标）的方法。</li>
+</ul>
+<p>问题的状态包括初始状态、中间状态、目标状态，问题解决者能够达到的状态被定义为「问题空间」，问题解决的算子可以被认为是将「问题空间」从一个状态转变到另一个状态的方法。</p>
+<p>我们可以把问题解决看作是走迷宫，<strong>算子是进入迷宫到走出迷宫的移动路径，问题解决者必须找到一条穿越迷宫的合适路径。</strong></p>
+<p>习得问题解决算子至少有三种路径：通过自己发现、被他人告知、或者通过观察其他人使用的算子来获得新的算子。如果你想成为某个领域的高手，最好<strong>的方式是模仿领域内高手的问题解决方法</strong>，<strong>模仿他们的思维方式、使用的工具、接触的信息。</strong></p>
+<h3 id="问题解决的三点规律"><a href="#问题解决的三点规律" class="headerlink" title="问题解决的三点规律"></a>问题解决的三点规律</h3><p>发现真正的问题，是解决问题的第一步。</p>
+<p>解决问题经常犯的错误：没有解的问题却想着解答、有解的问题却放弃解答、有解的问题却用错误的方法解答。</p>
+<p>在解决问题时，头脑会出现三种情况：</p>
+<p><strong>功能固着：</strong></p>
+<p>从物体固有的功能表征物体，未能表征物体的新功能。</p>
+<p>问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">桌子上有一盒图钉，一盒火柴，一支蜡烛，你的目标是把蜡烛放在门槛上。不可以把蜡烛点燃，直接放在门槛上行不通，请问如何解决？</span><br></pre></td></tr></table></figure>
+
+<p>按照常规的方法，这个问题很难解决。一种解法是，用图钉把盒子钉到门槛上，然后把蜡烛放到盒子上面。为什么很难想出其他方法呢？我们会在潜意识中把装火柴的盒子理解为装火柴的容器，压根不知道有其他用途。人也是一样，<strong>如果把自己当成工具人，或以工具人的角色工作，会执着自己某方面的“技能”，</strong>对其他工作漠不关心，反而阻碍发展。</p>
+<p><strong>定势效应：</strong></p>
+<p>人们会受到经验的影响，而选择某些算子，特别是某些状态下解决问题的方法被强化时，定势效应更明显。“对于拿着锤子的人来讲，全世界都是钉子”，一个程序员，面对一个问题时，首先想到的是编写代码。同理，局限在某个专业领域的人，所有问题都从专业思维习惯思考，这也是为什么芒格提倡多元思维——学习不同学科的思维方式。</p>
+<p><strong>酝酿效应：</strong></p>
+<p>当某个问题无法解决时，暂时把问题抛弃几个小时，几天或者几周，在回过头来解决问题时，会很快解决。所以，当一个问题难以解决时，不妨放一放。</p>
+<h3 id="人类问题解决的倾向"><a href="#人类问题解决的倾向" class="headerlink" title="人类问题解决的倾向"></a>人类问题解决的倾向</h3><p>在解决问题时，会出现三种倾向。</p>
+<p><strong>回溯规避。</strong>倾向于避免哪些可能消除先前作用的算子。比如，不愿意退后一步，前进两步，不希望以前达到的状态作废。</p>
+<p><strong>差异降低。</strong>趋向于选择最大限度地减少当前状态与目标状态差异的非重复算子，依赖于对当前状态与目标状态相似性的估计。比如，想要一步登天，赚很多钱，但是却不愿意付出努力，导致赚不到钱。</p>
+<p><strong>手段-目标分析。</strong>即把最终目标不断的拆分为每个手段，再把手段作为目标，循环往复解决。</p>
+<h3 id="问题解决的高级方法"><a href="#问题解决的高级方法" class="headerlink" title="问题解决的高级方法"></a>问题解决的高级方法</h3><p>手段-目标分析是一种较为高级的用来寻找解决问题的方法。纽厄尔和西蒙（Newell &amp; Simon）对此方法展开了广泛的研究，并把其用于构建人类问题解决模型的计算机模拟程序GPS（General Problem Solver）中。</p>
+<p>该方法的核心是：<strong>把最终目标拆解为子目标，有意识的放下真正的目标，焦点集中在使子目标起作用的方法上。</strong></p>
+<p>创建子目标有两种方法：</p>
+<p>流程图1：把目标状态与当前状态拆解为一个个差异，把消除每个差异当成子目标，首先消除被认为是最重要的差异。例子：目标是提高企业的盈利能力，拆解为子目标——增加收入、降低成本，继续拆解增加收入&#x3D;销量 * 客单价 * 复购率，成本&#x3D;人工+折旧+流动，发现盈利的最大影响因素是销量低，集中力量解决销量低。</p>
+<p>流程图2：寻找达到最终目标需要的条件，找到目标与条件之间的差距，集中力量消除差异。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkwk9fqfr4j31b80u07wi.jpg" alt="image-20201121095821388"></p>
+<h3 id="推荐书目"><a href="#推荐书目" class="headerlink" title="推荐书目"></a>推荐书目</h3><p>《创新算法：TRIZ、系统创新和技术创造力》 阿奇舒勒</p>
+<p>《改变：问题形成和解决的原则》</p>
+<p>《认知心理学及其启示》（第七版）安德森 第八章</p>
+<p>《问题解决力》 大前研一</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag"># 认知</a>
+              <a href="/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/" rel="tag"># 认知科学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020-11-17-JD-pig/" rel="prev" title="大家买猪肉时关心啥？爬取京东上2000条评论后发现了！">
+      <i class="fa fa-chevron-left"></i> 大家买猪肉时关心啥？爬取京东上2000条评论后发现了！
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020-11-27-python-excel/" rel="next" title="如何使用Python操作Excel">
+      如何使用Python操作Excel <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E7%9A%84%E7%AE%97%E5%AD%90"><span class="nav-number">1.</span> <span class="nav-text">问题解决的算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E7%9A%84%E4%B8%89%E7%82%B9%E8%A7%84%E5%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">问题解决的三点规律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%BA%E7%B1%BB%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E7%9A%84%E5%80%BE%E5%90%91"><span class="nav-number">3.</span> <span class="nav-text">人类问题解决的倾向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E7%9A%84%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">问题解决的高级方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%9B%AE"><span class="nav-number">5.</span> <span class="nav-text">推荐书目</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="妙生"
+      src="https://p.ipic.vip/cdgm25.jpg">
+  <p class="site-author-name" itemprop="name">妙生</p>
+  <div class="site-description" itemprop="description">如果有可能，让生活更美丽一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">妙生</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

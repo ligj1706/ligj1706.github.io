@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ligj1706.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.缘起 平时爱写一些文字，但文字分散在公众号、简书、豆瓣等平台上，没有体系化，想搭建博客把所有文章放在一起。目前文章的数量不多，但想想看，坚持十年后，就会积累一笔很客观的信息。还有一点，拥有个人博客是一件很酷的事情，想写啥就写啥，这是我的博客地址，欢迎Rss好运的分析师。  我搭建的博客是通过GitHub Pages + Hexo搭建的，环境是MacOS11。  搭建的步骤分为：   * 安装H">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github+hexo免费搭建个人博客教程">
+<meta property="og:url" content="http://ligj1706.github.io/how-to-make-blog/">
+<meta property="og:site_name" content="妙生">
+<meta property="og:description" content="1.缘起 平时爱写一些文字，但文字分散在公众号、简书、豆瓣等平台上，没有体系化，想搭建博客把所有文章放在一起。目前文章的数量不多，但想想看，坚持十年后，就会积累一笔很客观的信息。还有一点，拥有个人博客是一件很酷的事情，想写啥就写啥，这是我的博客地址，欢迎Rss好运的分析师。  我搭建的博客是通过GitHub Pages + Hexo搭建的，环境是MacOS11。  搭建的步骤分为：   * 安装H">
+<meta property="og:locale">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gkycq0osmrj30re02otae.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gkyd1eq4l2j30k40f6gq4.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gkyd4q39ydj306u05y3yz.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glmn6dsslvj316w0h840x.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr5yb7ou6j30t604a40h.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr7tkgr7lj31jk0u07wh.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr64fdlfcj30pa04kmzc.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr64625csj31f004sdh2.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr6c8pftzj31a60u0ajl.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr6drfz1pj31mc0u07wh.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glnsi0r1bsj31jo0u07ei.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr6vx8t4dj31fy0dqq4l.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr79taad4j30go04i3yx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr7ar1gdwj31560lc43z.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr7c56834j30wm0c8tah.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1glr7gp18fgj312c0u0dmp.jpg">
+<meta property="article:published_time" content="2020-12-17T14:19:46.000Z">
+<meta property="article:modified_time" content="2023-10-06T04:09:51.000Z">
+<meta property="article:author" content="妙生">
+<meta property="article:tag" content="职场技能">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gkycq0osmrj30re02otae.jpg">
+
+<link rel="canonical" href="http://ligj1706.github.io/how-to-make-blog/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>github+hexo免费搭建个人博客教程 | 妙生</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        <div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">妙生</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+
+        <!-- 添加切换背景的按钮 -->
+      </div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/how-to-make-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          github+hexo免费搭建个人博客教程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-12-17 22:19:46" itemprop="dateCreated datePublished" datetime="2020-12-17T22:19:46+08:00">2020-12-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-06 12:09:51" itemprop="dateModified" datetime="2023-10-06T12:09:51+08:00">2023-10-06</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-缘起"><a href="#1-缘起" class="headerlink" title="1.缘起"></a>1.缘起</h2><p>平时爱写一些文字，但文字分散在公众号、简书、豆瓣等平台上，没有体系化，想搭建博客把所有文章放在一起。目前文章的数量不多，但想想看，坚持十年后，就会积累一笔很客观的信息。还有一点，拥有个人博客是一件很酷的事情，想写啥就写啥，这是我的博客地址，欢迎Rss<a href="https://ligj1706.github.io/">好运的分析师</a>。</p>
+<p>我搭建的博客是通过GitHub Pages + Hexo搭建的，环境是MacOS11。</p>
+<p>搭建的步骤分为：</p>
+<ul>
+<li>安装Hexo</li>
+<li>在本地搭建博客</li>
+<li>部署到github</li>
+<li>选择博客主题</li>
+</ul>
+<h2 id="2-Hexo是什么"><a href="#2-Hexo是什么" class="headerlink" title="2.Hexo是什么"></a>2.Hexo是什么</h2><p>Hexo是快速、简洁且高效的博客框架，可以理解为搭建博客的模型。通过运用模型，省去了自己搭建博客的麻烦。</p>
+<p>Hexo 的详细介绍可参见<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">官网</a>，博客搭建过程中遇到问题，也可以参考官网解决。</p>
+<h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h2><p>在安装Hexo之前需要安装Node.js、Git，这里通过Homebrew安装。</p>
+<h3 id="3-1-安装brew"><a href="#3-1-安装brew" class="headerlink" title="3.1 安装brew"></a>3.1 安装brew</h3><p>首先安装<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">bin</span>/bash -c <span class="string">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>安装时显示<code>Failed to connect to raw.githubusercontent.com port 443: Connection refused</code>，由于环境原因，无法访问。按照知乎提供的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/90508170">mac下镜像飞速安装Homebrew教程</a>，进行安装。</p>
+<p>检查是否安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew --version</span><br></pre></td></tr></table></figure>
+
+<p>若显示为下图，则证明安装成功了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkycq0osmrj30re02otae.jpg" alt="image-20201122230838442"></p>
+<h3 id="3-2-安装Git"><a href="#3-2-安装Git" class="headerlink" title="3.2 安装Git"></a>3.2 安装Git</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+
+<p>检查是否安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew --version</span><br></pre></td></tr></table></figure>
+
+<p>显示如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git version 2.28.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-安装Node-js"><a href="#3-3-安装Node-js" class="headerlink" title="3.3 安装Node.js"></a>3.3 安装Node.js</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>如果安装不成功，可以通过<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js官网</a>，下载安装包进行安装。</p>
+<p>测试是否安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure>
+
+<p>显示如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v12.19.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-安装Hexo"><a href="#3-4-安装Hexo" class="headerlink" title="3.4 安装Hexo"></a>3.4 安装Hexo</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>测试是否安装成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo --version</span><br></pre></td></tr></table></figure>
+
+<p>显示如下：</p>
+<img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyd1eq4l2j30k40f6gq4.jpg" alt="image-20201122231937282" style="zoom:67%;" />
+
+<h2 id="4-本地搭建博客"><a href="#4-本地搭建博客" class="headerlink" title="4.本地搭建博客"></a>4.本地搭建博客</h2><h3 id="4-1-创建博客文件夹"><a href="#4-1-创建博客文件夹" class="headerlink" title="4.1 创建博客文件夹"></a>4.1 创建博客文件夹</h3><p>创建的文件夹将存放你的博客在本地的所有内容，建议文件夹以<code>你的github名字.github.io</code>命名，当然你也可以用任何名称命名。本文展示的博客放在Blog文件夹下。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyd4q39ydj306u05y3yz.jpg" alt="image-20201122232248414"></p>
+<h3 id="4-2-初始化Hexo"><a href="#4-2-初始化Hexo" class="headerlink" title="4.2 初始化Hexo"></a>4.2 初始化Hexo</h3><p>从终端通过<code>cd desktop/ligj1706.github.io</code>进入文件夹，然后在终端输入下面的命令，完成博客的初始化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>可以看到文件夹里面多了下面的文件.</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glmn6dsslvj316w0h840x.jpg" alt="image-20201213232354815"></p>
+<p>终端输入<code>hexo s</code>即可打造个人</p>
+<h3 id="4-4-本地查看博客"><a href="#4-4-本地查看博客" class="headerlink" title="4.4 本地查看博客"></a>4.4 本地查看博客</h3><p>输入命令<code>hexo s </code>，即可本地化运行。把方框中的网址复制到浏览器，即可打开网站。打开</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr5yb7ou6j30t604a40h.jpg" alt="image-20201217211549507"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr7tkgr7lj31jk0u07wh.jpg" alt="image-20201217211510521"></p>
+<p>通过浏览器打开<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000</a>，便可以看到本地博客信息。</p>
+<h3 id="4-5-开始你的第一篇文章"><a href="#4-5-开始你的第一篇文章" class="headerlink" title="4.5 开始你的第一篇文章"></a>4.5 开始你的第一篇文章</h3><p>使用Control + C 退出上面的页面，接下来通过<code>hexo n &quot;文件名称&quot;</code>创建你的文章。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr64fdlfcj30pa04kmzc.jpg" alt="image-20201217212142458"></p>
+<p>创建后，你会发现source 文件夹下，多了一个文件，这个文件就是我们新创建的。source文件夹是存放所有博客文章的地方，如果你想对博客文章进行修改，可以在这个文件夹里面找到相应的文件。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr64625csj31f004sdh2.jpg" alt="image-20201217212127290"></p>
+<p>打开新建的这个文件，可以看到抬头信息，依次为标题、文章创建日期，标签。可以进行修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: my_first_file</span><br><span class="line">date: 2020-12-17 21:20:47</span><br><span class="line">tags: [标签1, 标签2, 标签3]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">⚠️冒号后面需要加个空格，否则会报错！</span><br></pre></td></tr></table></figure>
+
+<p>使用Markdown创建下面文章。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr6c8pftzj31a60u0ajl.jpg" alt="image-20201217212911096"></p>
+<p>打开页面，我们会发现文章上去了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr6drfz1pj31mc0u07wh.jpg" alt="image-20201217213034440"></p>
+<h3 id="4-6-hexo-常见命令"><a href="#4-6-hexo-常见命令" class="headerlink" title="4.6 hexo 常见命令"></a>4.6 hexo 常见命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用缩写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n #新建文章</span><br><span class="line">hexo g #生成静态页面至public目录</span><br><span class="line">hexo s #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo d #部署到GitHub</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-部署到github"><a href="#5-部署到github" class="headerlink" title="5.部署到github"></a>5.部署到github</h2><h3 id="5-1-创建仓库"><a href="#5-1-创建仓库" class="headerlink" title="5.1 创建仓库"></a>5.1 创建仓库</h3><p>登录<a target="_blank" rel="noopener" href="https://github.com/github">github</a>，如果没有账号，则创建一个账号。</p>
+<p>点击右上角+创建一个新的仓库，这个仓库用来存放博客文件，仓库的名字必须为<code>昵称.github.io</code>，这个仓库就是你的博客的URL啦。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glnsi0r1bsj31jo0u07ei.jpg" alt="image-20201214231339388"></p>
+<h3 id="5-2-安装git部署插件"><a href="#5-2-安装git部署插件" class="headerlink" title="5.2 安装git部署插件"></a>5.2 安装git部署插件</h3><p>目的是让你电脑内的博客资料，同步到github上创建的仓库。</p>
+<p>直接在电脑终端输入<code>npm install hexo-deployer-git --save</code>即可创建。</p>
+<h3 id="5-3-配置ssh-key"><a href="#5-3-配置ssh-key" class="headerlink" title="5.3 配置ssh key"></a>5.3 配置ssh key</h3><p>通过ssh key解决本地盒服务器连接的问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/. ssh #检查本机已存在的ssh密钥</span><br></pre></td></tr></table></figure>
+
+<p>如果提示No such file or directory 则表示第一次使用git。</p>
+<p>输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>并且连续3次回车，最终会生成一个文件，找到<code>ssh\id_rsa.pub</code>文件，打开并复制里面的内容。</p>
+<p>然后打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
+<p>创建下面内容</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr6vx8t4dj31fy0dqq4l.jpg" alt="image-20201217214807634"></p>
+<h3 id="5-4-修改配置信息"><a href="#5-4-修改配置信息" class="headerlink" title="5.4 修改配置信息"></a>5.4 修改配置信息</h3><p>在B log中打开_config.yml这个文件，这个文件内容包含了博客的框架内容。</p>
+<p>下滑到最后，把信息改成如下形式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/ligj1706/ligj1706.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>改完后，在终端输入<code>hexo d</code>，即可把本地信息接入github了。</p>
+<p>我们直接用浏览器打开博客的网址，就可以看到博客信息了。</p>
+<h2 id="6-主题修改"><a href="#6-主题修改" class="headerlink" title="6.主题修改"></a>6.主题修改</h2><p>你可以在**<a href="https://link.zhihu.com/?target=https://hexo.io/themes/">https://hexo.io/themes/</a>**上选择自己喜欢的主题。</p>
+<p>点击主题，会提供相应的安装方法。</p>
+<p>我使用了next的主题。</p>
+<p>主题信息修改时，先在_config.yml中修改theme。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr79taad4j30go04i3yx.jpg" alt="image-20201217220128797"></p>
+<p>打开theme下的next，找到_config.yml，修改内容。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr7ar1gdwj31560lc43z.jpg" alt="image-20201217220221614"></p>
+<p>对于修改的信息，我是根据README 查看说明，照着修改的。</p>
+<p>可以一边修改，一边通过<code>heox s </code>检查修改是否正确和效果。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr7c56834j30wm0c8tah.jpg" alt="image-20201217220343155"></p>
+<p>修改完后，</p>
+<p>使用<code>hexo clean</code>—-&gt;<code>hexo g</code>—-&gt;<code>hexo d</code>即可推送至远端。</p>
+<p>最后效果如下；</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glr7gp18fgj312c0u0dmp.jpg" alt="image-20201217220804892"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://michael728.github.io/2016/09/03/blog-logfile/">博客建站日志</a></p>
+<p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/getting-started.html">主题NexT配置</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/114195340">GitHub Pages + Hexo免费搭建个人博客_Mac</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">使用hexo+github搭建免费个人博客详细教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37210523/article/details/80909983">使用hexo+github搭建个人博客(进阶篇)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Gent-Wang/p/7422444.html">Git安装及SSH Key管理之Mac篇</a></p>
+<p>End.</p>
+<p>2020年12月17日</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/" rel="tag"># 职场技能</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020-12-09-Wo-shi-geng-fu/" rel="prev" title="案例拆解｜一家不打农药的食材供应公司">
+      <i class="fa fa-chevron-left"></i> 案例拆解｜一家不打农药的食材供应公司
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021-01-09-Intelligence-analysis/" rel="next" title="情报分析心理学如何用——理论篇">
+      情报分析心理学如何用——理论篇 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BC%98%E8%B5%B7"><span class="nav-number">1.</span> <span class="nav-text">1.缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Hexo%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">2.Hexo是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">3.</span> <span class="nav-text">3.安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%AE%89%E8%A3%85brew"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 安装brew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%AE%89%E8%A3%85Git"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">4.</span> <span class="nav-text">4.本地搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 创建博客文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%88%9D%E5%A7%8B%E5%8C%96Hexo"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 初始化Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%9C%AC%E5%9C%B0%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2"><span class="nav-number">4.3.</span> <span class="nav-text">4.4 本地查看博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E5%BC%80%E5%A7%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">4.4.</span> <span class="nav-text">4.5 开始你的第一篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-hexo-%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="nav-number">4.5.</span> <span class="nav-text">4.6 hexo 常见命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="nav-number">5.</span> <span class="nav-text">5.部署到github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E5%AE%89%E8%A3%85git%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 安装git部署插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E9%85%8D%E7%BD%AEssh-key"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 配置ssh key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 修改配置信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9"><span class="nav-number">6.</span> <span class="nav-text">6.主题修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="妙生"
+      src="https://p.ipic.vip/cdgm25.jpg">
+  <p class="site-author-name" itemprop="name">妙生</p>
+  <div class="site-description" itemprop="description">如果有可能，让生活更美丽一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">妙生</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

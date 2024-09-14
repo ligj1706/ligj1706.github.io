@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ligj1706.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="背景 最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。  下面对网易未央的一款猪肉评论进行抓取，并做简单分析。  技术有限，大部分代码是参考这里的。  网页分析 京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。  使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。    第一个网页链接打开后，发现搜索错了，并非是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大家买猪肉时关心啥？爬取京东上2000条评论后发现了！">
+<meta property="og:url" content="http://ligj1706.github.io/2020-11-17-JD-pig/">
+<meta property="og:site_name" content="妙生">
+<meta property="og:description" content="背景 最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。  下面对网易未央的一款猪肉评论进行抓取，并做简单分析。  技术有限，大部分代码是参考这里的。  网页分析 京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。  使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。    第一个网页链接打开后，发现搜索错了，并非是">
+<meta property="og:locale">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdlhrz9vj327c0p47ez.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdy0ejbqj30gw0ea4hn.jpg">
+<meta property="article:published_time" content="2020-11-17T11:20:46.000Z">
+<meta property="article:modified_time" content="2023-01-02T10:07:59.000Z">
+<meta property="article:author" content="妙生">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg">
+
+<link rel="canonical" href="http://ligj1706.github.io/2020-11-17-JD-pig/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>大家买猪肉时关心啥？爬取京东上2000条评论后发现了！ | 妙生</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        <div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">妙生</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+
+        <!-- 添加切换背景的按钮 -->
+      </div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ligj1706.github.io/2020-11-17-JD-pig/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://p.ipic.vip/cdgm25.jpg">
+      <meta itemprop="name" content="妙生">
+      <meta itemprop="description" content="如果有可能，让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="妙生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          大家买猪肉时关心啥？爬取京东上2000条评论后发现了！
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-17 19:20:46" itemprop="dateCreated datePublished" datetime="2020-11-17T19:20:46+08:00">2020-11-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-02 18:07:59" itemprop="dateModified" datetime="2023-01-02T18:07:59+08:00">2023-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近在调研电商平台黑猪肉市场需求情况，电商平台有效的用户评论，可以用来辅助理解客户需求。</p>
+<p>下面对网易未央的一款猪肉评论进行抓取，并做简单分析。</p>
+<p>技术有限，大部分代码是<a target="_blank" rel="noopener" href="https://blog.csdn.net/Q_M_X_D_D_/article/details/104662721">参考这里</a>的。</p>
+<h3 id="网页分析"><a href="#网页分析" class="headerlink" title="网页分析"></a>网页分析</h3><p>京东商城的信息储存在JSON里面，我们首先要找到储存评论的JSON。</p>
+<p>使用谷歌浏览器，点击检查—Network，刷新进入，搜索发现储存评论的网址。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdgtnp1sj327y0p0aih.jpg" alt="image-20201117190100685"></p>
+<p>第一个网页链接打开后，发现搜索错了，并非是评论储存的地方。我们继续往下找，如下图所示的便是商品评论储存的地方了。观察URL，最后一个数字是“1”，表示评论的页数。我们可以通过for循环，爬取需要的数据。</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdlhrz9vj327c0p47ez.jpg" alt="image-20201117190532476"></p>
+<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代码参考链接：https://blog.csdn.net/Q_M_X_D_D_/article/details/104662721</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 爬取评论信息</span></span><br><span class="line"> </span><br><span class="line">page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入爬取的结束页码:&#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,page):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;第%s页开始爬取&#x27;</span>%(i+<span class="number">1</span>))</span><br><span class="line">    url = <span class="string">&#x27;https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId=5461917&amp;score=0&amp;sortType=5&amp;page=0&amp;pageSize=10&amp;isShadowSku=0&amp;fold=1&#x27;</span></span><br><span class="line">    url = url.<span class="built_in">format</span>(i)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://item.jd.com/&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    request = urllib.request.Request(url=url,headers=headers)</span><br><span class="line">    content = urllib.request.urlopen(request).read().decode(<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">    content = content.strip(<span class="string">&#x27;fetchJSON_comment98vv385();&#x27;</span>)</span><br><span class="line">    obj = json.loads(content)</span><br><span class="line">    comments = obj[<span class="string">&#x27;comments&#x27;</span>]</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;京东.text&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,encoding=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> comment <span class="keyword">in</span> comments:</span><br><span class="line">        <span class="comment">#评论时间</span></span><br><span class="line">        <span class="comment"># creationTime = comment[&#x27;creationTime&#x27;]</span></span><br><span class="line">        <span class="comment">#评论人</span></span><br><span class="line">        <span class="comment"># nickname = comment[&#x27;nickname&#x27;]</span></span><br><span class="line">        <span class="comment">#评论内容</span></span><br><span class="line">        contents = comment[<span class="string">&#x27;content&#x27;</span>]</span><br><span class="line">        item = &#123;</span><br><span class="line">            <span class="comment"># &#x27;评论时间&#x27;: creationTime,</span></span><br><span class="line">            <span class="comment"># &#x27;用户&#x27;: nickname,</span></span><br><span class="line">            <span class="string">&#x27;评论内容&#x27;</span>: contents,</span><br><span class="line">        &#125;</span><br><span class="line">        string = <span class="built_in">str</span>(item)</span><br><span class="line">        fp.write(string + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;第%s页完成&#x27;</span> %(i+<span class="number">1</span>))</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    fp.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="分析结论"><a href="#分析结论" class="headerlink" title="分析结论"></a>分析结论</h3><p>因需要分析的是“评论内容”，所以未爬取“评论时间”，“用户”等信息。</p>
+<p>爬取得完后，常规操作是利用Matplotlib、Pandas等进行数据分析及可视化，现在我们用最简单的词频统计工具分析，后面学会了这些工具，在完善。</p>
+<p>此次爬取了200页，总共2000条的评论，通过<a target="_blank" rel="noopener" href="http://www.picdata.cn/picdata/index.php#">图悦</a>分析词评，删除没有意义的“评论内容”，“猪肉”等词语，生成的词云如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gksdy0ejbqj30gw0ea4hn.jpg" alt="image-20201117191733693"></p>
+<p>从中可以得出用户购买猪肉关注的点：<strong>味道、价格、送货速度、外观、健康、售后服务、服务稳定性。</strong>这些指标在一定程度为生产经营提供了方向性参考，当然还需要进一步把这些指标拆解成具体的行动。</p>
+<p>不足之处：获取的评论数量依然有限，同时只获取了一个产品的评论，用户代表性上较差。等学到了更多新技能后，再来优化：）。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020-11-11-agricultural-lies/" rel="prev" title="农业的谎言，越早识破越好">
+      <i class="fa fa-chevron-left"></i> 农业的谎言，越早识破越好
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020-10-24-problem-solving-method/" rel="next" title="一种通用的问题解决方法">
+      一种通用的问题解决方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">网页分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">3.</span> <span class="nav-text">代码如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E7%BB%93%E8%AE%BA"><span class="nav-number">4.</span> <span class="nav-text">分析结论</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="妙生"
+      src="https://p.ipic.vip/cdgm25.jpg">
+  <p class="site-author-name" itemprop="name">妙生</p>
+  <div class="site-description" itemprop="description">如果有可能，让生活更美丽一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">妙生</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
