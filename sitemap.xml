@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ligj1706.github.io/about/</loc>
+    
+    <lastmod>2024-10-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ligj1706.github.io/2024-06-28-Possibility/</loc>
     
     <lastmod>2024-10-13</lastmod>
@@ -587,7 +596,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-10-24-problem-solving-method/</loc>
+    <loc>http://ligj1706.github.io/2020-10-11-GDP-to-angriculture/</loc>
     
     <lastmod>2023-01-03</lastmod>
     
@@ -596,7 +605,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-10-11-GDP-to-angriculture/</loc>
+    <loc>http://ligj1706.github.io/2020-10-24-problem-solving-method/</loc>
     
     <lastmod>2023-01-03</lastmod>
     
@@ -794,15 +803,6 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2019-03-28-four-principles-of-design/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ligj1706.github.io/2019-05-04-Million-baby/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -812,7 +812,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2019-05-10-base-Axmf/</loc>
+    <loc>http://ligj1706.github.io/2019-03-28-four-principles-of-design/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -822,6 +822,15 @@
   
   <url>
     <loc>http://ligj1706.github.io/2019-05-21-woop-psychology/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2019-05-10-base-Axmf/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1136,7 +1145,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-09-02-python-practice-bibili/</loc>
+    <loc>http://ligj1706.github.io/2020-09-02-python-practice-bibili-1/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1154,15 +1163,6 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-09-02-python-practice-bibili-1/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ligj1706.github.io/2020-10-03-choice_the_power_to_control_life%20independently/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -1172,7 +1172,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-10-23-the-road-to-effective-development/</loc>
+    <loc>http://ligj1706.github.io/2020-09-02-python-practice-bibili/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1182,6 +1182,15 @@
   
   <url>
     <loc>http://ligj1706.github.io/2020-10-09-Excel-learn/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2020-10-23-the-road-to-effective-development/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1719,14 +1728,14 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/</loc>
+    <loc>http://ligj1706.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
     <lastmod>2024-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
+    <loc>http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
