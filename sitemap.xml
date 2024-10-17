@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ligj1706.github.io/2024-10-18-The-Front-Line/</loc>
+    
+    <lastmod>2024-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2024-10-07-September-wisdom/</loc>
+    
+    <lastmod>2024-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2023-09-06-August-wisdom/</loc>
+    
+    <lastmod>2024-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ligj1706.github.io/about/</loc>
     
     <lastmod>2024-10-13</lastmod>
@@ -14,24 +41,6 @@
     <loc>http://ligj1706.github.io/2024-06-28-Possibility/</loc>
     
     <lastmod>2024-10-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ligj1706.github.io/2024-10-07-September-wisdom/</loc>
-    
-    <lastmod>2024-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ligj1706.github.io/2023-09-06-August-wisdom/</loc>
-    
-    <lastmod>2024-10-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -803,15 +812,6 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2019-05-04-Million-baby/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ligj1706.github.io/2019-03-28-four-principles-of-design/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -821,7 +821,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2019-05-21-woop-psychology/</loc>
+    <loc>http://ligj1706.github.io/2019-05-04-Million-baby/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -831,6 +831,15 @@
   
   <url>
     <loc>http://ligj1706.github.io/2019-05-10-base-Axmf/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2019-05-21-woop-psychology/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -884,7 +893,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2019-08-23-Principles_of_Speech/</loc>
+    <loc>http://ligj1706.github.io/2019-09-08-the-bridge-to-the-soul/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -893,7 +902,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2019-09-08-the-bridge-to-the-soul/</loc>
+    <loc>http://ligj1706.github.io/2019-08-23-Principles_of_Speech/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -992,7 +1001,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-02-29-We-are-cognitive-mister/</loc>
+    <loc>http://ligj1706.github.io/2020-02-20-cao%20de%20wang/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1001,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-02-20-cao%20de%20wang/</loc>
+    <loc>http://ligj1706.github.io/2020-02-29-We-are-cognitive-mister/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1127,7 +1136,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-08-21-data-analysis-learning-path/</loc>
+    <loc>http://ligj1706.github.io/2020-08-24-Three_ways_to_improve_cognition/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1136,7 +1145,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-08-24-Three_ways_to_improve_cognition/</loc>
+    <loc>http://ligj1706.github.io/2020-08-21-data-analysis-learning-path/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1154,25 +1163,16 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-09-07-data-visualization-tools/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ligj1706.github.io/2020-10-03-choice_the_power_to_control_life%20independently/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ligj1706.github.io/2020-09-02-python-practice-bibili/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2020-09-07-data-visualization-tools/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1190,6 +1190,15 @@
   </url>
   
   <url>
+    <loc>http://ligj1706.github.io/2020-10-03-choice_the_power_to_control_life%20independently/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ligj1706.github.io/2020-10-23-the-road-to-effective-development/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -1199,7 +1208,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-10-25-NumPy-leann1/</loc>
+    <loc>http://ligj1706.github.io/2020-10-25-python-basic-syntax/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1208,7 +1217,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-10-25-python-basic-syntax/</loc>
+    <loc>http://ligj1706.github.io/2020-10-25-NumPy-leann1/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1262,7 +1271,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-11-11-agricultural-lies/</loc>
+    <loc>http://ligj1706.github.io/2020-11-17-JD-pig/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1271,7 +1280,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2020-11-17-JD-pig/</loc>
+    <loc>http://ligj1706.github.io/2020-11-11-agricultural-lies/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1370,15 +1379,6 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2021-04-11-The-Human-Network/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ligj1706.github.io/2021-04-14-frame/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -1388,7 +1388,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2021-05-06-Stratege-school-1/</loc>
+    <loc>http://ligj1706.github.io/2021-04-11-The-Human-Network/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1415,7 +1415,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2021-05-08-James-G-March/</loc>
+    <loc>http://ligj1706.github.io/2021-05-06-Stratege-school-1/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1442,15 +1442,6 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2021-06-29-Madness-and-innovation/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ligj1706.github.io/2021-07-05-Culturul-capital/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -1461,6 +1452,24 @@
   
   <url>
     <loc>http://ligj1706.github.io/2021-07-05-how-to-learn-in-work/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2021-06-29-Madness-and-innovation/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/2021-05-08-James-G-March/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1487,7 +1496,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2021-11-14-Why-Don't-Students-Like-School/</loc>
+    <loc>http://ligj1706.github.io/2022-02-03-engineering-thinking/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1496,7 +1505,7 @@
   </url>
   
   <url>
-    <loc>http://ligj1706.github.io/2022-02-03-engineering-thinking/</loc>
+    <loc>http://ligj1706.github.io/2021-11-14-Why-Don't-Students-Like-School/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
@@ -1651,7 +1660,7 @@
 
   <url>
     <loc>http://ligj1706.github.io/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1659,259 +1668,259 @@
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%BC%80%E6%99%BA%E6%AD%A3%E5%85%B8/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E4%B9%A0%E6%83%AF/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E6%8A%95%E8%B5%84/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%88%9B%E6%96%B0/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/</loc>
-    <lastmod>2024-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://ligj1706.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%A1%8C%E5%8A%A8/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E7%A4%BE%E4%BC%9A%E6%99%BA%E6%85%A7/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%88%9B%E9%80%A0%E6%80%9D%E7%BB%B4/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%81%8C%E4%B8%9A%E6%8A%80%E8%83%BD/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%A4%A7%E5%86%9C%E4%B8%9A/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/python/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E6%83%85%E7%BB%AA/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%BF%83%E6%B5%81/</loc>
-    <lastmod>2024-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://ligj1706.github.io/tags/%E5%8A%A8%E6%9C%BA/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/tags/%E5%8A%A8%E6%9C%BA/</loc>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%95%86%E4%B8%9A%E6%A1%88%E4%BE%8B/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E4%BC%A0%E8%AE%B0/</loc>
-    <lastmod>2024-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://ligj1706.github.io/tags/%E5%BF%83%E7%90%86%E5%AD%A6/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ligj1706.github.io/tags/%E5%BF%83%E7%90%86%E5%AD%A6/</loc>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%86%B3%E7%AD%96/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%95%86%E4%B8%9A%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/R%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5-%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%AE%A4%E7%9F%A5-%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E5%88%9B%E4%B8%9A/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/tags/%E8%81%8C%E4%B8%9A%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1920,56 +1929,56 @@
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E8%AE%A4%E7%9F%A5/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E5%95%86%E4%B8%9A%E6%8A%80%E8%83%BD/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E6%96%B0%E5%86%9C%E4%B8%9A%E8%A7%82%E5%AF%9F/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E6%8A%95%E8%B5%84/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E8%81%8C%E5%9C%BA/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ligj1706.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
