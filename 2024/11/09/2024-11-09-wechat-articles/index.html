@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ligj1706.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":{"enable":true,"default":"light","sync_system":false,"toggle_button":{"enable":true,"position":"right","light_icon":"🌞","dark_icon":"🌛"}},"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+  <script src="/js/darkmode.js"></script>
+
+    <meta name="description" content="声明：本文只做个人学习，请尊重作者隐私和版权。 公众号是获取信息的重要渠道，特别是小众但真诚分享的作者，文章质量非常高。当找到这些作者时，我会查看他们写过的所有文章。但一篇篇打开干扰注意力，有时在飞机上没网也无法查看。于是我把所有文章全部保存到本地查看。 有的作者原创文章3-4百篇文章，一篇篇保存并不现实。 那怎么办呢？ 第一种方法是使用这个开源项目，背后的原理是，微信公众号内可以搜索文章。 ht">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何导出一个公众号上的所有文章？">
+<meta property="og:url" content="https://ligj1706.github.io/2024/11/09/2024-11-09-wechat-articles/index.html">
+<meta property="og:site_name" content="海边拾贝">
+<meta property="og:description" content="声明：本文只做个人学习，请尊重作者隐私和版权。 公众号是获取信息的重要渠道，特别是小众但真诚分享的作者，文章质量非常高。当找到这些作者时，我会查看他们写过的所有文章。但一篇篇打开干扰注意力，有时在飞机上没网也无法查看。于是我把所有文章全部保存到本地查看。 有的作者原创文章3-4百篇文章，一篇篇保存并不现实。 那怎么办呢？ 第一种方法是使用这个开源项目，背后的原理是，微信公众号内可以搜索文章。 ht">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://p.ipic.vip/jntd5n.png">
+<meta property="og:image" content="https://p.ipic.vip/a3tgde.png">
+<meta property="og:image" content="https://p.ipic.vip/l2rem0.png">
+<meta property="article:published_time" content="2024-11-09T06:07:08.000Z">
+<meta property="article:modified_time" content="2024-12-05T11:25:48.457Z">
+<meta property="article:author" content="妙生">
+<meta property="article:tag" content="技能">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/jntd5n.png">
+
+
+<link rel="canonical" href="https://ligj1706.github.io/2024/11/09/2024-11-09-wechat-articles/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ligj1706.github.io/2024/11/09/2024-11-09-wechat-articles/","path":"2024/11/09/2024-11-09-wechat-articles/","title":"如何导出一个公众号上的所有文章？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何导出一个公众号上的所有文章？ | 海边拾贝</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?f7efda7fd17f9fe755832cf5d4d5233b"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">海边拾贝</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
+
+
+
+  <div class="darkmode-toggle" id="darkmode-toggle" title="切换主题">
+    <i class="fas fa-adjust"></i>
+  </div>
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="妙生"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">妙生</p>
+  <div class="site-description" itemprop="description">让生活更美丽一点</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2024/11/09/2024-11-09-wechat-articles/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何导出一个公众号上的所有文章？ | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何导出一个公众号上的所有文章？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-11-09 14:07:08" itemprop="dateCreated datePublished" datetime="2024-11-09T14:07:08+08:00">2024-11-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><em><strong>声明：本文只做个人学习，请尊重作者隐私和版权。</strong></em></p>
+<p>公众号是获取信息的重要渠道，特别是小众但真诚分享的作者，文章质量非常高。当找到这些作者时，我会查看他们写过的所有文章。但一篇篇打开干扰注意力，有时在飞机上没网也无法查看。于是我把所有文章全部保存到本地查看。</p>
+<p>有的作者原创文章3-4百篇文章，一篇篇保存并不现实。</p>
+<p>那怎么办呢？</p>
+<p>第一种方法是使用这个开源项目，背后的原理是，微信公众号内可以搜索文章。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jooooock/wechat-article-exporter">https://github.com/jooooock/wechat-article-exporter</a></p>
+<p>使用前需要注册微信公众号，注册登录后，直接输入公众号名称即可解析。</p>
+<p>界面上可以选择导出的时间、是否原创等，你可以选择导出为excel、“打包下载”。其中，“打包下载”包含HTML+图片。</p>
+<p><img src="https://p.ipic.vip/jntd5n.png" alt="image-20241109134925633"></p>
+<p>打包下载的文件，是HTML+图片格式的。我用Claude写了一个脚本，转为PDF。并且合并在一个PDF中。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://heguangtongcheng.feishu.cn/file/QqukbjMmao3FBsxKznWciHldnaf?from=from_copylink">HTML 转 PDF</a></li>
+</ul>
+<p><img src="https://p.ipic.vip/a3tgde.png" alt="image-20241109135637421"></p>
+<p>当文章数量太多时，打包下载非常慢。</p>
+<p>于是，我在Claude等帮助下，写了个脚本获取文章原文。</p>
+<p>第一步，先“导出excel”。</p>
+<p><img src="https://p.ipic.vip/l2rem0.png" alt="image-20241109135947362"></p>
+<p>第二步，使用以下代码爬取excel中的链接，将文章转为Markdown、PDF等你想要的形式。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://heguangtongcheng.feishu.cn/file/E3KFb8LOkoxZBZxI96ecgaN0nSv?from=from_copylink">转为PDF的代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://heguangtongcheng.feishu.cn/file/Sfyqb8ZEGo8bG1xJ384c3YCInIf?from=from_copylink">转为Markdown的代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://heguangtongcheng.feishu.cn/file/IpmFbhaXuoUvThxD1YdcpawCnfc?from=from_copylink">转为HTML + 图片</a></li>
+<li><a target="_blank" rel="noopener" href="https://heguangtongcheng.feishu.cn/file/V3Yzb5F4XoUNFOxNmLacHOIhnlh?from=from_copylink">转为JSON格式</a></li>
+</ul>
+<p>第三步，把所有文章合并在一个文件中。下面是合并到pdf中。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://heguangtongcheng.feishu.cn/file/Him1be80go4OUtxn3n4cFwuxnyd?from=from_copylink">合并为PDF的代码</a></li>
+</ul>
+<p><em>相关项目</em></p>
+<p>导出公众号文章：<a target="_blank" rel="noopener" href="https://github.com/jooooock/wechat-article-exporter">https://github.com/jooooock/wechat-article-exporter</a></p>
+<p>使用RSS订阅公众号文章：<a target="_blank" rel="noopener" href="https://github.com/cooderl/wewe-rss">https://github.com/cooderl/wewe-rss</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E8%83%BD/" rel="tag"># 技能</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/11/06/2024-11-06-october-wisdom/" rel="prev" title="2024年10月碎片">
+                  <i class="fa fa-angle-left"></i> 2024年10月碎片
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/11/19/2024-11-19-cognitive-principles/" rel="next" title="一些基本的认知规律">
+                  一些基本的认知规律 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">妙生</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

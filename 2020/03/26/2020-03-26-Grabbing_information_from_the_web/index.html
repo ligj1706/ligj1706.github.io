@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ligj1706.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":{"enable":true,"default":"light","sync_system":false,"toggle_button":{"enable":true,"position":"right","light_icon":"🌞","dark_icon":"🌛"}},"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+  <script src="/js/darkmode.js"></script>
+
+    <meta name="description" content="1. Web抓取常用模块webbrower：打开浏览器获取指定页面。 requests：从网上下载文件和网页。 Beautiful Soup：解析HTML，即网页编写的格式。 Selenium：启动并控制浏览器，可以模拟鼠标在这个网页上点击。 2. 通过request模块下载Web文件 调用 requests.get()下载该文件。  用’wb’调用 open()，以写二进制的方式打开一个新文件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从Web抓取信息">
+<meta property="og:url" content="https://ligj1706.github.io/2020/03/26/2020-03-26-Grabbing_information_from_the_web/index.html">
+<meta property="og:site_name" content="海边拾贝">
+<meta property="og:description" content="1. Web抓取常用模块webbrower：打开浏览器获取指定页面。 requests：从网上下载文件和网页。 Beautiful Soup：解析HTML，即网页编写的格式。 Selenium：启动并控制浏览器，可以模拟鼠标在这个网页上点击。 2. 通过request模块下载Web文件 调用 requests.get()下载该文件。  用’wb’调用 open()，以写二进制的方式打开一个新文件。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-26T11:10:53.000Z">
+<meta property="article:modified_time" content="2024-12-05T11:25:48.005Z">
+<meta property="article:author" content="妙生">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ligj1706.github.io/2020/03/26/2020-03-26-Grabbing_information_from_the_web/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ligj1706.github.io/2020/03/26/2020-03-26-Grabbing_information_from_the_web/","path":"2020/03/26/2020-03-26-Grabbing_information_from_the_web/","title":"从Web抓取信息"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从Web抓取信息 | 海边拾贝</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?f7efda7fd17f9fe755832cf5d4d5233b"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">海边拾贝</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
+
+
+
+  <div class="darkmode-toggle" id="darkmode-toggle" title="切换主题">
+    <i class="fas fa-adjust"></i>
+  </div>
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Web%E6%8A%93%E5%8F%96%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97"><span class="nav-number">1.</span> <span class="nav-text">1. Web抓取常用模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%80%9A%E8%BF%87request%E6%A8%A1%E5%9D%97%E4%B8%8B%E8%BD%BDWeb%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">2. 通过request模块下载Web文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%94%A8-BeautifulSoup-%E6%A8%A1%E5%9D%97%E8%A7%A3%E6%9E%90-HTML"><span class="nav-number">3.</span> <span class="nav-text">3. 用 BeautifulSoup 模块解析 HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E2%80%9CI%E2%80%99m-Feeling-Lucky%E2%80%9DGoogle-%E6%9F%A5%E6%89%BE"><span class="nav-number">3.1.</span> <span class="nav-text">3.2 “I’m Feeling Lucky”Google 查找</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="妙生"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">妙生</p>
+  <div class="site-description" itemprop="description">让生活更美丽一点</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/03/26/2020-03-26-Grabbing_information_from_the_web/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="从Web抓取信息 | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从Web抓取信息
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-03-26 19:10:53" itemprop="dateCreated datePublished" datetime="2020-03-26T19:10:53+08:00">2020-03-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="1-Web抓取常用模块"><a href="#1-Web抓取常用模块" class="headerlink" title="1. Web抓取常用模块"></a>1. Web抓取常用模块</h3><p>webbrower：打开浏览器获取指定页面。</p>
+<p>requests：从网上下载文件和网页。</p>
+<p>Beautiful Soup：解析HTML，即网页编写的格式。</p>
+<p>Selenium：启动并控制浏览器，可以模拟鼠标在这个网页上点击。</p>
+<h3 id="2-通过request模块下载Web文件"><a href="#2-通过request模块下载Web文件" class="headerlink" title="2. 通过request模块下载Web文件"></a>2. 通过request模块下载Web文件</h3><ol>
+<li><p>调用 requests.get()下载该文件。</p>
+</li>
+<li><p>用’wb’调用 open()，以写二进制的方式打开一个新文件。 </p>
+</li>
+<li><p>利用 Respose 对象的 iter_content()方法做循环。 </p>
+</li>
+<li><p>在每次迭代中调用 write()，将内容写入该文件。 </p>
+</li>
+<li><p>调用 close()关闭该文件。</p>
+</li>
+</ol>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+17  
+18  
+19  
+</code></pre>
+<p>| </p>
+<pre><code># _*_ coding:utf-8 _*_  
+  
+# 输入模块  
+import requests  
+  
+res = requests.get(&#39;http://www.gutenberg.org/cache/epub/1112/pg1112.txt&#39;)  
+  
+# 检验是否下载成功  
+res.raise_for_status()  
+  
+# 以写二进制的方式打开文件  
+playFile = open(&#39;RomeoAndJuliet.txt&#39;, &#39;wb&#39;)  
+  
+# 通过循环克隆文件  
+for chunk in res.iter_content(1000000):  
+    playFile.write(chunk)  
+  
+# 关闭文件  
+playFile.close()  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="3-用-BeautifulSoup-模块解析-HTML"><a href="#3-用-BeautifulSoup-模块解析-HTML" class="headerlink" title="3. 用 BeautifulSoup 模块解析 HTML"></a>3. 用 BeautifulSoup 模块解析 HTML</h3><p>BeautifulSoup 是用于从HTML页面中提取信息的模块。在这里，需要先搞明白HTML是什么。</p>
+<p>####3.1 HTML简介</p>
+<p>HTML全称Hypertext Marked Language，即超文本标记语言，由Web的发明者 Tim Berners-Lee和同事 Daniel W. Connolly于1991年创立。超文本标记语言利用统一规则把网页上的图文视音频统一在一个格式下面。从Web抓取信息需要先弄清楚HTML网页结构，以便寻找需要的信息，并制定抓取策略。</p>
+<p>基本结构如下：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;The Website Title&lt;/title&gt;&lt;/head&gt;  
+&lt;body&gt;  
+  
+&lt;h1&gt;我的第一个标题&lt;/h1&gt;  
+  
+&lt;p&gt;我的第一个段落。&lt;/p&gt;  
+  
+&lt;/body&gt;  
+&lt;/html&gt;  
+  
+</code></pre>
+<p>—|—  </p>
+<p>具有以下特征：</p>
+<ul>
+<li>用&lt;&gt;表示</li>
+<li>成对出现，第一个是开始标签，第二个是结束标签</li>
+<li>纯文本文件，带有.html</li>
+</ul>
+<p>那么如何发现网页的源代码呢？如果是谷歌浏览器可以直接右键单击<code>检查</code>，然后点击代码即可发现对应的网页内容。</p>
+<h4 id="3-2-“I’m-Feeling-Lucky”Google-查找"><a href="#3-2-“I’m-Feeling-Lucky”Google-查找" class="headerlink" title="3.2 “I’m Feeling Lucky”Google 查找"></a>3.2 “I’m Feeling Lucky”Google 查找</h4><p>代码目的：自动查找网页中所需的特定信息。</p>
+<p>代码逻辑：</p>
+<ul>
+<li>从命令行参数中获取查询关键字。</li>
+<li>取得查询结果页面。 </li>
+<li>为每个结果打开一个浏览器选项卡。</li>
+</ul>
+<p>这意味着代码需要完成以下工作: </p>
+<ul>
+<li>从 sys.argv 中读取命令行参数。</li>
+<li>用 requests 模块取得查询结果页面。</li>
+<li>找到每个查询结果的链接。</li>
+<li>调用 webbrowser.open()函数打开 Web 浏览器。 </li>
+<li>打开一个新的文件编辑器窗口，并保存为 lucky.py。</li>
+</ul>
+<p>Ref 《Python编程快速上手—让繁琐工作自动化》</p>
+<p>2020年 3月27日</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/03/06/2020-03-26-good-strategy-bad-strategy/" rel="prev" title="三段论杂感">
+                  <i class="fa fa-angle-left"></i> 三段论杂感
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/03/30/2020-03-30-Rational_and_emotional_brain/" rel="next" title="理性和感性的大脑">
+                  理性和感性的大脑 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">妙生</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

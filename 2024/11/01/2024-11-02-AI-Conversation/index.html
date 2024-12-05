@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ligj1706.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":{"enable":true,"default":"light","sync_system":false,"toggle_button":{"enable":true,"position":"right","light_icon":"🌞","dark_icon":"🌛"}},"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+  <script src="/js/darkmode.js"></script>
+
+    <meta name="description" content="10月份用Claude辅助开发了几款产品，效率大大增强。比如我用Claude 3.5 Sonnet写了50个爬虫脚本。 某个任务，一位程序员说用半小时完成，而我在AI配合下，用5分钟就实现了他说的功能。 可以说，Claude是目前最强的AI大模型了，GPT-4效果逊色于Claude 3.5 Sonnet。 如何理解AI？AI是老师+全能助理。 作为老师它博学多才，24小时不厌其烦地回答你的问题。作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="与AI对话的技艺01">
+<meta property="og:url" content="https://ligj1706.github.io/2024/11/01/2024-11-02-AI-Conversation/index.html">
+<meta property="og:site_name" content="海边拾贝">
+<meta property="og:description" content="10月份用Claude辅助开发了几款产品，效率大大增强。比如我用Claude 3.5 Sonnet写了50个爬虫脚本。 某个任务，一位程序员说用半小时完成，而我在AI配合下，用5分钟就实现了他说的功能。 可以说，Claude是目前最强的AI大模型了，GPT-4效果逊色于Claude 3.5 Sonnet。 如何理解AI？AI是老师+全能助理。 作为老师它博学多才，24小时不厌其烦地回答你的问题。作">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-01T13:46:23.000Z">
+<meta property="article:modified_time" content="2024-12-05T11:25:48.452Z">
+<meta property="article:author" content="妙生">
+<meta property="article:tag" content="技能">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ligj1706.github.io/2024/11/01/2024-11-02-AI-Conversation/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ligj1706.github.io/2024/11/01/2024-11-02-AI-Conversation/","path":"2024/11/01/2024-11-02-AI-Conversation/","title":"与AI对话的技艺01"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>与AI对话的技艺01 | 海边拾贝</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?f7efda7fd17f9fe755832cf5d4d5233b"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">海边拾贝</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
+
+
+
+  <div class="darkmode-toggle" id="darkmode-toggle" title="切换主题">
+    <i class="fas fa-adjust"></i>
+  </div>
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">产品开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E6%80%9D%E5%BC%80%E5%8F%91%E5%B8%AE%E5%8A%A9%E6%96%B0%E6%89%8B%E8%BF%9B%E6%AD%A5"><span class="nav-number">2.</span> <span class="nav-text">反思开发帮助新手进步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.</span> <span class="nav-text">产品设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94"><span class="nav-number">4.</span> <span class="nav-text">角色扮演</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E6%8E%A7%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">引导控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E9%A2%86%E5%9F%9F%E5%AD%A6%E4%B9%A0"><span class="nav-number">6.</span> <span class="nav-text">跨领域学习</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="妙生"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">妙生</p>
+  <div class="site-description" itemprop="description">让生活更美丽一点</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2024/11/01/2024-11-02-AI-Conversation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="与AI对话的技艺01 | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          与AI对话的技艺01
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-11-01 21:46:23" itemprop="dateCreated datePublished" datetime="2024-11-01T21:46:23+08:00">2024-11-01</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>10月份用Claude辅助开发了几款产品，效率大大增强。比如我用Claude 3.5 Sonnet写了50个爬虫脚本。</p>
+<p>某个任务，一位程序员说用半小时完成，而我在AI配合下，用5分钟就实现了他说的功能。</p>
+<p>可以说，Claude是目前最强的AI大模型了，GPT-4效果逊色于Claude 3.5 Sonnet。</p>
+<p>如何理解AI？AI是老师+全能助理。</p>
+<p>作为老师它博学多才，24小时不厌其烦地回答你的问题。作为助理，脏活苦活都丢给它，随便你PUA，不过最好也多夸夸它。</p>
+<p>以下是一些我在提示词中经常输入的文字，整理如下，还会持续迭代。</p>
+<h2 id="产品开发"><a href="#产品开发" class="headerlink" title="产品开发"></a>产品开发</h2><ol>
+<li><p>我是新手，请你详细解答。</p>
+</li>
+<li><p>你是一个有20年编程经验的人，这是一个项目，请你根据目录，理解项目，完善代码。代码符合20年编程高手的风格。</p>
+</li>
+<li><p>注意非常重要、但是新手容易遇到，又常常被忽视的问题。要有操作细节。</p>
+</li>
+<li><p>代码简化：代码可以啦，代码不够优雅。这只是项目中的一个文件。请你看看保证正常运行情况下，是否可以简化代码。并且指出为什么这么做。</p>
+</li>
+<li><p>请你先指出问题所在。如果在更改前还需要其他信息。请先向我询问。</p>
+</li>
+</ol>
+<h2 id="反思开发帮助新手进步"><a href="#反思开发帮助新手进步" class="headerlink" title="反思开发帮助新手进步"></a>反思开发帮助新手进步</h2><ol>
+<li><p>详细说明目前这个运用的架构，设计思维，技术栈。请你用从业20年的经验分享，举一反三，用于迅速帮初中级开发者和产品经理提升能力。不要就项目论项目。</p>
+</li>
+<li><p>请你详细说明整个项目架构，包括核心文件作用。举一反三，帮助新手理解。</p>
+</li>
+<li><p>你改进了什么？达到什么效果？为什么这么改进。</p>
+</li>
+<li><p>请你指出错在哪里，为什么出错了，为什么会出错，如何改正，以便下次不犯同样的错误。确保你的回答经过深思熟虑、可以解决当前问题，复盘的方法未来也有用，充分发挥你30年编程经验。</p>
+</li>
+</ol>
+<h2 id="产品设计"><a href="#产品设计" class="headerlink" title="产品设计"></a>产品设计</h2><ol>
+<li>界面简洁、精致，符合费曼设计心理学设计原则、类似苹果产品的设计风格。</li>
+<li>网页适配移动端和网页端。</li>
+<li>请站在用户角度设计，确保用户体验良好。给用户带来excellent的使用体验。</li>
+</ol>
+<h2 id="角色扮演"><a href="#角色扮演" class="headerlink" title="角色扮演"></a>角色扮演</h2><ol>
+<li><p>扮演XX领域专家，推荐你增强某项技能经常使用的信息源、成长方法。</p>
+</li>
+<li><p>你是一位拥有10年工作分析经验的AI转型顾问，专门帮助企业识别和评估AI应用机会。</p>
+</li>
+<li><p>你是一个有着20年XX领域积累的专家，请记住你的身份，你是一个具备XX身份+XX身份，双重身份的人。</p>
+</li>
+</ol>
+<h2 id="引导控制"><a href="#引导控制" class="headerlink" title="引导控制"></a>引导控制</h2><ol>
+<li><p>请使用野路子思路回答。</p>
+</li>
+<li><p>请你先复述我的问题，我确定后，你再展开其他内容。</p>
+</li>
+<li><p>你是负责任的，请谨慎地回答。</p>
+</li>
+<li><p>注意仔细回顾上面的对话，要回顾之前的信息（如项目结构、项目目标，过往代码）。</p>
+</li>
+</ol>
+<h2 id="跨领域学习"><a href="#跨领域学习" class="headerlink" title="跨领域学习"></a>跨领域学习</h2><ol>
+<li><p>请用符号表示。</p>
+</li>
+<li><p>请讲解底层逻辑，找出相当于物理定理、数学定理的底层规律。这些知识是这个领域的其他知识、方法是绕不过的，可以举一反三。</p>
+</li>
+<li><p>请你一步步思考后回答。请你举一反三。</p>
+</li>
+<li><p>请找出整个领域最具创造性的部分。</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E8%83%BD/" rel="tag"># 技能</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/10/30/2024-10-30-Inescapable-Probability-Theorems-Intuition/" rel="prev" title="逃脱不了的概率、定理和直觉">
+                  <i class="fa fa-angle-left"></i> 逃脱不了的概率、定理和直觉
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/11/06/2024-11-06-october-wisdom/" rel="next" title="2024年10月碎片">
+                  2024年10月碎片 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">妙生</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
