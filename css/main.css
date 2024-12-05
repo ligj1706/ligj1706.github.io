@@ -1393,7 +1393,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #8161ff;
+  background: #20edfc;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3096,6 +3096,70 @@ html.dark-mode .site-author-image {
   .search-toggle i {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 767px) {
+  .header-inner {
+    padding: 10px !important;
+  }
+  .site-nav {
+    display: flex !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 0 10px !important;
+  }
+  .site-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+  .menu-item {
+    padding: 0 10px !important;
+  }
+  .post-title,
+  .post-block h1,
+  .post-block h2 {
+    font-size: 1.4rem !important;
+  }
+  .post-block h3 {
+    font-size: 1.2rem !important;
+  }
+  .post-block h4 {
+    font-size: 1.1rem !important;
+  }
+}
+.post-title,
+.post-block h1,
+.post-block h2 {
+  font-size: 1.6rem !important;
+}
+.post-block h3 {
+  font-size: 1.4rem !important;
+}
+.post-block h4 {
+  font-size: 1.2rem !important;
+}
+.posts-collapse .collection-title h1,
+.posts-collapse .collection-title h2,
+.posts-collapse .collection-year,
+.posts-collapse a.post-title-link,
+.posts-collapse .post-title {
+  font-size: 0.95rem !important;
+}
+.posts-collapse .post-header {
+  font-size: 0.875rem !important;
+}
+.posts-collapse .post-title {
+  border-bottom: none;
+}
+.posts-collapse .collection-title h1,
+.posts-collapse .collection-title h2,
+.posts-collapse .collection-year {
+  font-size: 1.2rem !important;
+}
+.posts-collapse .post-header {
+  font-size: 1rem !important;
 }
 .site-author-image {
   display: block;
