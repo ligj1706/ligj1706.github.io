@@ -1393,7 +1393,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #acffff;
+  background: #11fbeb;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3196,6 +3196,36 @@ html.dark-mode .site-author-image {
 }
 [data-theme="dark"] .post-block a {
   border-bottom-color: rgba(255,255,255,0.1);
+}
+.footer .custom_text {
+  margin-left: 8px;
+}
+.footer .custom_text a {
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.footer .custom_text a:hover {
+  opacity: 1;
+}
+.footer .custom_text a i {
+  font-size: 1rem;
+}
+.footer .footer-separator {
+  margin: 0 8px;
+  color: var(--text-color);
+  opacity: 0.3;
+}
+.footer .fa-rss {
+  font-size: 0.9em;
+  margin-right: 3px;
+}
+.footer a {
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+.footer a:hover {
+  color: var(--link-hover-color);
 }
 .site-author-image {
   display: block;
