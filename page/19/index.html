@@ -174,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-count">183</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -811,402 +811,6 @@ B：售价提高10%，维持现在的销售量
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/09/02/2020-09-02-python-practice-bibili-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/09/02/2020-09-02-python-practice-bibili-1/" class="post-title-link" itemprop="url">使用python爬取b站排行榜</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-09-02 21:12:21" itemprop="dateCreated datePublished" datetime="2020-09-02T21:12:21+08:00">2020-09-02</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="解析文本结构"><a href="#解析文本结构" class="headerlink" title="解析文本结构"></a>解析文本结构</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-</code></pre>
-<p>| </p>
-<pre><code>import requests  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求   
-response = requests.get(url)  
-  
-# 打印返回的文本  
-print(response.text)  
-  
-</code></pre>
-<p>—|—  </p>
-<h4 id="打印标题"><a href="#打印标题" class="headerlink" title="打印标题"></a>打印标题</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-</code></pre>
-<p>| </p>
-<pre><code>import requests  
-from bs4 import BeautifulSoup  
-  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求  
-response = requests.get(url)  
-html_text = response.text  
-soup = BeautifulSoup(html_text, &#39;html.parser&#39;) # html.parser为html页面解析工具  
-  
-# 打印返回的文本  
-print(soup.title.text)  
-  
-</code></pre>
-<p>—|—  </p>
-<h4 id="提取列表"><a href="#提取列表" class="headerlink" title="提取列表"></a>提取列表</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-</code></pre>
-<p>| </p>
-<pre><code>import requests  
-from bs4 import BeautifulSoup  
-  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求  
-response = requests.get(url)  
-html_text = response.text  
-soup = BeautifulSoup(html_text, &#39;html.parser&#39;)  
-  
-# 提取列表  
-items = soup.findAll(&#39;li&#39;,&#123;&#39;class&#39;:&#39;rank-item&#39;&#125;) # rank-item是其具体属性  
-print(len(items))  
-  
-</code></pre>
-<p>—|—  </p>
-<h4 id="提取标题"><a href="#提取标题" class="headerlink" title="提取标题"></a>提取标题</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-14  
-15  
-16  
-17  
-</code></pre>
-<p>| </p>
-<pre><code># 输入模块  
-import requests  
-from bs4 import BeautifulSoup  
-  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求  
-response = requests.get(url)  
-html_text = response.text  
-soup = BeautifulSoup(html_text, &#39;html.parser&#39;)  
-  
-# 提取列表  
-items = soup.findAll(&#39;li&#39;,&#123;&#39;class&#39;:&#39;rank-item&#39;&#125;) # rank-item是其具体属性  
-  
-for itm in items:  
-  title = itm.find(&#39;a&#39;, &#123;&#39;class&#39;:&#39;title&#39;&#125;).text  
-  print(title)  
-  
-</code></pre>
-<p>—|—  </p>
-<h4 id="提取其他字段"><a href="#提取其他字段" class="headerlink" title="提取其他字段"></a>提取其他字段</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-14  
-15  
-16  
-17  
-18  
-19  
-20  
-</code></pre>
-<p>| </p>
-<pre><code># 输入模块  
-import requests  
-from bs4 import BeautifulSoup  
-  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求  
-response = requests.get(url)  
-html_text = response.text  
-soup = BeautifulSoup(html_text, &#39;html.parser&#39;)  
-  
-# 提取列表  
-items = soup.findAll(&#39;li&#39;,&#123;&#39;class&#39;:&#39;rank-item&#39;&#125;) # rank-item是其具体属性，是总的分支  
-  
-for itm in items:  
-  title = itm.find(&#39;a&#39;, &#123;&#39;class&#39;:&#39;title&#39;&#125;).text  
-  rank = itm.find(&#39;div&#39;, &#123;&#39;class&#39;:&#39;num&#39;&#125;).text  
-  score = itm.find(&#39;div&#39;, &#123;&#39;class&#39;:&#39;pts&#39;&#125;).text  
-  url = itm.find(&#39;a&#39;,&#123;&#39;class&#39;:&#39;title&#39;&#125;).get(&#39;href&#39;) # 需要用get得到属性  
-  print(f&#39;&#123;title&#125;&#123;rank&#125;&#123;score&#125;&#123;url&#125;&#39;)  
-  
-</code></pre>
-<p>—|—  </p>
-<h4 id="创建提取数据的列表"><a href="#创建提取数据的列表" class="headerlink" title="创建提取数据的列表"></a>创建提取数据的列表</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-14  
-15  
-16  
-17  
-18  
-19  
-20  
-21  
-22  
-23  
-24  
-25  
-26  
-27  
-28  
-29  
-30  
-31  
-32  
-</code></pre>
-<p>| </p>
-<pre><code># 输入模块  
-import requests  
-from bs4 import BeautifulSoup  
-  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求  
-response = requests.get(url)  
-html_text = response.text  
-soup = BeautifulSoup(html_text, &#39;html.parser&#39;)  
-  
-# 创建用来储存信息的列表  
-class Videos:  
-  def __init__(self, title, rank, score, url):  
-    self.title = title  
-    self.rank = rank  
-    self.score = score  
-    self.url = url  
-      
-# 提取列表  
-items = soup.findAll(&#39;li&#39;,&#123;&#39;class&#39;:&#39;rank-item&#39;&#125;) # rank-item是其具体属性  
-videos = []  
-  
-for itm in items:  
-  title = itm.find(&#39;a&#39;, &#123;&#39;class&#39;:&#39;title&#39;&#125;).text  
-  rank = itm.find(&#39;div&#39;, &#123;&#39;class&#39;:&#39;num&#39;&#125;).text  
-  score = itm.find(&#39;div&#39;, &#123;&#39;class&#39;:&#39;pts&#39;&#125;).text  
-  url = itm.find(&#39;a&#39;,&#123;&#39;class&#39;:&#39;title&#39;&#125;).get(&#39;href&#39;) # 需要用get得到属性  
-  v = Videos(title, rank, score, url)  
-  videos.append(v)  
-    
-print(len(videos))  
-  
-</code></pre>
-<p>—|—  </p>
-<h4 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h4><pre><code>1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-14  
-15  
-16  
-17  
-18  
-19  
-20  
-21  
-22  
-23  
-24  
-25  
-26  
-27  
-28  
-29  
-30  
-31  
-32  
-33  
-34  
-35  
-36  
-37  
-38  
-39  
-40  
-41  
-42  
-43  
-44  
-</code></pre>
-<p>| </p>
-<pre><code># 输入模块  
-import requests  
-from bs4 import BeautifulSoup  
-import csv  
-  
-url = &#39;https://www.bilibili.com/ranking&#39;  
-  
-# 发起网络请求  
-response = requests.get(url)  
-html_text = response.text  
-soup = BeautifulSoup(html_text, &#39;html.parser&#39;)  
-  
-# 创建用来储存信息的列表  
-class Videos:  
-  def __init__(self, title, rank, score, url):  
-    self.title = title  
-    self.rank = rank  
-    self.score = score  
-    self.url = url  
-      
-  def to_csv(self):  
-    return[self.title, self.rank, self.score, self.url]  
-    
-  def csv_title():  
-    return([&#39;标题&#39;, &#39;排名&#39;, &#39;分数&#39;, &#39;URL&#39;])  
-      
-# 提取列表  
-items = soup.findAll(&#39;li&#39;,&#123;&#39;class&#39;:&#39;rank-item&#39;&#125;) # rank-item是其具体属性  
-videos = []  
-  
-for itm in items:  
-  title = itm.find(&#39;a&#39;, &#123;&#39;class&#39;:&#39;title&#39;&#125;).text  
-  rank = itm.find(&#39;div&#39;, &#123;&#39;class&#39;:&#39;num&#39;&#125;).text  
-  score = itm.find(&#39;div&#39;, &#123;&#39;class&#39;:&#39;pts&#39;&#125;).text  
-  url = itm.find(&#39;a&#39;,&#123;&#39;class&#39;:&#39;title&#39;&#125;).get(&#39;href&#39;) # 需要用get得到属性  
-  v = Videos(title, rank, score, url)  
-  videos.append(v)  
-    
-file_name = &#39;Top100.csv&#39;  
-with open(file_name, &#39;w&#39;, newline=&#39;&#39;) as f:  
-  pen = csv.writer(f)  
-  pen.writerow(Videos.csv_title())  
-  for v in videos:  
-    pen.writerow(v.to_csv())  
-  
-</code></pre>
-<p>—|—  </p>
-<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20200902 python实战</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/09/02/2020-09-02-python-practice-bibili/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1577,6 +1181,127 @@ with open(file_name, &#39;w&#39;, newline=&#39;&#39;) as f:
 </code></pre>
 <p>—|—  </p>
 <h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20200902 python实战</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/" class="post-title-link" itemprop="url">提升认知水平的三点方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-24 19:26:37" itemprop="dateCreated datePublished" datetime="2020-08-24T19:26:37+08:00">2020-08-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="人"><a href="#人" class="headerlink" title="人"></a>人</h4><ul>
+<li><p>通过各种途径认识牛人：</p>
+<ul>
+<li><p>通过社交媒体、行业会议等，主动认识各个领域的高手，最好能够建立信任关系。建立关系时，脸皮一定要厚，尊重、给别人提供你的价值，或者让别人看到你的潜力。注意，向别人请教时，一定要有所准备，问出高质量的问题。</p>
+</li>
+<li><p>阅读牛人的传记，从中得到启发，具体参见<a target="_blank" rel="noopener" href="https://www.douban.com/doulist/3217178/">阳志平-寻找牛人与智者清单</a>。</p>
+</li>
+<li><p>整理牛人的公开演讲，或者阅读牛人写的书，进行学习。比如任正非对外演讲、高瓴资本张磊演讲、巴菲特致股东的信等。</p>
+</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li><p>高手的水平最好比你高2个level，这样高手的经验你才够得到。</p>
+</li>
+<li><p>加入高质量社群，在潜在牛人做朋友，建立心理契约</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h4><ul>
+<li><p>观看各种神书，牛书，提升理性思维能力，进行主题阅读。</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/41691053/">开智正典：心智升级百本经典导读</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/1222896/">ReWork创业书单</a>、<a target="_blank" rel="noopener" href="https://www.douban.com/doulist/44889839/">创业思维基础课程</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/113458951/">江湖必备21种底层思维</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/vXC6M8j78bYMWJP0SXydXg">企业家和投行家阅读书目单|和君商学院</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/112836015/">国学入门</a></p>
+</li>
+<li><p>……</p>
+</li>
+</ul>
+</li>
+<li><p>如何阅读：</p>
+<ul>
+<li><p>主题阅读、深度阅读、实践阅读</p>
+</li>
+<li><p>抽样阅读、结构阅读、卡片大法</p>
+</li>
+</ul>
+</li>
+<li><p>注意</p>
+<ul>
+<li>阅读是以获取信息为目的，带着问题阅读，一本书不必从头看到尾</li>
+</ul>
+</li>
+</ul>
+<h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p>多经历大事，年轻时多做正确的难事，在实践中进行学习。</p>
+<p>end.<br>2020年8月24日</p>
 
       
     </div>
