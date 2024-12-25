@@ -1393,7 +1393,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #e8d5ff;
+  background: #fb9c9d;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2709,6 +2709,8 @@ hr {
 }
 .column {
   background: var(--content-bg-color);
+  width: 100%;
+  margin: 0;
 }
 header.header {
   align-items: center;
@@ -2737,7 +2739,7 @@ header.header {
   display: block;
   height: 2px;
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .logo-line {
@@ -3487,6 +3489,13 @@ html.dark-mode .header {
 .highlight *::-moz-selection {
   background: #264f78;
   color: #fff;
+}
+.main-inner {
+  width: 100%;
+  padding: 0;
+}
+.header-inner {
+  width: 100%;
 }
 [data-theme="dark"] ::selection {
   background: #ffd700 !important;
