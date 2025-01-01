@@ -174,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,6 +197,346 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/10/25/2020-10-25-python-basic-syntax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/25/2020-10-25-python-basic-syntax/" class="post-title-link" itemprop="url">一篇文章掌握python基本语法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-25 19:57:05" itemprop="dateCreated datePublished" datetime="2020-10-25T19:57:05+08:00">2020-10-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h3><pre><code>1  
+2  
+3  
+4  
+</code></pre>
+<p>| </p>
+<pre><code>name = input(&quot;What&#39;s is your name?&quot;)  
+a = 1 + 1  
+print(&#39;hello, %s&#39; %name)  
+print(&#39;a = %d&#39; %a)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+</code></pre>
+<p>| </p>
+<pre><code>What&#39;s your name?y  
+hello,y  
+a = 2  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+</code></pre>
+<p>| </p>
+<pre><code>score = int(input(&quot;What&#39;s your score?&quot;))  
+if score&gt;= 90:  
+       print(&#39;Excellent&#39;)  
+else:  
+       if score &lt; 60:  
+           print(&#39;Fail&#39;)  
+       else:  
+           print(&#39;Good Job&#39;)  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="循环语句：for-…-in"><a href="#循环语句：for-…-in" class="headerlink" title="循环语句：for … in"></a>循环语句：for … in</h3><pre><code>1  
+2  
+3  
+4  
+</code></pre>
+<p>| </p>
+<pre><code>sum = 0  
+for number in range(11):  
+    sum = sum + number  
+print(sum)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为；</p>
+<pre><code>1  
+</code></pre>
+<p>| </p>
+<pre><code>55  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="循环语句-while"><a href="#循环语句-while" class="headerlink" title="循环语句: while"></a>循环语句: while</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+</code></pre>
+<p>| </p>
+<pre><code>sum = 1  
+number = 2  
+while number &lt;=100:  
+  sum = sum + number  
+  number = number + 1  
+print(sum)  
+print(number)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+</code></pre>
+<p>| </p>
+<pre><code>5050  
+101  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="数据类型：列表、元组、字典、集合"><a href="#数据类型：列表、元组、字典、集合" class="headerlink" title="数据类型：列表、元组、字典、集合"></a>数据类型：列表、元组、字典、集合</h3><h4 id="列表"><a href="#列表" class="headerlink" title="列表[]"></a>列表[]</h4><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+</code></pre>
+<p>| </p>
+<pre><code>lists = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]  
+lists.append(&#39;d&#39;)  
+print(lists)  
+print(len(lists))  
+lists.insert(0,&#39;mm&#39;)  
+lists.pop()  
+print(lists)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+</code></pre>
+<p>| </p>
+<pre><code>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]  
+4  
+[&#39;nm&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;]  
+  
+</code></pre>
+<p>—|—  </p>
+<p>增：append() 在尾部添加元素、使用 insert() 在列表中插入元素</p>
+<p>删：使用 pop() 删除尾部的元素</p>
+<p>查：len() 函数获得 lists 中元素的个数</p>
+<h4 id="元组-tuple"><a href="#元组-tuple" class="headerlink" title="元组 (tuple)"></a>元组 (tuple)</h4><pre><code>1  
+2  
+3  
+4  
+</code></pre>
+<p>| </p>
+<pre><code>tuples = (&#39;tupleA&#39;,&#39;tupleB&#39;)  
+print(tuples[0])  
+print(tuples[1])  
+print(tuples[-1])  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+</code></pre>
+<p>| </p>
+<pre><code>tupleA  
+tupleB  
+tupleB  
+  
+</code></pre>
+<p>—|—  </p>
+<p>元组和列表相同，但是初始化后不能够增加和删除元素，上面程序表示的是元素的查找。</p>
+<h4 id="字典-dictionary"><a href="#字典-dictionary" class="headerlink" title="字典 {dictionary}"></a>字典 {dictionary}</h4><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+17  
+</code></pre>
+<p>| </p>
+<pre><code># -*- coding: utf-8 -*-  
+#定义一个dictionary  
+score = &#123;&#39;guanyu&#39;:95,&#39;zhangfei&#39;:96&#125;  
+#添加一个元素  
+score[&#39;zhaoyun&#39;] = 98  
+print(score)  
+  
+#删除一个元素  
+score.pop(&#39;zhangfei&#39;)  
+print(score)  
+  
+#查看key是否存在  
+print(&#39;guanyu&#39; in score)  
+  
+#查看一个key对应的值  
+print(score.get(&#39;guanyu&#39;))  
+print(score.get(&#39;yase&#39;,99))  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+</code></pre>
+<p>| </p>
+<pre><code>&#123;&#39;guanyu&#39;: 95, &#39;zhangfei&#39;: 96, &#39;zhaoyun&#39;: 98&#125;  
+&#123;&#39;guanyu&#39;: 95, &#39;zhaoyun&#39;: 98&#125;  
+True  
+95  
+99  
+  
+</code></pre>
+<p>—|—  </p>
+<p>增：score[‘zhaoyun’] &#x3D; 98</p>
+<p>删：score.pop()</p>
+<p>查：是否存在用print(‘guanyu’ in score)、对应值用print(score.get(‘guanyu’))</p>
+<h3 id="集合：set"><a href="#集合：set" class="headerlink" title="集合：set"></a>集合：set</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+</code></pre>
+<p>| </p>
+<pre><code>s = set([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;])  
+# 增加某个元素  
+s.add(&#39;d&#39;)  
+# 移除某个元素  
+s.remove(&#39;b&#39;)  
+print(s)  
+# 查找某个元素  
+print(&#39;c&#39; in s)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+</code></pre>
+<p>| </p>
+<pre><code>&#123;&#39;d&#39;, &#39;a&#39;, &#39;c&#39;&#125;  
+True  
+  
+</code></pre>
+<p>—|—  </p>
+<p>集合和字典类似，但在增删查语法上有所区别：</p>
+<p>增： add</p>
+<p>删：remove</p>
+<p>查：使用 in</p>
+<h3 id="函数：def"><a href="#函数：def" class="headerlink" title="函数：def"></a>函数：def</h3><pre><code>1  
+2  
+3  
+</code></pre>
+<p>| </p>
+<pre><code>def addone(score):  
+   return score + 1  
+print(addone(99))  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+</code></pre>
+<p>| </p>
+<pre><code>100  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>使用<code># -*- coding: utf-8 -*-</code>，单行注释使用<code>#</code>，多行注释可以使用三个单引号’’’ ‘’’。</p>
+<h3 id="引用模块-包：import"><a href="#引用模块-包：import" class="headerlink" title="引用模块 &#x2F; 包：import"></a>引用模块 &#x2F; 包：import</h3><p>引用直接使用<code>import module_name</code>调动即可，import本质上是路径的搜索。</p>
+<p>针对package，可以采用<code>from … import …</code>，这实际是从一个目录中引用模块</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>《数据分析实战45讲》-极课时间 陈旸</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1199,127 +1539,6 @@ with open(file_name, &#39;w&#39;, newline=&#39;&#39;) as f:
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/" class="post-title-link" itemprop="url">提升认知水平的三点方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-24 19:26:37" itemprop="dateCreated datePublished" datetime="2020-08-24T19:26:37+08:00">2020-08-24</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="人"><a href="#人" class="headerlink" title="人"></a>人</h4><ul>
-<li><p>通过各种途径认识牛人：</p>
-<ul>
-<li><p>通过社交媒体、行业会议等，主动认识各个领域的高手，最好能够建立信任关系。建立关系时，脸皮一定要厚，尊重、给别人提供你的价值，或者让别人看到你的潜力。注意，向别人请教时，一定要有所准备，问出高质量的问题。</p>
-</li>
-<li><p>阅读牛人的传记，从中得到启发，具体参见<a target="_blank" rel="noopener" href="https://www.douban.com/doulist/3217178/">阳志平-寻找牛人与智者清单</a>。</p>
-</li>
-<li><p>整理牛人的公开演讲，或者阅读牛人写的书，进行学习。比如任正非对外演讲、高瓴资本张磊演讲、巴菲特致股东的信等。</p>
-</li>
-</ul>
-</li>
-<li><p>注意：</p>
-<ul>
-<li><p>高手的水平最好比你高2个level，这样高手的经验你才够得到。</p>
-</li>
-<li><p>加入高质量社群，在潜在牛人做朋友，建立心理契约</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h4><ul>
-<li><p>观看各种神书，牛书，提升理性思维能力，进行主题阅读。</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/41691053/">开智正典：心智升级百本经典导读</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/1222896/">ReWork创业书单</a>、<a target="_blank" rel="noopener" href="https://www.douban.com/doulist/44889839/">创业思维基础课程</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/113458951/">江湖必备21种底层思维</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/vXC6M8j78bYMWJP0SXydXg">企业家和投行家阅读书目单|和君商学院</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.douban.com/doulist/112836015/">国学入门</a></p>
-</li>
-<li><p>……</p>
-</li>
-</ul>
-</li>
-<li><p>如何阅读：</p>
-<ul>
-<li><p>主题阅读、深度阅读、实践阅读</p>
-</li>
-<li><p>抽样阅读、结构阅读、卡片大法</p>
-</li>
-</ul>
-</li>
-<li><p>注意</p>
-<ul>
-<li>阅读是以获取信息为目的，带着问题阅读，一本书不必从头看到尾</li>
-</ul>
-</li>
-</ul>
-<h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p>多经历大事，年轻时多做正确的难事，在实践中进行学习。</p>
-<p>end.<br>2020年8月24日</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/18/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/20/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1331,8 +1550,8 @@ with open(file_name, &#39;w&#39;, newline=&#39;&#39;) as f:
     <div class="footer-inner">
 
   <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2024</span>
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
