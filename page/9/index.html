@@ -174,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-count">185</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,6 +197,228 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2022/12/19/2022-12-19-R-analysis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/19/2022-12-19-R-analysis/" class="post-title-link" itemprop="url">R语言|数据预处理方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-12-19 18:01:01" itemprop="dateCreated datePublished" datetime="2022-12-19T18:01:01+08:00">2022-12-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>数据预处理的主要内容包括：</p>
+<p><img src="https://p.ipic.vip/sr41kj.png" alt="image.png"></p>
+<h3 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h3><p>原始数据的质量直接影响了数据分析的质量，不符合要求的脏数据有：</p>
+<ul>
+<li>无关数据。</li>
+<li>重复数据或者含有特殊符号的数据。</li>
+<li>缺失值。产生原因是有些数据无法获取，或者获取成本过高，或者获取数据时产生误差。</li>
+<li>异常值。指明显偏离其他观测值的数据。</li>
+</ul>
+<p>数据清晰需要处理脏数据，包括删除无关数据、重复数据，处理缺失值、异常值。</p>
+<p><strong>缺失值处理：</strong> 使用NA表示，<code>is.na</code>识别是否存在缺失值。缺失值常见处理方法：</p>
+<ul>
+<li>删除法：使用<code>na.omit()</code>移除缺失行，该方法适用于缺失目标影响不大的情况。</li>
+<li>替换法：如果缺少数值型变量，使用均值代替；非数值型变量使用其他全部有效观测值的中位数或众数进行替换。</li>
+<li>插补法：回归插补法（利用回归模型预测缺失值）、多重插补法（使用mice函数包产生缺失值随机样本）。</li>
+</ul>
+<p><strong>异常值处理：</strong> 使用箱线图、散点图进行识别，如超过<code>上下四分位数 +/- 1.5倍上下四分位数间距</code>的为异常值。还可以使用标准差寻找。异常值的处理方法是：</p>
+<ul>
+<li>直接删除。如果样本量很少，或者删除后影响整个数据集，不建议删除。</li>
+<li>视为缺失值，利用缺失值的方法处理。</li>
+<li>平均值修正。使用前后两个观测值的平均值修正。</li>
+<li>不处理。直接在异常值的数据集上进行挖掘建模。</li>
+</ul>
+<h3 id="数据集成"><a href="#数据集成" class="headerlink" title="数据集成"></a>数据集成</h3><p>将多个数据源的数据集成到一个数据仓库中。R中的数据集成是指将储存在两个数据框中的数据以关键词为依据，以行为单位做列合并。可使用<code>merge()</code>函数，格式为&#96;merge(数据框1， 数据框2， by &#x3D; ‘关键词’)，合并后按关键词取值升序排列。</p>
+<p>统一实体。常见的实体不一致为同名不同义、同义不同名、单位不统一。</p>
+<p>数据集成中往往出现冗余：同一属性多次出现；同一属性命名不一致，导致重复。可以在数据集成前对冗余部分分析，统一实体。</p>
+<h3 id="数据变换"><a href="#数据变换" class="headerlink" title="数据变换"></a>数据变换</h3><p>数据变换的目的是把数据变换成适合进一步挖掘的格式。常见方法包括简单函数变换、规范化处理、连续变量的离散化、变量属性的构建。</p>
+<p><strong>简单函数变换：</strong> 包括平方、开方、取对数、差分运算。</p>
+<p><strong>规范化处理：</strong> 将差别很大的原始数据，变换为[-1,1]或者[0,1]之间的数据。常见的规范化方法包括最小-最大值法，零-均值规范化、小数定标规范化。</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+17  
+18  
+19  
+20  
+21  
+22  
+23  
+24  
+</code></pre>
+<p>| </p>
+<pre><code># 最小-最大值法  
+b1 &lt;- (data[,1] - min(data[,1]))/(max(data[,1] - min(data[,1])) # 第一列  
+b2 &lt;- (data[,2] - min(data[,2]))/(max(data[,2] - min(data[,2])) # 第二列  
+b3 &lt;- (data[,3] - min(data[,3]))/(max(data[,3] - min(data[,3])) # 第三列  
+b4 &lt;- (data[,4] - min(data[,4]))/(max(data[,4] - min(data[,4])) # 第四列  
+data_scatter &lt;- cbind(b1, b2, b3)  
+  
+# 零-均值规范化  
+data_zscore &lt;- scale(data) # 公式 (x - 均值）/标准差  
+  
+# 小数定标规范化  
+i1 &lt;- ceiling(log(max(abs(data[,1])),10)) # 指数  
+c1 &lt;- data[,1]/10^i1  
+i2 &lt;- ceiling(log(max(abs(data[,2])),10)) # 指数  
+c2 &lt;- data[,1]/10^i2  
+i3 &lt;- ceiling(log(max(abs(data[,3])),10)) # 指数  
+c3 &lt;- data[,1]/10^i3  
+i4 &lt;- ceiling(log(max(abs(data[,4])),10)) # 指数  
+c4 &lt;- data[,1]/10^i4  
+data_dot &lt;- cbind(c1,c2,c3,c4)  
+  
+# 打印结果  
+options(digits = 4)  
+data;data_scatter;data_zscore; data_dot                            
+  
+</code></pre>
+<p>—|—  </p>
+<p><strong>连续属性离散化：</strong> 一些分类算法，要求数据是分类属性形式。</p>
+<p>首先，在数据集中设定若干个离散划分点，把数据集划分为离散化区间；其次，用不同的符号或整数值代表落在每个子区间的数据值。</p>
+<p>常用的离散方法包括等宽法、等频法、一维聚类。</p>
+<h3 id="数据规约"><a href="#数据规约" class="headerlink" title="数据规约"></a>数据规约</h3><p>数据规约的目的是提高建模的准确性、使用少量且有代表性的数据大幅缩减数据挖掘所需时间、降低数据储存成本。</p>
+<p><strong>属性规约</strong> ：目的是寻找出能反映原始数据集概率分布的最小属性子集，常用方法如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15418870-ca6de6e143f8b2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>（上图来源《R语言数据分析与挖掘实战》）</p>
+<p>主成分分析方法见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/354086571">R语言教程|带你搞清楚主成分分析（PCA）并完成分析</a>。</p>
+<p><strong>数值规约：</strong> 选择替代的、较小的数据来减少数据量。包括有参数方法和无参数方法。</p>
+<p>有参数方法无需存放数据，只存放参数，如回归（线性回归和多元回归）和对数线性模型。</p>
+<p>无参数方法需要储存实际数据，如直方图、聚类、抽样。</p>
+<h3 id="主要数据预处理函数"><a href="#主要数据预处理函数" class="headerlink" title="主要数据预处理函数"></a>主要数据预处理函数</h3><p>主要函数如下：</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>函数功能</th>
+<th>格式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lm()</td>
+<td>利用因变量与自变量建立线性回归模型</td>
+<td>m &lt;- lm(y~x1 + x2 + …，data)</td>
+</tr>
+<tr>
+<td>predict()</td>
+<td>依据已有模型对数据进行预测</td>
+<td>predict(model, newdata)</td>
+</tr>
+<tr>
+<td>mice()</td>
+<td>对缺失数据进行多重插补</td>
+<td>-</td>
+</tr>
+<tr>
+<td>which()</td>
+<td>返回服从条件的观测所在位置</td>
+<td>which(约束条件)</td>
+</tr>
+<tr>
+<td>scale()</td>
+<td>对数据进行零-均值规范化</td>
+<td>Z &lt;- scale(X, center &#x3D; TRUE, scale &#x3D; TRUE)</td>
+</tr>
+<tr>
+<td>rnorm()</td>
+<td>随机产生服从正态分布的一列数</td>
+<td>X &lt;- rnorm(n , u, d^2)</td>
+</tr>
+<tr>
+<td>ceiling()</td>
+<td>向上舍入接近的整数</td>
+<td>Z &lt;- ceilling(X)</td>
+</tr>
+<tr>
+<td>kmeans()</td>
+<td>对数据进行快速聚类分析</td>
+<td>Z &lt;- kmeans(X, m)</td>
+</tr>
+<tr>
+<td>dwt()</td>
+<td>对数据进行小波分解</td>
+<td>Z &lt;- dwt(X, n, levels &#x3D; m)</td>
+</tr>
+<tr>
+<td>princomp()</td>
+<td>对指标变量矩阵进行主成分分析</td>
+<td>Z &lt;- princomp(X, cor&#x3D;TURE)</td>
+</tr>
+</tbody></table>
+<p>（上图来源《R语言数据分析与挖掘实战》 P61）</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1303,97 +1525,6 @@
 <p>成立时间：2015年 </p>
 <p>员工数：198 </p>
 <p>公司官网：<a target="_blank" rel="noopener" href="https://upsidefoods.com/">https://upsidefoods.com/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2022/10/20/2022-10-20-%E5%85%B3%E4%BA%8E%E4%BB%8E%E4%BA%8B%E6%96%B0%E5%86%9C%E4%B8%9A%E7%9A%8412%E6%9D%A1%E5%BF%83%E5%BE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/20/2022-10-20-%E5%85%B3%E4%BA%8E%E4%BB%8E%E4%BA%8B%E6%96%B0%E5%86%9C%E4%B8%9A%E7%9A%8412%E6%9D%A1%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">关于从事新农业的12条心得</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-10-20 22:13:55" itemprop="dateCreated datePublished" datetime="2022-10-20T22:13:55+08:00">2022-10-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>兜兜转转，已经在农业行业混了7年，尝试过创业、投资、农业企业管理咨询和管理培训、卖货，跑了50个左右的地级市，一边尝试，一边思考，这个行业的未来在哪里，自己的定位是什么，能在行业中留下什么。</p>
-<p>我一直认为自己从事的不是传统农业，故命名为「新农业。借此文梳理一下从业心得，欢迎把你的从业心得留言告诉我。</p>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>1、消费者需要什么，决定生产什么，怎么生产。要倒过来思考，不要先思考能种什么，能养什么。有终端客户资源的企业，反向整合上游就是这个道理。比如把下游餐饮商家的菜品采购需求拼购起来，形成大订单，向上游采购。再比如拼多多把消费者小散订单拼起来，相当于把分散的消费者，变成一个大的消费者，统一向上游购买。</p>
-<p>2、农业的利润在前端研发，农资和后端销售环节，不要随便去碰生产环节。去碰生产环节，会把模式做得很重，而且不赚钱。生产环节需要构建机制，让农民参与其中，或者借助技术，降本增效。</p>
-<p>3、农业细分领域众多，不要试图什么产品都做，在一个细分（垂直）领域做深做透，都有机会。生产环节越容易标准化，能按照工业方式生产的细分领域、单品越容易做出规模。</p>
-<p>终端毛利率很高，价格不透明的行业，也容易做出利润（如茶、兰花）。选择大于努力。</p>
-<p>4、单点突破，先在一个局部做到第一，跑通模式，然后向外扩展。</p>
-<p>5、不要讲情怀，先讲商业，算清楚做的事情赚不赚钱，能赚多少钱。</p>
-<p>很多贸然进入农业的创业者，喜欢讲情怀，但是并没有算清楚做农业的投入、产出，最容易忽视的是从事农业的隐性成本，比如因作物有生长周期，在收获前需要持续投入人工、维护农业设施和农业机械也需要成本。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>6、人口的增长或者人均收入的增加都会导致农产品需求结构发生变化。</p>
-<p>一般情况下，人口增长会导致对农产品的需求增加。随着人均收入的增加，消费的食品重点会从芋类、谷类等淀粉质食品逐渐转向畜禽等高蛋白食品。但对食品的消费量不会随着收入的增加而无限增加，当人均GDP超过1万美元时，对增加食品消费的欲望逐渐趋近于零。</p>
-<p>7、做农业最终是在做食品，从食品角度考虑农业，很多东西就通了。</p>
-<p>食品的逻辑是消费者在吃某个东西上有需求，为此需要把食品制造出来，为此需要确保食材质量稳定、成本可控、或者食材的新奇特。即，所有的环节都是为了给消费者提供他所需要的食品。 </p>
-<p>这样看来，农业生产环节是食品生产中的一个重要环节，在生产过程中需要相对标准化，需要利用技术降低成本，或者确保产品没有农残，或者种植新品种（如最初的阳光玫瑰）。做养殖的企业，实际上是食材供应商，可以供应给下游餐饮、商超，也可以选择自己做终端。</p>
-<p>8、针对高端人群的食品未来有很大增长空间。</p>
-<p>在把产品做好的同时，还需要把营销故事讲好。做农产品做的是信任，有1000个高端用户在你这里持续消费，你也可以活得很滋润。</p>
-<p>9、订单、标准、组织、数据、金融、品牌是社会资本组织农业的几个关键词。</p>
-<p>可以理解为：根据订单，组织农业生产者，进行标准化生产，借助数字化沉淀数据，用数字模型对接金融（贷款，保险），因产品价格合理和质量可控，形成产品品牌，获得更多订单，形成飞轮。</p>
-<p>这个操作起来难度很大，一方面涉及的利益主体众多，需要建立机制和有很强的管理能力；另一方面前期投入大，成效缓慢，资本没有耐心去做。这种产销一体化模式，在工业化水平高的白羽肉鸡，或者生产环节相对集中的细分领域，成功的可能性大。</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>10、农业从业者需要关注政策，争取政策支持，但是不要过度关注政策，甚至依赖政策。要去解决一个个具体的问题，做农业要求接地气。</p>
-<p>11、发展中国家工业化初期，农业发展的主要矛盾是满足粮食供给。</p>
-<p>该阶段，通过剪刀差从农业领域积累资本，此时以发展工业为工作重心。而当工业化发展到一定阶段，会面临着城乡二元结构，导致农村贫困问题进一步恶化。此时，农业政策的中心任务是如何解决农村贫困问题。当进入到工业化后期，如何实现城乡协同发展，保护农民权益变成了政策核心。</p>
-<p>12、除了生产功能外，农村还有社会功能、文化功能，农村可以成为叠加其他产业的载体，比如康养、文娱。这就需要依据区域特色，进行发展。</p>
 
       
     </div>

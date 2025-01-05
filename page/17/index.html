@@ -174,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-count">185</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,6 +197,151 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/12/07/web-crawl-method/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/07/web-crawl-method/" class="post-title-link" itemprop="url">爬虫|网页爬取方法和网页解析方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-07 21:49:15" itemprop="dateCreated datePublished" datetime="2020-12-07T21:49:15+08:00">2020-12-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="爬取网页的方法"><a href="#爬取网页的方法" class="headerlink" title="爬取网页的方法"></a>爬取网页的方法</h2><p>按照网页和APP划分，参考崔庆才老师的分享，可以划分为：网页爬取和App爬取。</p>
+<h3 id="网页爬取"><a href="#网页爬取" class="headerlink" title="网页爬取"></a>网页爬取</h3><p>(1)服务端渲染：页面结果由服务器渲染后返回，有效信息包括在服务器发来的HTML中，比如猫眼电影网站。</p>
+<p>使用基本的HTTP请求库便可以实现爬取，如urllib、urllib3、pycurl、hyper、requests、grab等框架，其中运用最多的是requests。</p>
+<p>(2)客户端渲染：页面内容由JavaScript渲染而成，真实数据通过Ajax获取，比如淘宝，今日头条网页内容。当操作获取更多数据时，URL没有变化。</p>
+<p>客户端渲染，崔老师给了四个方法：</p>
+<ul>
+<li>寻找Ajax接口，找到参数、请求方式，然后用HTTP库模拟；使用代理包Fiddler&#x2F;Charles查看接口。</li>
+<li>模拟浏览器执行，适用于借口复杂的情况。如使用Selenium、Splinter、Spynner、pyppeteer、PhantomJS、Splash、requests-html等实现，最常用的是Selenium。</li>
+<li>直接提取JavaScript数据，适用于数据包含在HTML的结果之中，使用正则表达式即可获取。</li>
+<li>模拟执行JavaScript。适用于已经掌握了JavaScript的某些执行和加密逻辑，如使用Selenium、PyExecJS、PyV8、js2py等库.</li>
+</ul>
+<p>渲染：英文是render，通俗理解是通过特定方式把信息呈现给用户的过程。</p>
+<h3 id="App爬取"><a href="#App爬取" class="headerlink" title="App爬取"></a>App爬取</h3><p><strong>（1）普通无加密接口：</strong></p>
+<p>直接抓保获取请求，抓包工具有 Charles、Fiddler、mitmproxy。</p>
+<p><strong>（2）加密参数接口：</strong></p>
+<p>使用Fiddler、mitmdump、Xposed 等实时处理；破解加密逻辑。</p>
+<p><strong>（3）加密内容接口：</strong></p>
+<p>适用于获取的内容看不懂。可以使用可见即可爬的工具Appium、Xposed、hook获取渲染结果；反编译破解。</p>
+<p><strong>（4）非常规协议接口</strong></p>
+<p>非常规HTTP、HTTPS协议，直接抓包没有结果。使用 Wireshark抓取所有协议包，或使用Tcpdump实现TCP数据包截获。</p>
+<h3 id="如何选择爬取方法"><a href="#如何选择爬取方法" class="headerlink" title="如何选择爬取方法"></a>如何选择爬取方法</h3><p>在爬取内容前，需要先对网页的结构进行分析，分析需要获取的数据储存在哪里，从而选择适合的爬取方法。</p>
+<h2 id="页面解析的方法"><a href="#页面解析的方法" class="headerlink" title="页面解析的方法"></a>页面解析的方法</h2><table>
+<thead>
+<tr>
+<th>解析方法</th>
+<th>使用的库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正则表达式</td>
+<td>re</td>
+</tr>
+<tr>
+<td>Xpath</td>
+<td>lmx, Serapy Selecto</td>
+</tr>
+<tr>
+<td>Json&#x2F;XML</td>
+<td>json, xml2dct</td>
+</tr>
+<tr>
+<td>CSS Selector</td>
+<td>pyquery, cssselect</td>
+</tr>
+</tbody></table>
+<p>此外还有一种方法是智能解析，因学习深度没有达到，此部分内容先不展开。</p>
+<h2 id="内容储存"><a href="#内容储存" class="headerlink" title="内容储存"></a>内容储存</h2><p>爬取内容的储存方法有很多种，需要根据需求选择储存方式。</p>
+<table>
+<thead>
+<tr>
+<th>文件形式</th>
+<th>储存载体</th>
+<th>常用库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件</td>
+<td>JSON、CSV、TXT、图⽚、视频、⾳频等</td>
+<td>csv、xlwt、json、pandas、pickle、python-docx 等</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>MySQL、MongoDB、HBase 等</td>
+<td>pymysql、pymssql、redis-py、pymongo、py2neo、thrift</td>
+</tr>
+<tr>
+<td>搜索引擎</td>
+<td>Solr、ElasticSearch 等</td>
+<td>elasticsearch、pysolr 等</td>
+</tr>
+<tr>
+<td>云存储</td>
+<td>七⽜云、又拍云、阿里云、腾讯云、AmazonS3 等</td>
+<td>qiniu、upyun、boto、azure-storage、google-cloud-storage 等</td>
+</tr>
+</tbody></table>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903697047257101">这可能是你见过的最全的网络爬虫干货总结！</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1323,90 +1468,6 @@ for i in range(0,page):
 <p>在他看来：乡村除了农产品有价值外，青山、绿水、空气、乡土文明等要素也是有价值，只是过去没被发掘。当前在三大资本过剩，加上中产阶级崛起，这些要素获得了重新定价的机会，即通过乡村资产价值化，吸引城市人群前来投资、消费。乡村资产化需要建立三级市场，大体过程如下图所示：</p>
 <p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkhkfaqf7cj312m0tm13b.jpg" alt="image-20201108104031158"></p>
 <p>三级市场壮大农村集体资产的方法在福建等地正在试点，推行下去需要协调政府、村集体组织、金融机构等多方面，并非易事。我觉得这个模式值得有条件的新农人尝试。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/11/10/2020-11-10-person-fate/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/11/10/2020-11-10-person-fate/" class="post-title-link" itemprop="url">不确定性意味着机会</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-10 23:23:34" itemprop="dateCreated datePublished" datetime="2020-11-10T23:23:34+08:00">2020-11-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>历史充满偶然性，看似普通的一件事情，小人物，却可以改写历史。</p>
-<p>诚如作者所说：</p>
-<blockquote>
-<p>或许，那平淡无奇的漫长岁月是为了历史的突变准备、积蓄能量，正如地下奔腾的岩浆，在长期积蓄的压力作用下喷薄而出。对个人、国家和民族来说，这种关键时刻的选择，的确关乎一生一世、存亡兴替。如果说漫长的悠悠岁月是历史长河地步平缓的深流，那短暂的“关键时刻”就是大河上的惊涛骇浪；如果说漫长岁月是历史幕后的长期演练，那辉煌的一瞬间就是历史前台的炫目演出。</p>
-</blockquote>
-<p>茨维格十四篇历史人物特写，刻画了在决定历史瞬间时，人物的心理状态。</p>
-<p>人们会为这种转折归因。历史足够复杂，茨维格在《人类的群星闪耀时》所说的时候，不一定也是这件事发生的深层原因，本质原因。</p>
-<p>或许，仅仅是巧合。比如淘金狂热者寻找到黄金，写出《马赛曲》，韩德尔的创作，海底电缆的铺设失败。</p>
-<p>这是否意味着生活完全不可控？我们应该放弃预测，放弃想象，消极的面对现实？人类历史的发展表明，并非如此。</p>
-<p><strong>相反，历史的随机性告诉我们：</strong></p>
-<p>要有风险意识，保证不亏掉本，不要All in，要买保险。</p>
-<p>时候准备好，当机会来临时，牢牢的抓住。</p>
-<p>当机会来临时，要贪婪，该拿的资源要拿，该赚的钱赚个够。</p>
-<p>打破平衡，寻找变量，不确定性意味着机会，自我革命，对抗熵增。</p>
-<p>事情再糟糕，也要积极的寻找解决方法。</p>
-<p>edn.</p>
 
       
     </div>
