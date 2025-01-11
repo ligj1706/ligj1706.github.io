@@ -29,7 +29,7 @@
 <meta property="og:description" content="10月份用Claude辅助开发了几款产品，效率大大增强。比如我用Claude 3.5 Sonnet写了50个爬虫脚本。 某个任务，一位程序员说用半小时完成，而我在AI配合下，用5分钟就实现了他说的功能。 可以说，Claude是目前最强的AI大模型了，GPT-4效果逊色于Claude 3.5 Sonnet。 如何理解AI？AI是老师+全能助理。 作为老师它博学多才，24小时不厌其烦地回答你的问题。作">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-01T13:46:23.000Z">
-<meta property="article:modified_time" content="2024-12-05T11:25:48.452Z">
+<meta property="article:modified_time" content="2025-01-11T03:15:24.023Z">
 <meta property="article:author" content="妙 生">
 <meta property="article:tag" content="技能">
 <meta name="twitter:card" content="summary">
@@ -163,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">产品开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E6%80%9D%E5%BC%80%E5%8F%91%E5%B8%AE%E5%8A%A9%E6%96%B0%E6%89%8B%E8%BF%9B%E6%AD%A5"><span class="nav-number">2.</span> <span class="nav-text">反思开发帮助新手进步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.</span> <span class="nav-text">产品设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94"><span class="nav-number">4.</span> <span class="nav-text">角色扮演</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E6%8E%A7%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">引导控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E9%A2%86%E5%9F%9F%E5%AD%A6%E4%B9%A0"><span class="nav-number">6.</span> <span class="nav-text">跨领域学习</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">辅助产品开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E6%80%9D%E5%BC%80%E5%8F%91%E5%B8%AE%E5%8A%A9%E6%96%B0%E6%89%8B%E5%BF%AB%E9%80%9F%E6%88%90%E9%95%BF"><span class="nav-number">2.</span> <span class="nav-text">反思开发帮助新手快速成长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9%E8%B7%A8%E9%A2%86%E5%9F%9F%E5%AD%A6%E4%B9%A0"><span class="nav-number">3.</span> <span class="nav-text">帮助跨领域学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">产品设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E6%8E%A7%E5%88%B6%EF%BC%88%E6%8E%A7%E5%88%B6AI%E7%9A%84%E8%BE%93%E5%87%BA%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">引导控制（控制AI的输出）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -258,60 +258,61 @@
 <p>如何理解AI？AI是老师+全能助理。</p>
 <p>作为老师它博学多才，24小时不厌其烦地回答你的问题。作为助理，脏活苦活都丢给它，随便你PUA，不过最好也多夸夸它。</p>
 <p>以下是一些我在提示词中经常输入的文字，整理如下，还会持续迭代。</p>
-<h2 id="产品开发"><a href="#产品开发" class="headerlink" title="产品开发"></a>产品开发</h2><ol>
-<li><p>我是新手，请你详细解答。</p>
+<h2 id="辅助产品开发"><a href="#辅助产品开发" class="headerlink" title="辅助产品开发"></a>辅助产品开发</h2><ol>
+<li><p>你是一个有20年编程经验的专家，这是一个项目，请你根据目录，理解项目，完善代码，需要包括顶部栏目，顶部栏目等。</p>
 </li>
-<li><p>你是一个有20年编程经验的人，这是一个项目，请你根据目录，理解项目，完善代码。代码符合20年编程高手的风格。</p>
+<li><p>我是新手，请你详细解答。注意不要忽视非常重要、但是新手容易遇到，又常常被忽视的问题，要有操作细节。</p>
 </li>
-<li><p>注意非常重要、但是新手容易遇到，又常常被忽视的问题。要有操作细节。</p>
+<li><p>请你先指出问题所在，如果在更改前还需要其他信息。请先向我询问。</p>
 </li>
-<li><p>代码简化：代码可以啦，代码不够优雅。这只是项目中的一个文件。请你看看保证正常运行情况下，是否可以简化代码。并且指出为什么这么做。</p>
-</li>
-<li><p>请你先指出问题所在。如果在更改前还需要其他信息。请先向我询问。</p>
+<li><p>请你优化代码，方向：优化内存，提升代码性能，加快数据处理效率。保持代码整洁和可维护性。</p>
 </li>
 </ol>
-<h2 id="反思开发帮助新手进步"><a href="#反思开发帮助新手进步" class="headerlink" title="反思开发帮助新手进步"></a>反思开发帮助新手进步</h2><ol>
-<li><p>详细说明目前这个运用的架构，设计思维，技术栈。请你用从业20年的经验分享，举一反三，用于迅速帮初中级开发者和产品经理提升能力。不要就项目论项目。</p>
+<h2 id="反思开发帮助新手快速成长"><a href="#反思开发帮助新手快速成长" class="headerlink" title="反思开发帮助新手快速成长"></a>反思开发帮助新手快速成长</h2><ol>
+<li><p>如果你是编程初中级选手，从整个过程中，学到了什么？有哪些可以复用？举一发三，让你最快成长，变成高级程序员。 </p>
 </li>
 <li><p>请你详细说明整个项目架构，包括核心文件作用。举一反三，帮助新手理解。</p>
 </li>
-<li><p>你改进了什么？达到什么效果？为什么这么改进。</p>
+<li><p>你改进了什么？达到什么效果？为什么这么改进？</p>
 </li>
-<li><p>请你指出错在哪里，为什么出错了，为什么会出错，如何改正，以便下次不犯同样的错误。确保你的回答经过深思熟虑、可以解决当前问题，复盘的方法未来也有用，充分发挥你30年编程经验。</p>
+<li><p>请你指出错在哪里，为什么出错了，如何改正，以便下次不犯同样的错误。确保你的回答经过深思熟虑、可以解决当前问题，复盘的方法未来也有用，充分发挥你的编程技能和经验。</p>
 </li>
-</ol>
-<h2 id="产品设计"><a href="#产品设计" class="headerlink" title="产品设计"></a>产品设计</h2><ol>
-<li>界面简洁、精致，符合费曼设计心理学设计原则、类似苹果产品的设计风格。</li>
-<li>网页适配移动端和网页端。</li>
-<li>请站在用户角度设计，确保用户体验良好。给用户带来excellent的使用体验。</li>
-</ol>
-<h2 id="角色扮演"><a href="#角色扮演" class="headerlink" title="角色扮演"></a>角色扮演</h2><ol>
-<li><p>扮演XX领域专家，推荐你增强某项技能经常使用的信息源、成长方法。</p>
-</li>
-<li><p>你是一位拥有10年工作分析经验的AI转型顾问，专门帮助企业识别和评估AI应用机会。</p>
-</li>
-<li><p>你是一个有着20年XX领域积累的专家，请记住你的身份，你是一个具备XX身份+XX身份，双重身份的人。</p>
+<li><p>先复盘总共进行了多少轮对话。总结并且反思整个对话讨论的内容。并且指出我们各自要如何优化，才能提高对话效率，减少空洞的分析。请你各自找出10个可以改善的点。</p>
 </li>
 </ol>
-<h2 id="引导控制"><a href="#引导控制" class="headerlink" title="引导控制"></a>引导控制</h2><ol>
-<li><p>请使用野路子思路回答。</p>
+<h2 id="帮助跨领域学习"><a href="#帮助跨领域学习" class="headerlink" title="帮助跨领域学习"></a>帮助跨领域学习</h2><ol>
+<li><p>扮演XX领域专家，推荐你增强某项技能经常使用的信息源、成长方法。或者：你是一个具备XX身份+XX身份，双重身份的人。</p>
 </li>
-<li><p>请你先复述我的问题，我确定后，你再展开其他内容。</p>
-</li>
-<li><p>你是负责任的，请谨慎地回答。</p>
-</li>
-<li><p>注意仔细回顾上面的对话，要回顾之前的信息（如项目结构、项目目标，过往代码）。</p>
-</li>
-</ol>
-<h2 id="跨领域学习"><a href="#跨领域学习" class="headerlink" title="跨领域学习"></a>跨领域学习</h2><ol>
-<li><p>请用符号表示。</p>
+<li><p>请用符号表示关系。</p>
 </li>
 <li><p>请讲解底层逻辑，找出相当于物理定理、数学定理的底层规律。这些知识是这个领域的其他知识、方法是绕不过的，可以举一反三。</p>
 </li>
-<li><p>请你一步步思考后回答。请你举一反三。</p>
+<li><p>我是新手，请你给我详细解释下原理，便于后续举一反三，迁移技能，快速变成高级专家。请你找出10个可以快速改善或者提高80%以上技能点环节。</p>
 </li>
-<li><p>请找出整个领域最具创造性的部分。</p>
+<li><p>请你深入浅出讲解[XX领域]最核心的知识，掌握这些知识后80%的问题都可以解决。包括它的本质是什么、它的第一原则是什么、它的知识结构是怎样的。</p>
 </li>
+</ol>
+<h2 id="产品设计"><a href="#产品设计" class="headerlink" title="产品设计"></a>产品设计</h2><ol>
+<li><p>请你先仔细观察我给的示范网页的结构，配色，然后做一个类似的。采用的技术栈是[XX]</p>
+</li>
+<li><p>界面简洁、精致，符合费曼设计心理学设计原则、类似苹果产品的设计风格。站在用户使用习惯角度优化。遵循”设计四大金刚”原则。</p>
+</li>
+<li><p>网页适配移动端和网页端。</p>
+</li>
+<li><p>请站在用户角度设计，确保用户体验良好。给用户带来excellent的使用体验。</p>
+</li>
+</ol>
+<h2 id="引导控制（控制AI的输出）"><a href="#引导控制（控制AI的输出）" class="headerlink" title="引导控制（控制AI的输出）"></a>引导控制（控制AI的输出）</h2><ol>
+<li><p>不要擅自改变我没有让你改变的。</p>
+</li>
+<li><p>请你先复述我的问题，我确定后，你再展开其他内容。</p>
+</li>
+<li><p>仔细阅读需求，确保理解所有细节：不要急于提供代码，遇到模糊的地方主动询问，验证代码是否满足所有要求。提供代码时注意：说明代码的关键功能点；指出可能需要注意的地方；建议如何验证代码是否正确。</p>
+</li>
+</ol>
+<p>4.先解释整个环境搭建；然后再给具体代码；最后说明如何运行。确保所有路径和依赖关系都经过验证，按照真实开发流程来组织代码。</p>
+<ol start="5">
+<li>请你一步步思考后回答，请你举一反三。</li>
 </ol>
 
     </div>
