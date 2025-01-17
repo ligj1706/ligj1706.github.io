@@ -174,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">185</span>
+          <span class="site-state-item-count">186</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,6 +197,673 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/10/27/2020-10-27-Pandas-basic-learn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/27/2020-10-27-Pandas-basic-learn/" class="post-title-link" itemprop="url">Pandas基础快速入门</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-27 21:37:50" itemprop="dateCreated datePublished" datetime="2020-10-27T21:37:50+08:00">2020-10-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="1-初识Pandas"><a href="#1-初识Pandas" class="headerlink" title="1.初识Pandas"></a>1.初识Pandas</h2><p><strong>Pandas</strong> 是“Python的核心数据分析支持库，提供了快速、灵活、明确的数据结构，旨在简单、直观地处理关系型、标记型数据”，主要数据结构是 Series（一维数据）与 DataFrame（二维数据），这两种数据结构可以处理金融、统计、社会科学、工程等领域里的大多数典型用例。</p>
+<h2 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2.数据结构"></a>2.数据结构</h2><h3 id="2-1-Series数据结构"><a href="#2-1-Series数据结构" class="headerlink" title="2.1 Series数据结构"></a>2.1 Series数据结构</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>import numpy as np  
+import pandas as pd  
+  
+s = pd.Series([1, 3, 5, np.nan, 6, 8])  
+  
+print(s)  
+  
+d = pd.Series([1, 3, 5, 7], index=[&#39;a&#39;, &#39;1&#39;, &#39;c&#39;, 3])  
+print(d)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+</code></pre>
+<p>| </p>
+<pre><code>0    1.0  
+1    3.0  
+2    5.0  
+3    NaN  
+4    6.0  
+5    8.0  
+dtype: float64  
+    
+a    1  
+1    3  
+c    5  
+3    7  
+dtype: int64  
+  
+</code></pre>
+<p>—|—  </p>
+<p>数据结构为Series([1, 3, 5, 6], index&#x3D;[‘a’, ‘b’, ‘c’, ‘d’])。index默认结构为0、1、2、3……</p>
+<p>从上面的运行结果可以看出，index后面的文本型结构’a’，必须加引号，否则会报错，而数字是否加引号虽不影响，单加不加引号，数据类型完全不同。</p>
+<p>除了采用index外，还可以采用字典形式，如下：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+d = &#123;&#39;a&#39;:1, &#39;b&#39;:2, &#39;c&#39;:3, &#39;d&#39;:4&#125;  
+  
+x1 = Series(d)  
+  
+print(x1)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+</code></pre>
+<p>| </p>
+<pre><code>a    1  
+b    2  
+c    3  
+d    4  
+dtype: int64  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="2-2-DataFrame-数据结构"><a href="#2-2-DataFrame-数据结构" class="headerlink" title="2.2 DataFrame 数据结构"></a>2.2 DataFrame 数据结构</h3><p>DataFrame可以理解为两个Series构成的数组结构，在语法上完全相同。</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+data = &#123;&#39;列1&#39;:[1, 2, 3, 4], &#39;列2&#39;:[5, 6, 7, 8], &#39;列3&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;列1&#39;, &#39;列2&#39;, &#39;列3&#39;])  
+  
+print(df2)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+</code></pre>
+<p>| </p>
+<pre><code>       列1  列2  列3  
+one     1   5   0  
+two     2   6   9  
+three   3   7   6  
+four    4   8   8  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="2-3-导入和导出"><a href="#2-3-导入和导出" class="headerlink" title="2.3 导入和导出"></a>2.3 导入和导出</h3><p>Pandas 可以从xlsx, csv中导入数据，也可以输出数据为xlsx, csv。</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+</code></pre>
+<p>| </p>
+<pre><code># 写入csv  
+df.to_csv(&#39;foo.csv&#39;)  
+  
+# 读取csv  
+pd.read_csv(&#39;foo.csv&#39;)  
+  
+</code></pre>
+<p>—|—  </p>
+<h2 id="3-数据清洗"><a href="#3-数据清洗" class="headerlink" title="3.数据清洗"></a>3.数据清洗</h2><h3 id="3-1-删除"><a href="#3-1-删除" class="headerlink" title="3.1 删除"></a>3.1 删除</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+data = &#123;&#39;列1&#39;:[1, 2, 3, 4], &#39;列2&#39;:[5, 6, 7, 8], &#39;列3&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;列1&#39;, &#39;列2&#39;, &#39;列3&#39;])  
+  
+# 数据删除使用drop()  
+df2 = df2.drop(columns=[&#39;列1&#39;])  
+df2 = df2.drop(index=[&#39;one&#39;])  
+  
+print(df2)  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="3-2-去除重复的值"><a href="#3-2-去除重复的值" class="headerlink" title="3.2 去除重复的值"></a>3.2 去除重复的值</h3><pre><code>1  
+</code></pre>
+<p>| </p>
+<pre><code>df = df.drop_duplicates() #去除重复行  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="3-3-重命名"><a href="#3-3-重命名" class="headerlink" title="3.3 重命名"></a>3.3 重命名</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+data = &#123;&#39;列1&#39;:[1, 2, 3, 4], &#39;列2&#39;:[5, 6, 7, 8], &#39;列3&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;列1&#39;, &#39;列2&#39;, &#39;列3&#39;])  
+  
+# 重命名使用rename(columns=new_names, inplace=True) 函数  
+df2.rename(index=&#123;&#39;one&#39;:&#39;第1&#39;, &#39;two&#39;:&#39;第2&#39;&#125;, inplace=True)  
+  
+print(df2)  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="3-4-格式相关"><a href="#3-4-格式相关" class="headerlink" title="3.4 格式相关"></a>3.4 格式相关</h3><p><strong>使用astype转换格式</strong></p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+data = &#123;&#39;列1&#39;:[1, 2, 3, 4], &#39;列2&#39;:[5, 6, 7, 8], &#39;列3&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;列1&#39;, &#39;列2&#39;, &#39;列3&#39;])  
+  
+df2[&#39;列1&#39;].astype(&#39;str&#39;)  
+df2[&#39;列1&#39;].astype(np.int64)  
+  
+</code></pre>
+<p>—|—  </p>
+<p><strong>去除数据之间的空格strip</strong></p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+17  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+data = &#123;&#39;列1&#39;:[1, 2, 3, 4], &#39;列2&#39;:[5, 6, 7, 8], &#39;列3&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;列1&#39;, &#39;列2&#39;, &#39;列3&#39;])  
+  
+# 删除左右两边的空格  
+df2[&#39;one&#39;] = df2[&#39;one&#39;].map(str.strip)  
+  
+# 删除左边的空格  
+df2[&#39;one&#39;] = df2[&#39;one&#39;].map(str.lstrip)  
+  
+# 删除右边的空格  
+df2[&#39;one&#39;] = df2[&#39;one&#39;].map.(str.rstrip)  
+  
+# 删除特殊的字符  
+df2[&#39;one&#39;]=df2[&#39;one&#39;].str.strip(&#39;$&#39;)  
+  
+</code></pre>
+<p>—|—  </p>
+<p><strong>大小写转换</strong></p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+data = &#123;&#39;chinese&#39;:[1, 2, 3, 4], &#39;math&#39;:[5, 6, 7, 8], &#39;English&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;chinese&#39;, &#39;math&#39;, &#39;English&#39;])  
+  
+# 全部大写  
+df2.columns = df2.columns.str.upper()  
+  
+# 全部小写  
+df2.columns = df2.columns.str.lower()  
+  
+# 首字母大写  
+df2.columns = df2.columns.str.title()  
+  
+print(df2)  
+  
+</code></pre>
+<p>—|—  </p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+</code></pre>
+<p>| </p>
+<pre><code># 下面这两行代码也可以一行代码  
+data = &#123;&#39;chinese&#39;:[1, 2, 3, 4], &#39;math&#39;:[5, 6, 7, 8], &#39;English&#39;:[0, 9, 6, 8]&#125;  
+df2 = DataFrame(data, index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;], columns=[&#39;chinese&#39;, &#39;math&#39;, &#39;English&#39;])  
+  
+  
+df2 = pd.DataFrame(&#123;&#39;chinese&#39;:[1, 2, 3, 4],   
+                     &#39;math&#39;:[5, 6, 7, 8],  
+                    &#39;English&#39;:[0, 9, 6, 8]&#125;,index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;] )  
+  
+</code></pre>
+<p>—|—  </p>
+<p><strong>查找空值</strong></p>
+<p>查找空值使用</p>
+<pre><code>1  
+</code></pre>
+<p>| </p>
+<pre><code>df.isnull()  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="3-5-apply-函数对数据进行清洗"><a href="#3-5-apply-函数对数据进行清洗" class="headerlink" title="3.5 apply 函数对数据进行清洗"></a>3.5 apply 函数对数据进行清洗</h3><p>@todo</p>
+<h2 id="4-数据分析"><a href="#4-数据分析" class="headerlink" title="4.数据分析"></a>4.数据分析</h2><p>Pandas常用的统计函数用法和NumPy类似（资料来源极课时间｜数据分析实战45讲），如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gk43eo27nnj30u01hcts7.jpg" alt="img"></p>
+<p>使用describe()函数可以输出所有的统计指标</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+df1 = DataFrame(&#123;&#39;name&#39;:[&#39;ZhangFei&#39;, &#39;GuanYu&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+  
+print(df1.describe())  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果如下：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>   data1  
+count  5.000000  
+mean   2.000000  
+std    1.581139  
+min    0.000000  
+25%    1.000000  
+50%    2.000000  
+75%    3.000000  
+max    4.000000  
+  
+</code></pre>
+<p>—|—  </p>
+<h2 id="5-数据表合并"><a href="#5-数据表合并" class="headerlink" title="5.数据表合并"></a>5.数据表合并</h2><p>比如下面两个数据表需要合并，使用的是merge()函数。</p>
+<pre><code>1  
+2  
+</code></pre>
+<p>| </p>
+<pre><code>df1 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;two&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+df2 = DataFrame(&#123;&#39;name&#39;:[&#39;one&#39;, &#39;Two&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;], &#39;data2&#39;:range(5)&#125;)  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="5-1-基于指定列进行连接"><a href="#5-1-基于指定列进行连接" class="headerlink" title="5.1 基于指定列进行连接"></a>5.1 基于指定列进行连接</h3><pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+df1 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+df2 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;], &#39;data2&#39;:range(5)&#125;)  
+  
+df3 = pd.merge(df1, df2, on=&#39;name&#39;)  
+  
+print(df3)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果</p>
+<pre><code>1  
+2  
+3  
+</code></pre>
+<p>| </p>
+<pre><code>name  data1  data2  
+0  One      0      0  
+1  Two      1      1  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="5-2-inner内链接"><a href="#5-2-inner内链接" class="headerlink" title="5.2 inner内链接"></a>5.2 inner内链接</h3><p>相当于求两个DataFrame的交集。</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+df1 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+df2 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;], &#39;data2&#39;:range(5)&#125;)  
+  
+df3 = pd.merge(df1, df2, how=&#39;inner&#39;)  
+  
+print(df3)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为</p>
+<pre><code>1  
+2  
+3  
+</code></pre>
+<p>| </p>
+<pre><code>  name  data1  data2  
+0  One      0      0  
+1  Two      1      1  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="5-3-outer外链接"><a href="#5-3-outer外链接" class="headerlink" title="5.3 outer外链接"></a>5.3 outer外链接</h3><p>相当于求两个 DataFrame 的并集</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+df1 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+df2 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;], &#39;data2&#39;:range(5)&#125;)  
+  
+df3 = pd.merge(df1, df2, how=&#39;outer&#39;)  
+  
+print(df3)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code> name  data1  data2  
+0  One    0.0    0.0  
+1  Two    1.0    1.0  
+2    a    2.0    NaN  
+3    b    3.0    NaN  
+4    c    4.0    NaN  
+5    A    NaN    2.0  
+6    B    NaN    3.0  
+7    C    NaN    4.0  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="5-4-left左链接"><a href="#5-4-left左链接" class="headerlink" title="5.4 left左链接"></a>5.4 left左链接</h3><p>第一个 DataFrame 为主进行的连接，第二个 DataFrame 作为补充</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+df1 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+df2 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;], &#39;data2&#39;:range(5)&#125;)  
+  
+df3 = pd.merge(df1, df2, how=&#39;left&#39;)  
+  
+print(df3)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+</code></pre>
+<p>| </p>
+<pre><code>name  data1  data2  
+0  One      0    0.0  
+1  Two      1    1.0  
+2    a      2    NaN  
+3    b      3    NaN  
+4    c      4    NaN  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="5-5-right右链接"><a href="#5-5-right右链接" class="headerlink" title="5.5 right右链接"></a>5.5 right右链接</h3><p>第二个 DataFrame 为主进行的连接，第一个 DataFrame 作为补充</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+</code></pre>
+<p>| </p>
+<pre><code>import pandas as pd  
+from pandas import Series,DataFrame  
+  
+df1 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;data1&#39;:range(5)&#125;)  
+df2 = DataFrame(&#123;&#39;name&#39;:[&#39;One&#39;, &#39;Two&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;], &#39;data2&#39;:range(5)&#125;)  
+  
+df3 = pd.merge(df1, df2, how=&#39;right&#39;)  
+  
+print(df3)  
+  
+</code></pre>
+<p>—|—  </p>
+<p>输出结果为：</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+</code></pre>
+<p>| </p>
+<pre><code> name  data1  data2  
+0  One    0.0      0  
+1  Two    1.0      1  
+2    A    NaN      2  
+3    B    NaN      3  
+4    C    NaN      4  
+  
+</code></pre>
+<p>—|—  </p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://www.pypandas.cn/docs/">Pandas中文网</a></p>
+<p>极课时间｜数据分析实战45讲-陈旸</p>
+<h3 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h3><p>20201026 完成1-3.4</p>
+<p>20201027 完成3.5-5</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1427,153 +2094,6 @@ B：售价提高10%，维持现在的销售量
 <p>正如郝明义在《工作DNA》一书中写道：“我们怎么看待工作，就是怎么看待生命，如何善用工作，也就是如何善用生命。这不会因为行业或职位的相异而有所不同。每个人都有一份工作，每个工作都在诉说、启发其特有的意义。只看我们是否能够倾听，领会。”</p>
 <p>做自己的主人，并非逃避现实，逃避责任，用“我不喜欢做XX，但不得不XX”，“我应该XX”去思考和行动。相反，你应该更加积极乐观的观察和改变处境，让每次选择拥有更大的自由度。</p>
 <p>2020年10月3日</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/09/20/2020-09-20-From_novice_to_expert_skills_development/" class="post-title-link" itemprop="url">从小白到专家的技能养成</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-09-20 08:13:18" itemprop="dateCreated datePublished" datetime="2020-09-20T08:13:18+08:00">2020-09-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="专家和新手的区别在哪里？"><a href="#专家和新手的区别在哪里？" class="headerlink" title="专家和新手的区别在哪里？"></a>专家和新手的区别在哪里？</h3><p>每一个程序员都有一个梦想，成为领域内的专家。专家和新手有什么不同？1970年代左右，德雷福斯兄弟通过对飞行员、国际著名象棋大师的技能习得进行研究，他们发现专家和新手在技能调用上有很大的不同，并提出了德雷福斯模型（Dreyfus model），把从新手到专家分为新手、高级新手、胜任者、精通者、专家五个阶段。</p>
-<p>第一阶：新手</p>
-<ul>
-<li><p>在该技能领域经验很少或者根本没有经验</p>
-</li>
-<li><p>严格按照指令行事（告诉行动清单时会做得很好） </p>
-</li>
-<li><p>几乎无法感知情景</p>
-</li>
-<li><p>无法判断行为的对错或处理问题</p>
-</li>
-</ul>
-<p>第二阶：高级新手</p>
-<ul>
-<li><p>可以独自尝试任务，但仍难以解决问题</p>
-</li>
-<li><p>摆脱固定规则但仍需依赖行动准则</p>
-</li>
-<li><p>情景感知依然有限，难以感知事情全貌</p>
-</li>
-<li><p>难以区分工作权重及优先级</p>
-</li>
-</ul>
-<p>第三阶：胜任者</p>
-<ul>
-<li><p>能独立解决遇到的新老问题</p>
-</li>
-<li><p>从全局角度（至少部分）审视行动，能区分工作权重</p>
-</li>
-<li><p>有意识刻意的制定计划</p>
-</li>
-<li><p>将流程标准化常规化</p>
-</li>
-</ul>
-<p>第四阶：精通者</p>
-<ul>
-<li><p>整体把握全局，而非局限在某一个方面</p>
-</li>
-<li><p>正确区分权重，知道最重要的任务</p>
-</li>
-<li><p>感知情景并反思纠偏</p>
-</li>
-<li><p>使用原则灵活指导行动</p>
-</li>
-<li><p>决策越来越轻松</p>
-</li>
-</ul>
-<p>第五阶：专家</p>
-<ul>
-<li><p>根据训练后的直觉把握情景</p>
-</li>
-<li><p>不再依赖规则、行动准则及原则</p>
-</li>
-<li><p>出现新情况或发送问题才使用新方法</p>
-</li>
-<li><p>预知未来</p>
-</li>
-</ul>
-<p>可以看出，新手和专家很重要的三个区别：全局意识及权重意识、情景化解决问题的能力、反思及纠偏的的能力。</p>
-<p>一项统计显示，专家和精通者的数量不足超过20%，80%以上的人注定的在胜任者以下，并且高级新手占比最多。这说明了很多标榜有10年工作经验的人，实际上只是把一年的工作技能重复了9年。这也从一个侧面反映了，成为一个专家是多么的困难（约占1%-5%），程序员发展到一定阶段转型管理成功的概率远高于成为专家，而且公司也要不了那么多专家。</p>
-<p><img src="https://p.ipic.vip/keokoi.png" alt="image-20230802212659113"></p>
-<p>任正非之前的一篇演讲中，提到把公司人员分为职员类、专家类、管理类，而对不同级别的专家任正非这么认为：</p>
-<blockquote>
-<p>第二类是专家队伍，专家要快速适应社会变化，赶不上时代变化就会掉队，华为没有收容队。初级专家应该一专多知，做好本职的基础上，再想别的；中级专家一专多能或两专多能；高级专家要有场景化的合成作战能力。</p>
-</blockquote>
-<p>可见，成为专家，并非仅仅局限在工具使用和技术能力提高上，在软件开发中程序设计语言、工具是十分必要的，但沟通能力、学习和思考能力更加重要，这往往是程序开发过程中容易忽视的能力，或者程序开发者不屑于注意的能力。</p>
-<p>拥有场景化解决问题的能力是多么重要，要培养全局思考的能力，多问问为什么这么做，不要仅仅局限在自己的一亩三分地，导致思维受到束缚。</p>
-<p>最后用网上看到的一篇文章里提到的，对新工程师入职企业的建议结尾。</p>
-<ul>
-<li>企业最关心的（或者说唯一在乎的）事情，就是增加收入、降低成本。</li>
-</ul>
-<p>企业实际上需要的不是程序员，而是能够帮助它们增加收入、降低成本的人。</p>
-<ul>
-<li><p>企业雇佣你，是为了让你帮它们完成某个可以增加收入、降低成本的项目，而不是为了让你追求个人的软件成就。正确的做法是，你应该把自己描述成与增加收入、降低成本有关系的人，比如”xx产品的开发者”或”改进者”。有一个 Google Adsense 程序员的自我介绍，是这样写的：”Google 公司97%的收入，与我的代码有关。”</p>
-</li>
-<li><p>我自己的体会是，写文档对一个人的锻炼是很大的。（1）可以熟悉项目；（2）可以提高表达能力；（3）可以提高技术能力，因为只有理解了代码才能表达出来，文档越清晰，就代表思路越清晰；（4）可以提高个人影响力，文档写得越好，看的人就越多。久而久之，你就会成为项目的代言人，别人有问题就会来找你。</p>
-</li>
-</ul>
-<p>End.</p>
 
       
     </div>
