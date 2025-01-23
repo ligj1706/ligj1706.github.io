@@ -177,7 +177,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">186</span>
+          <span class="site-state-item-count">188</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -200,6 +200,270 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/10/09/2020-10-09-Excel-learn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/09/2020-10-09-Excel-learn/" class="post-title-link" itemprop="url">重要的并不是工具本身</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-09 11:01:07" itemprop="dateCreated datePublished" datetime="2020-10-09T11:01:07+08:00">2020-10-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这本书《为什么精英都是Excel控》建议倒着看，先看附录，然后看最后一章的案例，接着在从第一章看。</p>
+<p>学习Excel重要的不是Excel本身，而是Excel背后体现的思维。</p>
+<h3 id="重要的并不是操作技术"><a href="#重要的并不是操作技术" class="headerlink" title="重要的并不是操作技术"></a>重要的并不是操作技术</h3><p>首先来做道面试题。</p>
+<pre><code>1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+</code></pre>
+<p>| </p>
+<pre><code>你是一家汉堡店的经营者，汉堡店生意很好，下个月的销售量预计比这个月增加10%  
+同时，你也可以提高汉堡的售价，如果售价提高10%的话，预计下个月的销售量，应该会和这个月差不多  
+  
+请问：  
+  
+A：维持现在的价格，让销售量增加10%  
+  
+B：售价提高10%，维持现在的销售量  
+  
+那个策略才能带来更多利润？  
+  
+不考虑其他因素答案选择B。原因：利润=收入-成本。A和B的成本虽然相同，但A会增加制作成本。  
+  
+</code></pre>
+<p>—|—  </p>
+<p>但是商业世界远比这个复杂，你需要考虑售价提高后，销量的减少，或者销量提高后边际成本的减少。</p>
+<p>但你可以你定出一个基本的公示*<em>：利润&#x3D;单价 * 数量 <em>复购率 - 成本</em></em></p>
+<p>所以在对商业进行思考时，我们都可以简单的拆分成收入、费用、成本，然后在把影响这些的因素进一步细分，找到企业经营的核心要素，然后把资源投入到核心要素上。</p>
+<p>下面这张图就是一个拆解的案例：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gjkimrnkf8j30qe0i0npd.jpg" alt="image-20201010203450916"></p>
+<p>而且你在对收益模拟时，可以采用极限模拟法：分为乐观、维持原状、悲观三个层次。这样思考的作用是确定临界点。</p>
+<h3 id="接下来讲讲操作技术"><a href="#接下来讲讲操作技术" class="headerlink" title="接下来讲讲操作技术"></a>接下来讲讲操作技术</h3><p>下面这张表是制作Excel时的注意事项。</p>
+<p>附录里面也有一张类似的表，比我下面这张好看多了，只是当时没发现：）。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gjkioreorij31jo0u01ky.jpg" alt="image-20201010203648708"></p>
+<p>下面的操作技术是改变数字或背景的颜色。下面这几点蛮有启发的，特别是第一点，<strong>第一点说明了一个工作中非常重要的原则：区分原始数据和修改数据，不要污染原始数据。</strong> 当你把原始数据污染了，如果后面需要找到最原始的记录但没有，这会增加额外的成本甚至带来巨大的损失。</p>
+<ol>
+<li><p>使用颜色区分不同的数字：手动输入的数字（蓝色）、计算公式的数字（黑色）、参照其他工作表的数字使用不同的颜色。</p>
+</li>
+<li><p>一个Excel表格的颜色，最好不要超过3种。</p>
+</li>
+<li><p>不需要填入数字的用N&#x2F;A，表示”not applicable ”。N&#x2F;M表示”not meaningful ”。</p>
+</li>
+<li><p>在公司内部贯彻格式，降低沟通成本。</p>
+</li>
+</ol>
+<h3 id="还有和协作有关的操作技术"><a href="#还有和协作有关的操作技术" class="headerlink" title="还有和协作有关的操作技术"></a>还有和协作有关的操作技术</h3><p>团队协作，最重要的是共享规则和共识，团队内部Excel协作只是一个场景，核心是简单计算、团队内部共享同一规则。</p>
+<p>具体包括：</p>
+<ul>
+<li><p>避免在算式中手动输入数字（输入的数字含义他人难以看懂）。可把手动输入的数字和计算的数字分开。</p>
+</li>
+<li><p>避免使用太长的算式。</p>
+</li>
+<li><p>为工作表绘制架构图。</p>
+</li>
+<li><p>同一工作簿中工作表按逻辑排列，相同的最好标上类似的数据，工作表越少越好。</p>
+</li>
+<li><p>标明数据的出处，写明附注，让自己和别人能够看懂。</p>
+</li>
+<li><p>交给别人时，确保想给别人看的信息，确定使用隐藏。</p>
+</li>
+<li><p>团队内部协作时遵循：第一负责人原则；只使用一个文件。</p>
+</li>
+<li><p>存档时不要覆盖原文件，做好版本管理，采用另存为的方法（重要）。</p>
+</li>
+</ul>
+<p>作者还有一章专门讲了Excel的快捷键，如果用Excel比较多，常用的快捷键建议用熟。</p>
+<p>这本书比较浅显，其他学习资料建议首选秋叶团队出版的Excel，把秋叶的那本书弄懂，工作的绝大部分场景就可以解决了，这本书里面还推荐了很多学习资源，可以延伸学习。</p>
+<p>最后，我在使用办公工具时的一个感想：工具的好坏影响工作的质量，比具体技术更重要的是思维，不要一味的追求技术的高大上，关键是用工具场景化解决问题。最后，工具宁愿少而精，不要频繁换工具增加成本。</p>
+<p>end.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="妙 生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海边拾贝">
+      <meta itemprop="description" content="让生活更美丽一点">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海边拾贝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/03/2020-10-03-choice_the_power_to_control_life%20independently/" class="post-title-link" itemprop="url">自主、责任与选择—自主掌控人生的力量</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-03 09:09:35" itemprop="dateCreated datePublished" datetime="2020-10-03T09:09:35+08:00">2020-10-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="他很完美，但是"><a href="#他很完美，但是" class="headerlink" title="他很完美，但是"></a>他很完美，但是</h3><p>在别人的眼中，他是一个完美的人。从小成绩优异，工作顺利，听父母的话，老师夸奖，老板欣赏，周围的人都很羡慕他的生活。</p>
+<p>但是，他并不快乐。已近中年的他，越来越不知道自己想要什么，在工作、家庭的压力下，失去了方向。他发现，这不是真实的自我，只是在做别人眼中的自我，没有自主感、胜任感和归属感。</p>
+<p>理解真实的自我，需要理解「真实」和「自我」两个词。</p>
+<p>自我可以理解为整合的中心，整合是指人们把外在环境和内在感受形成内在秩序的过程。自我是根据周围环境和自己的情绪感受等形成的对自己是谁、自己喜欢什么、自己想做什么、自己与社会的关系等问题，发展出的一套体系。</p>
+<p>真实则是指本来的样子，客观事实，不是假的。可见真实的自我是指个体引发的行为和调节，能够自我予以调节，感到自主。</p>
+<p>德西在《内在动机》一书的第一章中提到：</p>
+<blockquote>
+<p>这本书阐述人类动机，围绕着某一行为是自主的还是被控制的这一重要区别来组织内容。……这本书的目的很简单：利用全面的动机研究来探究自主和责任之间的关系，并且反思如何在疏离的世界中促使人们负起责任。</p>
+</blockquote>
+<p>德西和瑞安从有机的，人本主义的假设出发，认为人们在主动与身边世界交互过程中，通过有机整合而发展，探索、发展和接受挑战是人的天性。他们指出了人类有这样一种基本趋势：</p>
+<blockquote>
+<p>他们在内心世界的组织中朝着更加一致和更加完善的方向发展。这意味着，人类发展的内在本质是向内心深处的一致性与和谐迈进。</p>
+</blockquote>
+<p>而追求内心深处的和谐离不开内在动机。</p>
+<h3 id="社会价值观的内化"><a href="#社会价值观的内化" class="headerlink" title="社会价值观的内化"></a>社会价值观的内化</h3><p>社会价值观内化分为内摄和整合两种类型。内化是人们强制接受观念的过程，整合则是主动接受社会所要求的观念的过程。</p>
+<p>当通过内摄接受社会价值观（观点、观念）时，比如告诉孩子你应该好好学习，不然父母和老师就不喜欢你了；告诉员工，你不按照某某要求做工作时，就不要来公司了；社会中的人告诉你，必须结婚生子，不然你就是异类。通常这种让人感受不到自主的行为，会导致三种后果：死板的顺从、半心半意的坚持、反抗。不管哪一种后果，带来的都是压力，焦虑，较差的表现，甚至诱发心理疾病。典型的如父母压制孩子天性，导致叛逆，厌学。</p>
+<p>而通过整合接受社会价值观（观念、观念）时，即满足基本心理需求的同时内化社会价值观和规则。比如在让孩子做作业时，给予孩子自主，而非通过压力让孩子做作业，并且当孩子遇到学业困难时，能够给予帮助和解答。孩子会认为学校活动很重要，愿意承担更多的责任。孩子对价值观的内化和整合越充分，即把在学校表现出色（做更多的家务等）内化，孩子会有更强的责任感和幸福感。</p>
+<p>人们认为你是一个自律的人，你会想方设法在有人的时候“表现”出自律，维护你的形象。心理学家用“自我卷化”来定义“人们感觉自身价值依赖于特定结果的过程”，当你的自我价值感来自于从工作中积累财富，你就自我卷入于工作；当孩子的自我价值感来自于考高分时受到夸奖，孩子就自我卷入考试得高分。</p>
+<p>在德西看来：</p>
+<blockquote>
+<p>这种”自我是由社会定义的观点”，其问题在于没有它没有区分真正的和虚假的自我，没有认识到我们每个人都从内在的自我（尽管它是新生的）开始，也没有意识到我们有能力不断完善和提升那个自我。因此，自我可以按照其本性发展，也可以由社会来“编程”，但这两个过程产生的自我将迥然不同。</p>
+</blockquote>
+<p>| 社会价值观内化类型 | 产生环境 | 心理需求满足程度 | 获得的自尊<br>—|—|—|—|—<br>真实自我 | 整合 | 支持自主+设定界限+无条件的爱 | 满足基本心理需求自主、胜任、归属 | 真正的自尊（自由与责任相伴；尊重他人，接受他人缺点）<br>虚假自我 | 内摄 | 控制性环境+有条件的爱 | 放弃自主和真实的自我；追求归属感（得到他人认可），缺乏自主感和胜任感 | 有条件的自尊（不稳定，根本价值感缺乏安全感）  </p>
+<p>理解了内摄和整合，在看下面的自我决定论图解，动机越偏向内部，越依赖自我调节，越看重做事情本身的兴趣、享受和内在满足。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gjc457invpj30zk0k075q.jpg" alt="img"></p>
+<h3 id="给予自主，减少控制"><a href="#给予自主，减少控制" class="headerlink" title="给予自主，减少控制"></a>给予自主，减少控制</h3><p>自主是人类的核心心理需求。</p>
+<p>自主意味着可以按照自己的意愿做事，并感到自由。相反，则会感到行为被控制。被控制的行为可分为两种：顺从和反抗。顺从，即按照别人的意愿，做别人告诉（命令）你做的事；反抗，即违背别人的意愿，采取反向或者对抗等方式做事。</p>
+<p>奖赏和惩罚都会有损内在动机，但我们不能认为奖赏都不好。奖赏并不一定会伤害内在动机，瑞安提出奖赏对人们的影响取决于：奖赏者的动机、奖赏的方式、被奖赏者的感受。当奖赏者并没有控制的意图，只把奖赏当作是一种表扬，那么接受者可能不觉得是一种控制和损坏内在动机。</p>
+<p>分析奖赏者的动机需要找到其奖赏的默认假设，确保不是因为做成了奖赏者想要做的事情而得到奖赏。比如家长激励孩子学习完某某课程，可以得到什么东西，表面上看是为了孩子好，实际上是跟随其他家长的步伐，这种行为会让孩子把关注焦点放在东西上，而非学习知识带来的愉悦上。老板给予员工奖赏目的是让员工有动机做更多的活，而非对员工做某事的行为真心表扬，员工可能会感受到受到了控制。</p>
+<p>因此，需要慎重的使用奖励。在奖励他人时，有一个小小的方法可以尝试：少使用控制的语言（应该、必须），多给予自主选择的空间。</p>
+<p>强迫别人做事，是非常难的，特别是当这件事情很无趣时，即使这件事情对当事人有好处。这时就需要换一个思路，给予当事人更多自主。包括三个步骤：</p>
+<ul>
+<li><p>承认他人的感受。理解和表达当事人做这件事情的感受。</p>
+</li>
+<li><p>提供合理的理由。原因最好是向内，并非指向奖赏和惩罚。</p>
+</li>
+<li><p>人际支持。遇到困难时，给予解决方式。</p>
+</li>
+<li><p>提供选择。说话和做事时不给对方施压，少使用带有压制的词语，如必须、不得不、应该等。</p>
+</li>
+</ul>
+<p>当然，给予他人自主，并非等于放纵。支持自主需要清晰、一致，并且以理解和共情的方式设定界限。这个界限需要让当事人知道，以此更好的调节自身行为。</p>
+<p>同理，亲密的人际关系也是如此。</p>
+<p>成熟的人际关系的特点是两个人能够公开的交流，不受自我卷入、内摄信念或自我贬低的影响。在这种关系中，每一方能为对方付出而不受期待回报。</p>
+<p>爱一个人很难，难在从已经建立的自我的中解放出来。良好的亲密关系，在于给双方都留有空间。</p>
+<blockquote>
+<p>最成熟和令人满意的关系特征是，一个人的真实自我与另一个人的真实自我相关联。每个人都依赖对方，每个人都保持着他的自主、完整，以及自我意识。在某种程度上，每个人都是自主的，有真正的选择意识，这样的关系将是健康的，伴侣双方都将能够回应彼此的真实自我，并且支持彼此的个性和特质。</p>
+</blockquote>
+<h3 id="做自己的主人"><a href="#做自己的主人" class="headerlink" title="做自己的主人"></a>做自己的主人</h3><p>当前社会剧烈变化，思潮涌动，给人带来很多压力、焦虑和无力感。每个人都想掌握自己的命运，做自己喜欢做的事情。</p>
+<p>正如郝明义在《工作DNA》一书中写道：“我们怎么看待工作，就是怎么看待生命，如何善用工作，也就是如何善用生命。这不会因为行业或职位的相异而有所不同。每个人都有一份工作，每个工作都在诉说、启发其特有的意义。只看我们是否能够倾听，领会。”</p>
+<p>做自己的主人，并非逃避现实，逃避责任，用“我不喜欢做XX，但不得不XX”，“我应该XX”去思考和行动。相反，你应该更加积极乐观的观察和改变处境，让每次选择拥有更大的自由度。</p>
+<p>2020年10月3日</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1506,274 +1770,6 @@ with open(file_name, &#39;w&#39;, newline=&#39;&#39;) as f:
 <p>但，执行意向不是万能的，当规划的目标很糟糕时，将不利于目标实现。所以，提高目标规划的质量很重要，要注意目标的灵活性，不妨碍你灵活的采取行动；要对自己制定的目标负责，是自己真正想要达成的目标，可以对外宣布目标，让他人监督你实现目标。</p>
 <p>动机解释了人们行为背后的底层逻辑。对动机的理解和运用，需要结合具体的场景不断运用，上面的内容是看书后的总结。如果总结这本书给我的启发，我会给三个关键词：核心动机、自我决定论、执行意向。</p>
 <p>End.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/07/18/2020-07-18-Information_Sources_in_the_Pig/" class="post-title-link" itemprop="url">养猪领域信息源</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-07-18 19:35:32" itemprop="dateCreated datePublished" datetime="2020-07-18T19:35:32+08:00">2020-07-18</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[toc]</p>
-<h2 id="种猪"><a href="#种猪" class="headerlink" title="种猪"></a>种猪</h2><p>目前种猪集中在五大公司手中，对育种市场呈垄断状态。2017年，前三大企业市场占有率为47%，PIC高达23%，位于第二和第三的Topigs Norvsin和DanAvl，分别占据14%和10%。</p>
-<p><a target="_blank" rel="noopener" href="https://gb.pic.com/">PIC</a>、<a target="_blank" rel="noopener" href="https://danbred.com/en/about-us-uk/">Dan Avl</a>、<a target="_blank" rel="noopener" href="https://topigsnorsvin.com/">Topigs Norsvin</a>。该三家为美国公司。</p>
-<p><a target="_blank" rel="noopener" href="http://www.dnaswinegenetics.com/index.html">DNA Genetics</a>、<a target="_blank" rel="noopener" href="https://www.hypor.com/en/">Hypor</a>。DanAvl是家丹麦公司，Hypor是加拿大公司，</p>
-<h2 id="畜牧领域头部企业"><a href="#畜牧领域头部企业" class="headerlink" title="畜牧领域头部企业"></a>畜牧领域头部企业</h2><p><a target="_blank" rel="noopener" href="https://www.wens.com.cn/">温氏集团</a>。创立于1983年，总部位于广东省云浮市，2015年11月上市。温氏股份已在全国20多个省（市、自治区）拥有控股公司326家、合作家庭农场 4.98万户、员工5万多名。2019年温氏股份上市肉猪1851.66万头、肉鸡9.25亿只，实现营业收入731.20亿元。</p>
-<p><a target="_blank" rel="noopener" href="http://www.muyuanfoods.com/">牧原股份</a>。建于1992年，总部位于河南省南阳市，2014年1月上市。主营业务生猪养殖（占营业收入99%以上），下属子公司190余家。生猪养殖业务布局在全国18个省65个市139个县。</p>
-<p><a target="_blank" rel="noopener" href="http://www.zhengbang.com/about/index.html">正邦集团</a>。建于1996年，总部位于江西省南昌市，2007年上市。集团分设农牧、养殖、种植、物流、金融五大产业集团，在全国29个省（市、区）拥有480家分子公司、5万多名员工，在“一带一路”10个国家拥有15个企业。</p>
-<p><a target="_blank" rel="noopener" href="http://www.newhopegroup.com/">新希望集团</a>。始创于1982年，总部位于成都市武侯区，控股的新希望六和股份有限公司于1998年3月上市。新希望集团在全球30多个国家和地区拥有分子公司超过600家，员工10万余人，集团资产规模超2,000亿元人民币，年销售收入超1,600亿元人民币。</p>
-<p><a target="_blank" rel="noopener" href="http://www.cpgroup.cn/">正大集团</a>。始创于1921年，是泰籍华人谢易初先生创办，集团业务遍及全球100多个国家和地区，在中国设立企业近600家，员工超过9万人。</p>
-<p><a target="_blank" rel="noopener" href="http://www.tianbang.com/">天邦股份</a>。注册地浙江省余姚市，天邦食品股份有限公司创始于1996年，2007年挂牌上市。目前已拥有水产饲料、生物制品、生猪养殖(汉世伟)、生鲜食品(拾分味道)、工程建设（天邦开物）五个业务板块，2013年进入生猪现代化养殖。</p>
-<p>。。。</p>
-<h2 id="黑猪领域头部企业"><a href="#黑猪领域头部企业" class="headerlink" title="黑猪领域头部企业"></a>黑猪领域头部企业</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggsmrmdaabj313o0lgh0z.jpg" alt="image-20200716110126295"></p>
-<h2 id="科研机构"><a href="#科研机构" class="headerlink" title="科研机构"></a>科研机构</h2><p><a target="_blank" rel="noopener" href="http://cbs.cau.edu.cn/sys/">中国农业大学农业生物技术国家重点实验室</a></p>
-<p><a target="_blank" rel="noopener" href="http://ias.caas.cn/">中国农业科学院畜牧研究所</a></p>
-<p><a target="_blank" rel="noopener" href="http://dkdy.sdau.edu.cn/">山东农业大学动物科技学院</a></p>
-<p><a target="_blank" rel="noopener" href="https://dky.sicau.edu.cn/">四川农业大学动物科技学院</a></p>
-<h2 id="行业协会"><a href="#行业协会" class="headerlink" title="行业协会"></a>行业协会</h2><p>中国畜牧业协会猪业分会</p>
-<p>中国饲料工业协会</p>
-<p>中国养猪行业协会</p>
-<h2 id="期刊"><a href="#期刊" class="headerlink" title="期刊"></a>期刊</h2><p><a target="_blank" rel="noopener" href="http://gb.oversea.cnki.net/kns55/oldnavi/n_item.aspx?NaviID=55&Flg=local&BaseID=DWYX&NaviLink=%E7%95%9C%E7%89%A7%E3%80%81%E5%8A%A8%E7%89%A9%E5%8C%BB%E5%AD%A6%E3%80%81%E7%8B%A9%E7%8C%8E%E3%80%81%E8%9A%95%E3%80%81%E8%9C%82(%E9%99%A4%E8%8D%89%E5%9C%B0%E5%AD%A6%E3%80%81%E8%8D%89%E5%8E%9F%E5%AD%A6)-/kns55/oldnavi/n_list.aspx?NaviID=55&Field=hx_sort&Value=00060008?&OrderBy=idno&Flg=local%7C%E5%8A%A8%E7%89%A9%E8%90%A5%E5%85%BB%E5%AD%A6%E6%8A%A5">《动物营养学报》</a>。由动物营养学科奠基人许振英教授等老一辈专家学者于1989年创办，反映动物营养与饲料科学各学科前沿的研究动态与进展。2015年3月英文刊 <em>Animal Nutrition</em> 创刊。</p>
-<p><a target="_blank" rel="noopener" href="http://gb.oversea.cnki.net/kns55/oldnavi/n_item.aspx?NaviID=55&Flg=local&BaseID=SLGZ&NaviLink=%E7%95%9C%E7%89%A7%E3%80%81%E5%8A%A8%E7%89%A9%E5%8C%BB%E5%AD%A6%E3%80%81%E7%8B%A9%E7%8C%8E%E3%80%81%E8%9A%95%E3%80%81%E8%9C%82(%E9%99%A4%E8%8D%89%E5%9C%B0%E5%AD%A6%E3%80%81%E8%8D%89%E5%8E%9F%E5%AD%A6)-/kns55/oldnavi/n_list.aspx?NaviID=55&Field=hx_sort&Value=00060008?&OrderBy=idno&Flg=local%7C%E4%B8%AD%E5%9B%BD%E9%A5%B2%E6%96%99">《中国饲料》</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://gb.oversea.cnki.net/kns55/oldnavi/n_item.aspx?NaviID=55&Flg=local&BaseID=XMSY&NaviLink=%E7%95%9C%E7%89%A7%E3%80%81%E5%8A%A8%E7%89%A9%E5%8C%BB%E5%AD%A6%E3%80%81%E7%8B%A9%E7%8C%8E%E3%80%81%E8%9A%95%E3%80%81%E8%9C%82(%E9%99%A4%E8%8D%89%E5%9C%B0%E5%AD%A6%E3%80%81%E8%8D%89%E5%8E%9F%E5%AD%A6)-/kns55/oldnavi/n_list.aspx?NaviID=55&Field=hx_sort&Value=00060008?&OrderBy=idno&Flg=local%7C%E7%95%9C%E7%89%A7%E5%85%BD%E5%8C%BB%E5%AD%A6%E6%8A%A5">《畜牧兽医学报》</a>。创刊于1956年7月，中国畜牧兽医学会主办，报道中国畜牧兽医行业中最具创新性、突破性及代表科学发展前沿的重大科研成果。</p>
-<p><a target="_blank" rel="noopener" href="http://gb.oversea.cnki.net/kns55/oldnavi/n_item.aspx?NaviID=55&Flg=local&BaseID=GWXK&NaviLink=%E7%95%9C%E7%89%A7%E3%80%81%E5%8A%A8%E7%89%A9%E5%8C%BB%E5%AD%A6%E3%80%81%E7%8B%A9%E7%8C%8E%E3%80%81%E8%9A%95%E3%80%81%E8%9C%82(%E9%99%A4%E8%8D%89%E5%9C%B0%E5%AD%A6%E3%80%81%E8%8D%89%E5%8E%9F%E5%AD%A6)-/kns55/oldnavi/n_list.aspx?NaviID=55&Field=hx_sort&Value=00060008?&OrderBy=idno&Flg=local%7C%E4%B8%AD%E5%9B%BD%E7%95%9C%E7%89%A7%E5%85%BD%E5%8C%BB">《中国畜牧兽医》</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://gb.oversea.cnki.net/kns55/oldnavi/n_item.aspx?NaviID=55&Flg=local&BaseID=ZSYX&NaviLink=%E7%95%9C%E7%89%A7%E3%80%81%E5%8A%A8%E7%89%A9%E5%8C%BB%E5%AD%A6%E3%80%81%E7%8B%A9%E7%8C%8E%E3%80%81%E8%9A%95%E3%80%81%E8%9C%82(%E9%99%A4%E8%8D%89%E5%9C%B0%E5%AD%A6%E3%80%81%E8%8D%89%E5%8E%9F%E5%AD%A6)-/kns55/oldnavi/n_list.aspx?NaviID=55&Field=hx_sort&Value=00060008?&OrderBy=idno&Flg=local%7C%E4%B8%AD%E5%9B%BD%E5%85%BD%E5%8C%BB%E5%AD%A6%E6%8A%A5">《中国兽医学报》</a>。，是农业农村部主管，中国农业科学院北京畜牧兽医研究所主办的国内外公开发行的科技期刊。</p>
-<p><a target="_blank" rel="noopener" href="https://navi.cnki.net/knavi/JournalDetail?pcode=CJFD&pykm=NYGU">《农业工程学报》</a>。中国农业工程学会主办的全国性学术期刊，居“农业工程类”期刊榜首。</p>
-<p><a target="_blank" rel="noopener" href="http://gb.oversea.cnki.net/kns55/oldnavi/n_item.aspx?NaviID=69&Flg=local&BaseID=ZNYK&NaviLink=%E7%BB%BC%E5%90%88%E6%80%A7%E5%86%9C%E4%B8%9A%E7%A7%91%E5%AD%A6-/kns55/oldnavi/n_list.aspx?NaviID=55&Field=hx_sort&Value=00060001?&OrderBy=idno&Flg=local%7C%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E7%A7%91%E5%AD%A6">中国农业科学</a>。1960年创刊，是中国农业部主管，中国农业科学院与中国农学会共同主办，本刊影响因子和总被引频次等重要的学术评价指标，一直居于全国农业学术期刊界最前列或前列位次。</p>
-<h2 id="养猪领域专家"><a href="#养猪领域专家" class="headerlink" title="养猪领域专家"></a>养猪领域专家</h2><h4 id="遗传育种"><a href="#遗传育种" class="headerlink" title="遗传育种"></a>遗传育种</h4><p>吴常信：中国农业大学教授、中国科学院院士</p>
-<p>张勤：山东农业大学&#x2F;中国农业大学教授</p>
-<p>赵书红：华中农业大学教授</p>
-<p>傅衍：浙江大学教授</p>
-<p>李学伟：四川农业大学教授</p>
-<p>潘玉春：浙江大学教授</p>
-<p>王立贤：中国农业科学院北京畜牧兽医研究所研究员</p>
-<p>陈瑶生：中山大学教授</p>
-<p>吴珍芳：华南农业大学教授</p>
-<h4 id="动物营养"><a href="#动物营养" class="headerlink" title="动物营养"></a>动物营养</h4><h4 id="动物疫病防治"><a href="#动物疫病防治" class="headerlink" title="动物疫病防治"></a>动物疫病防治</h4><h4 id="发酵床养猪"><a href="#发酵床养猪" class="headerlink" title="发酵床养猪"></a>发酵床养猪</h4><p><a target="_blank" rel="noopener" href="http://search.dangdang.com/?key2=%D6%A3%D6%BE%CE%B0&medium=01&category_path=01.00.00.00.00.00">郑志伟</a>。<strong>从事发酵床一线推广的专家，从事发酵床研究</strong> 推广十余年，偏实战，著有<a target="_blank" rel="noopener" href="http://product.dangdang.com/1671878589.html">《生物发酵床养猪新技术》</a>。</p>
-<p><strong>刘波、陈倩倩、王阶平等</strong> 。福建省农业科学院农业生物资源研究所教授、研究员，理论性较强，著有<a target="_blank" rel="noopener" href="http://product.dangdang.com/1726410555.html">《正版异位发酵床微生物组多样性》</a>。刘波申请专利数25项。</p>
-<p><a target="_blank" rel="noopener" href="https://www.qcc.com/pl/p56fe001d8cbfa84c32318d81ad7885c.html">夏飚</a>，<strong>发酵菌品牌金宝贝董事长，从事发酵菌市场推广17年，偏实战和商业</strong> ，主编《干撒式生态发酵床畜禽养殖新技术》。</p>
-<p><strong>朱昌雄</strong> ，环发所副所长。<a target="_blank" rel="noopener" href="http://product.dangdang.com/1657056669.html">《畜禽养殖污染微生物发酵床控制技术》</a>。</p>
-<h2 id="媒体"><a href="#媒体" class="headerlink" title="媒体"></a>媒体</h2><h3 id="媒体-1"><a href="#媒体-1" class="headerlink" title="媒体"></a>媒体</h3><p><a target="_blank" rel="noopener" href="https://www.zhuwang.cc/">中国养猪网</a>。国内养猪行业最具权威性的垂直型门户网站。</p>
-<p><a target="_blank" rel="noopener" href="http://powerpigs.net/">猪场动力网</a>。成立于2008年。</p>
-<p><a target="_blank" rel="noopener" href="http://www.nmfirst.cn/">农牧前沿</a>.中国水产频道推出的 <em>农牧前沿</em> 资讯栏目，提供最新最热门的农牧养殖前沿内容</p>
-<p><a target="_blank" rel="noopener" href="http://www.soozhu.com/">搜猪网</a>。中国养猪行业第一市场分析预警门户。</p>
-<p><a target="_blank" rel="noopener" href="http://www.52swine.com/">爱猪网</a>。深度专业报道养猪业。</p>
-<p><a target="_blank" rel="noopener" href="http://www.xinm123.com/">新牧网</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://www.agripost.cn/">牧食记</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.yangzhu360.com/news/index.html">猪好多网</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://www.gdswine.com/">养殖信息网</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://www.zhue.com.cn/">猪易网</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://www.caaa.cn/association/pig/">中国猪业网</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://zhujia.zhuwang.cc/">查猪价</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://www.caaa.cn/">中国畜牧业信息网4.0版</a></p>
-<p><a target="_blank" rel="noopener" href="http://www.guojixumu.com/">国际畜牧网</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://www.nongdou.net/">农兜媒体</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://www.bybem.com/jishu/zhu/343.html">发酵床技术网</a>。专门介绍发酵床的技术网站。</p>
-<p><a target="_blank" rel="noopener" href="http://www.feedtrade.com.cn/">饲料行业信息网</a></p>
-<p><a target="_blank" rel="noopener" href="http://www.pig-world.co.uk/news">PIGWORLD</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://www.porkbusiness.com/news">PORK</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://www.pig333.cn/news/">世界猪业之窗 pig333.cn</a>。96874 专业人员注册，专注于养猪行业的教育性网站，内容涵盖了从养猪到猪肉的整个产业链。</p>
-<p><a target="_blank" rel="noopener" href="https://www.pigprogress.net/">Pig Progress</a>。世界养猪进展的新闻。</p>
-<p><a target="_blank" rel="noopener" href="https://www.wattagnet.com/topics/459-industry-news-trends">wattpoultry</a>。全球家禽业的新闻和分析。</p>
-<p><a target="_blank" rel="noopener" href="http://www.chinaswine.org.cn/index.php?m=content&c=index&a=lists&catid=18">中国种猪网</a></p>
-<h3 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h3><p>猪场动力网</p>
-<p>新牧网</p>
-<p>养猪一家人</p>
-<p>明天猪价</p>
-<p>猪天下网</p>
-<p>养猪助手</p>
-<p>养猪网</p>
-<h3 id="短视频"><a href="#短视频" class="headerlink" title="短视频"></a>短视频</h3><h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><h4 id="期刊媒体"><a href="#期刊媒体" class="headerlink" title="期刊媒体"></a>期刊媒体</h4><ul>
-<li><p><strong>（台湾）</strong><a target="_blank" rel="noopener" href="http://www.pigmgz.com.tw/">《现代养猪》杂志</a></p>
-</li>
-<li><p><strong>（英文）</strong><a target="_blank" rel="noopener" href="https://www.nationalhogfarmer.com/">《国家猪农》杂志(National Hog Farmer)</a>。National Hog Farmer为专业的猪肉生产商提供最新新闻，业务管理指南以及及时的生产信息，以保持现代猪肉生产系统的竞争力和利润。</p>
-</li>
-<li><p><strong>（英文）</strong><a target="_blank" rel="noopener" href="http://www.pigprogress.net/">《养猪进展》（Pig Progress）</a>。世界养猪进展的新闻。</p>
-</li>
-<li><p><strong>（英文）</strong><a target="_blank" rel="noopener" href="http://www.thepigsite.com/">英国国际猪网</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.porkbusiness.com/news/industry">porkbusiness</a>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.npa-uk.org.uk/">National Pig Association</a>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.bizreport.com/magazines/pig_international.html">《国际养猪》杂志（Pig International）</a>。</p>
-</li>
-</ul>
-<h4 id="相关机构"><a href="#相关机构" class="headerlink" title="相关机构"></a>相关机构</h4><ul>
-<li><strong>（日文）</strong><a target="_blank" rel="noopener" href="https://web.archive.org/web/20080407222344/http://youton.ac.affrc.go.jp/">日本養豚学会</a></li>
-<li><strong>（日文）</strong><a target="_blank" rel="noopener" href="http://www.jppa.biz/">日本养豚生产者协议会</a></li>
-<li><strong>（英文）</strong><a target="_blank" rel="noopener" href="http://www.nationalswine.com/">National Swine Registry</a></li>
-<li><strong>（英文）</strong><a target="_blank" rel="noopener" href="https://web.archive.org/web/20080108161117/http://www.ansc.purdue.edu/stages/">STAGES(Swine Testing And Genetic Evaluation System)</a></li>
-<li><strong>（英文）</strong><a target="_blank" rel="noopener" href="http://www.nsif.com/">美国国家猪改良联合会（National Swine Improvement Federation）</a></li>
-</ul>
-<h4 id="在线手册"><a href="#在线手册" class="headerlink" title="在线手册"></a>在线手册</h4><ul>
-<li><strong>（繁体中文）</strong><a target="_blank" rel="noopener" href="http://www.angrin.tlri.gov.tw/pss/index.htm">猪经济性状测定与品种改良</a></li>
-<li><strong>（英文）</strong><a target="_blank" rel="noopener" href="https://web.archive.org/web/20080214164359/http://www.nsif.com/handbook.htm">猪育种手册（Swine Genetics Handbook）</a></li>
-<li><strong>（英文）</strong><a target="_blank" rel="noopener" href="https://web.archive.org/web/20081021032417/http://www.nsif.com/guidel/guidelines.htm">猪改良程序指南（Swine Improvement Program Guidelines）</a></li>
-</ul>
-<h2 id="券商分析师"><a href="#券商分析师" class="headerlink" title="券商分析师"></a>券商分析师</h2><p>天风证券-吴立</p>
-<p>招商证券</p>
-<h2 id="论坛"><a href="#论坛" class="headerlink" title="论坛"></a>论坛</h2><p><a target="_blank" rel="noopener" href="https://bbs.zhue.com.cn/thread-2591574-1-1.html">猪易论坛</a></p>
-<p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/f?kw=%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD&fr=ala0&tpl=5">养猪吧</a>。</p>
-<h2 id="行业大会"><a href="#行业大会" class="headerlink" title="行业大会"></a>行业大会</h2><p><a target="_blank" rel="noopener" href="http://www.lemanchina.com/">李曼中国养猪大会</a>。由李曼教授搭建的全球养猪知识及经验分享平台，已成立33年。</p>
-<p><a target="_blank" rel="noopener" href="http://www.caaa.com.cn/2020/live.php">中国畜牧业博览会</a>。</p>
-<p><a target="_blank" rel="noopener" href="http://www.dbxmy.com/gyzh.php">东北三省畜牧业交易博览会</a>。目前已经举办27届</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ligj1706.github.io/2020/06/27/2020-06-27-Nodes-relationships-and-network/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="妙 生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海边拾贝">
-      <meta itemprop="description" content="让生活更美丽一点">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海边拾贝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/06/27/2020-06-27-Nodes-relationships-and-network/" class="post-title-link" itemprop="url">节点、关系与网络</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-06-27 11:09:56" itemprop="dateCreated datePublished" datetime="2020-06-27T11:09:56+08:00">2020-06-27</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>想象一下，把你的社交网络、中国所有的航班线路图、疫情的传染路径、某个社会热点的传播路径、某种观点在大众中的普及程度等抽象为由节点和边组成的网络。这些复杂网络是否有相同的规律？</p>
-<p>针对类似这样的问题，还真有科学家进行研究。最早的研究是1736年关于柯尼斯堡七桥问题的研究，提出了图论。随着研究的深入，提出了随机图模型、六度分隔理论、弱联系理论、小世界模型、无标度网络模型等，逐渐演化到了今天的网络科学。</p>
-<p>美国国家科研委员会将网络科学定义为<strong>研究物理，生物，和社会现象的网络化表达，建立针对这些象限具有预测效果的模型</strong> 的学科。</p>
-<p>简单来说，网络科学研究的是由节点和边组成的网络的基本规律。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>1736年，Leonhard Euler通过柯尼斯堡七桥问题提出「图论」。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2054046-6b4ae02636cb36a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/699/format/webp" alt="img"></p>
-<p>1934年莫雷诺把人际关系划分为6种类型，莫雷诺把网络理念用于社会研究，开启了网络科学最重要的分支之一：「社会网络分析」。</p>
-<p>1959，Erdős和Rényi提出「随机图模型」。随机图模型用于任何真实网络的基准或无效状态，随机图网络符合钟形曲线分布规律。构建方法：取所有节点，泡硬币，硬币正面向上，则画一个连线，硬币正面朝下，则转向下一个节点。当节点数量众多时，则使用计算机程序模拟。</p>
-<p>1967年，社会心理学家米尔格兰姆发现「小世界现象」，并提出「六度分隔理论」。实验：随机让陌生人寄送信件给A，但并没有告诉地址，这些陌生人可以把信件转送给他们认为认识A的人，实验表明没有一封信件被转发10次以上到达A，平均为6次。</p>
-<p>1973年，格兰诺维特通过研究城镇居民如何找工作，提出「弱联系理论」</p>
-<p>1998年，瓦特和他的导师斯托加茨发表论文《Collective Dynamics of Small-World Networks（小世界网络的集体动力学）》，提出「小世界模型」。</p>
-<p>1999年，巴拉巴西教授及其博士生Albert发表《随机网络中标度的涌现》一文，提出「无标度网络模型」，即网络中的边不是随机分布的，少部分顶点，占据了大部分链接。符合二八定律。</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1go9u9stia4j30l00dagmp.jpg" alt="image-20210306073801332"></p>
-<p>至此，复杂网络研究进入网络科学新时代。</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>对于不搞研究的人，学习网络科学最重要的是学习<strong>网络思维</strong> 。</p>
-<p>网络思维把事物抽象为点、边。比如，想了解一个热点事件的传播规律，可以分析热点最初始于哪里，是通过哪些节点传播出去的，由此分析舆论背后的力量。</p>
-<p>所有的网络背后有三个基本的特征：高度的集群性、不均衡的度分布以及中心节点结构。</p>
-<p><strong>高度集群性：</strong> 节点A与节点B和C相连，节点B和C也有可能相连（小世界网络）。比如你的朋友的朋友，可能也是我的朋友，一个领域核心玩家一般相互认识，如果你与领域内顶级人才的认识路径很长，那说明你不够知名。</p>
-<p><strong>不均衡的度分布：</strong> 节点之间的连接符合幂律分布规律，即20%的中心节点连接另外的80%的节点（无标度网络）。比如，网络上超过80%的网页只有不超过4个超链接，但不到总页面数的万分之一的网页却拥有极多的链接。</p>
-<p><strong>中心节点：</strong> 网络中信息和行为传递的主要通道。节点A连接节点B和节点C，节点B想要认识节点C，需要通过节点A，那么节点A是中心节点。</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>把三个特征用到个人发展中，给我最大的启示是：成为中心节点、利用好弱关系。</p>
-<p><strong>成为中心节点。</strong> 处在中心节点，意味着可以链接更多的人，获得更多的信息，自然可以获得更多发展机会。成为中心节点的好方法是1）发起社群，比如发起一些行业内的交流活动，如果做得好，会有越来越多优质的资源涌入，大家一想到要什么事情需要帮忙，会想到发起人你；2）接触更多高质量的社群，接触的信息多了，会发现信息差的存在，这就存在套利空间，看到过这么一句话：向草根讲述精英的做事逻辑，向精英讲述草根的接地气，道理也一样；3）想办法加入行业内顶级选手所在的圈子，逐渐获得认可。</p>
-<p><strong>利用好弱关系。</strong> 主动链接和维护弱关系，弱关系比强关系更能带来意想不到的效果。</p>
-<p>附：复杂与网络科学书籍</p>
-<p>《复杂》《隐秩序》《网络、群体与市场》《六度分隔》《隐秩序》</p>
-<p>参考资料<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/52a7872530a3">网络科学的前世今生 ——零基础学习网络科学（一）</a></p>
-<p>更多详见<a target="_blank" rel="noopener" href="https://www.yangzhiping.com/tech/sna-book.html">社会网络分析入门书目导读</a></p>
-<p>2020年6月27日</p>
 
       
     </div>
