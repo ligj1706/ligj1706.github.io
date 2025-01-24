@@ -1393,7 +1393,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #7869ff;
+  background: #abffd9;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3130,10 +3130,10 @@ html.dark-mode .header {
 @media (max-width: 767px) {
   .header-inner {
     padding: 0 12px;
-    min-height: 42px;
+    min-height: 30px;
   }
   .main {
-    padding-top: 42px;
+    padding-top: 30px;
   }
   .menu-item-active {
     font-size: 20px;
