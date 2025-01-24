@@ -1393,7 +1393,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #e53e90;
+  background: #7869ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2926,7 +2926,7 @@ header.header {
   width: 100%;
   z-index: 1000;
   background: #f5f5f5;
-  padding: 10px 0 !important;
+  padding: 5px 0 !important;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .header-inner {
@@ -2936,7 +2936,7 @@ header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 15px;
 }
 .site-brand-container {
   flex: 0 0 auto;
@@ -3129,22 +3129,41 @@ html.dark-mode .header {
 }
 @media (max-width: 767px) {
   .header-inner {
-    padding: 5px 15px;
-    min-height: 40px;
+    padding: 0 12px;
+    min-height: 42px;
+  }
+  .main {
+    padding-top: 42px;
+  }
+  .menu-item-active {
+    font-size: 20px;
+  }
+  .darkmode-toggle {
+    font-size: 20px !important;
+    padding: 4px;
+  }
+  .site-title {
+    font-size: 16px;
+    line-height: 42px;
+  }
+  .theme-toggle,
+  .bg-toggle,
+  .search-toggle {
+    padding: 4px;
+  }
+  .theme-toggle i,
+  .bg-toggle i,
+  .search-toggle i {
+    font-size: 20px;
   }
   .site-nav {
     margin: 0 10px;
   }
   .menu .menu-item {
-    margin: 0 5px;
-    line-height: 30px;
+    line-height: 20px;
   }
   .menu .menu-item a {
-    font-size: 14px;
     padding: 0 5px;
-  }
-  .menu .menu-item i {
-    margin-right: 3px;
     font-size: 14px;
   }
 }
@@ -3510,29 +3529,8 @@ html.dark-mode .header {
   background: #fff;
   margin: 0 auto;
 }
-@media (max-width: 767px) {
-  .header-inner {
-    padding: 3px 15px;
-    min-height: 36px;
-  }
-  .main {
-    padding-top: 42px;
-  }
-  .site-nav {
-    margin: 0 10px;
-  }
-  .menu .menu-item {
-    margin: 0 5px;
-    line-height: 28px;
-  }
-  .menu .menu-item a {
-    font-size: 14px;
-    padding: 0 5px;
-  }
-  .menu .menu-item i {
-    margin-right: 3px;
-    font-size: 14px;
-  }
+html.dark-mode .main {
+  background: #242424;
 }
 .column {
   background: #f5f5f5 !important;
