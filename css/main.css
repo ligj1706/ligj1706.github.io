@@ -1393,7 +1393,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #f644d5;
+  background: #0942ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3128,43 +3128,112 @@ html.dark-mode .header {
   background: #1a1a1a;
 }
 @media (max-width: 767px) {
+  .header {
+    padding: 2px 0 !important;
+    min-height: 30px !important;
+  }
   .header-inner {
-    padding: 0 12px;
-    min-height: 30px;
-  }
-  .main {
-    padding-top: 30px;
-  }
-  .menu-item-active {
-    font-size: 20px;
-  }
-  .darkmode-toggle {
-    font-size: 20px !important;
-    padding: 4px;
+    padding: 0 8px !important;
+    min-height: 30px !important;
   }
   .site-title {
+    font-size: 16px !important;
+    line-height: 30px !important;
+    margin: 0 !important;
+  }
+  .menu-item {
+    margin: 0 3px !important;
+  }
+  .menu-item a {
+    padding: 0 3px !important;
+    font-size: 12px !important;
+  }
+  .menu-item i {
+    font-size: 12px !important;
+    margin-right: 1px !important;
+  }
+  .darkmode-toggle {
+    font-size: 14px !important;
+    margin-left: 3px !important;
+    padding: 1px !important;
+  }
+  .main {
+    padding-top: 30px !important;
+  }
+  .site-nav-toggle {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+    position: relative !important;
+  }
+  .site-nav-toggle .toggle-line {
+    background: #333 !important;
+    height: 2px !important;
+    margin: 4px 0 !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  html.dark-mode .site-nav-toggle .toggle-line {
+    background: #fff !important;
+  }
+  .site-nav ul.menu {
+    display: none;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #f5f5f5 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    padding: 10px 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+  }
+  html.dark-mode .site-nav ul.menu {
+    background: #242424 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+  }
+  .site-nav ul.menu .menu-item {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  .site-nav ul.menu .menu-item a {
+    display: block !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+  }
+  html.dark-mode .site-nav ul.menu .menu-item a {
+    color: #fff !important;
+  }
+  .menu-item-search,
+  .menu-item-darkmode {
+    position: absolute !important;
+    top: 0 !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .menu-item-search {
+    right: 40px !important;
+  }
+  .menu-item-darkmode {
+    right: 10px !important;
+  }
+}
+@media (max-width: 480px) {
+  .site-title {
     font-size: 16px;
-    line-height: 42px;
   }
-  .theme-toggle,
-  .bg-toggle,
-  .search-toggle {
-    padding: 4px;
+  .menu-item:not(.menu-item-search):not(.menu-item-darkmode) {
+    display: none !important;
   }
-  .theme-toggle i,
-  .bg-toggle i,
-  .search-toggle i {
-    font-size: 20px;
-  }
-  .site-nav {
-    margin: 0 10px;
-  }
-  .menu .menu-item {
-    line-height: 20px;
-  }
-  .menu .menu-item a {
-    padding: 0 5px;
-    font-size: 14px;
+  .site-nav-toggle {
+    display: block !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -3492,6 +3561,7 @@ html.dark-mode .header {
   --bg-color: #f9f9f9;
   --header-bg: rgba(255,255,255,0.8);
   --header-border: rgba(0,0,0,0.06);
+  --body-bg-color-dark: #242424;
 }
 ::selection {
   background: #1890ff;
@@ -3576,4 +3646,68 @@ html.dark-mode body {
 }
 html.dark-mode .main {
   background: #242424;
+}
+.header,
+.header-inner,
+.site-brand-container,
+.site-meta,
+.site-nav,
+.menu,
+.search-pop-overlay,
+.popup.search-popup {
+  background: #f5f5f5 !important;
+}
+html.dark-mode .header,
+html.dark-mode .header-inner,
+html.dark-mode .site-brand-container,
+html.dark-mode .site-meta,
+html.dark-mode .site-nav,
+html.dark-mode .menu,
+html.dark-mode .search-pop-overlay,
+html.dark-mode .popup.search-popup {
+  background: var(--body-bg-color-dark) !important;
+}
+@media (max-width: 767px) {
+  .site-nav-toggle {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 5px 0;
+  }
+  .menu.menu-active {
+    display: block !important;
+  }
+  .menu-item {
+    display: block !important;
+    margin: 5px 10px !important;
+  }
+  .menu-item a {
+    display: block !important;
+    padding: 5px !important;
+  }
+  .menu-item-search,
+  .menu-item-darkmode {
+    display: inline-block !important;
+    position: absolute;
+    top: 0;
+  }
+  .menu-item-search {
+    right: 40px;
+  }
+  .menu-item-darkmode {
+    right: 10px;
+  }
+}
+html.dark-mode .menu {
+  background: #242424;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }

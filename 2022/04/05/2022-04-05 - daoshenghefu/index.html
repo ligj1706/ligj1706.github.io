@@ -56,7 +56,57 @@
 
 
 
+<script src="/js/mobile-menu.js"></script>
 
+<script>
+  // 备用方案：直接添加内联 JavaScript
+  document.addEventListener('DOMContentLoaded', function() {
+    // 获取汉堡菜单按钮
+    var toggleButton = document.querySelector('.site-nav-toggle');
+    
+    if (toggleButton) {
+      // 创建一个简单的移动菜单
+      var mobileMenu = document.createElement('div');
+      mobileMenu.className = 'mobile-menu';
+      mobileMenu.style.display = 'none';
+      mobileMenu.style.position = 'fixed';
+      mobileMenu.style.top = '40px';
+      mobileMenu.style.left = '0';
+      mobileMenu.style.width = '100%';
+      mobileMenu.style.background = document.documentElement.classList.contains('dark-mode') ? '#242424' : '#f5f5f5';
+      mobileMenu.style.padding = '10px 0';
+      mobileMenu.style.zIndex = '1000';
+      mobileMenu.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+      
+      // 复制主菜单项
+      var menuItems = document.querySelectorAll('.menu-item');
+      menuItems.forEach(function(item) {
+        if (!item.classList.contains('menu-item-search') && !item.classList.contains('menu-item-darkmode')) {
+          var clone = item.cloneNode(true);
+          clone.style.display = 'block';
+          clone.style.padding = '10px 20px';
+          mobileMenu.appendChild(clone);
+        }
+      });
+      
+      // 添加到页面
+      document.body.appendChild(mobileMenu);
+      
+      // 添加点击事件
+      toggleButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+      });
+      
+      // 点击页面其他地方关闭菜单
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.style.display === 'block' && !mobileMenu.contains(e.target) && !toggleButton.contains(e.target)) {
+          mobileMenu.style.display = 'none';
+        }
+      });
+    }
+  });
+</script> 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
