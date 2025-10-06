@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ligj1706.github.io/about/index.html</loc>
+    
+    <lastmod>2025-10-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ligj1706.github.io/2025/10/04/2025-10-04-tezhong-budui/</loc>
     
     <lastmod>2025-10-06</lastmod>
@@ -137,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2025/01/01/2025-01-01-error-correction-loop/</loc>
+    <loc>https://ligj1706.github.io/2025/01/17/2025-01-17-UX-design-mirrors-human-bonds/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -146,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2025/01/17/2025-01-17-UX-design-mirrors-human-bonds/</loc>
+    <loc>https://ligj1706.github.io/2025/01/01/2025-01-01-error-correction-loop/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -398,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2023/10/08/2023-11-08-October-wisdom/</loc>
+    <loc>https://ligj1706.github.io/2023/11/20/2023-11-20-high-risk-reward/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -407,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2023/11/20/2023-11-20-high-risk-reward/</loc>
+    <loc>https://ligj1706.github.io/2023/10/08/2023-11-08-October-wisdom/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -443,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2023/08/16/2023-08-16-Human_Nature/</loc>
+    <loc>https://ligj1706.github.io/2024/09/06/2023-09-06-August-wisdom/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -452,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2023/09/06/2023-09-07-Boss-experience/</loc>
+    <loc>https://ligj1706.github.io/2023/08/16/2023-08-16-Human_Nature/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -470,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2024/09/06/2023-09-06-August-wisdom/</loc>
+    <loc>https://ligj1706.github.io/2023/09/06/2023-09-07-Boss-experience/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -488,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2023/07/18/2023-07-18-visitor-notes/</loc>
+    <loc>https://ligj1706.github.io/2023/01/18/2023-07-18-sunzibingfa/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -506,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2023/01/18/2023-07-18-sunzibingfa/</loc>
+    <loc>https://ligj1706.github.io/2023/07/18/2023-07-18-visitor-notes/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1010,7 +1019,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2021/04/07/2021-04-07-Stratege-school/</loc>
+    <loc>https://ligj1706.github.io/2021/04/09/2021-04-09-Representative-heuristic/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1019,7 +1028,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2021/04/09/2021-04-09-Representative-heuristic/</loc>
+    <loc>https://ligj1706.github.io/2021/04/07/2021-04-07-Stratege-school/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1136,15 +1145,6 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/</loc>
-    
-    <lastmod>2025-05-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ligj1706.github.io/2020/11/27/2020-11-27-python-excel/</loc>
     
     <lastmod>2025-05-01</lastmod>
@@ -1154,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2020/11/03/2020-11-03-angricultre-500/</loc>
+    <loc>https://ligj1706.github.io/2020/11/17/2020-11-17-JD-pig/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1164,6 +1164,15 @@
   
   <url>
     <loc>https://ligj1706.github.io/2020/10/29/2020-10-29-python-douban-image/</loc>
+    
+    <lastmod>2025-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ligj1706.github.io/2020/11/03/2020-11-03-angricultre-500/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1307,7 +1316,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2020/08/21/2020-08-21-data-analysis-learning-path/</loc>
+    <loc>https://ligj1706.github.io/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1316,7 +1325,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2020/08/24/2020-08-24-Three_ways_to_improve_cognition/</loc>
+    <loc>https://ligj1706.github.io/2020/08/21/2020-08-21-data-analysis-learning-path/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1370,7 +1379,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/</loc>
+    <loc>https://ligj1706.github.io/2021/06/06/2020-06-06-How-I-use-Reddit-and-AI-to-find-winning-startup-ideas/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1379,7 +1388,7 @@
   </url>
   
   <url>
-    <loc>https://ligj1706.github.io/2021/06/06/2020-06-06-How-I-use-Reddit-and-AI-to-find-winning-startup-ideas/</loc>
+    <loc>https://ligj1706.github.io/2020/06/06/2020-06-06-Emotions-are-the-world-you-build/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
@@ -1767,15 +1776,6 @@
   
   <url>
     <loc>https://ligj1706.github.io/2020/11/29/HSBC/</loc>
-    
-    <lastmod>2025-05-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ligj1706.github.io/about/index.html</loc>
     
     <lastmod>2025-05-01</lastmod>
     
