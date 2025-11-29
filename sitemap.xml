@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ligj1706.github.io/2020/12/17/how-to-make-blog/</loc>
+    
+    <lastmod>2025-11-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ligj1706.github.io/2024/11/29/2025-11-29-compete-or-not/</loc>
     
     <lastmod>2025-11-29</lastmod>
@@ -129,15 +138,6 @@
   
   <url>
     <loc>https://ligj1706.github.io/2020/12/07/web-crawl-method/</loc>
-    
-    <lastmod>2025-05-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ligj1706.github.io/2020/12/17/how-to-make-blog/</loc>
     
     <lastmod>2025-05-01</lastmod>
     
